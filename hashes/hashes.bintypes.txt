@@ -166,6 +166,7 @@ bc4c4051 ChampionSpecificStatStoneData
 d94733d6 ChangeMissileSpeed
 cd2f704e ChangeMissileSpeedOnDelay
 24d0f2d9 ChangeMissileSpeedOnDelayInstance
+3cd8dbcd ChangeMissileWidth
 66a45d70 ChangeTurnRadius
 8b3aa710 Character
 11b71b5e CharacterHealthBarDataRecord
@@ -403,6 +404,7 @@ cd3905c8 DamageSourceSettings
 ab73cf73 DamageSourceSettingsInstance
 e7cb7ccb DamageSourceTemplate
 f9d15638 DamageSourceTemplateInstance
+9c1ed8b9 DamageTypeMeter
 ec41779d DamageUnitCheat
 3cebd9da DamageUnitCheatInstance
 2e548aaf DeathEventPriority
@@ -499,6 +501,7 @@ a82317ef EffectRotatingIconElementData
 d608195e ElementGroupButtonData
 ce08d3c3 ElementGroupButtonState
 f4562ede ElementGroupData
+20d0e681 ElementGroupFramedData
 2d6438c6 ElementGroupGridData
 02d5626b ElementGroupSliderData
 a20c7c54 ElementGroupSliderState
@@ -514,6 +517,7 @@ f7efc2c3 EnableLookAtEventDataInstance
 35d7e9b5 EnchantmentGroup
 70afcac2 EnchantmentGroupInstance
 039f4e7c EncounterUiTunables
+e7a8a5a4 EndOfGameViewController
 a64d5210 EngineFeatureToggles
 114700cb EngineFeatureTogglesInstance
 92bb5993 EnterFowVisibility
@@ -651,6 +655,7 @@ f90f84e3 FxActionVfx
 0533a8d6 FxTarget
 dbc7b64d FxTiming
 2cf7e065 FxTransform
+245ba20b FxType
 bc409284 GameCalculation
 e9ced584 GameCalculationConditional
 070e3593 GameCalculationModified
@@ -690,6 +695,7 @@ e9396ed2 GameModeContentInstance
 ccc30b24 GameModeItemListInstance
 89ce9636 GameModeMapData
 59876351 GameModeMapDataInstance
+15502626 GameModeSpellList
 f58450d9 GameMutatorExpansions
 2e22fe26 GameMutatorExpansionsInstance
 bcd573f7 GameplayConfig
@@ -1016,6 +1022,7 @@ e26d7082 ItemDataClientInstance
 f4613a84 ItemDataModifiable
 ab71da5f ItemDataModifiableInstance
 b2c62c87 ItemDataValue
+61f8c41c ItemDataValues
 a23f9d7e ItemGrid
 a25d9452 ItemGridRow
 513f4901 ItemGridSection
@@ -1052,6 +1059,10 @@ c22c2bc5 KillAllTurretsCheatInstance
 c2394d52 KillingSpreeFilter
 e7da7f6f LabelElement
 0e7be4b7 LaneData
+a51270e5 LayoutStyleBase
+d7d5f570 LayoutStyleGrid
+26f2a088 LayoutStyleHorizontalList
+b277fa06 LayoutStyleVerticalList
 30eeda78 LearnedSpellDynamicMaterialBoolDriver
 553e4ba3 LearnedSpellDynamicMaterialBoolDriverInstance
 b4c4e463 LerpMaterialDriver
@@ -1067,10 +1078,19 @@ be0dceb0 LoadScreenTipConfiguration
 508c53cd LoadScreenTipInstance
 f725cf62 LoadScreenTipSet
 6b52819d LoadScreenTipSetInstance
+15793a8c LoadingScreenClash
+4f3e1bdd LoadingScreenClashTeam
+868f2575 LoadingScreenEmblemData
+604da433 LoadingScreenLatency
+e259ae3e LoadingScreenLatencyThreshold
 7e1a5460 LoadingScreenRankedData
+6d6cc142 LoadingScreenRankedFrames
 65619bbd LoadingScreenRankedProperties
+af7c0947 LoadingScreenRatedData
+69af20f0 LoadingScreenRegaliaData
 df58e9c6 LoadingScreenSettings
 d3be7d61 LoadingScreenSettingsInstance
+a502a9f5 LoadingScreenTips
 a75a77b3 LoadoutArenaSkinInfoPanel
 0a42222f LoadoutCompanionInfoPanel
 3266720b LoadoutDamageSkinInfoPanel
@@ -1080,6 +1100,9 @@ ea452f2f LoadoutFeatureData
 6c262084 LoadoutScript
 a928a446 LoadoutSelectViewController
 00b1e2f6 LoadoutViewController
+407b58d1 LobbyBottomButtons
+5a27978a LobbyReadyCheck
+c5976812 LobbySelfPortrait
 08a15686 LobbyViewController
 3c136fac LocaleRarityOverride
 0bf5a9a6 Location
@@ -1249,6 +1272,7 @@ c869f406 MissileTriggerSpec
 f2cb0060 MissionBuffData
 09b6fc81 MissionsPanelViewController
 94400f01 MobileQualitySettings
+75259ad3 ModalDialogViewController
 0023f1da ModeProgressionRewardData
 b62eaf02 ModeSelectButtonData
 795e5e4f ModeSelectViewController
@@ -1352,6 +1376,7 @@ ef095576 PassThroughParamsTableInstance
 dd5707f9 PatchingRootScene
 09a308ea PatchingViewController
 1f728d34 PauseCheat
+e0e70cfc PauseDialogViewController
 b6f03cdd Perk
 3d7822a4 PerkBuff
 b5fbf17f PerkBuffInstance
@@ -1420,6 +1445,7 @@ cb4013bd RecSpellRankUpInfoInstance
 48645472 RecallDecalDataInstance
 02a6daa3 RecallSkinUpgrade
 f8ca5e60 RecallSkinUpgradeInstance
+4e4bbc2b ReconnectDialogViewController
 8842b9ae RegaliaData
 6a18df00 RegaliaLookup
 c7b0a712 RegaliaPrestigeCrestList
@@ -1479,6 +1505,7 @@ bad95a7a Rscript
 aae83c5b SceneData
 be3f9448 SceneDataInstance
 b70134c3 ScissorRegionElementData
+320b890e ScoreboardViewController
 dbf27281 ScriptCheat
 f5beca5e ScriptCheatInstance
 2aeacee8 ScriptCommentBlock
@@ -1572,6 +1599,7 @@ ce3b9427 SkinnedMeshDataMaterialController
 967673a3 SkipTerrain
 324176a4 SlowCrowdControlFilter
 f9d969a5 SocialPanelViewController
+7d090b3a SocialStatusIcons
 9c566034 SoundEventData
 22fdb34f SoundEventDataInstance
 cfc0a523 SourceHasBuffFilter
@@ -1643,6 +1671,7 @@ e8e2a06c StaticMaterialShaderParamDefInstance
 4919d810 StaticMaterialTechniqueDefInstance
 f4d0f73f StopAnimationEventData
 f29721ff StoreCategoryButtonDefinition
+0833fc03 StoreDialogViewController
 44544233 StoreViewController
 101afdc9 StringDefaultTableGet
 dbc5c2a4 StringGet
@@ -1712,6 +1741,7 @@ ee13a4b2 TargetTypeFilter
 4c35e652 TargeterDefinition
 e23b3315 TargeterDefinitionAoe
 0de90522 TargeterDefinitionAoeInstance
+29dfd7ad TargeterDefinitionAoeScalar
 bc6ed2a6 TargeterDefinitionArc
 db097a41 TargeterDefinitionArcInstance
 87f69f01 TargeterDefinitionCone
@@ -1759,6 +1789,7 @@ d6ff2a28 TftDamageSkinDescriptor
 54530df7 TftDragData
 f2a4458b TftDropRates
 62ff42f4 TftEffectAmount
+ad6892df TftGameHeaderViewController
 13f6b804 TftGameStartViewController
 03314f38 TftGameVariationData
 1233dbf1 TftHudAnnouncementData
@@ -1787,6 +1818,7 @@ a2d042b0 TftMapSkin
 f4a6bb27 TftRoundData
 438850ff TftSetData
 e52b8f5d TftShopData
+369a22b9 TftShopDataList
 f737def9 TftStageData
 7d14423b TftStatData
 26868b0f TftStreak
@@ -1870,8 +1902,16 @@ ae63c237 TrueDamageGivenFilter
 7c700beb UiButtonAdditionalElements
 6c2aba87 UiButtonAdditionalState
 6c68755e UiButtonDefinition
+209b0277 UiButtonSoundEvents
 a68fa594 UiButtonState
 eaf3a43d UiComboBoxDefinition
+25e82b58 UiElementGroupButtonData
+6780c1c5 UiElementGroupButtonState
+89fa8d1c UiElementGroupData
+345c1c77 UiElementGroupFramedData
+828bfdbd UiElementGroupMeterData
+474f1541 UiElementGroupSliderData
+df3bdc62 UiElementGroupSliderState
 4bebf6c1 UnitStatusData
 f441a39e UnitStatusDataInstance
 05ef7ba4 UnitStatusIconData
@@ -1911,6 +1951,7 @@ e08fa9b9 ValueProcessorDataInstance
 ccf3a67d VelocityDynamicMaterialFloatDriverInstance
 ece61617 VeritcalFacingMatchVelocity
 17bc4c24 VeritcalFacingMatchVelocityInstance
+17b19502 VersionString
 cb4c4703 VertexAnimationRigPoseModifierData
 dc0f82c0 VertexAnimationRigPoseModifierDataInstance
 22673575 VerticalFacingFaceTarget
@@ -2026,6 +2067,8 @@ a8eb52f4 VfxSpawnConditions
 a525024b VfxTrailDefinitionDataInstance
 796bf215 VideoDefinition
 ed511190 ViewController
+d9438618 ViewControllerList
+7feb6200 ViewControllerSet
 8ae2a6b7 ViewPaneDefinition
 7b7fe650 VoMarkerEvent
 c1aa1c0b VoMarkerEventInstance
@@ -2033,6 +2076,7 @@ c1aa1c0b VoMarkerEventInstance
 c04aaf66 VoMarkerEventsInstance
 36ad71fa VoiceChatViewController
 a2b8c408 VoiceChatViewSelfSlot
+f1c387c0 VotePanelViewController
 a36e0358 WadFileDescriptor
 aac92b83 WadFileDescriptorInstance
 8fa548d5 WallFollowMovement
