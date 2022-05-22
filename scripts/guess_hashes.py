@@ -31,18 +31,20 @@ def read_word_list(listname):
         ]
 
 def mutate(word):
+    if word.startswith('__') or word.startswith('m_') or word.startswith('ar'):
+        word = word[2:]
+    elif word.startswith('I') or word.startswith('m') or word.startswith('_') or word.startswith('b'):
+        word = word[1:]
+    if word.endswith('_'):
+        word = word[:-1]
     yield word
     yield word + 'Instance'
     yield word + 'Definition'
+    yield word + 'Tra'
     yield 'I' + word
     yield 'm' + word
     yield 'm_' + word
-    if word.startswith('I') or word.startswith('m') or word.startswith('_'):
-        yield word[1:]
-    if word.startswith('__'):
-        yield word[2:]
-    if word.endswith('_'):
-        yield word[:-1]
+
     return None
 
 def guess(all_set, known_dict, words_list):
