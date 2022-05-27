@@ -3,11 +3,10 @@ import sys
 import json
 from xxhash import xxh64_intdigest
 
-MASK = 0xFF_FF_FF_FF_FF
-MASK2 = MASK >> 4
+MASK = 0xF_FF_FF_FF_FF
 
-def xxh40(s, mask = MASK):
-    return xxh64_intdigest(s.lower()) & mask
+def xxh36(s):
+    return xxh64_intdigest(s.lower()) & MASK
 
 def read_hash_dict(listname):
     with open(listname) as inf:
@@ -18,7 +17,7 @@ def read_hash_dict(listname):
                         if line.strip()
         }
         for k, v in result.items():
-            assert(k & MASK2 == xxh40(v, MASK2))
+            assert(k == xxh36(v))
         return result
 
 def merge(dst, src):
@@ -29,7 +28,7 @@ def merge(dst, src):
             dst[h] = v
     dst_list_sorted = list((k, v) for k,v in dst.items())
     dst_list_sorted.sort(key = lambda x: (x[1], x[0]))
-    dst_list_stringified = list(f"{k:010x} {v}" for k,v in dst_list_sorted)
+    dst_list_stringified = list(f"{k:09x} {v}" for k,v in dst_list_sorted)
     return "\n".join(dst_list_stringified)
 
 dst_filename = sys.argv[1]
