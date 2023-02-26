@@ -2,17 +2,93 @@
 import json
 import sys
 import os
+import re
+import glob
 
-def fnv1a(s):
+# A python class with mandatory () for base classes
+RE_CLASS = re.compile(r'^class\s+(\w+)\s*\(((?:\s*\w+\s*,?\s*)*)\):$')
+# A python field with mandatory () for flattened typedef
+RE_FIELD = re.compile(r'^    (\w+)\s*:\s*\(((?:\s*\w+\s*,?\s*)*)\)$')
+
+def rehex_fnv1a(s):
+    if s.startswith('0x'): return hex(int(s, 16))
     h = 0x811c9dc5
     for b in s.encode('ascii').lower():
         h = ((h ^ b) * 0x01000193) % 0x100000000
-    return h
+    return hex(h)
 
-def readhashes(filename):
+def read_hashes(filename):
     with open(filename, "r") as inf:
         lines = [ x.rstrip().split(' ') for x in inf.readlines() ]
         return { hex(int(h, 16)) : v for h, v in lines }
+
+def read_database(filename):
+    if not os.path.exists(filename):
+        return {}
+    with open(filename, 'r') as inf:
+        db = {}
+        fields = None
+        for line in inf.readlines():
+            line = line.rstrip()
+            if not line or line.lstrip().startswith('#'):
+                continue
+            if m := RE_CLASS.match(line):
+                kname = rehex_fnv1a(m.group(1))
+                bases = set(rehex_fnv1a(b.strip()) for b in m.group(2).split(',') if b.strip())
+                fields = set()
+                if kname in db: raise ValueError(f"Duplicate class: {line}")
+                db[kname] = { 'bases': bases, 'fields': fields }
+                continue
+            if m := RE_FIELD.match(line):
+                fname = rehex_fnv1a(m.group(1))
+                ft, kt, vt, kh = tuple(t.strip() for t in m.group(2).split(','))
+                field = (fname, (ft, kt, vt, rehex_fnv1a(kh)))
+                if fields == None: raise ValueError(f"Stray field: {line}")
+                if field in fields: raise ValueError(f"Duplicate field: {line}")
+                fields.add(field)
+                continue
+            raise ValueError(f"Failed to parse: {line}")
+        return db
+
+def write_databse(filename, db):
+    def h2type(h):
+        return h if not h in h_types else h_types[h]
+    def h2field(h):
+        return h if not h in h_fields else h_fields[h]
+    with open(filename, 'w') as outf:
+        outf.write("#!python\n")
+        for kname in sorted(db.keys()):
+            klass = db[kname]
+            outf.write(f"class {h2type(kname)}({', '.join(h2type(b) for b in sorted(klass['bases']))}):\n")
+            for fname, (ft, kt, vt, kh) in sorted(klass['fields']):
+                outf.write(f"    {h2field(fname)}: ({ft}, {kt}, {vt}, {h2type(kh)})\n")
+            outf.write('\n')
+
+def import_database(db, meta):
+    for kname, klass in meta['classes'].items():
+        kname = rehex_fnv1a(kname)
+        if not kname in db: db[kname] = { 'bases': set(), 'fields': set() }
+        bases = db[kname]['bases']
+        fields = db[kname]['fields']
+        if klass["base"]: bases.add(rehex_fnv1a(klass["base"]))
+        for base in klass["secondary_bases"].keys(): bases.add(rehex_fnv1a(base))
+        for fname, field in klass["properties"].items():
+            if field['container'] and field['map']: raise ValueError("container/map conflict!")
+            ftype = [ field['value_type'] ]
+            if field['container']:
+                ftype.append(hex(field['container']['fixed_size'] or 0))
+                ftype.append(field['container']['value_type'])
+            elif field['map']:
+                ftype.append(field['map']['key_type'])
+                ftype.append(field['map']['value_type'])
+            else:
+                ftype.append(hex(0))
+                ftype.append(hex(0))
+            if field['other_class']:
+                ftype.append(rehex_fnv1a(field['other_class']))
+            else:
+                ftype.append(hex(0))
+            fields.add((rehex_fnv1a(fname), tuple(ftype)))
 
 def read_meta(filename):
     def convert_type(t, is_old):
@@ -121,138 +197,12 @@ def read_meta(filename):
             }
         }
 
-def h2type(h):
-    if h in h_types:
-        return h_types[h]
-    unktypes.add(h)
-    return "t_" + h
-
-def h2field(h):
-    if h in h_fields:
-        return h_fields[h]
-    unkfields.add(h)
-    return "m_" + h
-
-def n2ype(t, k):
-    if t == "Bool": return "bool"
-    if t == "I8": return "int8_t"
-    if t == "U8": return "uint8_t"
-    if t == "I16": return "int16_t"
-    if t == "U16": return "uint16_t"
-    if t == "I32": return "int32_t"
-    if t == "U32": return "uint32_t"
-    if t == "I64": return "int64_t"
-    if t == "U64": return "uint64_t"
-    if t == "F32": return "float_t"
-    if t == "Vec2": return "point2D_t"
-    if t == "Vec3": return "point3D_t"
-    if t == "Vec4": return "point4D_t"
-    if t == "Mtx44": return "matrix44_t"
-    if t == "Color": return "color_t"
-    if t == "String": return "string_t"
-    if t == "Hash": return "hash_t"
-    if t == "File": return "file_t"
-    if t == "Flag": return "bool"
-    if not k: raise Exception(f"other class is 0 for type: {t}")
-    if t == "Pointer": return f"unique_ptr_t<{h2type(k)}>"
-    if t == "Embed": return h2type(k)
-    if t == "Link": return f"link_ptr_t<{h2type(k)}>"
-    raise Exception(f"Nested type name too complex: {t}!")
-
-def get_type(field):
-    t = field["value_type"]
-    if t == "List" or t == "List2":
-        vt = n2ype(field["container"]["value_type"], field["other_class"])
-        sz = field["container"]["fixed_size"]
-        if sz: return "array_t<{}, {}>".format(vt, sz)
-        return "vector_t<{}>".format(vt)
-    if t == "Option":
-        vt = n2ype(field["container"]["value_type"], field["other_class"])
-        return "optional_t<{}>".format(vt)
-    if t == "Map":
-        kt = n2ype(field["map"]["key_type"], None)
-        vt = n2ype(field["map"]["value_type"], field["other_class"])
-        return f"map_t<{kt}, {vt}>"
-    return n2ype(t, field["other_class"])
-
-def dump_default(prop, defaults):
-    if not defaults:
-        return "{}"
-    if not prop in defaults:
-        return "{}"
-
-def dump_klass(khash, klass, outf):
-    virtual = [ h2type(x) for x in klass["secondary_bases"].keys() ]
-    prop = [ "PropertyBase" ] if klass["is"]["property_base"] else []
-    normal = [ h2type(klass["base"]) ] if klass["base"] else prop
-    bases = normal + virtual
-    inheritance = (": " + ", ".join(bases)) if bases else ""
-    o = outf.write(f"struct {h2type(khash)}{inheritance} {{\n")
-    for fhash, field in sorted(klass["properties"].items(), key=lambda kvp: kvp[1]["offset"]):
-        o = outf.write(f"    {get_type(field)} {h2field(fhash)};\n")
-    o = outf.write("};\n")
-
-def find_klass(klasses, h):
-    if not h:
-        return None
-    for klass in meta_klasses["classes"]:
-        if klass["hash"] == h:
-            return klass
-    return None
-
-def build_deps(klasses, root_hashes, skip = []):
-    q = []
-    deps = set()
-    done = set()
-    for kh, k in klasses.items():
-        if kh in root_hashes:
-            q.append(kh)
-            continue
-        for fh in k["properties"].keys():
-            if fh in root_hashes:
-                q.append(kh)
-                break
-    done.add(hex(0))
-    done.add(None)
-    for x in skip:
-        done.add(x)
-    while len(q) > 0:
-        h = q.pop()
-        if h in done:
-            continue
-        done.add(h)
-        deps.add(h)
-        k = klasses[h]
-        p = k["base"]
-        if not p in done:
-            q.append(p)
-        for f in k["properties"].values():
-            o = f["other_class"]
-            if not (o in done):
-                q.append(o)
-        for h2, k2 in klasses.items():
-            if h2 in done:
-                continue
-            if h2 == p:
-                q.append(h2)
-                continue
-    return deps
-
-def dump(klasses, outf, filterf = None):
-    for khash, klass in klasses.items():
-        if not filterf or filterf(khash, klass):
-            dump_klass(khash, klass, outf)
-
 if __name__ == '__main__':
-    h_fields = readhashes(f"hashes/hashes.binfields.txt")
-    h_types = readhashes(f"hashes/hashes.bintypes.txt")
-    meta_klasses = read_meta(sys.argv[1])
-    unktypes = set()
-    unkfields = set()
-
-    if len(sys.argv) > 2:
-        root_hashes = { hex(fnv1a(x)) if not x.startswith('0x') else hex(int(x, 16)) for x in sys.argv[2:] }
-        deps = build_deps(meta_klasses["classes"], root_hashes, [ ])
-        dump(meta_klasses["classes"], sys.stdout, lambda kh, k: kh in deps)
-    else:
-        dump(meta_klasses["classes"], sys.stdout, None)
+    h_fields = read_hashes(f"hashes/hashes.binfields.txt")
+    h_types = read_hashes(f"hashes/hashes.bintypes.txt")
+    database = read_database(sys.argv[1])
+    for arg in sys.argv[2:]:
+        for filename in glob.iglob(arg):
+            meta = read_meta(filename)
+            import_database(database, meta)
+    write_databse(sys.argv[1], database)

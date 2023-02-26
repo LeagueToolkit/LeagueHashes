@@ -2,6 +2,9 @@
 import sys
 import json
 
+PREFIX = [ '__', '_' 'm_', 'm', 'ar', 'b', 'I', '' ]
+SUFFIX = [ 'DataInstance', 'Data', 'Instance', '' ]
+
 def fnv1a(s):
     h = 0x811c9dc5
     for b in s.encode('ascii').lower():
@@ -31,20 +34,17 @@ def read_word_list(listname):
         ]
 
 def mutate(word):
-    if word.startswith('__') or word.startswith('m_') or word.startswith('ar'):
-        word = word[2:]
-    elif word.startswith('I') or word.startswith('m') or word.startswith('_') or word.startswith('b'):
-        word = word[1:]
-    if word.endswith('_'):
-        word = word[:-1]
-    yield word
-    yield word + 'Instance'
-    yield word + 'Definition'
-    yield word + 'Tra'
-    yield 'I' + word
-    yield 'm' + word
-    yield 'm_' + word
-
+    for prefix in PREFIX:
+        if prefix and word.startswith(prefix):
+            word = word[len(prefix):]
+            break
+    for suffix in SUFFIX:
+        if suffix and word.endswith(suffix):
+            word = word[:-len(suffix)]
+            break
+    for prefix in PREFIX:
+        for suffix in SUFFIX:
+            yield prefix + word + suffix
     return None
 
 def guess(all_set, known_dict, words_list):

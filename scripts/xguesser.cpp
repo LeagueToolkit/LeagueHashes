@@ -1,4 +1,4 @@
-///bin/sh -c "clang++ -std=c++20 -O3 -o ${0%.cpp}.exe ${0} -march=native" ; exit
+///bin/sh -c "g++ -std=c++20 -O3 -o ${0%.cpp}.exe ${0} -march=native" ; exit
 #include <algorithm>
 #include <array>
 #include <cctype>
@@ -16,7 +16,6 @@
 #include <vector>
 #include <unordered_map>
 #include <unordered_set>
-#include <xstring>
 
 static constexpr std::string_view ALPHABET =  "_ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
@@ -95,6 +94,14 @@ auto read_SentenceList(path const& source) -> SentenceList {
         results.push_back(std::move(words));
     }
     return results;
+}
+
+
+auto read_SentenceList2(path const& source1, path const& source2) -> SentenceList {
+    auto result1 = read_SentenceList(source1);
+    auto result2 = read_SentenceList(source2);
+    result1.insert(result1.end(), result2.cbegin(), result2.cend());
+    return result1;
 }
 
 struct Prefix {
@@ -218,9 +225,9 @@ void guess_fields(path const& words, int mode) {
     auto guesser = Guesser {
         read_HashSet("all/all.binfields.txt"),
         read_HashSet("hashes/hashes.binfields.txt"),
-        read_SentenceList("hashes/hashes.binfields.txt"),
+        read_SentenceList2("hashes/hashes.bintypes.txt", "hashes/hashes.binfields.txt"),
         read_WordList(words),
-        PrefixList {  u8"", u8"m", /*u8"b", u8"ar", u8"m_",*/ }
+        PrefixList {  u8"", /*u8"m", u8"b", u8"ar", u8"m_",*/ }
     };
     guesser.run(mode);
 }
@@ -229,7 +236,7 @@ void guess_types(path const& words, int mode) {
     auto guesser = Guesser {
         read_HashSet("all/all.bintypes.txt"),
         read_HashSet("hashes/hashes.bintypes.txt"),
-        read_SentenceList("hashes/hashes.bintypes.txt"),
+        read_SentenceList2("hashes/hashes.bintypes.txt", "hashes/hashes.binfields.txt"),
         read_WordList(words),
         PrefixList {  u8"", u8"I" }
     };

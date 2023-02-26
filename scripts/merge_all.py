@@ -16,7 +16,7 @@ def merge(dst, src):
     dst_list_sorted = list(dst | src)
     dst_list_sorted.sort()
     dst_list_stringified = list(f"{x:08x}" for x in dst_list_sorted)
-    return "\n".join(dst_list_stringified)
+    return "\n".join(dst_list_stringified) + '\n'
 
 dst_filename = sys.argv[1]
 src_filename = sys.argv[2]
