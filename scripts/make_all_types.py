@@ -7,8 +7,7 @@ import glob
 dst_filename = sys.argv[1]
 src_filename = sys.argv[2]
 
-def process_all_meta_types(sourcename):
-    results = set()
+def process_all_meta_types(sourcename, results):
     for filename in glob.iglob(sourcename, recursive=True):
         with open(filename) as inf:
             j = json.load(inf)
@@ -21,6 +20,14 @@ def process_all_meta_types(sourcename):
 dst_filename = sys.argv[1]
 src_filename = sys.argv[2]
 
-merged = process_all_meta_types(src_filename)
+results = set()
+with open(dst_filename, 'r') as inf:
+    for line in inf.readlines():
+        line = line.strip()
+        if not line:
+            continue
+        results.add(int(line, 16))
+
+merged = process_all_meta_types(src_filename, results)
 with open(dst_filename, 'w') as outf:
     outf.write(merged)
