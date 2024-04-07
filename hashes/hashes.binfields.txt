@@ -148,6 +148,7 @@ e0b63a87 Ally
 372a1376 AllyGem
 c4663005 AlphaErosionDefinition
 e8e7d190 AlphaFadeSpeed
+9c5124c0 AlphaOutWhileUntargetable
 b99310f4 AlphaRef
 d4315289 AlphaStart
 48fd3ad8 AlphaTestCompareFunc
@@ -553,7 +554,6 @@ c1948a38 Book
 a9d4b6e8 BoomFxTable
 29a7efc6 BoomLifeTimeSec
 15db0d85 BoomMapParticleName
-083093a2 BoostCard
 e1f94e91 BootsPanelDefinition
 2e373003 BootsQuickBuyData
 1f523237 Border
@@ -2107,7 +2107,6 @@ f4de034c GeneralMetrics
 cfe609d6 GeneralSettings
 271fb40d GenericBackgroundTexture
 df684997 GenericIcon
-0765f521 GenericNegation
 84a64914 GetAcquisitionRangeUsesAttackRange
 4eb5a788 GetPocClampBufferTrapezoid
 79b2d636 GetPocClampTrapezoid
@@ -2644,7 +2643,6 @@ afbfd186 ItemsLeft
 04ab21bc ItemsOnlyIcon
 fc99a7b2 ItemsPerRow
 6ccd463b ItemsRight
-6104a27d ItemsRolesPerRow
 39648078 IvernPromo
 b0b6713c JetChaos
 8c437bf8 JetKinetics
@@ -3092,7 +3090,6 @@ e7ded34d MaximumHoldTime
 c6fa1b5d MaximumRateByVelocity
 60a88bed MaximumSaturation
 f48b7975 MaximumScale
-9c5124c0 MaximumScaleWeighted
 ab25c5d9 MaximumShopScale
 35afd776 Medium
 f91db25d MediumHeight
@@ -3141,6 +3138,7 @@ c5611fe2 Meter
 2ce07dfb MeterEnemySkin
 2bf0ff9f MeterFill
 e845a287 MeterFillHealCasted
+c49b32ce MeterFillMagicBlocked
 f6ccd6f4 MeterFillMagicDealt
 08ef885e MeterFillPhysicalBlocked
 b30d72e4 MeterFillPhysicalDealt
@@ -3913,6 +3911,7 @@ b6f346eb PlayerOpponentTemplate
 b2aff146 PlayerPlacementBanners
 d5b6bcd3 PlayerPortrait
 811e7e11 PlayerProfileButton
+083093a2 PlayerProfileCategoryButtons
 d7177733 PlayerProfileScene
 4e7eddfd PlayerRankText
 cf1f4912 PlayerRejectIcon
@@ -4425,6 +4424,7 @@ f55e1472 ScaleDynamicallyWithAttachedBone
 c0bf561e ScaleEmitOffsetByBoundObjectSize
 0e5b32e1 ScaleOverride
 07996271 ScalePlaySpeedNameAnimation
+39d6e480 ScalePlaybackSpeedReferenceDuration
 ee7cd89a ScalePlaybackSpeedToDuration
 8658b70c ScaleSpeed
 a7bf26c3 ScaleStart
@@ -5377,6 +5377,7 @@ c09ccdd8 TftPenalizedStatColor
 125e783f TftPlaybookDefault
 8df47daa TftRegalia
 d10b6d14 TftRegularUpdateClock
+0765f521 TftReplicateSlotForUnit
 9316f661 TftShopDropRateTextColors
 2560015b TftSocialModeRequestSystem
 30c22182 TftThreeStarColor
@@ -5651,7 +5652,6 @@ ff8735eb TransitionStartDelaySecs
 8d6d21cf Transitional
 21328a43 Transitions
 b36cff34 TranslationOverride
-c49b32ce TravelsStar
 6a498f31 TreasureTroveTokenIconPath
 4bb004c1 TreatAutoAttacksAsNormalSpells
 3ac39a50 TriggerEventsOnInitialSpawn
@@ -5801,7 +5801,6 @@ af2b5cc2 UpgradePassButton
 93b6e0a6 UpgradesBeforeLateGameScaling
 94235ad9 UpperCardRegion
 0204a122 Upscale
-39d6e480 UpscaleEvaluation
 637af4c6 UrlTraKey
 8f449c8b UsableInStore
 39e0b364 UseAStringFormatInChat
@@ -7443,6 +7442,7 @@ b799904c mPerk
 36f7ed41 mPerkId
 4e437187 mPerkName
 27b18c01 mPerkReplacements
+6104a27d mPerkRootSpellOrigination
 77f9fa17 mPerkScript
 9ed64df4 mPerkStyleId
 71c6c91a mPerkStyleName
@@ -7592,6 +7592,8 @@ ff5d32f0 mRiverCursor
 1a7b693a mRootSpell
 16d0a895 mRotateAroundCasterFacingDirection
 304b0330 mRoundActiveIconPath
+4cb318cd mRoundResultDrawIconPath
+c90f19dc mRoundResultLossIconPath
 f862cc05 mRoundResultNoneIconPath
 cb830e67 mRoundResultWinIconPath
 d20054c0 mRoundUpcomingIconPath
@@ -7768,7 +7770,6 @@ cfcb6bee mStartFlashAlpha
 d8a4574e mStartLocator
 5ecf040c mStartPositionOffset
 4fc697cc mStartPositionTangent
-4cb318cd mStartRollover
 fc5edbd9 mStartTick
 fa58c885 mStartTime
 d06c375d mStartValue
@@ -7891,7 +7892,6 @@ f9721a78 mTextureName
 abb79fd0 mTextureSourceResolutionWidth
 257ce80c mTextureUv
 82a1ffed mTextureUvs
-c90f19dc mTftDamageSidewall
 412174df mTftDamageSkinDefault
 2ce36f6a mTftMapSkinDefault
 a06e485a mThickness

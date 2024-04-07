@@ -148,6 +148,8 @@ f6c7c333 BaseElementDataInstance
 798c7d28 BaseEventData
 a93d5ed3 BaseEventDataInstance
 b9f4d83f BaseHealthbarData
+a84012f3 BaseItemAdvice
+41ae8051 BaseItemAdviceSet
 95e0c840 BaseLoadoutData
 e26c2c7b BaseLoadoutDataInstance
 be8b36ac BasePerk
@@ -216,6 +218,7 @@ d816716a CallFunctionBlock
 dff5a8f8 CameraConfig
 2a406a23 CameraConfigInstance
 47fc4706 CameraTrapezoid
+86d1477b CandidateListViewController
 aa25504e Cast
 f8b77a74 CastOnDistanceFromCaster
 d9f51778 CastOnHit
@@ -1223,7 +1226,6 @@ e8edc65c IIntGetInstance
 e61bae9c ILevelBehavior
 6d3db6e2 ILevelController
 f78bf15b ILineIndicatorType
-88b8380c ILoadoutFeatureDataBehavior
 7f580dbe ILoadoutInfoPanel
 7a851cd8 ILogicBoolDriver
 995ca734 ILogicDriver
@@ -1371,8 +1373,6 @@ f297367c IsSpecifiedUnitCastRequirementInstance
 3b832d22 ItemAdvice
 222cbfee ItemAdviceAttribute
 fb0c2876 ItemAdviceReason
-a84012f3 ItemCareyOverrideStartingItemSet
-41ae8051 ItemCareyOverrideStartingItemSetSet
 244c26e6 ItemData
 c03becd9 ItemDataAvailability
 e535c1de ItemDataBuild
@@ -1516,6 +1516,7 @@ ea452f2f LoadoutFeatureData
 a928a446 LoadoutSelectViewController
 759a8c58 LoadoutUpgradeDialogViewController
 00b1e2f6 LoadoutViewController
+88b8380c LoadoutsButtonData
 407b58d1 LobbyBottomButtons
 45e66b18 LobbyFriendPortraitData
 e87aa7bf LobbyLabFields
@@ -3169,7 +3170,6 @@ a14bd4d0 VfxPrimitiveRay
 2185818d VfxPrimitiveTrailBase
 efd52b0a VfxPrimitiveTrailBaseInstance
 53a6c97e VfxProbabilityTableData
-86d1477b VfxProbabilityTableDataGrande
 96e47c49 VfxProbabilityTableDataInstance
 0f743d03 VfxProjectionDefinitionData
 af8038c0 VfxProjectionDefinitionDataInstance
