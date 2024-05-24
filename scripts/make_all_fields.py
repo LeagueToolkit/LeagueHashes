@@ -12,9 +12,14 @@ def process_all_meta_fields(sourcename, results):
     for filename in glob.iglob(sourcename, recursive=True):
         with open(filename) as inf:
             j = json.load(inf)
-            for k in j['classes'].values():
-                for h in k['properties'].keys():
-                    results.add(int(h, 16))
+            if not isinstance(j['classes'], dict):
+                for k in j['classes']:
+                    for p in k['properties']:
+                        results.add(p['hash'])
+            else:
+                for k in j['classes'].values():
+                    for h in k['properties'].keys():
+                        results.add(int(h, 16))
     results = list(results)
     results.sort()
     return "\n".join([f"{x:08x}" for x in results]) + '\n'

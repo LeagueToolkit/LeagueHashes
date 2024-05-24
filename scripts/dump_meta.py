@@ -183,7 +183,7 @@ def dump_default(prop, defaults):
 
 def dump_klass(khash, klass, outf):
     virtual = [ h2type(x) for x in klass["secondary_bases"].keys() ]
-    prop = [ "PropertyBase" ] if klass["is"]["property_base"] else []
+    prop = [ "PropertyBase" ] if klass["is"].get("property_base") else []
     normal = [ h2type(klass["base"]) ] if klass["base"] else prop
     bases = normal + virtual
     inheritance = (": " + ", ".join(bases)) if bases else ""

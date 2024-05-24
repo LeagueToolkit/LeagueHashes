@@ -11,8 +11,12 @@ def process_all_meta_types(sourcename, results):
     for filename in glob.iglob(sourcename, recursive=True):
         with open(filename) as inf:
             j = json.load(inf)
-            for h in j['classes'].keys():
-                results.add(int(h, 16))
+            if not isinstance(j['classes'], dict):
+                for k in j['classes']:
+                    results.add(k['hash'])
+            else:
+                for h in j['classes'].keys():
+                    results.add(int(h, 16))
     results = list(results)
     results.sort()
     return "\n".join([f"{x:08x}" for x in results]) + '\n'

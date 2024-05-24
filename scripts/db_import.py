@@ -30,6 +30,8 @@ def read_database(filename):
         fields = None
         for line in inf.readlines():
             line = line.rstrip()
+            if line.lstrip() == "pass":
+                continue
             if not line or line.lstrip().startswith('#'):
                 continue
             if m := RE_CLASS.match(line):
@@ -62,6 +64,7 @@ def write_databse(filename, db):
             outf.write(f"class {h2type(kname)}({', '.join(h2type(b) for b in sorted(klass['bases']))}):\n")
             for fname, (ft, kt, vt, kh) in sorted(klass['fields']):
                 outf.write(f"    {h2field(fname)}: ({ft}, {kt}, {vt}, {h2type(kh)})\n")
+            outf.write(f"    pass\n")
             outf.write('\n')
 
 def import_database(db, meta):

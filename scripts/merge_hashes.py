@@ -20,6 +20,8 @@ def read_hash_dict(listname):
 def merge(dst, src):
     for h, v in src.items():
         if h in dst:
+            if v.lower() != dst[h].lower():
+                print("Conflict dst {} vs src{}", v, dst[h])
             assert(v.lower() == dst[h].lower())
         else:
             dst[h] = v
