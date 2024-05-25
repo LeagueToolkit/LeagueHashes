@@ -7,28 +7,28 @@ class StringDefaultTableGet(IStringGet):
     pass
 
 class 0x103b4f7d(0x65a1bb16):
-    0x893b0813: (Pointer, 0x0, 0x0, ILogicFloatDriver)
+    DeltaDriver: (Pointer, 0x0, 0x0, ILogicFloatDriver)
     pass
 
-class 0x106bef1e():
-    0x4060ec22: (Hash, 0x0, 0x0, 0x0)
-    0x6f20f6ea: (Link, 0x0, 0x0, LevelControlScript)
+class LevelScriptFunctionLink():
+    FunctionName: (Hash, 0x0, 0x0, 0x0)
+    LevelScriptLink: (Link, 0x0, 0x0, LevelControlScript)
     pass
 
 class AndInputSourceBool(IInputSourceBool):
     Sources: (List2, 0x0, Pointer, IInputSourceBool)
     pass
 
-class 0x108deea5(0x21e5666c):
-    0x245ee9c5: (Embed, 0x0, 0x0, 0xdb6be360)
+class CcBehaviorData(ICcBehaviorData):
+    CcBehavior: (Embed, 0x0, 0x0, TargetingPriorityList)
     pass
 
 class 0x1099c885(GameModeConstant):
-    Character: (Link, 0x0, 0x0, 0x66b4f2c4)
+    Character: (Link, 0x0, 0x0, TftCharacter)
     pass
 
-class 0x109a4b6c(LevelScriptBlock):
-    0xe8b74712: (Embed, 0x0, 0x0, IntTableSet)
+class GetModePreloadFlags(LevelScriptBlock):
+    ModePreloadFlags: (Embed, 0x0, 0x0, IntTableSet)
     pass
 
 class 0x10b5dae9(0x26d26471):
@@ -52,7 +52,7 @@ class ChampionRuneRecommendation():
 class FxActionVfxAttach(FxActionVfxBase):
     pass
 
-class 0x1125294b(0x5c108a08):
+class 0x1125294b(ILolSpellScriptEvent):
     pass
 
 class 0x114828a9():
@@ -67,18 +67,18 @@ class TftCutsceneBasePostFxClip(TftCutsceneClip):
     pass
 
 class 0x115b5460(0x3e265091):
-    0x489a16f5: (Hash, 0x0, 0x0, 0x0)
-    0x4c04f945: (U32, 0x0, 0x0, 0x0)
+    TextureToOverride: (Hash, 0x0, 0x0, 0x0)
+    TacticianIndex: (U32, 0x0, 0x0, 0x0)
     pass
 
-class 0x1163f2ec(BehaviorScript):
+class TftBehaviorScript(BehaviorScript):
     Sequences: (Map, U32, Embed, ScriptBtSequence)
     pass
 
 class 0x1181085f():
     0x77cef4e0: (List, 0x0, Embed, 0xf2bc55fb)
-    0x885a9a2d: (U8, 0x0, 0x0, 0x0)
-    0x97eb4730: (List, 0x0, Hash, 0x0)
+    Stage: (U8, 0x0, 0x0, 0x0)
+    VisibleElements: (List, 0x0, Hash, 0x0)
     TitleTra: (String, 0x0, 0x0, 0x0)
     pass
 
@@ -121,7 +121,7 @@ class TftCondensedItemCombineTooltipData():
 
 class TftMatchupBannerUiContainer():
     IconEnableTime: (F32, 0x0, 0x0, 0x0)
-    0x2dcc66e: (Hash, 0x0, 0x0, 0x0)
+    TacticianIcon: (Hash, 0x0, 0x0, 0x0)
     VfxEnableTime: (F32, 0x0, 0x0, 0x0)
     Vfx: (Hash, 0x0, 0x0, 0x0)
     TextEnableTime: (F32, 0x0, 0x0, 0x0)
@@ -138,8 +138,8 @@ class 0x11efc9e9():
 class AiMarker(AiBaseClient):
     pass
 
-class 0x121b48aa():
-    0xdca93a3a: (Hash, 0x0, 0x0, 0x0)
+class IMapVisibilityController():
+    PathHash: (Hash, 0x0, 0x0, 0x0)
     pass
 
 class TftHudAnnouncementData():
@@ -206,7 +206,7 @@ class VfxParentInheritanceParams():
     Mode: (U8, 0x0, 0x0, 0x0)
     pass
 
-class 0x12ab94a6(0x31fd952a):
+class VfxShapeCylinder(VfxShapeVolume):
     Height: (F32, 0x0, 0x0, 0x0)
     Radius: (F32, 0x0, 0x0, 0x0)
     pass
@@ -214,7 +214,7 @@ class 0x12ab94a6(0x31fd952a):
 class 0x12b12bdf():
     0xa41734ff: (Hash, 0x0, 0x0, 0x0)
     0xa9d41f94: (Hash, 0x0, 0x0, 0x0)
-    0xef7a5e37: (Hash, 0x0, 0x0, 0x0)
+    SubTeamName: (Hash, 0x0, 0x0, 0x0)
     pass
 
 class 0x12b69e95():
@@ -222,9 +222,9 @@ class 0x12b69e95():
     pass
 
 class TftUnitPropertyNames():
-    0x35fa4ff0: (Link, 0x0, 0x0, TftUnitPropertyDefinition)
+    CharacterRoleOverride: (Link, 0x0, 0x0, TftUnitPropertyDefinition)
     RerollTraitLastCombatActive: (Link, 0x0, 0x0, TftUnitPropertyDefinition)
-    0x554967ca: (Link, 0x0, 0x0, TftUnitPropertyDefinition)
+    UnitGoldValue: (Link, 0x0, 0x0, TftUnitPropertyDefinition)
     RerollTraitCounter: (Link, 0x0, 0x0, TftUnitPropertyDefinition)
     0x5f9096dc: (Link, 0x0, 0x0, TftUnitPropertyDefinition)
     0x819c43fe: (Link, 0x0, 0x0, TftUnitPropertyDefinition)
@@ -260,21 +260,21 @@ class DeathTimes():
     pass
 
 class 0x131f5725(0x911f126a):
-    0xd50c7c8a: (Hash, 0x0, 0x0, 0x0)
+    StaticTexture: (Hash, 0x0, 0x0, 0x0)
     pass
 
-class 0x13314f94():
-    0x24a4d9aa: (String, 0x0, 0x0, 0x0)
+class TargetingParameters():
+    TargetingParamName: (String, 0x0, 0x0, 0x0)
     0x2b9c6a13: (Bool, 0x0, 0x0, 0x0)
-    0x5120063b: (Pointer, 0x0, 0x0, 0xa8f2f8d9)
-    0x5ba61dc2: (Hash, 0x0, 0x0, 0x0)
+    RangeValue: (Pointer, 0x0, 0x0, ITargetingRangeValue)
+    TargetSpell: (Hash, 0x0, 0x0, 0x0)
     0x791c5fa3: (Bool, 0x0, 0x0, 0x0)
     mAffectsStatusFlags: (U32, 0x0, 0x0, 0x0)
     0x9845aa67: (Bool, 0x0, 0x0, 0x0)
-    0xad3c0c4d: (Embed, 0x0, 0x0, ObjectTags)
-    0xc716e4ad: (U32, 0x0, 0x0, 0x0)
+    UnitObjectTags: (Embed, 0x0, 0x0, ObjectTags)
+    mSpellFlags: (U32, 0x0, 0x0, 0x0)
     Radius: (F32, 0x0, 0x0, 0x0)
-    0xe19f2477: (List2, 0x0, U8, 0x0)
+    ExitConditions: (List2, 0x0, U8, 0x0)
     mAffectsTypeFlags: (U32, 0x0, 0x0, 0x0)
     0xfc462d60: (List2, 0x0, Embed, 0xe90af953)
     pass
@@ -284,11 +284,11 @@ class HealthBarTickStyleUnit(HealthBarTickStyleBase):
     pass
 
 class 0x135a0579():
-    0x3adfaffb: (Hash, 0x0, 0x0, 0x0)
-    0x50898013: (Hash, 0x0, 0x0, 0x0)
-    0x61634c45: (Hash, 0x0, 0x0, 0x0)
-    0x8a8c3873: (Hash, 0x0, 0x0, 0x0)
-    0xc08605a8: (Hash, 0x0, 0x0, 0x0)
+    ResultGridItem: (Hash, 0x0, 0x0, 0x0)
+    TooltipOffset: (Hash, 0x0, 0x0, 0x0)
+    ResultIcon: (Hash, 0x0, 0x0, 0x0)
+    ResultText: (Hash, 0x0, 0x0, 0x0)
+    ResultRegion: (Hash, 0x0, 0x0, 0x0)
     pass
 
 class UiPerkSummonerSpecialistSelectorButtonData():
@@ -303,11 +303,11 @@ class ChatThrottlerData():
     pass
 
 class 0x138c3d23():
-    0x115bfcb9: (Hash, 0x0, 0x0, 0x0)
+    Subtitle: (Hash, 0x0, 0x0, 0x0)
     Scene: (Hash, 0x0, 0x0, 0x0)
     Description: (Hash, 0x0, 0x0, 0x0)
     Title: (Hash, 0x0, 0x0, 0x0)
-    0xa107ae5a: (String, 0x0, 0x0, 0x0)
+    SubtitleTra: (String, 0x0, 0x0, 0x0)
     pass
 
 class UiPerksStatData():
@@ -323,7 +323,7 @@ class AboveHealthPercentCastRequirement(ICastRequirement):
 
 class TftTeamPlannerMemberData():
     TraitIconBgs: (List, 0x3, Hash, 0x0)
-    0x30afad3f: (Hash, 0x0, 0x0, 0x0)
+    SnapshotHighlight: (Hash, 0x0, 0x0, 0x0)
     Button: (Hash, 0x0, 0x0, 0x0)
     Group: (Hash, 0x0, 0x0, 0x0)
     HoverEffectGlowChampion: (Hash, 0x0, 0x0, 0x0)
@@ -340,8 +340,8 @@ class TftTeamPlannerMemberData():
 class UiPropertyOverrideLoadable(PropertyOverrideLoadable):
     pass
 
-class ScriptFunction(0x3641a323, ScriptSequence):
-    0x4f1d51f0: (Embed, 0x0, 0x0, 0xeca2da9a)
+class ScriptFunction(RootScriptSequence, ScriptSequence):
+    FunctionDef: (Embed, 0x0, 0x0, 0xeca2da9a)
     pass
 
 class 0x13ed57fb(BaseEventData):
@@ -355,7 +355,7 @@ class TftGameStartViewController(ViewController):
     GameWelcomeLocVnVn: (Hash, 0x0, 0x0, 0x0)
     BaseLoadable: (Link, 0x0, 0x0, UiPropertyLoadable)
     GameWelcomeVfxStartTimeSecs: (F32, 0x0, 0x0, 0x0)
-    0x52ce97d8: (Map, U32, String, 0x0)
+    GameStartTraMap: (Map, U32, String, 0x0)
     GameStartVfxStartTimeSecs: (F32, 0x0, 0x0, 0x0)
     MobileOverrideLoadable: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
     GameWelcomeScene: (Hash, 0x0, 0x0, 0x0)
@@ -393,7 +393,7 @@ class CheatMenuUiData():
 
 class FxActionMaterialAnimate(IFxAction):
     Target: (Embed, 0x0, 0x0, FxTarget)
-    Target: (Embed, 0x0, 0x0, 0x5c086dbd)
+    Target: (Embed, 0x0, 0x0, FxObjectSelector)
     ParameterName: (String, 0x0, 0x0, 0x0)
     FromValue: (F32, 0x0, 0x0, 0x0)
     EasingType: (U8, 0x0, 0x0, 0x0)
@@ -414,24 +414,24 @@ class TftCutsceneLegacyCamClip(TftCutsceneClip):
 
 class 0x1472ec25(IFxAction):
     Location: (Pointer, 0x0, 0x0, IFxLocation)
-    TargetObject: (Embed, 0x0, 0x0, 0x5c086dbd)
+    TargetObject: (Embed, 0x0, 0x0, FxObjectSelector)
     pass
 
 class 0x1493959a():
     0x1bb7131a: (Embed, 0x0, 0x0, 0x990115ea)
-    0x1bcb8bae: (Hash, 0x0, 0x0, 0x0)
-    0x1d481c09: (Hash, 0x0, 0x0, 0x0)
-    0x233ae74a: (Hash, 0x0, 0x0, 0x0)
-    0x285fabdf: (Hash, 0x0, 0x0, 0x0)
-    0x3fa5afea: (Hash, 0x0, 0x0, 0x0)
-    0x91680730: (Hash, 0x0, 0x0, 0x0)
-    0xe785cbfc: (Hash, 0x0, 0x0, 0x0)
+    EventPassExpText: (Hash, 0x0, 0x0, 0x0)
+    EventPassNextRewardIcon: (Hash, 0x0, 0x0, 0x0)
+    EventPassNameText: (Hash, 0x0, 0x0, 0x0)
+    EventPassNextRewardText: (Hash, 0x0, 0x0, 0x0)
+    EventPassButton: (Hash, 0x0, 0x0, 0x0)
+    EventPassCompletedText: (Hash, 0x0, 0x0, 0x0)
+    EventPassCompletedFrame: (Hash, 0x0, 0x0, 0x0)
     0xed10fe9a: (Embed, 0x0, 0x0, UiMilestoneProgressMeter)
     pass
 
-class 0x1495c79f():
+class CherryArenaData():
     0x7680caf3: (U32, 0x0, 0x0, 0x0)
-    0x86a2faf6: (String, 0x0, 0x0, 0x0)
+    ArenaDisplayNameTra: (String, 0x0, 0x0, 0x0)
     pass
 
 class ShaderLogicalParameter():
@@ -454,8 +454,8 @@ class DelayedBoolMaterialDriver(ILogicBoolDriver, IDynamicMaterialBoolDriver):
     mBoolDriver: (Pointer, 0x0, 0x0, IDynamicMaterialBoolDriver)
     pass
 
-class 0x14c5a120(0x21e5666c):
-    0x45f61269: (Hash, 0x0, 0x0, 0x0)
+class LinkedCcBehaviorData(ICcBehaviorData):
+    CcBehaviorLink: (Hash, 0x0, 0x0, 0x0)
     pass
 
 class OptionItemFilter_ClassicMusicAllowed(IOptionItemFilter):
@@ -468,7 +468,7 @@ class 0x14e5d6d8(ViewController):
     ItemSceneTemplate: (Hash, 0x0, 0x0, 0x0)
     pass
 
-class 0x14e6a52c():
+class VfxVector3fBase():
     pass
 
 class FxTableEntry():
@@ -489,13 +489,13 @@ class 0x150d1b92():
 class BehaviorScriptContainer():
     CharacterRecord: (Hash, 0x0, 0x0, 0x0)
     0x915b2238: (Hash, 0x0, 0x0, 0x0)
-    0x925b23cb: (Hash, 0x0, 0x0, 0x0)
+    BotSpell1: (Hash, 0x0, 0x0, 0x0)
     Position: (String, 0x0, 0x0, 0x0)
     BehaviorScriptList: (List2, 0x0, Hash, 0x0)
     BehaviorScriptList: (List2, 0x0, Link, BehaviorScript)
     pass
 
-class 0x151419b2(IScriptBlock, LevelScriptBlock):
+class SpawnTurret(IScriptBlock, LevelScriptBlock):
     AiUnitName: (String, 0x0, 0x0, 0x0)
     Lane: (U16, 0x0, 0x0, 0x0)
     AiGroupName: (Hash, 0x0, 0x0, 0x0)
@@ -542,7 +542,7 @@ class IsCannonMinion(IStatStoneLogicDriver):
     pass
 
 class 0x15ebaa9c(IScriptBlock):
-    0x798fbc5d: (String, 0x0, 0x0, 0x0)
+    Formula: (String, 0x0, 0x0, 0x0)
     Dest: (Embed, 0x0, 0x0, ScriptTableSet)
     pass
 
@@ -565,7 +565,7 @@ class LoadingScreenPlayerCardClassicData(LoadingScreenPlayerCardBaseData):
     CharacterSkinName: (List, 0x0, Hash, 0x0)
     CharacterSplashEmblem: (Embed, 0x0, 0x0, LoadingScreenEmblemData)
     Regalia: (Embed, 0x0, 0x0, LoadingScreenRegaliaData)
-    0x74403d5: (Hash, 0x0, 0x0, 0x0)
+    BorderScene: (Hash, 0x0, 0x0, 0x0)
     SummonerTitle: (Embed, 0x0, 0x0, LoadingScreenSummonerTitleData)
     RankedFrames: (Link, 0x0, 0x0, LoadingScreenRankedFrames)
     Perks: (List, 0x2, Embed, LoadingScreenPlayerCardClassicSpellData)
@@ -600,8 +600,8 @@ class MapNavigationMesh():
     NavMeshFileName: (String, 0x0, 0x0, 0x0)
     pass
 
-class 0x1635bdb6(0x83d6eef9):
-    Filters: (List, 0x0, Pointer, 0x83d6eef9)
+class ViewControllerListFilter_Or(ViewControllerListFilterI):
+    Filters: (List, 0x0, Pointer, ViewControllerListFilterI)
     pass
 
 class IBooleanParametricUpdater(IBaseParametricUpdater):
@@ -610,19 +610,19 @@ class IBooleanParametricUpdater(IBaseParametricUpdater):
 class IDialogPickChoice():
     pass
 
-class 0x165cc655(0x5c108a08):
+class 0x165cc655(ILolSpellScriptEvent):
     pass
 
 class 0x1668b3e5():
-    0x11ea8ce7: (Hash, 0x0, 0x0, 0x0)
+    EventPassLevelText: (Hash, 0x0, 0x0, 0x0)
     0x1bb7131a: (Embed, 0x0, 0x0, 0x8d8b1535)
-    0x1bcb8bae: (Hash, 0x0, 0x0, 0x0)
-    0x1d481c09: (Hash, 0x0, 0x0, 0x0)
-    0x233ae74a: (Hash, 0x0, 0x0, 0x0)
-    0x285fabdf: (Hash, 0x0, 0x0, 0x0)
-    0x3fa5afea: (Hash, 0x0, 0x0, 0x0)
-    0x91680730: (Hash, 0x0, 0x0, 0x0)
-    0xe785cbfc: (Hash, 0x0, 0x0, 0x0)
+    EventPassExpText: (Hash, 0x0, 0x0, 0x0)
+    EventPassNextRewardIcon: (Hash, 0x0, 0x0, 0x0)
+    EventPassNameText: (Hash, 0x0, 0x0, 0x0)
+    EventPassNextRewardText: (Hash, 0x0, 0x0, 0x0)
+    EventPassButton: (Hash, 0x0, 0x0, 0x0)
+    EventPassCompletedText: (Hash, 0x0, 0x0, 0x0)
+    EventPassCompletedFrame: (Hash, 0x0, 0x0, 0x0)
     0xed10fe9a: (Embed, 0x0, 0x0, UiMilestoneProgressMeter)
     pass
 
@@ -664,17 +664,17 @@ class MapSunProperties(MapComponent):
     HorizonColor: (Vec4, 0x0, 0x0, 0x0)
     pass
 
-class 0x169dbd93():
+class TftBanner():
     BannerTexturePath: (String, 0x0, 0x0, 0x0)
     PityThreshold: (U32, 0x0, 0x0, 0x0)
     Id: (String, 0x0, 0x0, 0x0)
-    ChaseTable: (Link, 0x0, 0x0, 0x1c759b75)
+    ChaseTable: (Link, 0x0, 0x0, TftBannerTable)
     ActivationDateTime: (String, 0x0, 0x0, 0x0)
     DeactivationDateTime: (String, 0x0, 0x0, 0x0)
     BannerCurrencyId: (String, 0x0, 0x0, 0x0)
     NameTraKey: (String, 0x0, 0x0, 0x0)
     PityCounterId: (String, 0x0, 0x0, 0x0)
-    RootTable: (Link, 0x0, 0x0, 0x1c759b75)
+    RootTable: (Link, 0x0, 0x0, TftBannerTable)
     DescriptionTraKey: (String, 0x0, 0x0, 0x0)
     MythicTokenOfferId: (String, 0x0, 0x0, 0x0)
     pass
@@ -684,7 +684,7 @@ class NotificationsPanelViewController(ViewController):
     Scene: (Hash, 0x0, 0x0, 0x0)
     ClearAllButton: (Hash, 0x0, 0x0, 0x0)
     BaseLoadable: (Link, 0x0, 0x0, UiPropertyLoadable)
-    0x67c56f9d: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
+    TabletOverrideLoadable: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
     ViewPaneDefinition: (Embed, 0x0, 0x0, ViewPaneDefinition)
     ListItemData: (Embed, 0x0, 0x0, NotificationListItemData)
     ClearAllButtonDefinition: (Hash, 0x0, 0x0, 0x0)
@@ -715,26 +715,26 @@ class ScaleByScaleSkinCoef(MissileBehaviorSpec):
 
 class UiWeeklyMissionTemplate():
     DoubleDivider: (Hash, 0x0, 0x0, 0x0)
-    0x198cb5c6: (Hash, 0x0, 0x0, 0x0)
+    ObjectiveListLayout: (Hash, 0x0, 0x0, 0x0)
     DescriptionText: (Hash, 0x0, 0x0, 0x0)
     CompletionVfx: (Hash, 0x0, 0x0, 0x0)
     DoubleBackdrop: (Hash, 0x0, 0x0, 0x0)
     SingleRewardIcon: (Hash, 0x0, 0x0, 0x0)
-    0x2a4b4fcd: (Hash, 0x0, 0x0, 0x0)
+    RewardGroup: (Hash, 0x0, 0x0, 0x0)
     SingleTitleText: (Hash, 0x0, 0x0, 0x0)
     SingleRewardFrame: (Hash, 0x0, 0x0, 0x0)
     0x34918fbe: (Embed, 0x0, 0x0, UiMissionObjectiveData)
     0x35919151: (Embed, 0x0, 0x0, UiMissionObjectiveData)
     SingleBackdrop: (Hash, 0x0, 0x0, 0x0)
-    0x3cca8edc: (Hash, 0x0, 0x0, 0x0)
+    RewardIconFrame: (Hash, 0x0, 0x0, 0x0)
     MissionObjectiveData: (Embed, 0x0, 0x0, UiMissionObjectiveData)
-    0x40589731: (Hash, 0x0, 0x0, 0x0)
+    HorizontalSpacer: (Hash, 0x0, 0x0, 0x0)
     DoubleAlertText: (Hash, 0x0, 0x0, 0x0)
     DoubleRewardFrame: (Hash, 0x0, 0x0, 0x0)
     DoubleAlertIcon: (Hash, 0x0, 0x0, 0x0)
-    0x5150acce: (Hash, 0x0, 0x0, 0x0)
+    ObjectiveLayout: (Hash, 0x0, 0x0, 0x0)
     RewardText: (Hash, 0x0, 0x0, 0x0)
-    0x5dfbbe3: (Hash, 0x0, 0x0, 0x0)
+    MissionLayout: (Hash, 0x0, 0x0, 0x0)
     Group: (Hash, 0x0, 0x0, 0x0)
     NewMissionVfx: (Hash, 0x0, 0x0, 0x0)
     RewardIcon: (Hash, 0x0, 0x0, 0x0)
@@ -746,7 +746,7 @@ class UiWeeklyMissionTemplate():
     AlertText: (Hash, 0x0, 0x0, 0x0)
     DoubleSeparatorText: (Hash, 0x0, 0x0, 0x0)
     AlertIcon: (Hash, 0x0, 0x0, 0x0)
-    0x9c572ea4: (Hash, 0x0, 0x0, 0x0)
+    RewardLayout: (Hash, 0x0, 0x0, 0x0)
     SingleExpiryText: (Hash, 0x0, 0x0, 0x0)
     DoubleExpiryText: (Hash, 0x0, 0x0, 0x0)
     DoubleSeparator: (Hash, 0x0, 0x0, 0x0)
@@ -765,12 +765,12 @@ class UiWeeklyMissionTemplate():
     pass
 
 class 0x1717869f(MapGraphicsFeature):
-    0x68067b08: (Embed, 0x0, 0x0, 0x502b0c72)
+    Settings: (Embed, 0x0, 0x0, 0x502b0c72)
     0xce8f4190: (Embed, 0x0, 0x0, 0xce8f4190)
     pass
 
 class 0x172f5c92():
-    0x14f3cff4: (Link, 0x0, 0x0, 0x5d765a43)
+    Enabler: (Link, 0x0, 0x0, IEnabler)
     pass
 
 class IGameCalculation():
@@ -792,7 +792,7 @@ class 0x1778b398():
 
 class 0x1792fdb5(ILogicFloatDriver):
     0x3a302e74: (Pointer, 0x0, 0x0, ILogicFloatDriver)
-    0xc026d1cb: (List2, 0x0, Pointer, ILogicFloatDriver)
+    ValueArray: (List2, 0x0, Pointer, ILogicFloatDriver)
     pass
 
 class FloatingTextTunables():
@@ -827,7 +827,7 @@ class VersionString():
 class TransitionMissileSpecification(MissileSpecification):
     pass
 
-class 0x17c543dc():
+class TextureOverride():
     TexturePath: (String, 0x0, 0x0, 0x0)
     pass
 
@@ -837,7 +837,7 @@ class UiPerkSummonerSpecialistSelector():
     Layout: (Hash, 0x0, 0x0, 0x0)
     pass
 
-class 0x17eb9592(0x5c108a08):
+class 0x17eb9592(ILolSpellScriptEvent):
     pass
 
 class GameModeItemList():
@@ -851,7 +851,7 @@ class BannerOptions():
     DefaultMaterial: (Link, 0x0, 0x0, IMaterialDef)
     pass
 
-class 0x1818fe10(0x5c108a08):
+class 0x1818fe10(ILolSpellScriptEvent):
     pass
 
 class 0x182cf031():
@@ -882,7 +882,7 @@ class NumberFormattingBehavior():
 class 0x18871c61():
     0x9d6e31fd: (Hash, 0x0, 0x0, 0x0)
     0xc742ceb4: (Hash, 0x0, 0x0, 0x0)
-    0xf21efab0: (List2, 0x0, Hash, 0x0)
+    BottomHrMomentumPost: (List2, 0x0, Hash, 0x0)
     pass
 
 class TargeterDefinitionMinimap(TargeterDefinition):
@@ -893,7 +893,7 @@ class TargeterDefinitionMinimap(TargeterDefinition):
     pass
 
 class 0x18bec123(Rscript):
-    Sequence: (Embed, 0x0, 0x0, 0x3641a323)
+    Sequence: (Embed, 0x0, 0x0, RootScriptSequence)
     pass
 
 class 0x18ce0cda(IFxActionInstance):
@@ -907,8 +907,8 @@ class TftConditionalTraitSetData(TftBaseTraitSetData):
     Style: (U8, 0x0, 0x0, 0x0)
     pass
 
-class 0x18f1fc92():
-    0x14f3cff4: (Link, 0x0, 0x0, 0x5d765a43)
+class ConfigString():
+    Enabler: (Link, 0x0, 0x0, IEnabler)
     Value: (String, 0x0, 0x0, 0x0)
     pass
 
@@ -977,9 +977,9 @@ class HudEmotePopupData():
     pass
 
 class 0x1a4d18fe(ISequenceAction):
-    0x1138adb4: (Bool, 0x0, 0x0, 0x0)
-    0x4f4d3bf7: (Pointer, 0x0, 0x0, 0xe561be2e)
-    0x6852dace: (Bool, 0x0, 0x0, 0x0)
+    EnableOnEnd: (Bool, 0x0, 0x0, 0x0)
+    Element: (Pointer, 0x0, 0x0, 0xe561be2e)
+    DisableOnStart: (Bool, 0x0, 0x0, 0x0)
     pass
 
 class 0x1a4d9bd(ICharacterSubcondition):
@@ -994,8 +994,8 @@ class UiElementIconData(UiElementAssetData):
     mColor: (Color, 0x0, 0x0, 0x0)
     mUseAlpha: (Bool, 0x0, 0x0, 0x0)
     mMaterial: (Link, 0x0, 0x0, StaticMaterialDef)
-    0x8fde0428: (Bool, 0x0, 0x0, 0x0)
-    0xbadf029a: (Pointer, 0x0, 0x0, IconElementDataExtension)
+    UseAlpha: (Bool, 0x0, 0x0, 0x0)
+    Extension: (Pointer, 0x0, 0x0, IconElementDataExtension)
     Material: (Link, 0x0, 0x0, StaticMaterialDef)
     TextureData: (Pointer, 0x0, 0x0, IUiTextureDataProvider)
     PerPixelUvsX: (Bool, 0x0, 0x0, 0x0)
@@ -1035,7 +1035,7 @@ class UiMetricClash(UiMetricTypeI):
     ClashFrameMirror: (Hash, 0x0, 0x0, 0x0)
     pass
 
-class 0x1a8a8853(0x5c108a08):
+class 0x1a8a8853(ILolSpellScriptEvent):
     pass
 
 class UiElementToggle():
@@ -1049,7 +1049,7 @@ class 0x1aaa358b(0x6ca3cfd):
 
 class 0x1aae122(0x377491e8):
     0x7863785e: (F32, 0x0, 0x0, 0x0)
-    0x9ef5b2e0: (F32, 0x0, 0x0, 0x0)
+    MaxOffsetDelta: (F32, 0x0, 0x0, 0x0)
     MinDistance: (F32, 0x0, 0x0, 0x0)
     MaxDistance: (F32, 0x0, 0x0, 0x0)
     pass
@@ -1059,12 +1059,12 @@ class TriggerOnHit(MissileTriggerSpec):
 
 class 0x1ab4d045(0x2b00c366):
     0x2484d6c3: (Bool, 0x0, 0x0, 0x0)
-    0xc79493aa: (Link, 0x0, 0x0, TftDamageSkin)
+    Boom: (Link, 0x0, 0x0, TftDamageSkin)
     pass
 
 class UiPositionPolygon(UiPositionRect):
     Polygon: (List, 0x0, Vec2, 0x0)
-    0x52477462: (List2, 0x0, Vec2, 0x0)
+    PolygonVertices: (List2, 0x0, Vec2, 0x0)
     pass
 
 class TftMapShopData():
@@ -1156,7 +1156,7 @@ class HudLoadingScreenCarouselData():
     BodyTraKey: (String, 0x0, 0x0, 0x0)
     pass
 
-class 0x1c12183d(0x2efc296d):
+class 0x1c12183d(ITftBehaviorScriptEvent):
     pass
 
 class BuffStackingTemplate():
@@ -1191,7 +1191,7 @@ class 0x1c55e499(IScriptBlock, IBehaviorScriptBlock):
 
 class 0x1c5e3bb6(0x2b00c366):
     0x2484d6c3: (Bool, 0x0, 0x0, 0x0)
-    0xe4a127f: (Link, 0x0, 0x0, CompanionData)
+    Tactician: (Link, 0x0, 0x0, CompanionData)
     pass
 
 class CustomTableContainsValueBlock(IScriptBlock):
@@ -1204,29 +1204,29 @@ class CustomTableContainsValueBlock(IScriptBlock):
     CustomTable: (Embed, 0x0, 0x0, CustomTableGet)
     pass
 
-class 0x1c73bda5():
-    0x3250c257: (List2, 0x0, Pointer, 0x8a40e45d)
+class CharacterQuestObjective():
+    ObjectiveRewardList: (List2, 0x0, Pointer, CharacterQuestReward)
     0x42cd1140: (List2, 0x0, Hash, 0x0)
     0x856d8176: (List2, 0x0, Pointer, 0xa495afda)
-    0xcbca11f6: (List2, 0x0, Pointer, 0x8a40e45d)
+    0xcbca11f6: (List2, 0x0, Pointer, CharacterQuestReward)
     0xf7c78187: (List2, 0x0, Pointer, 0xa495afda)
-    0xf948299b: (Hash, 0x0, 0x0, 0x0)
+    ObjectiveName: (Hash, 0x0, 0x0, 0x0)
     pass
 
-class 0x1c759b75(0x1fe3bf63):
-    Children: (List, 0x0, Embed, 0xafb64ec3)
+class TftBannerTable(TftBannerNode):
+    Children: (List, 0x0, Embed, TftBannerTableEntry)
     pass
 
 class MapNavGrid(MapComponent):
-    0x2da963dd: (Embed, 0x0, 0x0, 0x2da963dd)
+    RegionBoundaryConfig: (Embed, 0x0, 0x0, RegionBoundaryConfig)
     0x34ffd0bd: (Bool, 0x0, 0x0, 0x0)
-    0xbdc90544: (Link, 0x0, 0x0, 0xbdc90544)
+    NavGridConfig: (Link, 0x0, 0x0, NavGridConfig)
     NavGridPath: (String, 0x0, 0x0, 0x0)
     pass
 
 class SyncCircleMovement(MissileMovementSpec):
     mRotateAroundCasterFacingDirection: (Bool, 0x0, 0x0, 0x0)
-    maxisOfRotation: (U8, 0x0, 0x0, 0x0)
+    mAxisOfRotation: (U8, 0x0, 0x0, 0x0)
     mAngularVelocity: (F32, 0x0, 0x0, 0x0)
     mLifetime: (F32, 0x0, 0x0, 0x0)
     pass
@@ -1237,7 +1237,7 @@ class TftTrovesCelebrationThemeData():
     CurrencySegmentData: (Embed, 0x0, 0x0, TftTrovesCelebrationCurrencySegmentData)
     PortalSegmentData: (Embed, 0x0, 0x0, TftTrovesCelebrationChestSegmentData)
     StandardSegmentData: (Embed, 0x0, 0x0, TftTrovesCelebrationStandardSegmentData)
-    0xef7286c1: (Bool, 0x0, 0x0, 0x0)
+    UseSequencer: (Bool, 0x0, 0x0, 0x0)
     pass
 
 class MapPlaceableName():
@@ -1251,7 +1251,7 @@ class SequenceLocationAttachment(ISequenceLocation):
     pass
 
 class AiUnitGroup():
-    0x8d11c272: (Map, String, Embed, AiBuildingConfig)
+    Buildings: (Map, String, Embed, AiBuildingConfig)
     Units: (Map, String, Embed, AiUnitConfig)
     Units: (Map, String, Pointer, AiUnitConfigBase)
     pass
@@ -1278,7 +1278,7 @@ class TargetLaserComponentEffects():
 
 class 0x1d54119c():
     XpRequired: (U32, 0x0, 0x0, 0x0)
-    0xf4a16502: (List2, 0x0, Pointer, 0xb639bddc)
+    BattlepassRewards: (List2, 0x0, Pointer, 0xb639bddc)
     pass
 
 class EmotesViewController(ViewController):
@@ -1329,21 +1329,21 @@ class TftModeData():
     mDefaultTftCompanion: (Hash, 0x0, 0x0, 0x0)
     mDragBlendTime: (F32, 0x0, 0x0, 0x0)
     mMobileDragData: (Embed, 0x0, 0x0, TftDragData)
-    0xd07745a5: (Link, 0x0, 0x0, TftSetData)
+    EventSetData: (Link, 0x0, 0x0, TftSetData)
     0xd0c165ba: (Hash, 0x0, 0x0, 0x0)
     mClickTimeMul: (F32, 0x0, 0x0, 0x0)
     DefaultSetData: (Link, 0x0, 0x0, TftSetData)
     GroupSurrenderVoterCount: (U32, 0x0, 0x0, 0x0)
     MinHealthAfterLossForgiven: (I32, 0x0, 0x0, 0x0)
-    0xdb236bac: (List, 0x0, Hash, 0x0)
+    EncounterTagOptions: (List, 0x0, Hash, 0x0)
     SurrenderVoteCompleteEliminateDelaySec: (F32, 0x0, 0x0, 0x0)
     HexToRangeMap: (List, 0x0, Embed, TftHexToRangeTranslation)
     mClickDistanceExp: (F32, 0x0, 0x0, 0x0)
     MemoryReportMinimalSet: (Link, 0x0, 0x0, TftSetData)
-    0xf381ba6a: (String, 0x0, 0x0, 0x0)
+    mTftDamageSkinScriptDefault: (String, 0x0, 0x0, 0x0)
     pass
 
-class 0x1d786017(0x5c108a08):
+class 0x1d786017(ILolSpellScriptEvent):
     pass
 
 class HudTooltipAdjustments():
@@ -1368,7 +1368,7 @@ class VfxSoftParticleDefinitionData():
     pass
 
 class 0x1db6d987(ILogicBoolDriver):
-    0x5150a6a1: (Link, 0x0, 0x0, 0x121b48aa)
+    VisibilityController: (Link, 0x0, 0x0, IMapVisibilityController)
     pass
 
 class ContextualActionTriggerEvent(IContextualAction):
@@ -1408,12 +1408,12 @@ class AnnouncementDefinitionData():
     EnemyElements: (Hash, 0x0, 0x0, 0x0)
     pass
 
-class 0x1dffbaa3(DebugPrintToChatBlock, IBehaviorScriptBlock):
-    0x1934e46f: (Pointer, 0x0, 0x0, BoolGet)
-    0x1934e46f: (Pointer, 0x0, 0x0, IBoolGet)
-    0x894727e2: (Pointer, 0x0, 0x0, BoolGet)
-    0x894727e2: (Pointer, 0x0, 0x0, IBoolGet)
-    0x98aff484: (Embed, 0x0, 0x0, DebugPrintToChatBlock)
+class BehaviorDebugPrintToChatBlock(DebugPrintToChatBlock, IBehaviorScriptBlock):
+    ExecutePrint: (Pointer, 0x0, 0x0, BoolGet)
+    ExecutePrint: (Pointer, 0x0, 0x0, IBoolGet)
+    ReturnSuccess: (Pointer, 0x0, 0x0, BoolGet)
+    ReturnSuccess: (Pointer, 0x0, 0x0, IBoolGet)
+    ChatBlock: (Embed, 0x0, 0x0, DebugPrintToChatBlock)
     pass
 
 class HudHealthBarProgressiveTickData():
@@ -1431,11 +1431,11 @@ class HealthBarTickStyleHero(HealthBarTickStyleBase):
 class MasteryData():
     Texture: (String, 0x0, 0x0, 0x0)
     LevelTraKey: (String, 0x0, 0x0, 0x0)
-    0xd516b033: (String, 0x0, 0x0, 0x0)
+    TextureMini: (String, 0x0, 0x0, 0x0)
     DetailsTraKey: (String, 0x0, 0x0, 0x0)
     pass
 
-class ForEachInCustomTableBlock(IScriptBlock, 0x4359be6):
+class ForEachInCustomTableBlock(IScriptBlock, ILoopScriptBlock):
     Sequence: (Embed, 0x0, 0x0, ScriptSequence)
     SortedByKeys: (Bool, 0x0, 0x0, 0x0)
     SortedByKeys: (Pointer, 0x0, 0x0, IBoolGet)
@@ -1464,7 +1464,7 @@ class FloatPerSpellLevel():
     mPerLevelValues: (List, 0x6, F32, 0x0)
     pass
 
-class 0x1e6c47fe(IDynamicMaterialFloatDriver, ILogicFloatDriver):
+class GetFxObjectDynamicMaterialFloatDriver(IDynamicMaterialFloatDriver, ILogicFloatDriver):
     mKeyName: (String, 0x0, 0x0, 0x0)
     pass
 
@@ -1480,7 +1480,7 @@ class UiAbilityPromptAnimData():
     PulseStartColor: (Color, 0x0, 0x0, 0x0)
     pass
 
-class 0x1eb9b37a(0x5c108a08):
+class 0x1eb9b37a(ILolSpellScriptEvent):
     pass
 
 class CooldownMultiplierCalculationPart(IGameCalculationPart, ISpellCalculationPart):
@@ -1520,9 +1520,9 @@ class PfxComplexEmitterDefinitionData():
     pass
 
 class 0x1f8480d8(IScriptBlock):
-    0x19ccdde: (Pointer, 0x0, 0x0, IStringGet)
-    0x745628e5: (Embed, 0x0, 0x0, IntTableSet)
-    0x81c1bdb1: (Pointer, 0x0, 0x0, IStringGet)
+    InputString: (Pointer, 0x0, 0x0, IStringGet)
+    FoundIndex: (Embed, 0x0, 0x0, IntTableSet)
+    TargetString: (Pointer, 0x0, 0x0, IStringGet)
     pass
 
 class 0x1f8db674(MissileBehaviorSpec):
@@ -1531,7 +1531,7 @@ class 0x1f8db674(MissileBehaviorSpec):
 class TftBannerIconData():
     Button: (Hash, 0x0, 0x0, 0x0)
     Group: (Hash, 0x0, 0x0, 0x0)
-    0xdcabd2fa: (Embed, 0x0, 0x0, 0x6241da2)
+    NewPip: (Embed, 0x0, 0x0, 0x6241da2)
     Icon: (Hash, 0x0, 0x0, 0x0)
     pass
 
@@ -1566,7 +1566,7 @@ class VfxBeamDefinitionData():
 class PlayerPositionDynamicMaterialDriver(IDynamicMaterialDriver, ILogicDriver):
     pass
 
-class 0x1fe3bf63():
+class TftBannerNode():
     Id: (String, 0x0, 0x0, 0x0)
     Name: (String, 0x0, 0x0, 0x0)
     pass
@@ -1582,12 +1582,12 @@ class ExponentSubPartsCalculationPart(IGameCalculationPart):
     Part2: (Pointer, 0x0, 0x0, IGameCalculationPart)
     pass
 
-class 0x202c6c9():
+class UiSceneData():
     mName: (String, 0x0, 0x0, 0x0)
     mHandleInputDuringPause: (Bool, 0x0, 0x0, 0x0)
     mHealthBar: (Bool, 0x0, 0x0, 0x0)
     Enabled: (Bool, 0x0, 0x0, 0x0)
-    0x36da862e: (Bool, 0x0, 0x0, 0x0)
+    HandleInputDuringPause: (Bool, 0x0, 0x0, 0x0)
     0x49d8f2c4: (Bool, 0x0, 0x0, 0x0)
     mEnabled: (Bool, 0x0, 0x0, 0x0)
     Layer: (U32, 0x0, 0x0, 0x0)
@@ -1595,8 +1595,8 @@ class 0x202c6c9():
     SceneTransitionOut: (Pointer, 0x0, 0x0, SceneBaseTransitionData)
     SceneTransitionIn: (Pointer, 0x0, 0x0, SceneBaseTransitionData)
     Name: (String, 0x0, 0x0, 0x0)
-    mParentScene: (Link, 0x0, 0x0, 0x202c6c9)
-    ParentScene: (Link, 0x0, 0x0, 0x202c6c9)
+    mParentScene: (Link, 0x0, 0x0, UiSceneData)
+    ParentScene: (Link, 0x0, 0x0, UiSceneData)
     InheritScissoring: (Bool, 0x0, 0x0, 0x0)
     pass
 
@@ -1610,7 +1610,7 @@ class LobbyPlayerData():
     LoadoutsFrame: (Hash, 0x0, 0x0, 0x0)
     0x7ec3f9ad: (Hash, 0x0, 0x0, 0x0)
     SummonerIconFrame: (Hash, 0x0, 0x0, 0x0)
-    0x8982f06e: (Hash, 0x0, 0x0, 0x0)
+    RandomLoadoutButton: (Hash, 0x0, 0x0, 0x0)
     RankText: (Hash, 0x0, 0x0, 0x0)
     LittleLegendIcon: (Hash, 0x0, 0x0, 0x0)
     EditButton: (Hash, 0x0, 0x0, 0x0)
@@ -1657,7 +1657,7 @@ class CooldownGemUiData():
     pass
 
 class HeroFloatingInfoBorderData():
-    0x35b3c516: (Pointer, 0x0, 0x0, 0xded67873)
+    ResistBorders: (Pointer, 0x0, 0x0, HeroFloatingInfoResistBorderData)
     HasAttachedAllyBorder: (Pointer, 0x0, 0x0, HeroFloatingInfoBorderTypeData)
     LevelTextColorSelfColorblind: (Color, 0x0, 0x0, 0x0)
     LevelTextColorEnemy: (Color, 0x0, 0x0, 0x0)
@@ -1676,7 +1676,7 @@ class OffScreenPoiConfigData():
     DownscaleBezier: (Vec4, 0x0, 0x0, 0x0)
     BezierMaxSize: (F32, 0x0, 0x0, 0x0)
     DownscaleTime: (F32, 0x0, 0x0, 0x0)
-    0x4a0b5bb4: (List, 0x0, Embed, 0x228de4db)
+    OffscreenCamps: (List, 0x0, Embed, OffScreenPoiCamp)
     OffscreenPings: (List, 0x0, Embed, OffScreenPoiPing)
     IntroBezier: (Vec4, 0x0, 0x0, 0x0)
     EdgeBuffer: (U32, 0x0, 0x0, 0x0)
@@ -1685,8 +1685,8 @@ class OffScreenPoiConfigData():
     IntroTime: (F32, 0x0, 0x0, 0x0)
     pass
 
-class 0x2088c90c():
-    0x2458369c: (String, 0x0, 0x0, 0x0)
+class TftPassAsset():
+    IconTexturePath: (String, 0x0, 0x0, 0x0)
     InternalName: (String, 0x0, 0x0, 0x0)
     IconNeedsFrame: (Bool, 0x0, 0x0, 0x0)
     pass
@@ -1715,10 +1715,10 @@ class BuffModifier():
     pass
 
 class 0x209fa685():
-    0x1bdb4474: (Hash, 0x0, 0x0, 0x0)
-    0xac8ff38b: (String, 0x0, 0x0, 0x0)
-    0xb849355a: (List2, 0x0, Hash, 0x0)
-    0xbc9567c6: (U32, 0x0, 0x0, 0x0)
+    UiBar: (Hash, 0x0, 0x0, 0x0)
+    RewardSoundEvent: (String, 0x0, 0x0, 0x0)
+    UiElements: (List2, 0x0, Hash, 0x0)
+    Points: (U32, 0x0, 0x0, 0x0)
     0xcebbf565: (Hash, 0x0, 0x0, 0x0)
     pass
 
@@ -1727,7 +1727,7 @@ class IResource():
 
 class 0x20b66cd9():
     0x6eb7250f: (List2, 0x0, Embed, 0x50714aa1)
-    0xa2f9bba4: (Embed, 0x0, 0x0, 0x12b69e95)
+    Planning: (Embed, 0x0, 0x0, 0x12b69e95)
     pass
 
 class ElementGroupFramedData(ElementGroupData):
@@ -1752,25 +1752,25 @@ class FxActionContinue(IFxAction):
 class IEnvironmentShadingModel(0x38a77cab, IX3dShadingModel):
     pass
 
-class 0x21426d5a(IFloatParametricUpdater):
+class ArenaOwnerLevelParametricUpdater(IFloatParametricUpdater):
     pass
 
-class 0x215d037d():
+class TftTraitInfoCard():
     0x3eedfe4f: (Bool, 0x0, 0x0, 0x0)
-    0x4c285a2f: (Hash, 0x0, 0x0, 0x0)
+    UnitGridLink: (Hash, 0x0, 0x0, 0x0)
     TraitName: (Hash, 0x0, 0x0, 0x0)
-    0x6771125d: (Hash, 0x0, 0x0, 0x0)
+    CardScene: (Hash, 0x0, 0x0, 0x0)
     0x7b313643: (Bool, 0x0, 0x0, 0x0)
     PortraitRegion: (Hash, 0x0, 0x0, 0x0)
     0x7f4a4a4: (Bool, 0x0, 0x0, 0x0)
-    0x833fc1c: (Hash, 0x0, 0x0, 0x0)
+    CardSceneAnchor: (Hash, 0x0, 0x0, 0x0)
     TraitIcon: (Hash, 0x0, 0x0, 0x0)
     ResizableBackdrop: (Hash, 0x0, 0x0, 0x0)
     HorizontalRule: (Hash, 0x0, 0x0, 0x0)
     TraitDescription: (Hash, 0x0, 0x0, 0x0)
     HudTraitUnitSlotTemplate: (Embed, 0x0, 0x0, TftHudTraitUnitSlotData)
-    0xe8a36b45: (Hash, 0x0, 0x0, 0x0)
-    0xf63a5820: (Hash, 0x0, 0x0, 0x0)
+    TraitFooterPadding: (Hash, 0x0, 0x0, 0x0)
+    TraitFooter: (Hash, 0x0, 0x0, 0x0)
     HudTraitUnitSlotBorders: (Embed, 0x0, 0x0, TftHudTraitUnitSlotBorders)
     pass
 
@@ -1779,8 +1779,8 @@ class ParallelClipData(ClipBaseData):
     mClipIndexList: (List, 0x0, U32, 0x0)
     pass
 
-class 0x21695480(0x83d6eef9):
-    Filter: (Pointer, 0x0, 0x0, 0x83d6eef9)
+class ViewControllerListFilter_Not(ViewControllerListFilterI):
+    Filter: (Pointer, 0x0, 0x0, ViewControllerListFilterI)
     pass
 
 class VfxPrimitiveTrailBase(VfxPrimitiveBase):
@@ -1807,7 +1807,7 @@ class TftArmoryActionButtonData():
     ActionButton: (Hash, 0x0, 0x0, 0x0)
     DynamicNumericTextDisabledColor: (Color, 0x0, 0x0, 0x0)
     0x4ca9e6c0: (Color, 0x0, 0x0, 0x0)
-    0x5c715f43: (String, 0x0, 0x0, 0x0)
+    DynamicNumericTextTra: (String, 0x0, 0x0, 0x0)
     DynamicNumericText: (Hash, 0x0, 0x0, 0x0)
     0xabef78e0: (Color, 0x0, 0x0, 0x0)
     NumericText: (Hash, 0x0, 0x0, 0x0)
@@ -1817,7 +1817,7 @@ class TftArmoryActionButtonData():
     DisableOnAction: (Bool, 0x0, 0x0, 0x0)
     pass
 
-class 0x21e5666c():
+class ICcBehaviorData():
     pass
 
 class SpellSlotDetailedUiDefinition(SpellSlotPassiveUiDefinition):
@@ -1836,15 +1836,15 @@ class SpellSlotDetailedUiDefinition(SpellSlotPassiveUiDefinition):
     OverlayCced: (Hash, 0x0, 0x0, 0x0)
     TimerBarBg: (Hash, 0x0, 0x0, 0x0)
     TimerBarFx: (Hash, 0x0, 0x0, 0x0)
-    0xc93009e4: (Hash, 0x0, 0x0, 0x0)
+    ResetFlashFx: (Hash, 0x0, 0x0, 0x0)
     BuffTimer: (Pointer, 0x0, 0x0, SpellSlotBuffTimerData)
     Cost: (Hash, 0x0, 0x0, 0x0)
     AmmoText: (Hash, 0x0, 0x0, 0x0)
     CooldownGem: (Pointer, 0x0, 0x0, CooldownGemUiData)
     pass
 
-class 0x222662c1():
-    0xea472d7e: (List2, 0x0, String, 0x0)
+class TftMissionList():
+    Missions: (List2, 0x0, String, 0x0)
     pass
 
 class ItemAdviceAttribute():
@@ -1870,7 +1870,7 @@ class ScriptTableGet(IScriptValueGet):
     Var: (String, 0x0, 0x0, 0x0)
     pass
 
-class 0x223e46b7(BaseElementData):
+class UiAssetElementData(BaseElementData):
     pass
 
 class TftItemPanelViewController(ViewController):
@@ -1891,18 +1891,18 @@ class GetNextBuildingInLaneBlock(IScriptBlock):
     RelativeIndex: (Pointer, 0x0, 0x0, IIntGet)
     pass
 
-class 0x228de4db():
+class OffScreenPoiCamp():
     TextField: (U8, 0x0, 0x0, 0x0)
-    0x68c0f16a: (Bool, 0x0, 0x0, 0x0)
+    ShowIfOnScreen: (Bool, 0x0, 0x0, 0x0)
     MaxDistanceFromCenterOfScreen: (U32, 0x0, 0x0, 0x0)
-    0xbe6c1727: (Bool, 0x0, 0x0, 0x0)
-    0xcaa78dfd: (U8, 0x0, 0x0, 0x0)
+    ShowDistance: (Bool, 0x0, 0x0, 0x0)
+    AnchorTo: (U8, 0x0, 0x0, 0x0)
     Frame: (Hash, 0x0, 0x0, 0x0)
     Icon: (Hash, 0x0, 0x0, 0x0)
     DurationSecs: (F32, 0x0, 0x0, 0x0)
     pass
 
-class 0x228fa61a(ScriptTableSet):
+class FloatArrayTableSet(ScriptTableSet):
     pass
 
 class ContextualRule():
@@ -1914,7 +1914,7 @@ class ContextualRule():
     CanStompSelf: (Bool, 0x0, 0x0, 0x0)
     StompLowerPriority: (Bool, 0x0, 0x0, 0x0)
     CooldownModifications: (Pointer, 0x0, 0x0, ContextualActionCooldownModifications)
-    0xc9969515: (F32, 0x0, 0x0, 0x0)
+    ChanceWeight: (F32, 0x0, 0x0, 0x0)
     mTriggerEventAction: (Pointer, 0x0, 0x0, ContextualActionTriggerEvent)
     mAudioAction: (Pointer, 0x0, 0x0, IContextualAction)
     mAudioAction: (Pointer, 0x0, 0x0, ContextualActionPlayAudio)
@@ -2032,27 +2032,27 @@ class 0x22fa35f4(ViewController):
     TitleText: (Hash, 0x0, 0x0, 0x0)
     pass
 
-class 0x231dd1a2():
+class ElementDataI():
     mName: (String, 0x0, 0x0, 0x0)
     mScene: (Link, 0x0, 0x0, SceneData)
     pass
 
-class 0x232464eb():
+class FxSfxBeamEvent():
     EventName: (String, 0x0, 0x0, 0x0)
-    AudioSource: (Embed, 0x0, 0x0, 0x5c086dbd)
+    AudioSource: (Embed, 0x0, 0x0, FxObjectSelector)
     UseCharacterTags: (Bool, 0x0, 0x0, 0x0)
     pass
 
 class TftMobileLoginData():
     Scene: (Hash, 0x0, 0x0, 0x0)
     Group: (Hash, 0x0, 0x0, 0x0)
-    0x66109013: (Map, U32, Hash, 0x0)
+    RegionalLogoMapping: (Map, U32, Hash, 0x0)
     UsernameText: (Hash, 0x0, 0x0, 0x0)
-    0x7bc052ba: (Hash, 0x0, 0x0, 0x0)
+    VnLogo: (Hash, 0x0, 0x0, 0x0)
     StatusText: (Hash, 0x0, 0x0, 0x0)
     PasswordText: (Hash, 0x0, 0x0, 0x0)
-    0xcbe4dd63: (Hash, 0x0, 0x0, 0x0)
-    0xec950741: (Hash, 0x0, 0x0, 0x0)
+    TwLogo: (Hash, 0x0, 0x0, 0x0)
+    DefaultLogo: (Hash, 0x0, 0x0, 0x0)
     pass
 
 class WallSlidingPrototype(MissileBehaviorSpec):
@@ -2093,7 +2093,7 @@ class CharacterRecord():
     AreaIndicatorTextureSize: (F32, 0x0, 0x0, 0x0)
     AttackSpeedPerLevel: (F32, 0x0, 0x0, 0x0)
     CharAudioNameOverride: (String, 0x0, 0x0, 0x0)
-    Script: (Pointer, 0x0, 0x0, 0xb60f0432)
+    Script: (Pointer, 0x0, 0x0, CharScript)
     MinionFlags: (U32, 0x0, 0x0, 0x0)
     HoverIndicatorRotateToPlayer: (Bool, 0x0, 0x0, 0x0)
     CriticalAttack: (String, 0x0, 0x0, 0x0)
@@ -2327,7 +2327,7 @@ class ItemData():
     mFlatMovementSpeedMod: (F32, 0x0, 0x0, 0x0)
     PercentPhysicalVampMod: (F32, 0x0, 0x0, 0x0)
     mDataValues: (List, 0x0, Embed, ItemDataValue)
-    Script: (Pointer, 0x0, 0x0, 0xcfce5be5)
+    Script: (Pointer, 0x0, 0x0, ItemScript)
     m_PercentMagicPenetrationModPerLevel: (F32, 0x0, 0x0, 0x0)
     ItemVoGroup: (Hash, 0x0, 0x0, 0x0)
     ItemVoGroup: (String, 0x0, 0x0, 0x0)
@@ -2348,7 +2348,7 @@ class ItemData():
     ItemGroup: (String, 0x0, 0x0, 0x0)
     mPercentHpRegenMod: (F32, 0x0, 0x0, 0x0)
     mRequiredAlly: (String, 0x0, 0x0, 0x0)
-    0x4308c416: (Map, Hash, Pointer, 0x83212e16)
+    StringCalculations: (Map, Hash, Pointer, IStringCalculation)
     mRequiredBuffCurrencyCost: (I32, 0x0, 0x0, 0x0)
     mPercentArmorPenetrationMod: (F32, 0x0, 0x0, 0x0)
     SellBackModifier: (F32, 0x0, 0x0, 0x0)
@@ -2398,7 +2398,7 @@ class ItemData():
     CustomExclusions: (List, 0x0, String, 0x0)
     m_FlatHpModPerLevel: (F32, 0x0, 0x0, 0x0)
     mFlatPhysicalReduction: (F32, 0x0, 0x0, 0x0)
-    0x7cddeb87: (List2, 0x0, Hash, 0x0)
+    RecommendationTags: (List2, 0x0, Hash, 0x0)
     mMajorActiveItem: (Bool, 0x0, 0x0, 0x0)
     ConsumeOnAcquire: (Bool, 0x0, 0x0, 0x0)
     SpellName: (String, 0x0, 0x0, 0x0)
@@ -2441,7 +2441,7 @@ class ItemData():
     mItemModifiers: (List, 0x0, Link, ItemModifier)
     mPercentMovementSpeedMod: (F32, 0x0, 0x0, 0x0)
     PercentOmnivampMod: (F32, 0x0, 0x0, 0x0)
-    0xb821026a: (F32, 0x0, 0x0, 0x0)
+    PhysicalLethality: (F32, 0x0, 0x0, 0x0)
     mFlatDodgeMod: (F32, 0x0, 0x0, 0x0)
     mFlatSpellBlockMod: (F32, 0x0, 0x0, 0x0)
     mRequiredLevel: (I32, 0x0, 0x0, 0x0)
@@ -2519,7 +2519,7 @@ class FxType():
 
 class 0x2483c715():
     BaseLoadable: (Hash, 0x0, 0x0, 0x0)
-    0x6f2b10db: (Hash, 0x0, 0x0, 0x0)
+    MobileLoadable: (Hash, 0x0, 0x0, 0x0)
     pass
 
 class 0x24c7aea():
@@ -2532,24 +2532,24 @@ class TooltipInstanceKeyword(TooltipInstance):
 
 class TftLobbyViewController(LobbyViewController):
     0x354d2b95: (Hash, 0x0, 0x0, 0x0)
-    0x4178b606: (Hash, 0x0, 0x0, 0x0)
+    ReadyCheckDeclineVfx: (Hash, 0x0, 0x0, 0x0)
     LabPopupHitRegion: (Hash, 0x0, 0x0, 0x0)
     0x47aa5f76: (Hash, 0x0, 0x0, 0x0)
     LeaderControls: (Embed, 0x0, 0x0, LobbyLeaderControls)
     LobbyLayouts: (Map, U8, Pointer, LobbyLayout)
-    0x67ba1a3e: (Map, String, Embed, LobbyLabFields)
+    EventTypeFields: (Map, String, Embed, LobbyLabFields)
     RatedOnlyTraKey: (String, 0x0, 0x0, 0x0)
-    0x8cc833d1: (Embed, 0x0, 0x0, LobbyLabFields)
+    SoulfighterField: (Embed, 0x0, 0x0, LobbyLabFields)
     RankOnlyTraKey: (String, 0x0, 0x0, 0x0)
-    0xa5d8d968: (Hash, 0x0, 0x0, 0x0)
+    ReadyCheckAcceptVfx: (Hash, 0x0, 0x0, 0x0)
     PopupHitRegion: (Hash, 0x0, 0x0, 0x0)
     CustomButtonPopupViewController: (Link, 0x0, 0x0, TftLobbyCustomButtonPopupViewController)
     RankAndRatedTraKey: (String, 0x0, 0x0, 0x0)
     0xc20a812c: (Link, 0x0, 0x0, 0xdbede580)
     DoubleUpFullLobbyEnabled: (Bool, 0x0, 0x0, 0x0)
-    0xe1128817: (Hash, 0x0, 0x0, 0x0)
+    ReadyCheckTimerVfx: (Hash, 0x0, 0x0, 0x0)
     0xe31300f: (Hash, 0x0, 0x0, 0x0)
-    0xe397d18b: (Map, Hash, Embed, 0xb2c5db9d)
+    0xe397d18b: (Map, Hash, Embed, TftLobbyCustomAssets)
     GameTypeFields: (Map, U32, Embed, LobbyLabFields)
     0xf0a2677: (Hash, 0x0, 0x0, 0x0)
     BottomButtons: (Embed, 0x0, 0x0, LobbyBottomButtons)
@@ -2564,7 +2564,7 @@ class 0x24e1cb45():
 class ScriptTable():
     pass
 
-class 0x24f4a711(0xf9ded696):
+class 0x24f4a711(SelectSpellBlock):
     pass
 
 class 0x24fc182b(0xa24429bf):
@@ -2573,12 +2573,12 @@ class 0x24fc182b(0xa24429bf):
     FovBone: (String, 0x0, 0x0, 0x0)
     pass
 
-class 0x250bc9c6():
-    0x47acdd27: (Hash, 0x0, 0x0, 0x0)
-    0x54432b65: (Embed, 0x0, 0x0, 0x2cb7a6b5)
-    0x7041bc3f: (Hash, 0x0, 0x0, 0x0)
-    0x7319f5bd: (Embed, 0x0, 0x0, 0xee28fb8d)
-    0xd4ecb75c: (List2, 0x0, Embed, 0xd232712d)
+class DisplayStatsUiData():
+    BasicLayout: (Hash, 0x0, 0x0, 0x0)
+    BasicStatUi: (Embed, 0x0, 0x0, DisplayBasicStatUiData)
+    DetailedLayout: (Hash, 0x0, 0x0, 0x0)
+    DetailedStatUi: (Embed, 0x0, 0x0, 0xee28fb8d)
+    DisplayStats: (List2, 0x0, Embed, DisplayStatUiData)
     pass
 
 class BannerData():
@@ -2597,7 +2597,7 @@ class RefundAbilityPointsCheat(Cheat):
     pass
 
 class ObjectTags():
-    0xa47810c1: (List2, 0x0, Hash, 0x0)
+    mObjectTagList: (List2, 0x0, Hash, 0x0)
     mTagList: (String, 0x0, 0x0, 0x0)
     pass
 
@@ -2608,13 +2608,13 @@ class 0x252c22fd():
     pass
 
 class 0x253f5ab(0x64c18f7d):
-    0x85d8a7e8: (F32, 0x0, 0x0, 0x0)
-    0x876c4a35: (F32, 0x0, 0x0, 0x0)
+    Cooldown: (F32, 0x0, 0x0, 0x0)
+    PushDuration: (F32, 0x0, 0x0, 0x0)
     0x901d5b0c: (F32, 0x0, 0x0, 0x0)
-    0x9bf0527a: (F32, 0x0, 0x0, 0x0)
-    0xa3f03b49: (F32, 0x0, 0x0, 0x0)
+    PushDistance: (F32, 0x0, 0x0, 0x0)
+    ConeAngle: (F32, 0x0, 0x0, 0x0)
     0xc9cbfa01: (F32, 0x0, 0x0, 0x0)
-    0xcfd5f4c8: (F32, 0x0, 0x0, 0x0)
+    ConeRadius: (F32, 0x0, 0x0, 0x0)
     pass
 
 class IBlock():
@@ -2638,13 +2638,13 @@ class TftPlaybook(BaseLoadoutData):
     LateAugments: (List2, 0x0, Hash, 0x0)
     Name: (String, 0x0, 0x0, 0x0)
     BuffName: (String, 0x0, 0x0, 0x0)
-    0x94d00b55: (Map, U8, String, 0x0)
+    EarlyAugmentNames: (Map, U8, String, 0x0)
     VfxResourceResolver: (Hash, 0x0, 0x0, 0x0)
-    0xb84bcddc: (Map, U8, String, 0x0)
-    0xbcd36c7f: (String, 0x0, 0x0, 0x0)
+    LateAugmentNames: (Map, U8, String, 0x0)
+    RotationThrottler: (String, 0x0, 0x0, 0x0)
     0xbf351f86: (Bool, 0x0, 0x0, 0x0)
-    0xbfa63898: (Map, U8, String, 0x0)
-    0xdf6bd61c: (String, 0x0, 0x0, 0x0)
+    MidAugmentNames: (Map, U8, String, 0x0)
+    LeagueClientSmallIconPath: (String, 0x0, 0x0, 0x0)
     Unit: (Hash, 0x0, 0x0, 0x0)
     MidAugments: (List2, 0x0, Hash, 0x0)
     LargeLoadoutsIcon: (String, 0x0, 0x0, 0x0)
@@ -2669,7 +2669,7 @@ class TftCombatRecapViewController(ViewController):
     BaseBinName: (String, 0x0, 0x0, 0x0)
     pass
 
-class 0x2563f75a(0xd4f5c384):
+class TftBannerLoadoutReward(TftBannerReward):
     LoadoutsItem: (Link, 0x0, 0x0, BaseLoadoutData)
     pass
 
@@ -2735,7 +2735,7 @@ class 0x25fe6ccb(UiMetricTypeI):
 
 class TftArmorySlotData():
     ItemFootprintSelectedVfx: (Hash, 0x0, 0x0, 0x0)
-    0x1c6c7513: (Hash, 0x0, 0x0, 0x0)
+    RadiantItemButton: (Hash, 0x0, 0x0, 0x0)
     RecipeHintButton: (Hash, 0x0, 0x0, 0x0)
     ItemIconBordered: (Hash, 0x0, 0x0, 0x0)
     DefaultItemButton: (Hash, 0x0, 0x0, 0x0)
@@ -2747,14 +2747,14 @@ class TftArmorySlotData():
     ShadowItemButton: (Hash, 0x0, 0x0, 0x0)
     0x7a1e4997: (Hash, 0x0, 0x0, 0x0)
     NormalItemButton: (Hash, 0x0, 0x0, 0x0)
-    0x802a142c: (U8, 0x0, 0x0, 0x0)
+    ItemAction: (U8, 0x0, 0x0, 0x0)
     ItemIconShadow: (Hash, 0x0, 0x0, 0x0)
     Traits: (List, 0x0, Embed, TftArmoryItemTraitData)
     DesaturateOnInactive: (List, 0x0, Hash, 0x0)
     BadgeData: (Embed, 0x0, 0x0, TftArmoryBadgeDisplayData)
     ItemDesc: (Hash, 0x0, 0x0, 0x0)
     ItemFootprintUnselectedVfx: (Hash, 0x0, 0x0, 0x0)
-    0xaabd3ce8: (Hash, 0x0, 0x0, 0x0)
+    ItemActionButton: (Hash, 0x0, 0x0, 0x0)
     IconMaskRegion: (Hash, 0x0, 0x0, 0x0)
     DefaultButtonStyle: (Embed, 0x0, 0x0, TftArmoryButtonStyleData)
     CharacterTierGroups: (List, 0x0, Hash, 0x0)
@@ -2769,7 +2769,7 @@ class FeatureId():
     mFeatureId: (String, 0x0, 0x0, 0x0)
     pass
 
-class 0x261afc7b(IScriptBlock):
+class SortCustomTableBlock(IScriptBlock):
     Table: (Embed, 0x0, 0x0, CustomTableGet)
     pass
 
@@ -2797,8 +2797,8 @@ class 0x26435b25(ViewController):
 class EnemyRespawnTimersViewController(ViewController):
     Scene: (Hash, 0x0, 0x0, 0x0)
     BaseLoadable: (Link, 0x0, 0x0, UiPropertyLoadable)
-    0x59c6a802: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
-    PortraitData: (List, 0x5, Embed, 0xaad8e7d2)
+    FlippedMinimapOverride: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
+    PortraitData: (List, 0x5, Embed, ScoreLinePortraitUiData)
     PortraitData: (List, 0x5, Embed, UiPlayerPortraitData)
     0x949bbb90: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
     ObjectName: (String, 0x0, 0x0, 0x0)
@@ -2818,7 +2818,7 @@ class DropRateSlot():
     Text: (Hash, 0x0, 0x0, 0x0)
     pass
 
-class 0x2667586c():
+class ICharacterQuestReward():
     pass
 
 class TftStreak():
@@ -2839,22 +2839,22 @@ class SummonerEmoteManagerSettings():
 class 0x26917ba6(TftPassRewardBase):
     0x2484d6c3: (Bool, 0x0, 0x0, 0x0)
     Type: (String, 0x0, 0x0, 0x0)
-    0xddf28636: (Link, 0x0, 0x0, 0x28b2b2ea)
+    Currency: (Link, 0x0, 0x0, TftCurrency)
     pass
 
 class 0x26949c34():
-    0x256ea259: (U8, 0x0, 0x0, 0x0)
+    ButtonType: (U8, 0x0, 0x0, 0x0)
     Id: (U32, 0x0, 0x0, 0x0)
     Name: (String, 0x0, 0x0, 0x0)
-    0xdff003b3: (Hash, 0x0, 0x0, 0x0)
+    ButtonElement: (Hash, 0x0, 0x0, 0x0)
     pass
 
 class TftGameStartSequenceSimple(TftGameStartSequence):
-    Events: (List2, 0x0, Embed, 0xa4036762)
+    Events: (List2, 0x0, Embed, TftGameStartSequenceSimpleEvent)
     Duration: (F32, 0x0, 0x0, 0x0)
     MainScene: (Hash, 0x0, 0x0, 0x0)
     GameStartVfx: (Hash, 0x0, 0x0, 0x0)
-    0xde9583a3: (F32, 0x0, 0x0, 0x0)
+    TotalDurationSecs: (F32, 0x0, 0x0, 0x0)
     pass
 
 class ClearAlreadyHitTrackingOnMovementComplete(MissileBehaviorSpec):
@@ -2889,7 +2889,7 @@ class UnitShopItemFrameData():
     Default: (Hash, 0x0, 0x0, 0x0)
     pass
 
-class 0x274447fc(ViewController):
+class CherryEliminationViewController(ViewController):
     0x156acc5e: (F32, 0x0, 0x0, 0x0)
     Scene: (Hash, 0x0, 0x0, 0x0)
     BaseLoadable: (Link, 0x0, 0x0, UiPropertyLoadable)
@@ -2979,9 +2979,9 @@ class TargeterDefinitionSpline(TargeterDefinition):
 
 class 0x27f036af(0x64c18f7d):
     0x5d1c6fe9: (Bool, 0x0, 0x0, 0x0)
-    0x9a3785c9: (F32, 0x0, 0x0, 0x0)
-    0xb679bbae: (F32, 0x0, 0x0, 0x0)
-    0xcc81b3d2: (F32, 0x0, 0x0, 0x0)
+    StartMoveSpeed: (F32, 0x0, 0x0, 0x0)
+    LerpTimeSeconds: (F32, 0x0, 0x0, 0x0)
+    EndMoveSpeed: (F32, 0x0, 0x0, 0x0)
     pass
 
 class 0x280745b1():
@@ -2998,7 +2998,7 @@ class ProgressBarViewController(ViewController):
     ObjectName: (String, 0x0, 0x0, 0x0)
     pass
 
-class 0x2820c167():
+class VfxMaterialDefinitionData():
     MaterialDrivers: (Map, String, Pointer, IVfxMaterialDriver)
     Material: (Link, 0x0, 0x0, IMaterialDef)
     pass
@@ -3010,8 +3010,8 @@ class HudReplaySlider():
     SliderBackdrop: (Hash, 0x0, 0x0, 0x0)
     pass
 
-class 0x2848d6a0(0x5d765a43):
-    0x82cfb185: (List2, 0x0, Pointer, 0x5d765a43)
+class 0x2848d6a0(IEnabler):
+    Enablers: (List2, 0x0, Pointer, IEnabler)
     pass
 
 class RecSpellRecommendations():
@@ -3023,8 +3023,8 @@ class VfxPrimitiveCameraTrail(VfxPrimitiveTrailBase):
     pass
 
 class 0x288b8edc():
-    0x35e8662f: (List, 0x4, Hash, 0x0)
-    0x35e8662f: (List, 0x4, Link, SpellObject)
+    SpellObjects: (List, 0x4, Hash, 0x0)
+    SpellObjects: (List, 0x4, Link, SpellObject)
     0x40a9978e: (Bool, 0x0, 0x0, 0x0)
     pass
 
@@ -3039,15 +3039,15 @@ class TestMap(WadFileDescriptor):
     AdditionalRoots: (List, 0x0, String, 0x0)
     pass
 
-class 0x28b2b2ea():
+class TftCurrency():
     CurrencyId: (String, 0x0, 0x0, 0x0)
     Rarity: (U32, 0x0, 0x0, 0x0)
     0x5f944701: (String, 0x0, 0x0, 0x0)
     NameTraKey: (String, 0x0, 0x0, 0x0)
     RewardTexturePath: (String, 0x0, 0x0, 0x0)
-    0x7a3fea92: (Hash, 0x0, 0x0, 0x0)
+    TrovesHighlightVfx: (Hash, 0x0, 0x0, 0x0)
     0x8e2a4357: (Hash, 0x0, 0x0, 0x0)
-    0xe6014d27: (String, 0x0, 0x0, 0x0)
+    TrovesRewardTexturePath: (String, 0x0, 0x0, 0x0)
     pass
 
 class 0x28be1dfd():
@@ -3081,10 +3081,10 @@ class UiTeamMemberData():
     HealthMeter: (Pointer, 0x0, 0x0, HealthBarData)
     SummonerSpellSlots: (Pointer, 0x0, 0x0, ScoreLineSpellSlots)
     0x1d924766: (Pointer, 0x0, 0x0, 0x37a8385c)
-    0x1d95af94: (Pointer, 0x0, 0x0, 0x6c84152e)
+    ObjectivePlanningIcon: (Pointer, 0x0, 0x0, 0x6c84152e)
     UltimateCooldownGem: (Pointer, 0x0, 0x0, CooldownGemUiData)
     Portrait: (Embed, 0x0, 0x0, UiPlayerPortraitData)
-    0x409b10ec: (Hash, 0x0, 0x0, 0x0)
+    ReciprocityOverlay: (Hash, 0x0, 0x0, 0x0)
     VoiceChatHalo: (Hash, 0x0, 0x0, 0x0)
     Group: (Hash, 0x0, 0x0, 0x0)
     ParMeter: (Pointer, 0x0, 0x0, AbilityResourceBarData)
@@ -3101,7 +3101,7 @@ class KillAllTurretsCheat(Cheat):
 class BlendedLinearHeightSolver(HeightSolverType):
     pass
 
-class 0x29505c77(UiElementEffect):
+class UiElementInstancedEffect(UiElementEffect):
     pass
 
 class 0x296338f8(0x377491e8):
@@ -3122,14 +3122,14 @@ class RecallDecalData():
     ArrivalEffectFile: (String, 0x0, 0x0, 0x0)
     pass
 
-class 0x297c5518():
-    Properties: (List, 0x0, Link, 0x5cf82f9b)
+class MilestoneDefinition():
+    Properties: (List, 0x0, Link, IMilestoneProperty)
     Id: (String, 0x0, 0x0, 0x0)
-    0x637a2000: (I32, 0x0, 0x0, 0x0)
+    TriggerValue: (I32, 0x0, 0x0, 0x0)
     Name: (String, 0x0, 0x0, 0x0)
     IsPremium: (Bool, 0x0, 0x0, 0x0)
-    0x9cacde23: (Link, 0x0, 0x0, 0x8776327e)
-    0xe8d89b4: (U32, 0x0, 0x0, 0x0)
+    Counter: (Link, 0x0, 0x0, CounterDefinition)
+    MilestoneSize: (U32, 0x0, 0x0, 0x0)
     pass
 
 class ContextualActionPlayVo(ContextualActionPlayAudio):
@@ -3150,7 +3150,7 @@ class TargeterDefinitionAoeScalar():
     pass
 
 class 0x29ec74eb(VfxSpawnConditionData):
-    0x27dba09a: (Pointer, 0x0, 0x0, ILogicBoolDriver)
+    CasterCondition: (Pointer, 0x0, 0x0, ILogicBoolDriver)
     OwnerCondition: (Pointer, 0x0, 0x0, ILogicBoolDriver)
     pass
 
@@ -3167,7 +3167,7 @@ class EsportsRotatingBannerConfiguration():
     LeagueRotatingFlavors: (List, 0x0, Embed, LeagueRotatingFlavor)
     AssociatedTeams: (List, 0x0, String, 0x0)
     IsAnEvent: (Bool, 0x0, 0x0, 0x0)
-    0xda47e35: (F32, 0x0, 0x0, 0x0)
+    GlobalRotationTime: (F32, 0x0, 0x0, 0x0)
     DefaultBannerTexturePath: (File, 0x0, 0x0, 0x0)
     TexturePath: (File, 0x0, 0x0, 0x0)
     EventMutator: (Link, 0x0, 0x0, GameMutatorExpansions)
@@ -3190,15 +3190,15 @@ class OptionTemplateHotkeys(IOptionTemplate):
 
 class 0x2a2c82dc():
     Inputs: (List2, 0x0, Pointer, IScriptValueGet)
-    0xfc881855: (List2, 0x0, Pointer, ScriptTableSet)
+    Outputs: (List2, 0x0, Pointer, ScriptTableSet)
     pass
 
 class IntGet(IIntGet, IScriptValueGet):
     Value: (I32, 0x0, 0x0, 0x0)
     pass
 
-class 0x2a4ec840(MapComponent):
-    0x4474405: (Bool, 0x0, 0x0, 0x0)
+class MapMinimap(MapComponent):
+    MinimapEnabled: (Bool, 0x0, 0x0, 0x0)
     TexturePath: (String, 0x0, 0x0, 0x0)
     pass
 
@@ -3208,7 +3208,7 @@ class 0x2a598565(TftFinisherData):
     TargetIdleAnimation: (Hash, 0x0, 0x0, 0x0)
     OutroVfx: (String, 0x0, 0x0, 0x0)
     StopAudioEventName: (String, 0x0, 0x0, 0x0)
-    0x49d66b61: (List2, 0x0, Embed, 0x28be1dfd)
+    PostFxData: (List2, 0x0, Embed, 0x28be1dfd)
     0x567421af: (List2, 0x0, Embed, 0x24fc182b)
     CameraBone: (String, 0x0, 0x0, 0x0)
     0x721f9044: (String, 0x0, 0x0, 0x0)
@@ -3256,8 +3256,8 @@ class 0x2a98259f(0xb0e1e45e):
 
 class 0x2aa61eb4():
     SourceIcon: (Hash, 0x0, 0x0, 0x0)
-    0xa8a9c03: (Hash, 0x0, 0x0, 0x0)
-    0xf18979da: (Hash, 0x0, 0x0, 0x0)
+    CenterKnownSourceIcon: (Hash, 0x0, 0x0, 0x0)
+    CenterActiveSourceIcon: (Hash, 0x0, 0x0, 0x0)
     pass
 
 class MinimapBackgroundConfig():
@@ -3271,7 +3271,7 @@ class FxActionAlpha(IFxAction):
     EasingType: (U8, 0x0, 0x0, 0x0)
     TargetAlpha: (F32, 0x0, 0x0, 0x0)
     TargetObject: (Embed, 0x0, 0x0, FxTarget)
-    TargetObject: (Embed, 0x0, 0x0, 0x5c086dbd)
+    TargetObject: (Embed, 0x0, 0x0, FxObjectSelector)
     ResetOnEnd: (Bool, 0x0, 0x0, 0x0)
     pass
 
@@ -3334,10 +3334,10 @@ class TeamFramesViewController(ViewController):
     Scene: (Hash, 0x0, 0x0, 0x0)
     0x25f3de6e: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
     BaseLoadable: (Link, 0x0, 0x0, UiPropertyLoadable)
-    0x59c6a802: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
+    FlippedMinimapOverride: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
     TeamFrameTemplate: (Embed, 0x0, 0x0, UiTeamMemberData)
     Layout: (Hash, 0x0, 0x0, 0x0)
-    0xf931aa40: (Pointer, 0x0, 0x0, 0xc9566499)
+    ReciprocityButton: (Pointer, 0x0, 0x0, HudReciprocityButton)
     pass
 
 class FxSequence():
@@ -3361,12 +3361,12 @@ class RegaliaRatedBadgeMap():
 class 0x2bcba3b4(ISequenceActionInstance):
     pass
 
-class 0x2bd190dd(IScriptBlock):
+class ContinueBlock(IScriptBlock):
     pass
 
 class 0x2bde0c9c(0x8e30b80e):
-    0x115175ef: (Bool, 0x0, 0x0, 0x0)
-    0x7ecd0c01: (Vec3, 0x0, 0x0, 0x0)
+    OrientOffset: (Bool, 0x0, 0x0, 0x0)
+    OffsetVector: (Vec3, 0x0, 0x0, 0x0)
     pass
 
 class CastOnMovementCompleteSpec(MissileBehaviorSpec):
@@ -3408,32 +3408,32 @@ class TftTrovesViewController(ViewController):
     MythicTokenButton: (Hash, 0x0, 0x0, 0x0)
     TftBannerIconData: (Embed, 0x0, 0x0, TftBannerIconData)
     Scene: (Hash, 0x0, 0x0, 0x0)
-    0x2117434f: (Pointer, 0x0, 0x0, 0xa48aca10)
+    UrgentBannerTimer: (Pointer, 0x0, 0x0, TftEventTimer)
     BannerList: (Hash, 0x0, 0x0, 0x0)
     SubtitleText: (Hash, 0x0, 0x0, 0x0)
     ActiveBannerIcon: (Hash, 0x0, 0x0, 0x0)
     BaseLoadable: (Link, 0x0, 0x0, UiPropertyLoadable)
-    0x3f851f9d: (Pointer, 0x0, 0x0, 0xa48aca10)
-    0x435830f8: (Hash, 0x0, 0x0, 0x0)
+    DefaultBannerTimer: (Pointer, 0x0, 0x0, TftEventTimer)
+    MoreInfoClickRegion: (Hash, 0x0, 0x0, 0x0)
     NoActiveBannersIcon: (Hash, 0x0, 0x0, 0x0)
-    0x494e73ac: (Hash, 0x0, 0x0, 0x0)
+    Roll10TextDisable: (Hash, 0x0, 0x0, 0x0)
     FailureIcon: (Hash, 0x0, 0x0, 0x0)
     MoreInfoButton: (Hash, 0x0, 0x0, 0x0)
-    0x5ca6f7d0: (Hash, 0x0, 0x0, 0x0)
-    0x67c56f9d: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
+    Roll10Text: (Hash, 0x0, 0x0, 0x0)
+    TabletOverrideLoadable: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
     ActiveBannerParent: (Hash, 0x0, 0x0, 0x0)
     FailureTitleTraKey: (String, 0x0, 0x0, 0x0)
     Roll1Button: (Hash, 0x0, 0x0, 0x0)
-    0x90d74224: (Pointer, 0x0, 0x0, 0xa48aca10)
+    BannerTimer: (Pointer, 0x0, 0x0, TftEventTimer)
     FailureText: (Hash, 0x0, 0x0, 0x0)
     Roll10Button: (Hash, 0x0, 0x0, 0x0)
-    0xbb5bf1ae: (Hash, 0x0, 0x0, 0x0)
-    0xbb64ee4d: (Hash, 0x0, 0x0, 0x0)
+    Roll1TextDisable: (Hash, 0x0, 0x0, 0x0)
+    DefaultPlatform: (Hash, 0x0, 0x0, 0x0)
     NoContentSubtitleTraKey: (String, 0x0, 0x0, 0x0)
     NoContentTitleTraKey: (String, 0x0, 0x0, 0x0)
-    0xd2f6d7d: (Hash, 0x0, 0x0, 0x0)
-    0xd34f2c66: (Hash, 0x0, 0x0, 0x0)
-    0xdbc00b43: (Hash, 0x0, 0x0, 0x0)
+    CustomPlatform: (Hash, 0x0, 0x0, 0x0)
+    Roll1Text: (Hash, 0x0, 0x0, 0x0)
+    BannerBackground: (Hash, 0x0, 0x0, 0x0)
     MythicTokenText: (Hash, 0x0, 0x0, 0x0)
     TitleText: (Hash, 0x0, 0x0, 0x0)
     pass
@@ -3486,11 +3486,11 @@ class FloatingTextTypeList():
     PhysicalDamage: (Link, 0x0, 0x0, FloatTextFormattingData)
     pass
 
-class 0x2caa513c(TftCutsceneVfxClip):
+class TftCutsceneBeamVfxClip(TftCutsceneVfxClip):
     HideWhenNotViewed: (Bool, 0x0, 0x0, 0x0)
     BlackboardTargetObject: (String, 0x0, 0x0, 0x0)
-    0x95377d77: (Pointer, 0x0, 0x0, 0x9d97d657)
-    0xd8b7f07c: (Pointer, 0x0, 0x0, 0x9d97d657)
+    Startpoint: (Pointer, 0x0, 0x0, TftCutscenePositionProvider)
+    Endpoint: (Pointer, 0x0, 0x0, TftCutscenePositionProvider)
     pass
 
 class HudHealthBarDefenseModifierData():
@@ -3500,12 +3500,12 @@ class HudHealthBarDefenseModifierData():
     DefenseDownL1Percent: (F32, 0x0, 0x0, 0x0)
     pass
 
-class 0x2cb7a6b5():
-    0x1c351dfb: (Hash, 0x0, 0x0, 0x0)
-    0x24e4cc78: (Hash, 0x0, 0x0, 0x0)
-    0x346a1164: (Hash, 0x0, 0x0, 0x0)
-    0x6849532d: (Hash, 0x0, 0x0, 0x0)
-    0x732aab4c: (Hash, 0x0, 0x0, 0x0)
+class DisplayBasicStatUiData():
+    BasicStatAmount: (Hash, 0x0, 0x0, 0x0)
+    BasicIcon: (Hash, 0x0, 0x0, 0x0)
+    BasicGroup: (Hash, 0x0, 0x0, 0x0)
+    BasicHoverRegion: (Hash, 0x0, 0x0, 0x0)
+    BasicStatName: (Hash, 0x0, 0x0, 0x0)
     pass
 
 class PfxAnimatedVector2fVariableData():
@@ -3545,7 +3545,7 @@ class ElementGroupSliderData(ElementGroupData):
     SliderClickedState: (Embed, 0x0, 0x0, ElementGroupSliderState)
     SliderHitRegion: (Link, 0x0, 0x0, RegionElementData)
     SliderHoveredState: (Embed, 0x0, 0x0, ElementGroupSliderState)
-    SoundEvents: (Pointer, 0x0, 0x0, 0xaf7ac937)
+    SoundEvents: (Pointer, 0x0, 0x0, ElementGroupSliderSoundEvents)
     BarHoveredState: (Embed, 0x0, 0x0, ElementGroupSliderState)
     DefaultState: (Embed, 0x0, 0x0, ElementGroupSliderState)
     Direction: (U8, 0x0, 0x0, 0x0)
@@ -3576,7 +3576,7 @@ class DynamicMaterialDef(IMaterialDef):
     SourceMaterial: (Link, 0x0, 0x0, StaticMaterialDef)
     pass
 
-class 0x2d8b5833(0x5fb6e936):
+class TftTextInfoNubData(TftInfoNubData):
     BodyKey: (String, 0x0, 0x0, 0x0)
     TitleKey: (String, 0x0, 0x0, 0x0)
     pass
@@ -3587,7 +3587,7 @@ class 0x2da50c9f():
     OnDragStartEvent: (String, 0x0, 0x0, 0x0)
     pass
 
-class 0x2da963dd():
+class RegionBoundaryConfig():
     0x240ebb1b: (U8, 0x0, 0x0, 0x0)
     0xb9ace82c: (F32, 0x0, 0x0, 0x0)
     0xbec32eb5: (F32, 0x0, 0x0, 0x0)
@@ -3617,12 +3617,12 @@ class ISplineInfo():
     pass
 
 class LoadingScreenClassicViewController(LoadingScreenBasicViewController):
-    0x3ecc7226: (Link, 0x0, 0x0, UiPropertyLoadable)
+    ClashLoadable: (Link, 0x0, 0x0, UiPropertyLoadable)
     Clash: (Embed, 0x0, 0x0, LoadingScreenClash)
     0xf2af7d00: (Hash, 0x0, 0x0, 0x0)
     pass
 
-class VfxAnimatedVector2fVariableData(0x42dc7bd1):
+class VfxAnimatedVector2fVariableData(VfxVector2fBase):
     Values: (List, 0x0, Vec2, 0x0)
     Times: (List, 0x0, F32, 0x0)
     ProbabilityTables: (List, 0x2, Pointer, VfxProbabilityTableData)
@@ -3648,20 +3648,20 @@ class ContextualConditionAnyOtherHero(IContextualCondition):
     mChildConditions: (List, 0x0, Pointer, ICharacterSubcondition)
     pass
 
-class 0x2efc296d(0xebc572c3):
+class ITftBehaviorScriptEvent(IScriptBtEvent):
     pass
 
-class 0x2efdcf99():
-    0x5a4e3636: (Hash, 0x0, 0x0, 0x0)
+class TftCharacterRoleCardItem():
+    RecipeGroup: (Hash, 0x0, 0x0, 0x0)
     Group: (Hash, 0x0, 0x0, 0x0)
     ComponentIcons: (List, 0x2, Hash, 0x0)
     ItemIcon: (Hash, 0x0, 0x0, 0x0)
     pass
 
-class 0x2f0c3844(ScriptTable):
+class InstanceVars(ScriptTable):
     pass
 
-class 0x2f165570(0x5c108a08):
+class 0x2f165570(ILolSpellScriptEvent):
     pass
 
 class FloatDefaultTableGet(IFloatGet):
@@ -3720,7 +3720,7 @@ class PackManagerData():
     0x377491e8: (Pointer, 0x0, 0x0, 0x377491e8)
     RankToFormationMap: (Map, U32, Embed, PackFormationData)
     UiTargetForgivenessRange: (F32, 0x0, 0x0, 0x0)
-    0x71a473ba: (F32, 0x0, 0x0, 0x0)
+    TargetForgivenessRange: (F32, 0x0, 0x0, 0x0)
     BuffOverrides: (List, 0x0, Link, SpellObject)
     0x879eb9a2: (String, 0x0, 0x0, 0x0)
     OnLeaderMoveFollowerAnimation: (Hash, 0x0, 0x0, 0x0)
@@ -3744,9 +3744,9 @@ class FunctionTableGet(ScriptTableGet, IFunctionGet):
     pass
 
 class MapCubemapProbe(MapPlaceable):
-    0x5150a6a1: (Link, 0x0, 0x0, 0x121b48aa)
+    VisibilityController: (Link, 0x0, 0x0, IMapVisibilityController)
     CubemapProbeScale: (F32, 0x0, 0x0, 0x0)
-    0x717180fb: (Hash, 0x0, 0x0, 0x0)
+    CubemapProbeGroup: (Hash, 0x0, 0x0, 0x0)
     CubemapRegion: (Pointer, 0x0, 0x0, MapCubemapRegion)
     CubemapProbePath: (String, 0x0, 0x0, 0x0)
     pass
@@ -3778,7 +3778,7 @@ class TftCharacterRecord(CharacterRecord):
     mManaPerAttack: (F32, 0x0, 0x0, 0x0)
     BoardCountContribution: (U8, 0x0, 0x0, 0x0)
     mMoveHeight: (F32, 0x0, 0x0, 0x0)
-    0xb6b01440: (Link, 0x0, 0x0, TftCharacterRoleData)
+    CharacterRole: (Link, 0x0, 0x0, TftCharacterRoleData)
     0xbb71cb89: (Bool, 0x0, 0x0, 0x0)
     CharacterRoles: (List, 0x1, Link, TftCharacterRoleData)
     CharacterRoles: (List, 0x2, Link, TftCharacterRoleData)
@@ -3787,7 +3787,7 @@ class TftCharacterRecord(CharacterRecord):
     OmitFromMatchHistory: (Bool, 0x0, 0x0, 0x0)
     mMoveInterval: (F32, 0x0, 0x0, 0x0)
     mShopData: (Link, 0x0, 0x0, TftShopData)
-    0xec296e87: (List2, 0x0, Hash, 0x0)
+    LinkedUnits: (List2, 0x0, Hash, 0x0)
     mUsesAbilityPower: (Bool, 0x0, 0x0, 0x0)
     PortraitIcon: (String, 0x0, 0x0, 0x0)
     ShowItemsUnsorted: (Bool, 0x0, 0x0, 0x0)
@@ -3796,8 +3796,8 @@ class TftCharacterRecord(CharacterRecord):
     pass
 
 class 0x304e703f():
-    0x40469c43: (Hash, 0x0, 0x0, 0x0)
-    0x40469c43: (Link, 0x0, 0x0, Champion)
+    OwnerChampion: (Hash, 0x0, 0x0, 0x0)
+    OwnerChampion: (Link, 0x0, 0x0, Champion)
     pass
 
 class 0x30aa7360():
@@ -3807,15 +3807,15 @@ class LearnedSpellDynamicMaterialBoolDriver(ILogicBoolDriver, IDynamicMaterialBo
     mSlot: (U8, 0x0, 0x0, 0x0)
     pass
 
-class 0x30f0efe0(Rscript):
+class GameScript(Rscript):
     PreloadData: (Embed, 0x0, 0x0, LolSpellPreloadData)
-    0x454a414e: (Map, Hash, Embed, ScriptFunction)
-    CustomSequences: (Map, Hash, Embed, 0x3641a323)
+    Functions: (Map, Hash, Embed, ScriptFunction)
+    CustomSequences: (Map, Hash, Embed, RootScriptSequence)
     CustomSequences: (Map, Hash, Embed, ScriptSequence)
     ScriptName: (String, 0x0, 0x0, 0x0)
     IsEnabled: (Bool, 0x0, 0x0, 0x0)
     GlobalProperties: (Embed, 0x0, 0x0, ScriptGlobalProperties)
-    Sequences: (Map, Hash, Embed, 0x3641a323)
+    Sequences: (Map, Hash, Embed, RootScriptSequence)
     Sequences: (Map, Hash, Embed, ScriptSequence)
     pass
 
@@ -3860,13 +3860,13 @@ class ShaderTexture():
 class 0x31f7aded(ISequenceActionInstance):
     pass
 
-class 0x31fd952a(0x7d3206d):
+class VfxShapeVolume(IVfxShape):
     Flags: (U8, 0x0, 0x0, 0x0)
     pass
 
 class 0x31ff922d():
     0x37efaba6: (Bool, 0x0, 0x0, 0x0)
-    0xeb302eba: (U8, 0x0, 0x0, 0x0)
+    RoundDamage: (U8, 0x0, 0x0, 0x0)
     0xecf20ef8: (U8, 0x0, 0x0, 0x0)
     pass
 
@@ -3891,7 +3891,7 @@ class ScoreboardViewController(ViewController):
     0xb01c9387: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
     Team1SwapDragTarget: (Hash, 0x0, 0x0, 0x0)
     Team1ReportModalAnchor: (Hash, 0x0, 0x0, 0x0)
-    0xd016d45c: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
+    DragonUiLoadable: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
     SummonerSocialCard: (Pointer, 0x0, 0x0, UiSummonerSocialCardData)
     Team2ReportModalAnchor: (Hash, 0x0, 0x0, 0x0)
     Team2EnemyGlow: (Hash, 0x0, 0x0, 0x0)
@@ -3927,7 +3927,7 @@ class Target(TargetingTypeData):
     pass
 
 class LoadoutDamageSkinInfoPanel(ILoadoutInfoPanel):
-    0x51ed69a7: (Hash, 0x0, 0x0, 0x0)
+    GamePassIcon: (Hash, 0x0, 0x0, 0x0)
     UnownedTierButton: (List, 0x3, Hash, 0x0)
     RarityIcon: (List, 0x5, Hash, 0x0)
     TierButton: (List, 0x3, Hash, 0x0)
@@ -3981,7 +3981,7 @@ class TftPassCurrencyInfo():
 class ResourceMeterBaseData():
     pass
 
-class 0x32ef34c3():
+class TftTierEntry():
     Count: (I32, 0x0, 0x0, 0x0)
     ShopData: (Link, 0x0, 0x0, TftShopData)
     pass
@@ -4019,7 +4019,7 @@ class SequenceTableEntry():
     pass
 
 class IconLink():
-    0x31ff34b: (Hash, 0x0, 0x0, 0x0)
+    ClickedIcon: (Hash, 0x0, 0x0, 0x0)
     ActiveIcon: (Hash, 0x0, 0x0, 0x0)
     DisabledIcon: (Hash, 0x0, 0x0, 0x0)
     pass
@@ -4083,9 +4083,9 @@ class BuffDisplayList():
     MaxBuffDisplayCount: (U32, 0x0, 0x0, 0x0)
     pass
 
-class 0x34274458():
+class CharacterQuestDefinitionsData():
     0x869c3e32: (List2, 0x0, Pointer, 0x7b40445f)
-    0xa2bf8c3e: (String, 0x0, 0x0, 0x0)
+    QuestName: (String, 0x0, 0x0, 0x0)
     IsEnabled: (Bool, 0x0, 0x0, 0x0)
     pass
 
@@ -4113,18 +4113,18 @@ class ContextualConditionSpellSlot(IContextualConditionSpell, IContextualConditi
     pass
 
 class 0x349845d9(ViewControllerFilterI):
-    0x438850ff: (String, 0x0, 0x0, 0x0)
+    TftSetData: (String, 0x0, 0x0, 0x0)
     pass
 
 class 0x34cca270():
-    0x115bfcb9: (Hash, 0x0, 0x0, 0x0)
+    Subtitle: (Hash, 0x0, 0x0, 0x0)
     Button: (Hash, 0x0, 0x0, 0x0)
-    0x43c6ee46: (Hash, 0x0, 0x0, 0x0)
-    0x5d831fc: (Hash, 0x0, 0x0, 0x0)
+    ModalUpperLeftAnchor: (Hash, 0x0, 0x0, 0x0)
+    ButtonIcon: (Hash, 0x0, 0x0, 0x0)
     Group: (Hash, 0x0, 0x0, 0x0)
-    0x61edf0f9: (Hash, 0x0, 0x0, 0x0)
+    TitleBackground: (Hash, 0x0, 0x0, 0x0)
     Title: (Hash, 0x0, 0x0, 0x0)
-    0x9f40f2a9: (Hash, 0x0, 0x0, 0x0)
+    SubtitleBackground: (Hash, 0x0, 0x0, 0x0)
     ButtonIcons: (List2, 0x0, Hash, 0x0)
     pass
 
@@ -4141,7 +4141,7 @@ class ContextualConditionKillCount(IContextualCondition):
 
 class 0x34f43159(0x6ca3cfd):
     0x3a302e74: (Pointer, 0x0, 0x0, ILogicFloatDriver)
-    0xc026d1cb: (List2, 0x0, Pointer, 0x6ca3cfd)
+    ValueArray: (List2, 0x0, Pointer, 0x6ca3cfd)
     pass
 
 class TerrainType(TargetingTypeData):
@@ -4158,12 +4158,12 @@ class OverridePerkSelectionSet():
 
 class 0x3519dc31():
     0x125ffd9b: (F32, 0x0, 0x0, 0x0)
-    0x141669d6: (Hash, 0x0, 0x0, 0x0)
+    CameoPortraitIcon: (Hash, 0x0, 0x0, 0x0)
     0x6c42f089: (Hash, 0x0, 0x0, 0x0)
     0x93412050: (Hash, 0x0, 0x0, 0x0)
-    0xb186288e: (Hash, 0x0, 0x0, 0x0)
+    CameoTooltipAnchor: (Hash, 0x0, 0x0, 0x0)
     0xb26cff08: (Hash, 0x0, 0x0, 0x0)
-    0xdc2df35f: (Hash, 0x0, 0x0, 0x0)
+    CameoPortraitRegion: (Hash, 0x0, 0x0, 0x0)
     0xf02bce06: (Hash, 0x0, 0x0, 0x0)
     0xfc5bf017: (Hash, 0x0, 0x0, 0x0)
     pass
@@ -4192,26 +4192,26 @@ class 0x359681d9(0x87a6a884):
 
 class CherryScoreboardViewController(ViewController):
     MainTooltipAnchor: (Hash, 0x0, 0x0, 0x0)
-    0x29df69f3: (List2, 0x0, Hash, 0x0)
-    0x315f77b5: (Pointer, 0x0, 0x0, 0x8444401a)
+    TeamBanners: (List2, 0x0, Hash, 0x0)
+    MatchupHistoryData: (Pointer, 0x0, 0x0, 0x8444401a)
     ScoreboardScene: (Hash, 0x0, 0x0, 0x0)
     BaseLoadable: (Link, 0x0, 0x0, UiPropertyLoadable)
-    0x43bf4874: (List, 0x0, Hash, 0x0)
-    0x43bf4874: (List2, 0x0, Hash, 0x0)
-    0x7654b55d: (Hash, 0x0, 0x0, 0x0)
+    TeamPositions: (List, 0x0, Hash, 0x0)
+    TeamPositions: (List2, 0x0, Hash, 0x0)
+    ReportModalAnchor: (Hash, 0x0, 0x0, 0x0)
     ScoreLineUi: (Pointer, 0x0, 0x0, ScoreLineBaseUiData)
     ScoreLineUi: (Pointer, 0x0, 0x0, ScoreLineCherryUiData)
     0xb1f34e3f: (Pointer, 0x0, 0x0, 0xf2dd2d14)
     0xca86315a: (List2, 0x0, Hash, 0x0)
     SummonerSocialCard: (Pointer, 0x0, 0x0, UiSummonerSocialCardData)
-    0xd2e7fb6a: (List, 0x0, Hash, 0x0)
-    0xd2e7fb6a: (List2, 0x0, Hash, 0x0)
+    TeamIcons: (List, 0x0, Hash, 0x0)
+    TeamIcons: (List2, 0x0, Hash, 0x0)
     PlayerSlotHeightReference: (Hash, 0x0, 0x0, 0x0)
     TeamData: (List2, 0x0, Embed, 0x69057401)
     pass
 
-class 0x35b54ed0(LevelScriptBlock):
-    0xe8b74712: (Pointer, 0x0, 0x0, IIntGet)
+class SetModePreloadFlags(LevelScriptBlock):
+    ModePreloadFlags: (Pointer, 0x0, 0x0, IIntGet)
     pass
 
 class DestroyOnDistanceFromCaster(MissileBehaviorSpec):
@@ -4276,7 +4276,7 @@ class TftShopMobileDelays():
     AutoOpenShopInPlanningPhaseDelaySecs: (F32, 0x0, 0x0, 0x0)
     pass
 
-class 0x3641a323(ScriptSequence):
+class RootScriptSequence(ScriptSequence):
     pass
 
 class TftScoreboardNotificationTemplate():
@@ -4293,18 +4293,18 @@ class TftScoreboardNotificationTemplate():
     pass
 
 class TftPassLevel():
-    0x178f85d1: (String, 0x0, 0x0, 0x0)
+    ImageOverridePath: (String, 0x0, 0x0, 0x0)
     IsKeystone: (Bool, 0x0, 0x0, 0x0)
     MilestoneId: (String, 0x0, 0x0, 0x0)
     NameTraKey: (String, 0x0, 0x0, 0x0)
     PassRewards: (List2, 0x0, Pointer, TftPassRewardBase)
     IsPremium: (Bool, 0x0, 0x0, 0x0)
     0x96f93ea0: (U32, 0x0, 0x0, 0x0)
-    0xa1d9de0b: (List2, 0x0, Pointer, TftPassRewardBase)
+    Rewards: (List2, 0x0, Pointer, TftPassRewardBase)
     XpRequired: (U32, 0x0, 0x0, 0x0)
     DescriptionTraKey: (String, 0x0, 0x0, 0x0)
     ImageOverride: (Hash, 0x0, 0x0, 0x0)
-    0xeda83934: (Bool, 0x0, 0x0, 0x0)
+    IsBonus: (Bool, 0x0, 0x0, 0x0)
     pass
 
 class FinisherParticleData():
@@ -4324,7 +4324,7 @@ class TftShopDataList():
     ShopDatas: (List, 0x0, Link, TftShopData)
     pass
 
-class 0x36a57817(VotePanelViewController):
+class SubteamSurrenderViewController(VotePanelViewController):
     DefaultTitleTra: (String, 0x0, 0x0, 0x0)
     DoneVotingTitleTra: (String, 0x0, 0x0, 0x0)
     TitleText: (Hash, 0x0, 0x0, 0x0)
@@ -4335,7 +4335,7 @@ class VoiceChatViewController(ViewController):
     PlayerGrid: (Hash, 0x0, 0x0, 0x0)
     ErrorText: (Hash, 0x0, 0x0, 0x0)
     BaseLoadable: (Link, 0x0, 0x0, UiPropertyLoadable)
-    0x61c428dd: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
+    TftOverrideLoadable: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
     ConnectedBgRegionHandle: (Hash, 0x0, 0x0, 0x0)
     PlayerSlotRegionHandle: (Hash, 0x0, 0x0, 0x0)
     Backdrop: (Hash, 0x0, 0x0, 0x0)
@@ -4370,7 +4370,7 @@ class X3dSharedTextureDef():
     Type: (U32, 0x0, 0x0, 0x0)
     Type: (U8, 0x0, 0x0, 0x0)
     Name: (String, 0x0, 0x0, 0x0)
-    0xb0afcae5: (U32, 0x0, 0x0, 0x0)
+    BindLocation: (U32, 0x0, 0x0, 0x0)
     IsCurrentFramebufferDepthRead: (Bool, 0x0, 0x0, 0x0)
     PlatformMask: (U32, 0x0, 0x0, 0x0)
     pass
@@ -4393,15 +4393,15 @@ class UiElementEffectInstancedData(UiElementEffectData):
     mPerPixelUvsX: (Bool, 0x0, 0x0, 0x0)
     mColor: (Color, 0x0, 0x0, 0x0)
     Offsets: (List, 0x0, Vec2, 0x0)
-    TextureData: (Pointer, 0x0, 0x0, 0x840074ef)
+    TextureData: (Pointer, 0x0, 0x0, IUiEffectTextureDataProvider)
     mAtlas: (Pointer, 0x0, 0x0, AtlasData)
-    mAtlas: (Pointer, 0x0, 0x0, 0x840074ef)
+    mAtlas: (Pointer, 0x0, 0x0, IUiEffectTextureDataProvider)
     mFlipY: (Bool, 0x0, 0x0, 0x0)
     mFlipX: (Bool, 0x0, 0x0, 0x0)
     pass
 
 class 0x376e71c2(ViewController):
-    0x1ec120bb: (Embed, 0x0, 0x0, 0x9b1b08e6)
+    ChallengeTitleTooltipData: (Embed, 0x0, 0x0, 0x9b1b08e6)
     0x32925e75: (Embed, 0x0, 0x0, 0xf8739c73)
     0x4c6557d5: (Hash, 0x0, 0x0, 0x0)
     0x6f003bbf: (Embed, 0x0, 0x0, 0x9e380c11)
@@ -4419,9 +4419,9 @@ class 0x37841b56(0xe561be2e):
 class 0x37a8385c():
     ItemSlots: (Embed, 0x0, 0x0, DetailedItemSlots)
     ExpandedRegion: (Hash, 0x0, 0x0, 0x0)
-    0x3f39cbd1: (Hash, 0x0, 0x0, 0x0)
+    TeamFrameRegion: (Hash, 0x0, 0x0, 0x0)
     Group: (Hash, 0x0, 0x0, 0x0)
-    0xc71b8992: (Embed, 0x0, 0x0, 0x3aee5d80)
+    BuffDisplay: (Embed, 0x0, 0x0, 0x3aee5d80)
     SummonerName: (Embed, 0x0, 0x0, SummonerNameUiData)
     pass
 
@@ -4459,7 +4459,7 @@ class HudItemShopItemGroupDefinition():
     GroupName: (String, 0x0, 0x0, 0x0)
     pass
 
-class 0x38749c0a(0xcee56575):
+class 0x38749c0a(TftCutsceneMissileClip):
     MissileSpeed: (F32, 0x0, 0x0, 0x0)
     pass
 
@@ -4510,8 +4510,8 @@ class LiveFeatureToggles():
     mEngineToggles: (Embed, 0x0, 0x0, EngineFeatureToggles)
     pass
 
-class 0x38eee8e5(0x71eb4498):
-    Border: (Pointer, 0x0, 0x0, 0x5c2449a6)
+class BorderSkinAugment(ISkinAugment):
+    Border: (Pointer, 0x0, 0x0, BorderPropertyData)
     pass
 
 class MapSkinColorizationPostEffect():
@@ -4530,7 +4530,7 @@ class NeutralTimerData():
     0x3995c23b: (Bool, 0x0, 0x0, 0x0)
     mSourceIcons: (Map, Hash, Embed, NeutralTimerSourceIconData)
     mTimerKeyName: (String, 0x0, 0x0, 0x0)
-    0x89f7a6e9: (Hash, 0x0, 0x0, 0x0)
+    TimerName: (Hash, 0x0, 0x0, 0x0)
     TooltipRespawn: (String, 0x0, 0x0, 0x0)
     TooltipChatNameChaos: (String, 0x0, 0x0, 0x0)
     mTooltipChatNameChaos: (String, 0x0, 0x0, 0x0)
@@ -4551,7 +4551,7 @@ class 0x3985a371(IFxActionInstance):
 
 class UiElementIData():
     mName: (String, 0x0, 0x0, 0x0)
-    Scene: (Link, 0x0, 0x0, 0x202c6c9)
+    Scene: (Link, 0x0, 0x0, UiSceneData)
     Scene: (Link, 0x0, 0x0, SceneData)
     Name: (String, 0x0, 0x0, 0x0)
     mScene: (Link, 0x0, 0x0, SceneData)
@@ -4583,9 +4583,9 @@ class SocialActionsDialogViewController(ModalDialogViewController):
 
 class UiElementEffectArcFillData(UiElementEffectData):
     mPerPixelUvsX: (Bool, 0x0, 0x0, 0x0)
-    TextureData: (Pointer, 0x0, 0x0, 0x840074ef)
+    TextureData: (Pointer, 0x0, 0x0, IUiEffectTextureDataProvider)
     mAtlas: (Pointer, 0x0, 0x0, AtlasData)
-    mAtlas: (Pointer, 0x0, 0x0, 0x840074ef)
+    mAtlas: (Pointer, 0x0, 0x0, IUiEffectTextureDataProvider)
     mFlipY: (Bool, 0x0, 0x0, 0x0)
     mFlipX: (Bool, 0x0, 0x0, 0x0)
     pass
@@ -4619,7 +4619,7 @@ class HeightSolverType():
     pass
 
 class ArenaSkinLoadoutGridButtonData(LoadoutGridButtonData):
-    0x74381508: (Hash, 0x0, 0x0, 0x0)
+    FavoriteIcon: (Hash, 0x0, 0x0, 0x0)
     RarityIcon: (List, 0x0, Hash, 0x0)
     pass
 
@@ -4668,7 +4668,7 @@ class 0x3ac5d197():
     pass
 
 class 0x3aee5d80():
-    0x5876d022: (Hash, 0x0, 0x0, 0x0)
+    BuffLayout: (Hash, 0x0, 0x0, 0x0)
     BuffDisplayTemplate: (Embed, 0x0, 0x0, BuffDisplayData)
     MaxBuffDisplayCount: (U32, 0x0, 0x0, 0x0)
     pass
@@ -4684,7 +4684,7 @@ class FixedDurationTriggeredBoolDriver(ILogicBoolDriver, IDynamicMaterialBoolDri
     pass
 
 class 0x3b2ba6c0():
-    0x1dd027ec: (String, 0x0, 0x0, 0x0)
+    IconOverrideTexturePath: (String, 0x0, 0x0, 0x0)
     pass
 
 class ItemGroup():
@@ -4728,8 +4728,8 @@ class ClearSkillsSumsCooldownCheat(Cheat):
     mTarget: (U32, 0x0, 0x0, 0x0)
     pass
 
-class 0x3bd6ea88(0xa3271e82):
-    0x83c10d42: (List2, 0x0, Embed, 0x8f92cfab)
+class 0x3bd6ea88(ElementDataBase):
+    InstanceData: (List2, 0x0, Embed, 0x8f92cfab)
     pass
 
 class SkinScaleParametricUpdater(IFloatParametricUpdater):
@@ -4744,7 +4744,7 @@ class ShaderParamDef():
 class TftSurrenderCheat(Cheat):
     pass
 
-class IconElementData(0x223e46b7, BaseElementData, UiElementAssetData):
+class IconElementData(UiAssetElementData, BaseElementData, UiElementAssetData):
     mTextureUv: (Vec4, 0x0, 0x0, 0x0)
     mPerPixelUvsX: (Bool, 0x0, 0x0, 0x0)
     mColor: (Color, 0x0, 0x0, 0x0)
@@ -4797,7 +4797,7 @@ class LootTableDialogViewController(ModalDialogViewController):
     BaseLoadable: (Link, 0x0, 0x0, UiPropertyLoadable)
     LootTablelayout: (Hash, 0x0, 0x0, 0x0)
     0x5ba7b7c9: (String, 0x0, 0x0, 0x0)
-    0x67c56f9d: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
+    TabletOverrideLoadable: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
     0x749fcb22: (String, 0x0, 0x0, 0x0)
     0x791accf7: (String, 0x0, 0x0, 0x0)
     NoDuplicatesButton: (Hash, 0x0, 0x0, 0x0)
@@ -4823,7 +4823,7 @@ class MapBehavior(GenericMapPlaceable):
     Cue: (String, 0x0, 0x0, 0x0)
     pass
 
-class 0x3c770c70():
+class UnitObjectTagsSettings():
     UnitTags: (List2, 0x0, String, 0x0)
     pass
 
@@ -4837,14 +4837,14 @@ class FxActionMoveBase(IFxAction):
     EasingType: (U8, 0x0, 0x0, 0x0)
     FaceVelocity: (Bool, 0x0, 0x0, 0x0)
     TargetObject: (Embed, 0x0, 0x0, FxTarget)
-    TargetObject: (Embed, 0x0, 0x0, 0x5c086dbd)
+    TargetObject: (Embed, 0x0, 0x0, FxObjectSelector)
     pass
 
 class LoadingScreenHonorFlairData():
     FlairIcons: (List, 0x3, Hash, 0x0)
     pass
 
-class 0x3c995caf(0xec1355b3):
+class 0x3c995caf(IPath):
     Segments: (List2, 0x0, Vec3, 0x0)
     pass
 
@@ -4879,15 +4879,15 @@ class HudHealthBarFadeData():
     FadeSpeed: (F32, 0x0, 0x0, 0x0)
     pass
 
-class 0x3dbe415d(0x31fd952a):
+class VfxShapeSphere(VfxShapeVolume):
     Radius: (F32, 0x0, 0x0, 0x0)
     pass
 
 class 0x3dc0ea14(ISequenceAction):
-    0x4203ebdb: (Bool, 0x0, 0x0, 0x0)
-    0x4f4d3bf7: (Pointer, 0x0, 0x0, 0xc06f5f6a)
+    DisableOnEnd: (Bool, 0x0, 0x0, 0x0)
+    Element: (Pointer, 0x0, 0x0, 0xc06f5f6a)
     Text: (Pointer, 0x0, 0x0, 0xa8a6ac21)
-    0xe898aa4d: (Bool, 0x0, 0x0, 0x0)
+    EnableOnStart: (Bool, 0x0, 0x0, 0x0)
     pass
 
 class UiMetricLaneMinionPercentIncreasedDamageToMinion(UiMetricLaneMinionI):
@@ -4904,7 +4904,7 @@ class MissileGroupSpawnerSpec():
 class 0x3e265091():
     pass
 
-class 0x3e5051fa():
+class IGameModeConfigBase():
     pass
 
 class OptionItemFilter_HwRequirement(IOptionItemFilter):
@@ -4926,15 +4926,15 @@ class RotatingBannerSet():
     pass
 
 class 0x3eed1ba8(0xe561be2e):
-    0xc68d40a4: (Pointer, 0x0, 0x0, 0xed4b858b)
+    KeyType: (Pointer, 0x0, 0x0, 0xed4b858b)
     pass
 
-class 0x3f13cd9b(BaseLoadoutData):
+class StrawberryLoadoutItem(BaseLoadoutData):
     pass
 
 class 0x3f1c01bb():
     0x2f7e46c8: (F32, 0x0, 0x0, 0x0)
-    0x47704df2: (Link, 0x0, 0x0, QualitySetting)
+    QualitySetting: (Link, 0x0, 0x0, QualitySetting)
     0xc58ea052: (F32, 0x0, 0x0, 0x0)
     pass
 
@@ -4965,13 +4965,13 @@ class FloatingTextOverride():
     OverriddenFloatingTextTypes: (Map, U32, Bool, 0x0)
     pass
 
-class 0x3f3df125(0x42dc7bd1):
+class VfxAnimatedVector2f(VfxVector2fBase):
     Values: (List, 0x0, Vec2, 0x0)
     Values: (List2, 0x0, Vec2, 0x0)
     Times: (List, 0x0, F32, 0x0)
     Times: (List2, 0x0, F32, 0x0)
     0x7c9bcfd5: (List, 0x0, U32, 0x0)
-    0x938b38b3: (List2, 0x0, U8, 0x0)
+    Modes: (List2, 0x0, U8, 0x0)
     ProbabilityTables: (List, 0x2, Pointer, VfxProbabilityTableData)
     pass
 
@@ -4981,7 +4981,7 @@ class MapGraphicsFeature(MapComponent):
 class IndicatorTypeLocal(ILineIndicatorType):
     pass
 
-class 0x3fc15f90(ViewController):
+class ItemSelectionBaseViewController(ViewController):
     ItemSlots: (List, 0x0, Embed, UiItemSelectionSlotData)
     Scene: (Hash, 0x0, 0x0, 0x0)
     Loadable: (Link, 0x0, 0x0, UiPropertyLoadable)
@@ -5055,16 +5055,16 @@ class MaterialInstanceDynamicTexture():
 
 class 0x409a5657(IGameModeConfig):
     0x6575891f: (Map, U8, U8, 0x0)
-    0x857c9848: (List2, 0x0, Embed, 0x587d08e4)
+    0x857c9848: (List2, 0x0, Embed, AugmentFallbackPool)
     0x8794a0e6: (Map, U8, U8, 0x0)
     0xba9783c7: (U8, 0x0, 0x0, 0x0)
     pass
 
-class 0x40a87ffc():
-    0x440e1d7b: (I32, 0x0, 0x0, 0x0)
-    0x440e1d7b: (U32, 0x0, 0x0, 0x0)
-    0xf28dd471: (I32, 0x0, 0x0, 0x0)
-    0xf28dd471: (U32, 0x0, 0x0, 0x0)
+class TftBoardPosition():
+    Row: (I32, 0x0, 0x0, 0x0)
+    Row: (U32, 0x0, 0x0, 0x0)
+    Col: (I32, 0x0, 0x0, 0x0)
+    Col: (U32, 0x0, 0x0, 0x0)
     pass
 
 class TftUnitPropertyValueString(TftUnitPropertyValue):
@@ -5104,8 +5104,8 @@ class INeutralCampSpawnBehavior():
 class LookAtSpellTargetAngleParametricUpdater(IFloatParametricUpdater):
     pass
 
-class 0x4142edcd(0x5d765a43):
-    0x82cfb185: (List2, 0x0, Pointer, 0x5d765a43)
+class 0x4142edcd(IEnabler):
+    Enablers: (List2, 0x0, Pointer, IEnabler)
     pass
 
 class FlexValueVector2():
@@ -5119,11 +5119,11 @@ class FlexValueVector2():
 
 class 0x418af145(IScriptCondition):
     Position: (Pointer, 0x0, 0x0, IIntGet)
-    0xa5d2169c: (Pointer, 0x0, 0x0, IIntGet)
+    BitField: (Pointer, 0x0, 0x0, IIntGet)
     pass
 
 class ContextualConditionBuffCounterSetToZeroAfterLimitReached(IContextualConditionBuff):
-    mcounterHighestReached: (U8, 0x0, 0x0, 0x0)
+    mCounterHighestReached: (U8, 0x0, 0x0, 0x0)
     mBuff: (Hash, 0x0, 0x0, 0x0)
     pass
 
@@ -5141,15 +5141,15 @@ class BaseItemAdviceSet():
     mAdvices: (List, 0x0, Embed, BaseItemAdvice)
     pass
 
-class 0x41c19efe():
+class VfxPrimitiveCameraSegmentSeriesBeam():
     VfxSystem: (Link, 0x0, 0x0, VfxSystemDefinitionData)
     Name: (String, 0x0, 0x0, 0x0)
-    0x8e786db: (Color, 0x0, 0x0, 0x0)
+    VfxMask: (Color, 0x0, 0x0, 0x0)
     pass
 
 class ScoreboardTeamScoresDefinitions():
-    0x395592c9: (Embed, 0x0, 0x0, 0x6638d338)
-    0x5467ceb5: (Embed, 0x0, 0x0, 0x6638d338)
+    ChampionKillsUiData: (Embed, 0x0, 0x0, TeamScoreUiData)
+    TowerKillsUiData: (Embed, 0x0, 0x0, TeamScoreUiData)
     DragonTracker: (Embed, 0x0, 0x0, UiMetricMultiDragonKillsSrX)
     TowerKills: (Embed, 0x0, 0x0, UiMetricTeamTowerKills)
     TrackerData: (Embed, 0x0, 0x0, 0xa44b28c0)
@@ -5172,10 +5172,10 @@ class ISkinUpgradeObject(BaseLoadoutData):
     mCost: (U32, 0x0, 0x0, 0x0)
     pass
 
-class 0x4231af3a(0xa4290ed0):
+class EnabledRegionData(RegionDataBase):
     pass
 
-class 0x4247cbb9(AiBaseClient):
+class AiGenericCommon(AiBaseClient):
     pass
 
 class FlexValueVector3():
@@ -5192,8 +5192,8 @@ class SkinAnimationProperties():
     AnimationGraphData: (Link, 0x0, 0x0, AnimationGraphData)
     pass
 
-class 0x4275b121(0x121b48aa):
-    0xcb0a7522: (String, 0x0, 0x0, 0x0)
+class MutatorMapVisibilityController(IMapVisibilityController):
+    MutatorName: (String, 0x0, 0x0, 0x0)
     pass
 
 class LoadScreenTip():
@@ -5241,13 +5241,13 @@ class DrawFx(GameObject):
 class 0x42d18dab(IScriptBlock, IBehaviorScriptBlock):
     pass
 
-class 0x42dc7bd1():
+class VfxVector2fBase():
     pass
 
 class 0x42dcedbc():
     Border: (Hash, 0x0, 0x0, 0x0)
     Group: (Hash, 0x0, 0x0, 0x0)
-    0x6d4da2ea: (Hash, 0x0, 0x0, 0x0)
+    StaticIcon: (Hash, 0x0, 0x0, 0x0)
     TimerVfx: (Hash, 0x0, 0x0, 0x0)
     pass
 
@@ -5258,7 +5258,7 @@ class AudioTagListProperties():
 
 class ValueFloat():
     ConstantValue: (F32, 0x0, 0x0, 0x0)
-    Dynamics: (Pointer, 0x0, 0x0, 0x5c4922b6)
+    Dynamics: (Pointer, 0x0, 0x0, VfxFloatBase)
     Dynamics: (Pointer, 0x0, 0x0, VfxAnimatedFloatVariableData)
     pass
 
@@ -5272,9 +5272,9 @@ class VectorValueGet(DirectValueGet):
     Value: (Vec3, 0x0, 0x0, 0x0)
     pass
 
-class 0x432837bc():
+class DesignerEvent():
     Name: (String, 0x0, 0x0, 0x0)
-    0xe12f5ab7: (Map, Hash, Pointer, IScriptValueGet)
+    EventParameters: (Map, Hash, Pointer, IScriptValueGet)
     pass
 
 class SpellDataResource():
@@ -5356,7 +5356,7 @@ class SpellDataResource():
     mSpellDamageRatio: (F32, 0x0, 0x0, 0x0)
     mTargetingTypeData: (Pointer, 0x0, 0x0, TargetingTypeData)
     mChannelIsInterruptedByDisables: (Bool, 0x0, 0x0, 0x0)
-    0x62bb343b: (Embed, 0x0, 0x0, 0x62bb343b)
+    AutoSpellCastInfo: (Embed, 0x0, 0x0, AutoSpellCastInfo)
     mHideRangeIndicatorWhenCasting: (Bool, 0x0, 0x0, 0x0)
     Loadable: (Link, 0x0, 0x0, PropertyLoadable)
     mHideCdOnPostSpellCast: (Bool, 0x0, 0x0, 0x0)
@@ -5435,7 +5435,7 @@ class SpellDataResource():
     mMissileClientWaitForTargetUpdateBeforeMissileShow: (Bool, 0x0, 0x0, 0x0)
     mApplyAttackDamage: (Bool, 0x0, 0x0, 0x0)
     mUseChargeChanneling: (Bool, 0x0, 0x0, 0x0)
-    0xb4b840e6: (U32, 0x0, 0x0, 0x0)
+    mSpellShapeFlags: (U32, 0x0, 0x0, 0x0)
     mCanTriggerChargeSpellWhileDisabled: (Bool, 0x0, 0x0, 0x0)
     bLineMissileBounces: (Bool, 0x0, 0x0, 0x0)
     mMissileClientExitFowPrediction: (Bool, 0x0, 0x0, 0x0)
@@ -5516,13 +5516,13 @@ class OptionItemDropdownItem():
     TraKey: (String, 0x0, 0x0, 0x0)
     pass
 
-class VfxAnimatedColorVariableData(0x7c893a73):
+class VfxAnimatedColorVariableData(VfxColorBase):
     Values: (List, 0x0, Vec4, 0x0)
     Times: (List, 0x0, F32, 0x0)
     ProbabilityTables: (List, 0x4, Pointer, VfxProbabilityTableData)
     pass
 
-class 0x4359be6(IScriptBlock):
+class ILoopScriptBlock(IScriptBlock):
     Sequence: (Embed, 0x0, 0x0, ScriptSequence)
     pass
 
@@ -5536,31 +5536,31 @@ class TftSetData():
     AugmentContainerName: (String, 0x0, 0x0, 0x0)
     Number: (U32, 0x0, 0x0, 0x0)
     0x250b81df: (Pointer, 0x0, 0x0, 0x2483c715)
-    0x280dc349: (Pointer, 0x0, 0x0, 0x2483c715)
+    UnitShopUiOverride: (Pointer, 0x0, 0x0, 0x2483c715)
     DropRateTables: (Map, String, Link, TftDropRateTable)
     StageRoundData: (Link, 0x0, 0x0, TftStageRoundData)
-    0x3a75fcf: (Link, 0x0, 0x0, 0xf8ec595b)
-    0x3a75fcf: (Map, U8, Link, 0xf8ec595b)
+    BotSkillData: (Link, 0x0, 0x0, TftBotSkillData)
+    BotSkillData: (Map, U8, Link, TftBotSkillData)
     Items: (List, 0x0, Link, TftItemData)
     0x412bcd03: (Link, 0x0, 0x0, 0x34d37457)
     0x46bf1dcb: (Link, 0x0, 0x0, 0xa5f064ff)
     Stages: (List, 0x0, Embed, TftStageData)
     Stages: (List2, 0x0, Embed, TftStageData)
-    0x4a60eb38: (Link, 0x0, 0x0, 0xa190d964)
+    TooltipList: (Link, 0x0, 0x0, TftTooltipList)
     ItemLists: (List, 0x0, Link, TftItemList)
     ItemLists: (List2, 0x0, Link, TftItemList)
     CompanionHealthPerTickMark: (U32, 0x0, 0x0, 0x0)
     DisplayName: (String, 0x0, 0x0, 0x0)
     UnitUpgrades: (List, 0x0, Link, TftUnitUpgradeData)
     UnitUpgrades: (List2, 0x0, Link, TftUnitUpgradeData)
-    InfoNubData: (Pointer, 0x0, 0x0, 0x5fb6e936)
+    InfoNubData: (Pointer, 0x0, 0x0, TftInfoNubData)
     DebugCharacterLists: (List, 0x0, Link, MapCharacterList)
     DebugCharacterLists: (List2, 0x0, Link, MapCharacterList)
     GameStartSequenceOverride: (Hash, 0x0, 0x0, 0x0)
     GameStartSequenceOverride: (Link, 0x0, 0x0, TftGameStartSequence)
     CharacterLists: (List, 0x0, Link, MapCharacterList)
     CharacterLists: (List2, 0x0, Link, MapCharacterList)
-    0x8785b623: (List, 0x0, Link, TftUnitProperties)
+    UnitPropertyLists: (List, 0x0, Link, TftUnitProperties)
     Traits: (List, 0x0, Link, TftTraitData)
     ScriptDataObjectLists: (List, 0x0, Link, ScriptDataObjectList)
     ScriptDataObjectLists: (List2, 0x0, Link, ScriptDataObjectList)
@@ -5573,26 +5573,26 @@ class TftSetData():
     VfxResourceResolver: (Link, 0x0, 0x0, ResourceResolver)
     0x9fd292f5: (String, 0x0, 0x0, 0x0)
     TierBagList: (Link, 0x0, 0x0, ScriptDataObjectList)
-    0xa8ae70b: (List2, 0x0, Link, 0x64da2c7f)
+    0xa8ae70b: (List2, 0x0, Link, TftTraitAssignmentVariation)
     TftGameType: (U32, 0x0, 0x0, 0x0)
     TraitList: (Link, 0x0, 0x0, TftTraitList)
-    0xb43288f2: (Pointer, 0x0, 0x0, 0x2483c715)
-    0xc1fe84cf: (Pointer, 0x0, 0x0, 0x2483c715)
-    0xc58015b5: (List2, 0x0, String, 0x0)
+    AugmentUiOverride: (Pointer, 0x0, 0x0, 0x2483c715)
+    FloatingInfoOverride: (Pointer, 0x0, 0x0, 0x2483c715)
+    ItemUnitProperties: (List2, 0x0, String, 0x0)
     Mutator: (String, 0x0, 0x0, 0x0)
     AugmentContainerTexture: (String, 0x0, 0x0, 0x0)
     ScriptData: (Map, String, Pointer, GameModeConstant)
-    0xd8275936: (Link, 0x0, 0x0, 0xa8722702)
+    EncounterList: (Link, 0x0, 0x0, TftEncounterList)
     0xdacd2fc1: (Pointer, 0x0, 0x0, 0x252c22fd)
     0xe081f469: (I8, 0x0, 0x0, 0x0)
-    0xe59c70cd: (List2, 0x0, Link, 0xc19ac06c)
+    TftCharacterLists: (List2, 0x0, Link, TftCharacterList)
     0xecb7a24b: (Link, 0x0, 0x0, TftUnitPropertyDefinition)
-    0xedf2aef5: (Pointer, 0x0, 0x0, 0x2483c715)
+    ArmoryUiOverride: (Pointer, 0x0, 0x0, 0x2483c715)
     0xf5c7941: (Pointer, 0x0, 0x0, 0x2483c715)
     ShopDropRates: (Map, U8, Embed, 0x6db4b328)
     TraitLists: (List, 0x0, Link, TftTraitList)
     TraitLists: (List2, 0x0, Link, TftTraitList)
-    0xfe3c602e: (Link, 0x0, 0x0, 0xe4a9b58a)
+    ShopContentData: (Link, 0x0, 0x0, TftShopContentData)
     pass
 
 class LinearTransformProcessorData(ValueProcessorData):
@@ -5620,8 +5620,8 @@ class PfxFieldNoiseDefinitionData():
 
 class 0x43aaf187():
     0x39b2057a: (Hash, 0x0, 0x0, 0x0)
-    0x884f4289: (Hash, 0x0, 0x0, 0x0)
-    0xae38eee5: (Hash, 0x0, 0x0, 0x0)
+    PhaseIcon: (Hash, 0x0, 0x0, 0x0)
+    PhaseHitRegion: (Hash, 0x0, 0x0, 0x0)
     pass
 
 class ScriptContext():
@@ -5654,7 +5654,7 @@ class SwitchBlock(IBlock):
     Cases: (List, 0x0, Pointer, SwitchCase)
     pass
 
-class 0x44431594(0xf9ded696):
+class SelectSmiteSpellBlock(SelectSpellBlock):
     pass
 
 class ClearTargetAndKeepMovingOnMovementCompleteSpec(MissileBehaviorSpec):
@@ -5662,24 +5662,24 @@ class ClearTargetAndKeepMovingOnMovementCompleteSpec(MissileBehaviorSpec):
     pass
 
 class StoreViewController(ViewController):
-    0x1069f88c: (Hash, 0x0, 0x0, 0x0)
+    CatalogBackground: (Hash, 0x0, 0x0, 0x0)
     0x11fe3ab2: (Hash, 0x0, 0x0, 0x0)
     0x1c69d900: (String, 0x0, 0x0, 0x0)
     0x1d9b78e8: (Pointer, 0x0, 0x0, 0xb2430347)
     StoreScene: (Hash, 0x0, 0x0, 0x0)
     BaseLoadable: (Link, 0x0, 0x0, UiPropertyLoadable)
-    0x4054b33e: (Hash, 0x0, 0x0, 0x0)
-    0x5c98a36e: (Pointer, 0x0, 0x0, 0x7a2ff279)
-    0x67c56f9d: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
+    FilterArenaToggle: (Hash, 0x0, 0x0, 0x0)
+    MythicView: (Pointer, 0x0, 0x0, StoreViewMythic)
+    TabletOverrideLoadable: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
     StoreCategoryButtonDefinitions: (List, 0x0, Embed, StoreCategoryButtonDefinition)
     FooterHyperlinks: (List, 0x0, Embed, UiHyperlink)
     0x7b557bdc: (Hash, 0x0, 0x0, 0x0)
     0x834e2e8d: (Embed, 0x0, 0x0, 0x834e2e8d)
     OfferGrid: (Hash, 0x0, 0x0, 0x0)
     0x9eae8cc2: (Hash, 0x0, 0x0, 0x0)
-    0xa526b5bd: (Hash, 0x0, 0x0, 0x0)
+    FilterFeaturedToggle: (Hash, 0x0, 0x0, 0x0)
     0xac62d69a: (String, 0x0, 0x0, 0x0)
-    0xaf360b29: (Hash, 0x0, 0x0, 0x0)
+    FilterTacticianToggle: (Hash, 0x0, 0x0, 0x0)
     PurchasesView: (Pointer, 0x0, 0x0, StoreViewPurchases)
     MainViewPaneDefinition: (Pointer, 0x0, 0x0, ViewPaneDefinition)
     UiStoreItemTileData: (Embed, 0x0, 0x0, UiStoreItemTileData)
@@ -5714,8 +5714,8 @@ class PerkSummonerSpecialistChoices():
     mSpells: (List, 0x0, Hash, 0x0)
     pass
 
-class 0x44bf19e3(0xa8f2f8d9):
-    0x24a4d9aa: (String, 0x0, 0x0, 0x0)
+class ScriptTargetingRangeValue(ITargetingRangeValue):
+    TargetingParamName: (String, 0x0, 0x0, 0x0)
     pass
 
 class CharacterVarsTable(ScriptTable):
@@ -5799,7 +5799,7 @@ class CheatSet():
     mUseIconsForButtons: (Bool, 0x0, 0x0, 0x0)
     mGameMutator: (String, 0x0, 0x0, 0x0)
     mGameModeName: (Hash, 0x0, 0x0, 0x0)
-    0xde748cc1: (List2, 0x0, Embed, 0x9d79fb9f)
+    AssociatedChampions: (List2, 0x0, Embed, 0x9d79fb9f)
     mIsUiAlwaysShown: (Bool, 0x0, 0x0, 0x0)
     mGameMode: (U32, 0x0, 0x0, 0x0)
     pass
@@ -5808,7 +5808,7 @@ class IStringGet(IRsValueGet, IScriptValueGet):
     pass
 
 class 0x45a556cd(0x26d26471):
-    0xef4bf7b0: (List2, 0x0, Pointer, 0x26d26471)
+    AndConditions: (List2, 0x0, Pointer, 0x26d26471)
     pass
 
 class VfxSystemDefinitionData(IResource):
@@ -5884,13 +5884,13 @@ class SwitchMaterialDriverElement():
 
 class 0x45f140fc():
     0x10074827: (String, 0x0, 0x0, 0x0)
-    0x30637e3a: (String, 0x0, 0x0, 0x0)
+    TitleVictoryTra: (String, 0x0, 0x0, 0x0)
     0x3fca802: (String, 0x0, 0x0, 0x0)
-    0x4a72336b: (String, 0x0, 0x0, 0x0)
+    TitleDefeatTra: (String, 0x0, 0x0, 0x0)
     0x4c453e79: (String, 0x0, 0x0, 0x0)
-    0x5652b095: (String, 0x0, 0x0, 0x0)
+    TitleNextTra: (String, 0x0, 0x0, 0x0)
     0x8e3d338b: (String, 0x0, 0x0, 0x0)
-    0x9d97c953: (String, 0x0, 0x0, 0x0)
+    TitleFutureTra: (String, 0x0, 0x0, 0x0)
     0xd0133f4a: (String, 0x0, 0x0, 0x0)
     0xe130f1de: (String, 0x0, 0x0, 0x0)
     pass
@@ -5994,7 +5994,7 @@ class 0x46ebf194(ICatalogEntryOwner, BaseLoadoutData):
     NameTraKey: (String, 0x0, 0x0, 0x0)
     pass
 
-class 0x4723f716(ScriptTable):
+class CharacterVars(ScriptTable):
     pass
 
 class TftOutOfGameCharData():
@@ -6016,10 +6016,10 @@ class UiElementGroupSliderData(UiElementGroupData):
     BarHitRegion: (Link, 0x0, 0x0, UiElementRegionData)
     pass
 
-class 0x4750ceb6(0x83212e16):
-    0x158508fb: (String, 0x0, 0x0, 0x0)
-    0xd92cd177: (String, 0x0, 0x0, 0x0)
-    0xf61974d2: (String, 0x0, 0x0, 0x0)
+class 0x4750ceb6(IStringCalculation):
+    RangedResult: (String, 0x0, 0x0, 0x0)
+    DefaultResult: (String, 0x0, 0x0, 0x0)
+    MeleeResult: (String, 0x0, 0x0, 0x0)
     pass
 
 class QualitySetting():
@@ -6033,11 +6033,11 @@ class QualitySetting():
     mEnvironmentQuality: (U32, 0x0, 0x0, 0x0)
     pass
 
-class 0x477e22a5():
-    0x26c61566: (Hash, 0x0, 0x0, 0x0)
-    0x588a734a: (Hash, 0x0, 0x0, 0x0)
-    0xbc2c3f87: (Hash, 0x0, 0x0, 0x0)
-    0xe52e8845: (Hash, 0x0, 0x0, 0x0)
+class StrawberryAugmentDisplayTagData():
+    AugmentDisplayTagSpacer: (Hash, 0x0, 0x0, 0x0)
+    AugmentDisplayTagRow: (Hash, 0x0, 0x0, 0x0)
+    AugmentDisplayTagFrame: (Hash, 0x0, 0x0, 0x0)
+    AugmentDisplayTagText: (Hash, 0x0, 0x0, 0x0)
     pass
 
 class 0x47884d9d(IBooleanParametricUpdater):
@@ -6092,8 +6092,8 @@ class CameraTrapezoid():
     mMaxXBottom: (F32, 0x0, 0x0, 0x0)
     pass
 
-class 0x480cc223():
-    0xebd9617e: (Hash, 0x0, 0x0, 0x0)
+class ChampionNameUiData():
+    ChampionNameText: (Hash, 0x0, 0x0, 0x0)
     pass
 
 class HeroFloatingInfoIconsData():
@@ -6106,7 +6106,7 @@ class TargetIsWithinNDistanceOfCaster(ICastRequirement):
 
 class 0x483e0716():
     VfxSystem: (Link, 0x0, 0x0, VfxSystemDefinitionData)
-    0x89123f7e: (Hash, 0x0, 0x0, 0x0)
+    RegionName: (Hash, 0x0, 0x0, 0x0)
     pass
 
 class UiMetricUnitTypeI():
@@ -6115,7 +6115,7 @@ class UiMetricUnitTypeI():
 class TftHudUnitShopDropRate():
     DropRateSlots: (List, 0x5, Embed, DropRateSlot)
     DropRateSlots: (List, 0x5, Embed, TftDropRateSlot)
-    0x887f6193: (List2, 0x0, Embed, TftDropRateSlot)
+    DropRateSlotsList: (List2, 0x0, Embed, TftDropRateSlot)
     0xe2c6ffc9: (Hash, 0x0, 0x0, 0x0)
     pass
 
@@ -6136,7 +6136,7 @@ class UiTextureProviderBase():
     pass
 
 class 0x48b2d5fb():
-    0x409c1823: (U8, 0x0, 0x0, 0x0)
+    RelationshipType: (U8, 0x0, 0x0, 0x0)
     0xa02845e3: (Hash, 0x0, 0x0, 0x0)
     0xa02845e3: (Link, 0x0, 0x0, Champion)
     0xa1284776: (Hash, 0x0, 0x0, 0x0)
@@ -6203,7 +6203,7 @@ class ElementalSelectionViewController(ViewController):
 class 0x48eb8d47():
     pass
 
-class 0x48ed2f8c(0x83d6eef9):
+class ViewControllerListFilter_Champion(ViewControllerListFilterI):
     Relationship: (U8, 0x0, 0x0, 0x0)
     ChampionSkinDataLink: (String, 0x0, 0x0, 0x0)
     pass
@@ -6226,7 +6226,7 @@ class OptionTemplateButton(IOptionTemplate):
     pass
 
 class TftScoreboardViewController(ViewController):
-    0x16eaefba: (Color, 0x0, 0x0, 0x0)
+    OverrideFillMeterSelfColor: (Color, 0x0, 0x0, 0x0)
     ViewingIcon: (Hash, 0x0, 0x0, 0x0)
     NotificationTemplate: (Embed, 0x0, 0x0, TftScoreboardNotificationTemplate)
     BaseLoadable: (Link, 0x0, 0x0, UiPropertyLoadable)
@@ -6236,7 +6236,7 @@ class TftScoreboardViewController(ViewController):
     ToggleButton: (Hash, 0x0, 0x0, 0x0)
     MobileOverrideBinName: (String, 0x0, 0x0, 0x0)
     PlayerSelfTemplate: (Embed, 0x0, 0x0, TftScoreboardPlayerTemplate)
-    0x9e44c967: (Color, 0x0, 0x0, 0x0)
+    OverrideFillMeterOpponentColor: (Color, 0x0, 0x0, 0x0)
     ActivateScoreboardButton: (Hash, 0x0, 0x0, 0x0)
     FillMeterSelfColor: (Color, 0x0, 0x0, 0x0)
     PlayerOpponentTemplate: (Embed, 0x0, 0x0, TftScoreboardPlayerTemplate)
@@ -6257,10 +6257,10 @@ class RelicDropConfig():
     pass
 
 class 0x49cb6889(MapGraphicsFeature):
-    0x82fe6a54: (String, 0x0, 0x0, 0x0)
+    CubemapProbePrefix: (String, 0x0, 0x0, 0x0)
     Constants: (List2, 0x0, Embed, 0xc668ae80)
-    0xfbd79e70: (Hash, 0x0, 0x0, 0x0)
-    0xfed7a329: (Hash, 0x0, 0x0, 0x0)
+    ProbeA: (Hash, 0x0, 0x0, 0x0)
+    ProbeB: (Hash, 0x0, 0x0, 0x0)
     pass
 
 class VfxDistortionDefinitionData():
@@ -6317,7 +6317,7 @@ class ItemSlotDetailedUiData():
     BorderDefault: (Hash, 0x0, 0x0, 0x0)
     HitArea: (Hash, 0x0, 0x0, 0x0)
     BorderSelected: (Hash, 0x0, 0x0, 0x0)
-    0xc2ccf34: (Hash, 0x0, 0x0, 0x0)
+    NewItemFx: (Hash, 0x0, 0x0, 0x0)
     OverlayLoc: (Hash, 0x0, 0x0, 0x0)
     StackText: (Hash, 0x0, 0x0, 0x0)
     Icon: (Hash, 0x0, 0x0, 0x0)
@@ -6331,16 +6331,16 @@ class DestroyChildrenOnMovementComplete(MissileBehaviorSpec):
     pass
 
 class 0x4a4575a8(MapAction):
-    0x15d4b4a1: (List2, 0x0, String, 0x0)
-    0x17c543dc: (Pointer, 0x0, 0x0, 0x3e265091)
+    MapParticleNames: (List2, 0x0, String, 0x0)
+    TextureOverride: (Pointer, 0x0, 0x0, 0x3e265091)
     pass
 
 class 0x4a70b12c():
-    AugmentGroup: (List2, 0x0, Link, 0x38eee8e5)
+    AugmentGroup: (List2, 0x0, Link, BorderSkinAugment)
     pass
 
 class 0x4a7922fb():
-    0x43a26ef5: (Embed, 0x0, 0x0, 0xfc331f53)
+    AugmentSlots: (Embed, 0x0, 0x0, 0xfc331f53)
     pass
 
 class StatFormulaDataList():
@@ -6416,10 +6416,10 @@ class 0x4b3c671d(IScriptBlock, IBehaviorScriptBlock):
 class TftTrovesBannerTable(TftTrovesBannerNode):
     NameTraKey: (String, 0x0, 0x0, 0x0)
     Children: (List, 0x0, Embed, TftTrovesBannerTableEntry)
-    0xcb02939: (U32, 0x0, 0x0, 0x0)
+    DisplayPriority: (U32, 0x0, 0x0, 0x0)
     pass
 
-class 0x4b7bc412(0x5c108a08):
+class 0x4b7bc412(ILolSpellScriptEvent):
     pass
 
 class VfxBeamParticleDefinitionData():
@@ -6457,8 +6457,8 @@ class UnitStatusData():
     LocType: (U32, 0x0, 0x0, 0x0)
     pass
 
-class 0x4bf5d9a8():
-    0x14f3cff4: (Link, 0x0, 0x0, 0x5d765a43)
+class ConfigInt():
+    Enabler: (Link, 0x0, 0x0, IEnabler)
     Value: (I32, 0x0, 0x0, 0x0)
     pass
 
@@ -6470,19 +6470,19 @@ class UiHyperlink():
 class OffScreenPoiItemData():
     Portrait: (Hash, 0x0, 0x0, 0x0)
     Region: (Hash, 0x0, 0x0, 0x0)
-    0x40284a0e: (Hash, 0x0, 0x0, 0x0)
-    0xb2cd2dd5: (Hash, 0x0, 0x0, 0x0)
+    RotatingFrame: (Hash, 0x0, 0x0, 0x0)
+    RenderRegion: (Hash, 0x0, 0x0, 0x0)
     Text: (Hash, 0x0, 0x0, 0x0)
     Frame: (Hash, 0x0, 0x0, 0x0)
     pass
 
 class 0x4c1fe46e(0x7319918a):
     Source: (Link, 0x0, 0x0, SequenceObjectSelector)
-    0xc2e77088: (List2, 0x0, Hash, 0x0)
+    DebugOverride: (List2, 0x0, Hash, 0x0)
     pass
 
-class 0x4c2a6193(0xa3271e82):
-    0x83c10d42: (List2, 0x0, Embed, 0xddac6756)
+class TroveElementData(ElementDataBase):
+    InstanceData: (List2, 0x0, Embed, TroveInstanceData)
     pass
 
 class TargeterDefinition():
@@ -6500,11 +6500,11 @@ class FadeEventData(BaseEventData):
 
 class NeutralTimers():
     Scene: (Hash, 0x0, 0x0, 0x0)
-    0x8991dc1: (Pointer, 0x0, 0x0, 0x8991dc1)
+    NeutralTimerStateManager: (Pointer, 0x0, 0x0, NeutralTimerStateManager)
     Timers: (List, 0x0, Embed, NeutralTimerData)
     mTimers: (Map, Hash, Embed, NeutralTimerData)
     mSceneName: (String, 0x0, 0x0, 0x0)
-    0xee974cae: (String, 0x0, 0x0, 0x0)
+    mOptionalBinName: (String, 0x0, 0x0, 0x0)
     pass
 
 class TftHudStreakUi():
@@ -6514,7 +6514,7 @@ class TftHudStreakUi():
     StreakText: (Hash, 0x0, 0x0, 0x0)
     pass
 
-class 0x4c895a1d():
+class IScriptEvent():
     pass
 
 class RespawnPointDataList():
@@ -6546,13 +6546,13 @@ class StoreListingData():
     mIdentityInstance: (Embed, 0x0, 0x0, IdentityInstance)
     pass
 
-class 0x4d3a3598(0x14e6a52c):
+class VfxAnimatedVector3f(VfxVector3fBase):
     Values: (List, 0x0, Vec3, 0x0)
     Values: (List2, 0x0, Vec3, 0x0)
     Times: (List, 0x0, F32, 0x0)
     Times: (List2, 0x0, F32, 0x0)
     0x7c9bcfd5: (List, 0x0, U32, 0x0)
-    0x938b38b3: (List2, 0x0, U8, 0x0)
+    Modes: (List2, 0x0, U8, 0x0)
     ProbabilityTables: (List, 0x3, Pointer, VfxProbabilityTableData)
     pass
 
@@ -6600,18 +6600,18 @@ class ObjectiveVotePanelData():
 
 class 0x4e16b860():
     DescriptionText: (Hash, 0x0, 0x0, 0x0)
-    0x19bbe6be: (Hash, 0x0, 0x0, 0x0)
+    HolderIcon: (Hash, 0x0, 0x0, 0x0)
     ProgressText: (Hash, 0x0, 0x0, 0x0)
-    0x27a9d313: (Hash, 0x0, 0x0, 0x0)
+    ExpandedHolderIcon: (Hash, 0x0, 0x0, 0x0)
     0x3a95996f: (List2, 0x0, Hash, 0x0)
-    0x3f0a4030: (Hash, 0x0, 0x0, 0x0)
+    MissionGroup: (Hash, 0x0, 0x0, 0x0)
     0x51e9dd09: (List2, 0x0, Hash, 0x0)
     RewardText: (Hash, 0x0, 0x0, 0x0)
-    0x6a226480: (List2, 0x0, Embed, 0xb4517220)
-    0x90990350: (Hash, 0x0, 0x0, 0x0)
-    0xace10fe5: (Embed, 0x0, 0x0, 0xd19d72ee)
-    0xaf1ce00: (List2, 0x0, Hash, 0x0)
-    0xdf2a906d: (Embed, 0x0, 0x0, 0xd19d72ee)
+    ProgressIcons: (List2, 0x0, Embed, 0xb4517220)
+    ManagedLayout: (Hash, 0x0, 0x0, 0x0)
+    SecondaryMission: (Embed, 0x0, 0x0, 0xd19d72ee)
+    CosmeticIcons: (List2, 0x0, Hash, 0x0)
+    PrimaryMission: (Embed, 0x0, 0x0, 0xd19d72ee)
     TitleText: (Hash, 0x0, 0x0, 0x0)
     pass
 
@@ -6619,7 +6619,7 @@ class ReconnectDialogViewController(ViewController):
     Scene: (Hash, 0x0, 0x0, 0x0)
     BaseLoadable: (Link, 0x0, 0x0, UiPropertyLoadable)
     Meter: (Hash, 0x0, 0x0, 0x0)
-    0xdd522de7: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
+    MobileOverride: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
     pass
 
 class 0x4e4e17(IBehaviorScriptBlock):
@@ -6630,9 +6630,9 @@ class PlayGameViewController(ViewController):
     pass
 
 class 0x4e590cfd(ISequenceAction):
-    0x4203ebdb: (Bool, 0x0, 0x0, 0x0)
-    0x4f4d3bf7: (Hash, 0x0, 0x0, 0x0)
-    0xe898aa4d: (Bool, 0x0, 0x0, 0x0)
+    DisableOnEnd: (Bool, 0x0, 0x0, 0x0)
+    Element: (Hash, 0x0, 0x0, 0x0)
+    EnableOnStart: (Bool, 0x0, 0x0, 0x0)
     pass
 
 class MapCamera(MapPlaceable):
@@ -6650,8 +6650,8 @@ class FollowTerrainHeightSolver(HeightSolverType):
 
 class DeathRecapShowcaseSlotKdaData(DeathRecapShowcaseSlotData):
     BountyText: (Hash, 0x0, 0x0, 0x0)
-    0x377db006: (Embed, 0x0, 0x0, 0xdd017d46)
-    0x5c1376f1: (Embed, 0x0, 0x0, UiMetricUnitKda)
+    Bounty: (Embed, 0x0, 0x0, UiMetricUnitBounty)
+    Kda: (Embed, 0x0, 0x0, UiMetricUnitKda)
     KdaText: (Hash, 0x0, 0x0, 0x0)
     TitleText: (Hash, 0x0, 0x0, 0x0)
     BountyIcon: (Hash, 0x0, 0x0, 0x0)
@@ -6660,11 +6660,11 @@ class DeathRecapShowcaseSlotKdaData(DeathRecapShowcaseSlotData):
 class UiElementRect():
     Size: (Vec2, 0x0, 0x0, 0x0)
     Position: (Vec2, 0x0, 0x0, 0x0)
-    0x95876e1f: (F32, 0x0, 0x0, 0x0)
+    Width: (F32, 0x0, 0x0, 0x0)
     SourceResolutionHeight: (U16, 0x0, 0x0, 0x0)
     Height: (F32, 0x0, 0x0, 0x0)
     SourceResolutionWidth: (U16, 0x0, 0x0, 0x0)
-    0xfc2cd44b: (Vec2, 0x0, 0x0, 0x0)
+    LeftTop: (Vec2, 0x0, 0x0, 0x0)
     pass
 
 class ScriptPreloadModule():
@@ -6681,7 +6681,7 @@ class FxActionScale(IFxAction):
     EasingType: (U8, 0x0, 0x0, 0x0)
     TargetScale: (F32, 0x0, 0x0, 0x0)
     TargetObject: (Embed, 0x0, 0x0, FxTarget)
-    TargetObject: (Embed, 0x0, 0x0, 0x5c086dbd)
+    TargetObject: (Embed, 0x0, 0x0, FxObjectSelector)
     ResetOnEnd: (Bool, 0x0, 0x0, 0x0)
     pass
 
@@ -6697,11 +6697,11 @@ class JungleMonsterKillsTypeConstraintInfo(ListenerConstraintInfo):
 class 0x4f0aa8a0():
     TooltipText: (Pointer, 0x0, 0x0, 0x6ca3cfd)
     TooltipText: (String, 0x0, 0x0, 0x0)
-    0x4f4d3bf7: (Hash, 0x0, 0x0, 0x0)
-    0x56fbc12e: (U8, 0x0, 0x0, 0x0)
+    Element: (Hash, 0x0, 0x0, 0x0)
+    ElementAnchor: (U8, 0x0, 0x0, 0x0)
     0xa620b98f: (List2, 0x0, Embed, 0xd5c5318a)
     TooltipAnchor: (U8, 0x0, 0x0, 0x0)
-    0xf97affde: (String, 0x0, 0x0, 0x0)
+    TooltipLocalizedText: (String, 0x0, 0x0, 0x0)
     pass
 
 class MaterialSwitchData():
@@ -6716,11 +6716,11 @@ class LoadingScreenClashTeam():
 
 class 0x4f4c4ffc():
     CharacterRecord: (Link, 0x0, 0x0, CharacterRecord)
-    0x783217ca: (F32, 0x0, 0x0, 0x0)
+    RandomWeight: (F32, 0x0, 0x0, 0x0)
     SkinId: (U32, 0x0, 0x0, 0x0)
     pass
 
-class 0x4f4e2ed7(0x7d3206d):
+class VfxShapeLegacy(IVfxShape):
     EmitRotationAngles: (List, 0x0, Embed, ValueFloat)
     EmitRotationAxes: (List, 0x0, Vec3, 0x0)
     EmitOffset: (Embed, 0x0, 0x0, ValueVector3)
@@ -6729,7 +6729,7 @@ class 0x4f4e2ed7(0x7d3206d):
 class FxActionMoveToInstance(IFxActionInstance):
     pass
 
-class 0x4f92775c(0x6074d548):
+class 0x4f92775c(ILogicVector3Driver):
     pass
 
 class 0x4f983e1d(0xd97f9bd3):
@@ -6756,7 +6756,7 @@ class MasteryBadgeData():
     mParticleName: (String, 0x0, 0x0, 0x0)
     pass
 
-class 0x4fb9f226():
+class PlaybookAugmentItemData():
     Description: (Hash, 0x0, 0x0, 0x0)
     Group: (Hash, 0x0, 0x0, 0x0)
     Name: (Hash, 0x0, 0x0, 0x0)
@@ -6765,18 +6765,18 @@ class 0x4fb9f226():
     pass
 
 class 0x4fbb3f5d():
-    0x19bbe6be: (Hash, 0x0, 0x0, 0x0)
+    HolderIcon: (Hash, 0x0, 0x0, 0x0)
     0x25a7b1dc: (Bool, 0x0, 0x0, 0x0)
-    0x27a9d313: (Hash, 0x0, 0x0, 0x0)
+    ExpandedHolderIcon: (Hash, 0x0, 0x0, 0x0)
     0x3a95996f: (List2, 0x0, Hash, 0x0)
-    0x3f0a4030: (Hash, 0x0, 0x0, 0x0)
+    MissionGroup: (Hash, 0x0, 0x0, 0x0)
     0x51e9dd09: (List2, 0x0, Hash, 0x0)
-    0x6a226480: (List2, 0x0, Embed, 0xc0bb891d)
-    0x90990350: (Hash, 0x0, 0x0, 0x0)
-    0xace10fe5: (Embed, 0x0, 0x0, 0xece8d41b)
-    0xaf1ce00: (List2, 0x0, Hash, 0x0)
-    0xd92e5cdc: (Embed, 0x0, 0x0, 0xd65c937c)
-    0xdf2a906d: (Embed, 0x0, 0x0, 0xece8d41b)
+    ProgressIcons: (List2, 0x0, Embed, 0xc0bb891d)
+    ManagedLayout: (Hash, 0x0, 0x0, 0x0)
+    SecondaryMission: (Embed, 0x0, 0x0, 0xece8d41b)
+    CosmeticIcons: (List2, 0x0, Hash, 0x0)
+    TrackerIconTemplate: (Embed, 0x0, 0x0, 0xd65c937c)
+    PrimaryMission: (Embed, 0x0, 0x0, 0xece8d41b)
     pass
 
 class BarracksConfig():
@@ -6794,7 +6794,7 @@ class BarracksConfig():
     MoveSpeedIncreaseInitialDelaySecs: (F32, 0x0, 0x0, 0x0)
     pass
 
-class 0x4fc40112(SkinMeshDataProperties):
+class SkinnedMeshHelper(SkinMeshDataProperties):
     pass
 
 class 0x4fd53cef(0x2515101c):
@@ -6829,32 +6829,32 @@ class UnitStatUiData():
     pass
 
 class 0x502b0c72():
-    0x176d4d09: (U32, 0x0, 0x0, 0x0)
-    0x1fd670cc: (U32, 0x0, 0x0, 0x0)
-    0x9a8c9615: (F32, 0x0, 0x0, 0x0)
-    0xe94ae473: (F32, 0x0, 0x0, 0x0)
-    0xf54f2346: (F32, 0x0, 0x0, 0x0)
+    BlurQuality: (U32, 0x0, 0x0, 0x0)
+    SampleQuality: (U32, 0x0, 0x0, 0x0)
+    SampleRadius: (F32, 0x0, 0x0, 0x0)
+    BufferScale: (F32, 0x0, 0x0, 0x0)
+    Power: (F32, 0x0, 0x0, 0x0)
     pass
 
 class Hq(HqCommon):
     pass
 
 class LevelControlScript(Rscript):
-    0x2c9b7f0c: (String, 0x0, 0x0, 0x0)
-    0x454a414e: (Map, Hash, Embed, ScriptFunction)
+    Guid: (String, 0x0, 0x0, 0x0)
+    Functions: (Map, Hash, Embed, ScriptFunction)
     CustomSequences: (Map, Hash, Link, ScriptSequence)
-    Sequences: (Map, Hash, Embed, 0x3641a323)
+    Sequences: (Map, Hash, Embed, RootScriptSequence)
     Sequences: (Map, Hash, Embed, ScriptSequence)
     Sequences: (Map, U32, Embed, ScriptSequence)
     pass
 
 class TftHudTraitUnitPortraitSection():
-    0x4c285a2f: (Hash, 0x0, 0x0, 0x0)
+    UnitGridLink: (Hash, 0x0, 0x0, 0x0)
     UnitSlotRegions: (List, 0xc, Hash, 0x0)
     PortraitRegion: (Hash, 0x0, 0x0, 0x0)
     UnitInfoPortraitTooltipRegion: (Hash, 0x0, 0x0, 0x0)
     TraitTrackerPortraitTooltipRegion: (Hash, 0x0, 0x0, 0x0)
-    0xab8f2359: (Hash, 0x0, 0x0, 0x0)
+    PortraitTooltipRegion: (Hash, 0x0, 0x0, 0x0)
     HudTraitUnitSlotTemplate: (Embed, 0x0, 0x0, TftHudTraitUnitSlotData)
     UnitPortraitScene: (Hash, 0x0, 0x0, 0x0)
     HudTraitUnitSlotBorders: (Embed, 0x0, 0x0, TftHudTraitUnitSlotBorders)
@@ -6933,7 +6933,7 @@ class TftCutsceneAnimClip(TftCutsceneClip):
     PostStartModifiers: (List2, 0x0, Pointer, TftAnimClipModifier)
     0x55eb4ac7: (Bool, 0x0, 0x0, 0x0)
     StartPaused: (Bool, 0x0, 0x0, 0x0)
-    0x6058471f: (String, 0x0, 0x0, 0x0)
+    BlackboardWorldTransformName: (String, 0x0, 0x0, 0x0)
     ReportBone: (List2, 0x0, Embed, TftCutsceneReportBone)
     PauseOnEnd: (Bool, 0x0, 0x0, 0x0)
     StartSkipToTime: (F32, 0x0, 0x0, 0x0)
@@ -6950,11 +6950,11 @@ class 0x50f553aa(0xb639bddc):
 
 class ChallengeTitleData():
     CatalogEntry: (Embed, 0x0, 0x0, CatalogEntry)
-    0x43eba213: (String, 0x0, 0x0, 0x0)
-    0x646cf661: (String, 0x0, 0x0, 0x0)
-    0x6d2f7778: (String, 0x0, 0x0, 0x0)
+    TitleAcquisitionRequirementTrakey: (String, 0x0, 0x0, 0x0)
+    BackgroundImagePath: (String, 0x0, 0x0, 0x0)
+    TitleAcquisitionTrakey: (String, 0x0, 0x0, 0x0)
     IconPath: (String, 0x0, 0x0, 0x0)
-    0x7e760c8: (U8, 0x0, 0x0, 0x0)
+    TitleAcquisitionType: (U8, 0x0, 0x0, 0x0)
     LocalizedName: (String, 0x0, 0x0, 0x0)
     Name: (String, 0x0, 0x0, 0x0)
     0x9b72d4a4: (U8, 0x0, 0x0, 0x0)
@@ -6968,7 +6968,7 @@ class ItemGridSection():
     mLabel: (String, 0x0, 0x0, 0x0)
     pass
 
-class 0x51436d8a(ILogicFloatDriver):
+class InvertFloatMaterialDriver(ILogicFloatDriver):
     Driver: (Pointer, 0x0, 0x0, ILogicFloatDriver)
     pass
 
@@ -7011,23 +7011,23 @@ class DefenseModifierIcons():
     mMagicShred: (Pointer, 0x0, 0x0, HealthbarImageInfo)
     pass
 
-class 0x51b98b7f():
+class IAugment():
     RootSpell: (Hash, 0x0, 0x0, 0x0)
     RootSpell: (Link, 0x0, 0x0, SpellObject)
-    0x19ae3e16: (String, 0x0, 0x0, 0x0)
+    AugmentNameId: (String, 0x0, 0x0, 0x0)
     NameTra: (String, 0x0, 0x0, 0x0)
     Enabled: (Bool, 0x0, 0x0, 0x0)
-    0x366935fc: (String, 0x0, 0x0, 0x0)
+    AugmentTooltipTra: (String, 0x0, 0x0, 0x0)
     AugmentSmallIconPath: (String, 0x0, 0x0, 0x0)
     mBuildTags: (U32, 0x0, 0x0, 0x0)
-    0xc1716cff: (List, 0x0, U32, 0x0)
+    AugmentDisplayTags: (List, 0x0, U32, 0x0)
     mAugmentTags: (U32, 0x0, 0x0, 0x0)
     AugmentLargeIconPath: (String, 0x0, 0x0, 0x0)
     DescriptionTra: (String, 0x0, 0x0, 0x0)
     pass
 
 class 0x51c026b9(0xc10d4fdc):
-    0x2bf53be5: (List2, 0x0, Link, 0xe75aad84)
+    Waves: (List2, 0x0, Link, 0xe75aad84)
     pass
 
 class HealthBarData():
@@ -7121,7 +7121,7 @@ class MapDynamicPointLight(MapPointLightBase):
     Impact: (U8, 0x0, 0x0, 0x0)
     IntensityScale: (F32, 0x0, 0x0, 0x0)
     Type: (U8, 0x0, 0x0, 0x0)
-    0x5150a6a1: (Link, 0x0, 0x0, 0x121b48aa)
+    VisibilityController: (Link, 0x0, 0x0, IMapVisibilityController)
     UpdaterType: (Link, 0x0, 0x0, MapLightUpdaterType)
     LightColor: (Vec4, 0x0, 0x0, 0x0)
     HdrScale: (F32, 0x0, 0x0, 0x0)
@@ -7143,16 +7143,16 @@ class LogicDriverViewEntry():
     0x40c7c429: (List2, 0x0, Pointer, 0x4f0aa8a0)
     ConditionalElementsEntries: (List, 0x0, Embed, LogicDriverConditionalElementsEntry)
     0x8d424715: (List2, 0x0, Pointer, 0x30aa7360)
-    0x8f4f63ee: (List, 0x0, Embed, 0x6bb5ba68)
+    0x8f4f63ee: (List, 0x0, Embed, TextGimmeDataInstance)
     TransitionOnState: (Hash, 0x0, 0x0, 0x0)
     EnableCondition: (Pointer, 0x0, 0x0, ILogicBoolDriver)
     TransitionOffState: (Hash, 0x0, 0x0, 0x0)
     pass
 
-class 0x529a504e():
-    0x118dbe5b: (Hash, 0x0, 0x0, 0x0)
+class UiRotationalStoreItemTileData():
+    OwnedIcon: (Hash, 0x0, 0x0, 0x0)
     Button: (Hash, 0x0, 0x0, 0x0)
-    Timer: (Pointer, 0x0, 0x0, 0xa48aca10)
+    Timer: (Pointer, 0x0, 0x0, TftEventTimer)
     Group: (Hash, 0x0, 0x0, 0x0)
     Vfx: (Hash, 0x0, 0x0, 0x0)
     PriceText: (Hash, 0x0, 0x0, 0x0)
@@ -7225,7 +7225,7 @@ class 0x534e00eb():
 class IRsValueGet():
     pass
 
-class 0x536ed3c5(ScriptTableGet, IIntGet):
+class IntCast(ScriptTableGet, IIntGet):
     pass
 
 class ParametricMovement(MissileMovementSpec):
@@ -7268,7 +7268,7 @@ class MaterialParameterData():
     pass
 
 class 0x53dfc5b5(0xf9e5b8b9):
-    0x42c1a561: (Pointer, 0x0, 0x0, ILogicFloatDriver)
+    Subtract: (Pointer, 0x0, 0x0, ILogicFloatDriver)
     pass
 
 class MapTransitionPositions(MapGraphicsFeature):
@@ -7276,8 +7276,8 @@ class MapTransitionPositions(MapGraphicsFeature):
     pass
 
 class 0x54019489(0x38749c0a):
-    0x3cedacb1: (Bool, 0x0, 0x0, 0x0)
-    0x89eccefc: (F32, 0x0, 0x0, 0x0)
+    ReverseScale: (Bool, 0x0, 0x0, 0x0)
+    MaxAddedSpeed: (F32, 0x0, 0x0, 0x0)
     pass
 
 class PassThroughParamsTable(ScriptTable, RsTable):
@@ -7299,9 +7299,9 @@ class ParticleEventData(BaseEventData):
     mEffectKey: (Hash, 0x0, 0x0, 0x0)
     pass
 
-class 0x542f6458(IGameModeConfig):
-    0x2c28acf8: (List2, 0x0, Pointer, 0x34274458)
-    0x49b1d9ae: (List2, 0x0, Pointer, 0xe2ff8b22)
+class CharacterQuestListConfig(IGameModeConfig):
+    CharacterQuestDefinitionsList: (List2, 0x0, Pointer, CharacterQuestDefinitionsData)
+    CharacterQuestList: (List2, 0x0, Pointer, 0xe2ff8b22)
     0x5f1426cf: (Bool, 0x0, 0x0, 0x0)
     0x702d99a3: (I32, 0x0, 0x0, 0x0)
     pass
@@ -7314,9 +7314,9 @@ class RelicList():
 class EpicMinionFilter(IStatStoneLogicDriver):
     pass
 
-class 0x544ded33(IFxLocation):
+class FxLocationObject(IFxLocation):
     Object: (Embed, 0x0, 0x0, FxTarget)
-    Object: (Embed, 0x0, 0x0, 0x5c086dbd)
+    Object: (Embed, 0x0, 0x0, FxObjectSelector)
     pass
 
 class TftDragData():
@@ -7351,7 +7351,7 @@ class TrackMouseMovement(MissileMovementSpec):
     mTurnRadius: (F32, 0x0, 0x0, 0x0)
     mMinSpeed: (F32, 0x0, 0x0, 0x0)
     mMaxSpeed: (F32, 0x0, 0x0, 0x0)
-    0xf609b184: (F32, 0x0, 0x0, 0x0)
+    mAntiLagTrackingDelay: (F32, 0x0, 0x0, 0x0)
     pass
 
 class WorldVarsTable(ScriptTable):
@@ -7405,16 +7405,16 @@ class OptionTemplateHotkeysLabel():
     Label: (Hash, 0x0, 0x0, 0x0)
     pass
 
-class 0x55937f1():
-    0x115bfcb9: (Hash, 0x0, 0x0, 0x0)
+class TftCustomAnnouncementData():
+    Subtitle: (Hash, 0x0, 0x0, 0x0)
     Scene: (Hash, 0x0, 0x0, 0x0)
-    0x2c99c300: (Hash, 0x0, 0x0, 0x0)
+    Player: (Hash, 0x0, 0x0, 0x0)
     Title: (Hash, 0x0, 0x0, 0x0)
     0xbf98d308: (Hash, 0x0, 0x0, 0x0)
     Icon: (Hash, 0x0, 0x0, 0x0)
     pass
 
-class 0x559f837a(IGameModeConfig):
+class SmartPingData(IGameModeConfig):
     0x1e98bb0e: (Map, U8, U8, 0x0)
     0x5aa830e8: (F32, 0x0, 0x0, 0x0)
     0xaa8eb438: (F32, 0x0, 0x0, 0x0)
@@ -7438,14 +7438,14 @@ class 0x55d03617(IFxAction):
     Location: (Pointer, 0x0, 0x0, IFxLocation)
     pass
 
-class 0x55dd7d5():
+class ProgressTrack():
     Id: (String, 0x0, 0x0, 0x0)
-    0x4c10ca77: (List, 0x0, Link, 0x8776327e)
+    CounterDefinitions: (List, 0x0, Link, CounterDefinition)
     PremiumEntitlementId: (String, 0x0, 0x0, 0x0)
     Name: (String, 0x0, 0x0, 0x0)
-    0x96483821: (String, 0x0, 0x0, 0x0)
-    0xb9ba7771: (List, 0x0, Link, 0x297c5518)
-    0xd99ba82a: (Embed, 0x0, 0x0, 0xa0406423)
+    ProductId: (String, 0x0, 0x0, 0x0)
+    MilestoneDefinitions: (List, 0x0, Link, MilestoneDefinition)
+    Repeat: (Embed, 0x0, 0x0, GroupRepeat)
     pass
 
 class MaterialOverrideCallbackDynamicMaterial():
@@ -7455,8 +7455,8 @@ class UiElementAsset(UiElement):
     pass
 
 class 0x55f603e4(0x48eb8d47):
-    0x3f954075: (Bool, 0x0, 0x0, 0x0)
-    0x81bc04be: (I32, 0x0, 0x0, 0x0)
+    OrEqualTo: (Bool, 0x0, 0x0, 0x0)
+    GreaterThan: (I32, 0x0, 0x0, 0x0)
     pass
 
 class 0x55f6bf86():
@@ -7479,7 +7479,7 @@ class UiElementGroupSliderSoundEvents():
     OnDragStartEvent: (String, 0x0, 0x0, 0x0)
     pass
 
-class 0x562f28ea(0xb115222b):
+class LevelScriptOnUpdate(ILevelScriptEvent):
     pass
 
 class 0x563a9d91(IFxAction):
@@ -7489,7 +7489,7 @@ class 0x563a9d91(IFxAction):
 class TurnAngleParametricUpdater(IFloatParametricUpdater):
     pass
 
-class 0x5657b533(IUiTextureDataProvider):
+class LooseUiTextureDataBase(IUiTextureDataProvider):
     TextureName: (String, 0x0, 0x0, 0x0)
     pass
 
@@ -7497,7 +7497,7 @@ class RoleSelfConstraintInfo(ListenerConstraintInfo):
     RequiredRole: (U32, 0x0, 0x0, 0x0)
     pass
 
-class 0x56767442(SkinCharacterDataProperties):
+class TftSkinCharacterDataProperties(SkinCharacterDataProperties):
     pass
 
 class ContextualConditionCharacterLevel(IContextualCondition):
@@ -7536,7 +7536,7 @@ class 0x5727ed42(IScriptCondition):
     CustomTable: (Embed, 0x0, 0x0, CustomTableGet)
     pass
 
-class BehaviorLevelController(ILevelController, 0xf486858e):
+class BehaviorLevelController(ILevelController, BaseLevelController):
     LevelBehaviors: (Map, Hash, Pointer, ILevelBehavior)
     LevelBehaviors: (Map, U32, Pointer, ILevelBehavior)
     pass
@@ -7555,17 +7555,17 @@ class TftPassData():
     PremiumEntitlementId: (String, 0x0, 0x0, 0x0)
     InternalName: (String, 0x0, 0x0, 0x0)
     AssetListId: (String, 0x0, 0x0, 0x0)
-    0x76f8fa70: (String, 0x0, 0x0, 0x0)
+    PremiumTitleTraKey: (String, 0x0, 0x0, 0x0)
     ProgressionId: (String, 0x0, 0x0, 0x0)
     0x890c336a: (String, 0x0, 0x0, 0x0)
     PassItemId: (U32, 0x0, 0x0, 0x0)
-    0x96483821: (String, 0x0, 0x0, 0x0)
+    ProductId: (String, 0x0, 0x0, 0x0)
     TitleTrakey: (String, 0x0, 0x0, 0x0)
-    0xa147b6ea: (List2, 0x0, Pointer, TftPassRewardBase)
+    Levels: (List2, 0x0, Pointer, TftPassRewardBase)
     TftPassLevels: (List2, 0x0, Embed, TftPassLevel)
     DescriptionTraKey: (String, 0x0, 0x0, 0x0)
     0xc119fe2a: (U64, 0x0, 0x0, 0x0)
-    0xf969d2ee: (String, 0x0, 0x0, 0x0)
+    CounterId: (String, 0x0, 0x0, 0x0)
     pass
 
 class OverrideAttackTimeData():
@@ -7578,7 +7578,7 @@ class OverrideAttackTimeData():
 class ShopCommon(BuildingClient):
     pass
 
-class UiMetricKda(UiMetricTypeI, 0xe66ae1e4):
+class UiMetricKda(UiMetricTypeI, UiMetricTypeSimpleI):
     KdaText: (Hash, 0x0, 0x0, 0x0)
     KdaIcon: (Hash, 0x0, 0x0, 0x0)
     pass
@@ -7599,7 +7599,7 @@ class EventCardDefinition():
 
 class PlayerStatsPanelViewController(ViewController):
     BaseLoadable: (Link, 0x0, 0x0, UiPropertyLoadable)
-    0x59c6a802: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
+    FlippedMinimapOverride: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
     pass
 
 class StatByCoefficientCalculationPart(IGameCalculationPartWithStats, ISpellCalculationPartWithStats, ISpellCalculationPart):
@@ -7617,11 +7617,11 @@ class HudEncounterData():
 class 0x5835d0f2(IFxActionInstance):
     pass
 
-class 0x583fe96c(0x7fa75f35):
+class TftGameStartSequenceScene(TftGameStartSequenceSimpleObject):
     UiScene: (Hash, 0x0, 0x0, 0x0)
     pass
 
-class 0x585257a3(0x3fc15f90):
+class UpgradeItemSelectionViewController(ItemSelectionBaseViewController):
     pass
 
 class 0x58622c03(BuffEffect):
@@ -7632,8 +7632,8 @@ class ContextualConditionNeutralMinionMapSide(IContextualCondition):
     mTeamCompareOp: (U8, 0x0, 0x0, 0x0)
     pass
 
-class 0x587d08e4():
-    0x17086006: (List2, 0x0, Link, AugmentData)
+class AugmentFallbackPool():
+    AugmentPool: (List2, 0x0, Link, AugmentData)
     Rarity: (U8, 0x0, 0x0, 0x0)
     pass
 
@@ -7659,7 +7659,7 @@ class 0x58c2dd4f(0x4664ae0a):
     pass
 
 class TftUnitProperties():
-    0xef84a8d4: (Map, Hash, Embed, TftUnitPropertyDefinition)
+    UnitPropertyDefinitions: (Map, Hash, Embed, TftUnitPropertyDefinition)
     pass
 
 class PlayerPerksViewController(PlayerStatsPanelViewController, ViewController):
@@ -7671,7 +7671,7 @@ class PlayerPerksViewController(PlayerStatsPanelViewController, ViewController):
     PlayerPerksStats: (Embed, 0x0, 0x0, UiPerksStats)
     pass
 
-class 0x59025a99(ViewControllerFilterI):
+class ViewControllerFilter_Mobile(ViewControllerFilterI):
     pass
 
 class HudRadialWheelData():
@@ -7681,11 +7681,11 @@ class HudRadialWheelData():
     mRadialWheelButtonTransitionIntro: (Embed, 0x0, 0x0, HudMenuTransitionData)
     pass
 
-class 0x591d0e47(ViewController):
+class TftTrovesCelebrationViewControllerV2(ViewController):
     0x104fe04e: (Link, 0x0, 0x0, SequenceObjectSelector)
     0x108492b7: (String, 0x0, 0x0, 0x0)
     DefaultStandardItemRarityTexturePath: (String, 0x0, 0x0, 0x0)
-    0x21de79b2: (Hash, 0x0, 0x0, 0x0)
+    SingleStandardQuantityText: (Hash, 0x0, 0x0, 0x0)
     StandardItemStarLevelTexturePaths: (List, 0x3, String, 0x0)
     0x27edf69a: (List2, 0x0, Link, SequenceObjectSelector)
     0x2e05d5a9: (Link, 0x0, 0x0, SequenceObjectSelector)
@@ -7697,7 +7697,7 @@ class 0x591d0e47(ViewController):
     0x5db7f820: (Map, String, Embed, 0x9ab8b8e6)
     0x629d7fe5: (Link, 0x0, 0x0, SequenceObjectSelector)
     DefaultTheme: (Link, 0x0, 0x0, TftTrovesCelebrationThemeData)
-    0x67c56f9d: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
+    TabletOverrideLoadable: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
     SingleStandardItemLegendaryVfx: (Hash, 0x0, 0x0, 0x0)
     SingleStandardItemVfx: (Hash, 0x0, 0x0, 0x0)
     StandardItemRarityTexturePaths: (Map, U32, String, 0x0)
@@ -7706,14 +7706,14 @@ class 0x591d0e47(ViewController):
     0x7e6bb126: (Link, 0x0, 0x0, SequenceObjectSelector)
     StandardContentLayout: (Hash, 0x0, 0x0, 0x0)
     0x880040f3: (Link, 0x0, 0x0, SequenceObjectSelector)
-    0x8825ec03: (Hash, 0x0, 0x0, 0x0)
+    VignetteTitle: (Hash, 0x0, 0x0, 0x0)
     ContinueButton: (Hash, 0x0, 0x0, 0x0)
     StandardItemTemplate: (Embed, 0x0, 0x0, 0x8190bc9f)
-    0x9f2fd79d: (Hash, 0x0, 0x0, 0x0)
+    SingleStandardCurrencyVfx: (Hash, 0x0, 0x0, 0x0)
     0xa3021f81: (Link, 0x0, 0x0, SequenceObjectSelector)
     0xa7b45c64: (Link, 0x0, 0x0, SequenceObjectSelector)
     0xaad46f66: (Hash, 0x0, 0x0, 0x0)
-    0xad8aa34c: (Hash, 0x0, 0x0, 0x0)
+    CommonScene: (Hash, 0x0, 0x0, 0x0)
     DefaultStandardItemStarLevelTexturePath: (String, 0x0, 0x0, 0x0)
     0xc1d80535: (Link, 0x0, 0x0, SequenceObjectSelector)
     0xc91cc065: (Link, 0x0, 0x0, SequenceObjectSelector)
@@ -7721,18 +7721,18 @@ class 0x591d0e47(ViewController):
     0xdf4d96db: (Link, 0x0, 0x0, Sequence)
     ParentScene: (Hash, 0x0, 0x0, 0x0)
     0xeed1cb06: (Link, 0x0, 0x0, SequenceObjectSelector)
-    0xf28bb814: (Hash, 0x0, 0x0, 0x0)
+    SingleStandardItemText: (Hash, 0x0, 0x0, 0x0)
     0xf9787c06: (Map, String, Hash, 0x0)
     0xf9ae2168: (Link, 0x0, 0x0, SequenceObjectSelector)
-    0xfb688f7b: (String, 0x0, 0x0, 0x0)
+    VignetteTitleTraKey: (String, 0x0, 0x0, 0x0)
     pass
 
 class MapParticle(MapPlaceable):
-    0x17c543dc: (Pointer, 0x0, 0x0, 0x3e265091)
-    0x321f0c11: (Bool, 0x0, 0x0, 0x0)
+    TextureOverride: (Pointer, 0x0, 0x0, 0x3e265091)
+    AllDimensions: (Bool, 0x0, 0x0, 0x0)
     StartDisabled: (Bool, 0x0, 0x0, 0x0)
     System: (Link, 0x0, 0x0, VfxSystemDefinitionData)
-    0x5150a6a1: (Link, 0x0, 0x0, 0x121b48aa)
+    VisibilityController: (Link, 0x0, 0x0, IMapVisibilityController)
     EyeCandy: (Bool, 0x0, 0x0, 0x0)
     Transitional: (Bool, 0x0, 0x0, 0x0)
     Quality: (I32, 0x0, 0x0, 0x0)
@@ -7752,19 +7752,19 @@ class MaterialInstanceParamDef():
 
 class 0x597c4a9d(IFxAction):
     Target: (Embed, 0x0, 0x0, FxTarget)
-    Target: (Embed, 0x0, 0x0, 0x5c086dbd)
+    Target: (Embed, 0x0, 0x0, FxObjectSelector)
     ResetOnEnd: (Bool, 0x0, 0x0, 0x0)
     Overrides: (Link, 0x0, 0x0, CharacterOverrides)
     pass
 
-class MapPlaceable(0x9ef09bad):
+class MapPlaceable(MapPlaceableBase):
     Name: (Hash, 0x0, 0x0, 0x0)
     Name: (String, 0x0, 0x0, 0x0)
     mVisibilityFlags: (U8, 0x0, 0x0, 0x0)
     Transform: (Mtx44, 0x0, 0x0, 0x0)
     pass
 
-class 0x59aa33fd(TftCutsceneVfxClip):
+class TftCutscenePosVfxClip(TftCutsceneVfxClip):
     HideWhenNotViewed: (Bool, 0x0, 0x0, 0x0)
     0x6230e799: (String, 0x0, 0x0, 0x0)
     0x82ea4a57: (Bool, 0x0, 0x0, 0x0)
@@ -7829,16 +7829,16 @@ class SelectorClipPairData():
     mProbability: (F32, 0x0, 0x0, 0x0)
     pass
 
-class 0x5a4abe00():
+class HomeViewPromoBanner():
     Scene: (Hash, 0x0, 0x0, 0x0)
-    0x2617a432: (U8, 0x0, 0x0, 0x0)
-    0x28673f60: (Hash, 0x0, 0x0, 0x0)
-    0x2f2b34: (U8, 0x0, 0x0, 0x0)
+    FadeEasing: (U8, 0x0, 0x0, 0x0)
+    SceneViewPane: (Hash, 0x0, 0x0, 0x0)
+    PaginationEasing: (U8, 0x0, 0x0, 0x0)
     0x557095fe: (Embed, 0x0, 0x0, 0x42dcedbc)
-    Elements: (List2, 0x0, Embed, 0x9789b6)
-    Elements: (List2, 0x0, Pointer, 0xa3271e82)
+    Elements: (List2, 0x0, Embed, PromoBannerElement)
+    Elements: (List2, 0x0, Pointer, ElementDataBase)
     0x7099ea0e: (U8, 0x0, 0x0, 0x0)
-    0x7b4ba87: (F32, 0x0, 0x0, 0x0)
+    FadeDuration: (F32, 0x0, 0x0, 0x0)
     0x8190d5ac: (F32, 0x0, 0x0, 0x0)
     0x82ee166: (Hash, 0x0, 0x0, 0x0)
     0xa3e52539: (U8, 0x0, 0x0, 0x0)
@@ -7906,8 +7906,8 @@ class 0x5ad4a256():
     IconHover: (Hash, 0x0, 0x0, 0x0)
     IconLeft: (Hash, 0x0, 0x0, 0x0)
     SlotArea: (Hash, 0x0, 0x0, 0x0)
-    0xb5d2fb19: (Hash, 0x0, 0x0, 0x0)
-    0xc1d39c37: (Hash, 0x0, 0x0, 0x0)
+    MessageTitleText: (Hash, 0x0, 0x0, 0x0)
+    MessageBodyText: (Hash, 0x0, 0x0, 0x0)
     BackgroundDefault: (Hash, 0x0, 0x0, 0x0)
     IconDefault: (Hash, 0x0, 0x0, 0x0)
     IconRight: (Hash, 0x0, 0x0, 0x0)
@@ -7924,10 +7924,10 @@ class PerkConfig():
     mBotOverrideSet: (Link, 0x0, 0x0, OverridePerkSelectionSet)
     pass
 
-class 0x5aff9f1d(0x5fb6e936):
-    0x259d2b12: (String, 0x0, 0x0, 0x0)
+class TftTraitVariationInfoNubData(TftInfoNubData):
+    TemplateKey: (String, 0x0, 0x0, 0x0)
     Trait: (Link, 0x0, 0x0, TftTraitData)
-    0x86473240: (Map, U8, String, 0x0)
+    TextStyles: (Map, U8, String, 0x0)
     BodyKey: (String, 0x0, 0x0, 0x0)
     TitleKey: (String, 0x0, 0x0, 0x0)
     pass
@@ -7942,17 +7942,17 @@ class GameModeContentManager():
     pass
 
 class 0x5b2fdd66(0xf9e5b8b9):
-    0x3b391274: (Pointer, 0x0, 0x0, ILogicFloatDriver)
+    Add: (Pointer, 0x0, 0x0, ILogicFloatDriver)
     pass
 
 class 0x5b49a915(TargetingTypeData):
-    0xa7ee6542: (Bool, 0x0, 0x0, 0x0)
+    CanCompleteCastWithoutTarget: (Bool, 0x0, 0x0, 0x0)
     0xfb5bbd7: (Bool, 0x0, 0x0, 0x0)
     pass
 
-class 0x5b5667ce():
-    Message: (Pointer, 0x0, 0x0, 0x93270e1b)
-    Vfx: (Pointer, 0x0, 0x0, 0x5babc270)
+class TftHintUiData():
+    Message: (Pointer, 0x0, 0x0, TftHintMessageData)
+    Vfx: (Pointer, 0x0, 0x0, TftHintVfxData)
     pass
 
 class QueueDisplayData():
@@ -7960,8 +7960,8 @@ class QueueDisplayData():
     IllustrationIconPath: (String, 0x0, 0x0, 0x0)
     QueueIconElementClicked: (Hash, 0x0, 0x0, 0x0)
     IllustrationIconElement: (Hash, 0x0, 0x0, 0x0)
-    0xa63b5841: (String, 0x0, 0x0, 0x0)
-    0xbcfe4458: (Pointer, 0x0, 0x0, 0x5b5667ce)
+    IllustrationIconPathDisabled: (String, 0x0, 0x0, 0x0)
+    0xbcfe4458: (Pointer, 0x0, 0x0, TftHintUiData)
     DisplayNameTraKey: (String, 0x0, 0x0, 0x0)
     QueueIconElementDefault: (Hash, 0x0, 0x0, 0x0)
     QueueId: (I64, 0x0, 0x0, 0x0)
@@ -7971,7 +7971,7 @@ class QueueDisplayData():
     pass
 
 class 0x5b5e6994():
-    0x22ed07f6: (Hash, 0x0, 0x0, 0x0)
+    TimerDefaultFill: (Hash, 0x0, 0x0, 0x0)
     0x81cbec5f: (Hash, 0x0, 0x0, 0x0)
     0x9ba9ed34: (Hash, 0x0, 0x0, 0x0)
     0xbcde5149: (Hash, 0x0, 0x0, 0x0)
@@ -7985,8 +7985,8 @@ class IntOffsetTableGet(ScriptTableGet, IIntGet):
     Var: (String, 0x0, 0x0, 0x0)
     pass
 
-class 0x5b82a425(LevelScriptBlock):
-    0x38022a93: (Pointer, 0x0, 0x0, IStringGet)
+class PreloadCharacterWithSkinId(LevelScriptBlock):
+    CharacterName: (Pointer, 0x0, 0x0, IStringGet)
     SkinId: (Pointer, 0x0, 0x0, IIntGet)
     pass
 
@@ -7995,9 +7995,9 @@ class WallDetection(TargetingTypeData):
     DetectionRange: (F32, 0x0, 0x0, 0x0)
     pass
 
-class 0x5babc270():
-    0x43851f70: (Hash, 0x0, 0x0, 0x0)
-    0x90e3195f: (F32, 0x0, 0x0, 0x0)
+class TftHintVfxData():
+    TargetElement: (Hash, 0x0, 0x0, 0x0)
+    VfxScale: (F32, 0x0, 0x0, 0x0)
     pass
 
 class TftTraitList():
@@ -8028,11 +8028,11 @@ class ViewControllerFilter_Map(ViewControllerFilterI):
     Map: (String, 0x0, 0x0, 0x0)
     pass
 
-class 0x5c086dbd():
+class FxObjectSelector():
     Type: (U32, 0x0, 0x0, 0x0)
     pass
 
-class 0x5c108a08(0x4c895a1d):
+class ILolSpellScriptEvent(IScriptEvent):
     pass
 
 class LootItem(LootOutputBase):
@@ -8044,20 +8044,20 @@ class LootItem(LootOutputBase):
     mStatus: (Embed, 0x0, 0x0, LootStatus)
     pass
 
-class 0x5c2449a6():
-    0xadfac771: (Link, 0x0, 0x0, StaticMaterialDef)
-    0xe7b947a0: (String, 0x0, 0x0, 0x0)
+class BorderPropertyData():
+    BorderTreatment: (Link, 0x0, 0x0, StaticMaterialDef)
+    BorderPath: (String, 0x0, 0x0, 0x0)
     pass
 
-class 0x5c4922b6():
+class VfxFloatBase():
     pass
 
 class ICastRequirement():
     mInvertResult: (Bool, 0x0, 0x0, 0x0)
     pass
 
-class 0x5c8a06f1(LevelScriptBlock):
-    0x38022a93: (Pointer, 0x0, 0x0, IStringGet)
+class PreloadCharacter(LevelScriptBlock):
+    CharacterName: (Pointer, 0x0, 0x0, IStringGet)
     pass
 
 class ILogicIntDriver(ILogicFloatDriver):
@@ -8074,7 +8074,7 @@ class LobbyLayout():
     FriendPortraitData: (Embed, 0x0, 0x0, LobbyFriendPortraitData)
     TeamSize: (U32, 0x0, 0x0, 0x0)
     OtherPlayerPortraitData: (Embed, 0x0, 0x0, LobbyPlayerData)
-    0xe93789ab: (U32, 0x0, 0x0, 0x0)
+    MaxInviteCount: (U32, 0x0, 0x0, 0x0)
     SelfPortraitData: (Embed, 0x0, 0x0, LobbyPlayerData)
     pass
 
@@ -8105,13 +8105,13 @@ class 0x5cb6b755():
     0x58766309: (String, 0x0, 0x0, 0x0)
     0x63d105a5: (String, 0x0, 0x0, 0x0)
     0x7e458980: (String, 0x0, 0x0, 0x0)
-    0x87696dab: (String, 0x0, 0x0, 0x0)
+    BackgroundTexturePath: (String, 0x0, 0x0, 0x0)
     0x96349f57: (String, 0x0, 0x0, 0x0)
     0x9a0caad2: (String, 0x0, 0x0, 0x0)
     0xa807a4b2: (String, 0x0, 0x0, 0x0)
     0xc1d8474a: (String, 0x0, 0x0, 0x0)
     0xd0666cc4: (String, 0x0, 0x0, 0x0)
-    0xdc47fab7: (Hash, 0x0, 0x0, 0x0)
+    BackgroundVfx: (Hash, 0x0, 0x0, 0x0)
     0xde84022d: (String, 0x0, 0x0, 0x0)
     0xdf83f0d3: (String, 0x0, 0x0, 0x0)
     0xe98a6e08: (String, 0x0, 0x0, 0x0)
@@ -8120,10 +8120,10 @@ class 0x5cb6b755():
     pass
 
 class 0x5cc13029(ISequenceAction):
-    0x4203ebdb: (Bool, 0x0, 0x0, 0x0)
+    DisableOnEnd: (Bool, 0x0, 0x0, 0x0)
     Index: (U32, 0x0, 0x0, 0x0)
     0xd07dcd34: (Link, 0x0, 0x0, SequenceObjectSelector)
-    0xe898aa4d: (Bool, 0x0, 0x0, 0x0)
+    EnableOnStart: (Bool, 0x0, 0x0, 0x0)
     pass
 
 class IsOwnerHeroSpawnConditions(IVfxSpawnConditions):
@@ -8131,7 +8131,7 @@ class IsOwnerHeroSpawnConditions(IVfxSpawnConditions):
     mDefaultVfxData: (Embed, 0x0, 0x0, VfxDefaultSpawnConditionData)
     pass
 
-class 0x5cd88e24(0xe66ae1e4):
+class UiMetricBounty(UiMetricTypeSimpleI):
     pass
 
 class ModalShroudManager():
@@ -8146,7 +8146,7 @@ class ByCharLevelBreakpointsCalculationPart(IGameCalculationPartByCharLevel, ISp
     mLevel1Value: (F32, 0x0, 0x0, 0x0)
     pass
 
-class 0x5cf82f9b():
+class IMilestoneProperty():
     pass
 
 class 0x5cfe6ce7(TftCutsceneInitializer, TftCutsceneArenaLocatorInitializer):
@@ -8167,7 +8167,7 @@ class TftCutsceneCamVfxClip(TftCutsceneVfxClip):
     BlackboardAssociatedPlayers: (List2, 0x0, String, 0x0)
     pass
 
-class 0x5d765a43():
+class IEnabler():
     pass
 
 class SequenceTable():
@@ -8176,7 +8176,7 @@ class SequenceTable():
     pass
 
 class CustomNeutralCampSpawnBehavior(INeutralCampSpawnBehavior):
-    Callback: (Embed, 0x0, 0x0, 0x106bef1e)
+    Callback: (Embed, 0x0, 0x0, LevelScriptFunctionLink)
     Callback: (Link, 0x0, 0x0, ScriptFunction)
     pass
 
@@ -8249,10 +8249,10 @@ class UiElementEffectGlowData(UiElementEffectData):
     mPerPixelUvsX: (Bool, 0x0, 0x0, 0x0)
     MinimumAlpha: (F32, 0x0, 0x0, 0x0)
     CycleBasedScaleAddition: (F32, 0x0, 0x0, 0x0)
-    TextureData: (Pointer, 0x0, 0x0, 0x840074ef)
+    TextureData: (Pointer, 0x0, 0x0, IUiEffectTextureDataProvider)
     CycleTime: (F32, 0x0, 0x0, 0x0)
     mAtlas: (Pointer, 0x0, 0x0, AtlasData)
-    mAtlas: (Pointer, 0x0, 0x0, 0x840074ef)
+    mAtlas: (Pointer, 0x0, 0x0, IUiEffectTextureDataProvider)
     mFlipY: (Bool, 0x0, 0x0, 0x0)
     mFlipX: (Bool, 0x0, 0x0, 0x0)
     pass
@@ -8289,8 +8289,8 @@ class TableGet(IRsValueGet):
     pass
 
 class SpellObject():
-    0x108deea5: (Pointer, 0x0, 0x0, 0x21e5666c)
-    BotData: (Pointer, 0x0, 0x0, 0xf195e56b)
+    CcBehaviorData: (Pointer, 0x0, 0x0, ICcBehaviorData)
+    BotData: (Pointer, 0x0, 0x0, BotsSpellData)
     mScript: (Pointer, 0x0, 0x0, LolSpellScript)
     mSpell: (Pointer, 0x0, 0x0, SpellDataResource)
     mBuff: (Pointer, 0x0, 0x0, BuffData)
@@ -8320,7 +8320,7 @@ class TooltipInstanceBuff(TooltipInstance):
     pass
 
 class BehaviorScript(Rscript):
-    Sequences: (Map, Hash, Embed, 0x7eafed49)
+    Sequences: (Map, Hash, Embed, ScriptBtRootSequence)
     Sequences: (Map, Hash, Embed, ScriptBtSequence)
     Sequences: (Map, U32, Embed, ScriptBtSequence)
     Sequences: (Map, U32, Embed, ScriptSequence)
@@ -8342,7 +8342,7 @@ class AbilityPrompt():
 class PlayerProfileViewController(ViewController):
     0x28dee5e9: (Embed, 0x0, 0x0, 0x28dee5e9)
     BaseLoadable: (Link, 0x0, 0x0, UiPropertyLoadable)
-    0x67c56f9d: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
+    TabletOverrideLoadable: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
     PlayerProfileCategoryButtons: (List, 0x0, Embed, PlayerProfileCategoryButtonDefinition)
     MatchHistoryView: (Embed, 0x0, 0x0, PlayerProfileMatchHistoryView)
     PlayerProfileScene: (Hash, 0x0, 0x0, 0x0)
@@ -8350,7 +8350,7 @@ class PlayerProfileViewController(ViewController):
     pass
 
 class 0x5ee39f14():
-    0x938b38b3: (List2, 0x0, U8, 0x0)
+    Modes: (List2, 0x0, U8, 0x0)
     pass
 
 class ShadowOverrideSettings():
@@ -8364,7 +8364,7 @@ class ShadowOverrideSettings():
 class 0x5ee7c71f(BuffEffect):
     0x47c120b7: (List, 0x0, U8, 0x0)
     0x68aa7f75: (Bool, 0x0, 0x0, 0x0)
-    0xd95f7caa: (Bool, 0x0, 0x0, 0x0)
+    CleanseOnActivate: (Bool, 0x0, 0x0, 0x0)
     pass
 
 class UnitStatusIconData():
@@ -8422,7 +8422,7 @@ class EvoSettings():
     pass
 
 class 0x5f5925f1():
-    0xc669ada3: (List2, 0x0, Embed, 0x32ef34c3)
+    TierBagEntries: (List2, 0x0, Embed, TftTierEntry)
     pass
 
 class StatByNamedDataValueCalculationPart(IGameCalculationPartWithStats, ISpellCalculationPartWithStats, ISpellCalculationPart):
@@ -8437,7 +8437,7 @@ class ContextualConditionMoveDistance(IContextualCondition):
     mDistance: (F32, 0x0, 0x0, 0x0)
     pass
 
-class 0x5fb6e936():
+class TftInfoNubData():
     0xeb74e3c6: (Hash, 0x0, 0x0, 0x0)
     pass
 
@@ -8471,7 +8471,7 @@ class ContextualConditionSpellName(IContextualConditionSpell, IContextualConditi
     mSpellName: (Hash, 0x0, 0x0, 0x0)
     pass
 
-class 0x6074d548(ILogicDriver):
+class ILogicVector3Driver(ILogicDriver):
     pass
 
 class TftTeamPlannerActiveTraitData():
@@ -8487,8 +8487,8 @@ class TftTeamPlannerActiveTraitData():
 class ContextualConditionCharacterIsCastingRecall(ICharacterSubcondition):
     pass
 
-class 0x607ade7e(0xcee56575):
-    0xd70f51d0: (F32, 0x0, 0x0, 0x0)
+class 0x607ade7e(TftCutsceneMissileClip):
+    TimeToTarget: (F32, 0x0, 0x0, 0x0)
     pass
 
 class 0x608a3ee7(ILogicIntDriver):
@@ -8505,21 +8505,21 @@ class StaticMaterialTechniqueDef():
     Name: (String, 0x0, 0x0, 0x0)
     pass
 
-class 0x60a46c3():
+class StrawberryAugmentSlotData():
     AugmentGroup: (Hash, 0x0, 0x0, 0x0)
     AugmentPickedVfx: (Hash, 0x0, 0x0, 0x0)
     0x4ddb7d67: (Hash, 0x0, 0x0, 0x0)
     AugmentDescription: (Hash, 0x0, 0x0, 0x0)
-    0x5f1b3269: (Hash, 0x0, 0x0, 0x0)
+    AugmentRefreshVfx: (Hash, 0x0, 0x0, 0x0)
     AugmentNotPickedVfx: (Hash, 0x0, 0x0, 0x0)
     AugmentIcon: (Hash, 0x0, 0x0, 0x0)
-    0x954bc86a: (Hash, 0x0, 0x0, 0x0)
-    0x9dcaddb: (Hash, 0x0, 0x0, 0x0)
-    0xa1af8ca8: (Hash, 0x0, 0x0, 0x0)
-    0xbcce96da: (Hash, 0x0, 0x0, 0x0)
-    0xc4b6fb6: (Embed, 0x0, 0x0, 0x477e22a5)
-    0xd94aa383: (Hash, 0x0, 0x0, 0x0)
-    0xe0f9184b: (Hash, 0x0, 0x0, 0x0)
+    AugmentIdleVfx: (Hash, 0x0, 0x0, 0x0)
+    AugmentName: (Hash, 0x0, 0x0, 0x0)
+    AugmentLevelTitle: (Hash, 0x0, 0x0, 0x0)
+    AugmentHoverVfx: (Hash, 0x0, 0x0, 0x0)
+    AugmentDisplayTagData: (Embed, 0x0, 0x0, StrawberryAugmentDisplayTagData)
+    AugmentRefreshOverlayVfx: (Hash, 0x0, 0x0, 0x0)
+    AugmentLevelUpData: (Hash, 0x0, 0x0, 0x0)
     AugmentButton: (Hash, 0x0, 0x0, 0x0)
     pass
 
@@ -8529,12 +8529,12 @@ class SameTeamCastRequirement(ICastRequirement):
 class BarracksDampener(BarracksDampenerCommon):
     pass
 
-class 0x60ca3f49():
+class MapWorldParticle():
     EffectName: (String, 0x0, 0x0, 0x0)
-    0x783132f6: (U8, 0x0, 0x0, 0x0)
+    State: (U8, 0x0, 0x0, 0x0)
     Particle: (Link, 0x0, 0x0, VfxSystemDefinitionData)
     EffectKey: (String, 0x0, 0x0, 0x0)
-    0xc1958fe9: (String, 0x0, 0x0, 0x0)
+    EffectState: (String, 0x0, 0x0, 0x0)
     pass
 
 class PfxFieldDragDefinitionData():
@@ -8549,11 +8549,11 @@ class ScriptDataObject():
     mRequiredConstantsGroup: (Link, 0x0, 0x0, GameModeConstantsGroup)
     pass
 
-class 0x60e2ec74(0xc03bb018):
+class 0x60e2ec74(IGameModeConfigClient):
     MutatorControlledLoadingScreenBackgrounds: (List2, 0x0, String, 0x0)
-    0xae427127: (String, 0x0, 0x0, 0x0)
-    0xbe0dceb0: (Link, 0x0, 0x0, LoadScreenTipConfiguration)
-    0xe8b7a3b7: (Map, String, String, 0x0)
+    LoadingScreenBackground: (String, 0x0, 0x0, 0x0)
+    LoadScreenTipConfiguration: (Link, 0x0, 0x0, LoadScreenTipConfiguration)
+    LoadingScreenBackgroundOverride: (Map, String, String, 0x0)
     pass
 
 class 0x60fea92f(ISequenceActionInstance):
@@ -8616,7 +8616,7 @@ class SkinMeshDataProperties():
     pass
 
 class 0x6136d145(0x64c18f7d):
-    0x416010f5: (F32, 0x0, 0x0, 0x0)
+    TargetSkinScale: (F32, 0x0, 0x0, 0x0)
     pass
 
 class HealthBarExtraBarsData():
@@ -8636,10 +8636,10 @@ class ModeSelectQueueButtonData():
     ButtonDisabledIcon: (Hash, 0x0, 0x0, 0x0)
     ButtonClickedIcon: (Hash, 0x0, 0x0, 0x0)
     ButtonHoverIcon: (Hash, 0x0, 0x0, 0x0)
-    0xdcabd2fa: (Embed, 0x0, 0x0, 0x6241da2)
-    0xe94db68: (Hash, 0x0, 0x0, 0x0)
+    NewPip: (Embed, 0x0, 0x0, 0x6241da2)
+    RestrictionIcon: (Hash, 0x0, 0x0, 0x0)
     ButtonDefaultIcon: (Hash, 0x0, 0x0, 0x0)
-    0xefcfec1a: (Hash, 0x0, 0x0, 0x0)
+    IllustrationIconDisabled: (Hash, 0x0, 0x0, 0x0)
     pass
 
 class ContextualConditionOwnerTeamNetChampionKills(IContextualCondition):
@@ -8678,9 +8678,9 @@ class DeathRecapShowcaseSlotData():
     SlotGroup: (Hash, 0x0, 0x0, 0x0)
     pass
 
-class 0x61dcaf9a(TftCutsceneVfxClip):
+class TftCutscenePosProviderVfxClip(TftCutsceneVfxClip):
     HideWhenNotViewed: (Bool, 0x0, 0x0, 0x0)
-    Position: (Pointer, 0x0, 0x0, 0x9d97d657)
+    Position: (Pointer, 0x0, 0x0, TftCutscenePositionProvider)
     pass
 
 class ItemDataValues():
@@ -8691,7 +8691,7 @@ class HudDamageDisplayData():
     0xdfcea7db: (F32, 0x0, 0x0, 0x0)
     pass
 
-class 0x6217fc5b(IGameModeConfig):
+class VisionConfig(IGameModeConfig):
     0x667106f9: (Bool, 0x0, 0x0, 0x0)
     pass
 
@@ -8700,11 +8700,11 @@ class 0x6222096a():
 
 class 0x6241da2():
     0x114ce1e2: (Hash, 0x0, 0x0, 0x0)
-    0x87640efa: (Hash, 0x0, 0x0, 0x0)
+    NewPipVfx: (Hash, 0x0, 0x0, 0x0)
     pass
 
 class PlaybookInfoPanel():
-    0x115bfcb9: (Hash, 0x0, 0x0, 0x0)
+    Subtitle: (Hash, 0x0, 0x0, 0x0)
     Scene: (Hash, 0x0, 0x0, 0x0)
     Description: (Hash, 0x0, 0x0, 0x0)
     EquippedIcon: (Hash, 0x0, 0x0, 0x0)
@@ -8741,11 +8741,11 @@ class TargeterDefinitionWall(TargeterDefinition):
 
 class 0x629f5938():
     UiElement: (Hash, 0x0, 0x0, 0x0)
-    0x6f38905e: (Hash, 0x0, 0x0, 0x0)
+    UnitPropertyToggle: (Hash, 0x0, 0x0, 0x0)
     pass
 
-class 0x62bb343b():
-    0xf91faa4f: (Bool, 0x0, 0x0, 0x0)
+class AutoSpellCastInfo():
+    AutoSpellCast: (Bool, 0x0, 0x0, 0x0)
     pass
 
 class HybridMaterialDefPreset():
@@ -8835,7 +8835,7 @@ class TftOutOfGameItemData():
     IconPath: (String, 0x0, 0x0, 0x0)
     pass
 
-class 0x63326f99(IScriptBlock):
+class EndGameBlock(IScriptBlock):
     pass
 
 class UiElementGroupButtonAdditionalElements():
@@ -8944,8 +8944,8 @@ class ChildMissileRepulsion(MissileBehaviorSpec):
     mSiblingRepulsion: (F32, 0x0, 0x0, 0x0)
     pass
 
-class 0x64a133b3(0x71eb4498):
-    0x411b1019: (List2, 0x0, Pointer, 0x8f1ade1)
+class BasicSkinAugment(ISkinAugment):
+    Modifiers: (List2, 0x0, Pointer, ISkinAugmentModifier)
     pass
 
 class QuestTrackerMessageTemplate():
@@ -8968,14 +8968,14 @@ class 0x64c18f7d():
 
 class AddLevelTimer(LevelScriptBlock):
     PassThroughParameters: (Map, Hash, Pointer, IScriptValueGet)
-    Callback: (Embed, 0x0, 0x0, 0x106bef1e)
+    Callback: (Embed, 0x0, 0x0, LevelScriptFunctionLink)
     Callback: (Link, 0x0, 0x0, ScriptFunction)
     PeriodicFrequencySecs: (Pointer, 0x0, 0x0, IFloatGet)
     InitialDelaySecs: (Pointer, 0x0, 0x0, IFloatGet)
     pass
 
-class 0x64da2c7f():
-    0xc1474e3: (List2, 0x0, Embed, 0x98f54b56)
+class TftTraitAssignmentVariation():
+    TraitAssignments: (List2, 0x0, Embed, TftTraitAssignment)
     0xd009f732: (Link, 0x0, 0x0, TftTraitData)
     pass
 
@@ -9021,7 +9021,7 @@ class TftCombatRecapPanelTemplate():
 class 0x65597744(IBehaviorScriptBlock):
     pass
 
-class 0x6560a660(0x5c108a08):
+class 0x6560a660(ILolSpellScriptEvent):
     pass
 
 class LoadingScreenRankedProperties():
@@ -9035,17 +9035,17 @@ class UiTextureProviderMesh(UiTextureProviderBase):
 class 0x658ecca7(IBehaviorScriptBlock):
     pass
 
-class 0x65a0d565():
+class PlaybookAugmentPanelData():
     0x454175b4: (U8, 0x0, 0x0, 0x0)
     0x87ff6cbc: (U8, 0x0, 0x0, 0x0)
-    0x90386cd8: (Hash, 0x0, 0x0, 0x0)
-    0x971f3f7c: (Hash, 0x0, 0x0, 0x0)
+    MidAugmentGrid: (Hash, 0x0, 0x0, 0x0)
+    LateAugmentGrid: (Hash, 0x0, 0x0, 0x0)
     0xa233b0ab: (Hash, 0x0, 0x0, 0x0)
     ViewPanelScene: (Hash, 0x0, 0x0, 0x0)
     pass
 
 class 0x65a1bb16(0x9a573886):
-    0xb33bbb28: (U8, 0x0, 0x0, 0x0)
+    Easing: (U8, 0x0, 0x0, 0x0)
     pass
 
 class PlayerFields():
@@ -9127,7 +9127,7 @@ class MusicAudioDataProperties():
 class UiElementGroupMeter(UiElementGroup):
     pass
 
-class 0x6634ed37():
+class CherrySpectateMatchDialogText():
     0x14810744: (String, 0x0, 0x0, 0x0)
     0x270bd9c2: (String, 0x0, 0x0, 0x0)
     0x9e7b5cd7: (String, 0x0, 0x0, 0x0)
@@ -9135,7 +9135,7 @@ class 0x6634ed37():
     0xdecfb3d8: (String, 0x0, 0x0, 0x0)
     pass
 
-class 0x6638d338():
+class TeamScoreUiData():
     Team2Text: (Hash, 0x0, 0x0, 0x0)
     Team1Icon: (Hash, 0x0, 0x0, 0x0)
     Team2Icon: (Hash, 0x0, 0x0, 0x0)
@@ -9160,15 +9160,15 @@ class SyncGroupData():
     pass
 
 class CcBehaviorsConfig():
-    0x19921be: (List2, 0x0, Hash, 0x0)
+    ExperimentalBehaviors: (List2, 0x0, Hash, 0x0)
     BerserkTargetingParametersMap: (Map, Hash, Embed, BerserkTargetingPriorityList)
     BerserkTargetingParameters: (List, 0x0, Embed, BerserkTargetingParameters)
-    0x8b22a93a: (Map, Hash, Embed, 0xdb6be360)
+    TargetingParametersMap: (Map, Hash, Embed, TargetingPriorityList)
     pass
 
 class 0x6693bb9(0x2b00c366):
     0x2484d6c3: (Bool, 0x0, 0x0, 0x0)
-    0x65bba5e8: (Link, 0x0, 0x0, TftMapSkin)
+    Arena: (Link, 0x0, 0x0, TftMapSkin)
     pass
 
 class ChangeTurnRadius(MissileTriggeredActionSpec):
@@ -9176,13 +9176,13 @@ class ChangeTurnRadius(MissileTriggeredActionSpec):
     pass
 
 class 0x66b38743():
-    0xdca93a3a: (Hash, 0x0, 0x0, 0x0)
+    PathHash: (Hash, 0x0, 0x0, 0x0)
     pass
 
 class DestroyOnHit(MissileBehaviorSpec):
     pass
 
-class 0x66b4f2c4(0x7fdaad8b, BinFileContainer):
+class TftCharacter(ICharacter, BinFileContainer):
     Name: (String, 0x0, 0x0, 0x0)
     pass
 
@@ -9195,13 +9195,13 @@ class RsOrCondition(IRsCondition):
     Conditions: (List, 0x0, Pointer, IRsCondition)
     pass
 
-class 0x671b2d4(0xbfaf421f):
-    0x328f4c1e: (String, 0x0, 0x0, 0x0)
-    0x60038edd: (Embed, 0x0, 0x0, 0x17c543dc)
+class BrowserInstanceData(InstanceDataBase):
+    Url: (String, 0x0, 0x0, 0x0)
+    ForegroundImage: (Embed, 0x0, 0x0, TextureOverride)
     pass
 
 class 0x671b7351(0x1519e8d2):
-    0xbc1c4865: (String, 0x0, 0x0, 0x0)
+    VfxGroupName: (String, 0x0, 0x0, 0x0)
     pass
 
 class 0x67406e7f(0xbc280d0a):
@@ -9217,9 +9217,9 @@ class OptionTemplateGroup(IOptionTemplate):
     pass
 
 class UiElementGroupButtonState():
-    DisplayElements: (List, 0x0, Link, 0x231dd1a2)
+    DisplayElements: (List, 0x0, Link, ElementDataI)
     DisplayElements: (List, 0x0, Link, UiElementIData)
-    0xafbfe7cf: (List2, 0x0, Link, UiElementIData)
+    DisplayElementList: (List2, 0x0, Link, UiElementIData)
     TextElement: (Link, 0x0, 0x0, TextElementData)
     TextElement: (Link, 0x0, 0x0, UiElementTextData)
     TextFrameElement: (Link, 0x0, 0x0, UiElementIconData)
@@ -9291,13 +9291,13 @@ class VfxPrimitiveBeam(VfxPrimitiveBase):
     mMesh: (Embed, 0x0, 0x0, VfxMeshDefinitionData)
     pass
 
-class 0x6878c1b5(0x7c893a73):
+class VfxAnimatedColor(VfxColorBase):
     Values: (List, 0x0, Vec4, 0x0)
     Values: (List2, 0x0, Vec4, 0x0)
     Times: (List, 0x0, F32, 0x0)
     Times: (List2, 0x0, F32, 0x0)
     0x7c9bcfd5: (List, 0x0, U32, 0x0)
-    0x938b38b3: (List2, 0x0, U8, 0x0)
+    Modes: (List2, 0x0, U8, 0x0)
     ProbabilityTables: (List, 0x4, Pointer, VfxProbabilityTableData)
     pass
 
@@ -9318,13 +9318,13 @@ class IBaseParametricUpdater():
 
 class ValueVector3():
     ConstantValue: (Vec3, 0x0, 0x0, 0x0)
-    Dynamics: (Pointer, 0x0, 0x0, 0x14e6a52c)
+    Dynamics: (Pointer, 0x0, 0x0, VfxVector3fBase)
     Dynamics: (Pointer, 0x0, 0x0, VfxAnimatedVector3fVariableData)
     pass
 
 class SkinUpgradeData():
     mRecallSkinUpgrades: (List, 0x0, Link, RecallSkinUpgrade)
-    0x771215f7: (Embed, 0x0, 0x0, 0x771215f7)
+    SkinAugmentCategories: (Embed, 0x0, 0x0, SkinAugmentCategories)
     mSpawnSkinUpgrades: (List, 0x0, Link, SpawnSkinUpgrade)
     mGearSkinUpgrades: (List, 0x0, Link, GearSkinUpgrade)
     mHomeguardSkinUpgrades: (List, 0x0, Link, HomeguardSkinUpgrade)
@@ -9333,10 +9333,10 @@ class SkinUpgradeData():
 class 0x69057401():
     Divider: (Hash, 0x0, 0x0, 0x0)
     TeamName: (Hash, 0x0, 0x0, 0x0)
-    0x917db252: (Hash, 0x0, 0x0, 0x0)
-    0xa0618d73: (Hash, 0x0, 0x0, 0x0)
+    TeamBanner: (Hash, 0x0, 0x0, 0x0)
+    TeamByeText: (Hash, 0x0, 0x0, 0x0)
     0xf933c90d: (Hash, 0x0, 0x0, 0x0)
-    0xfebfae4f: (Hash, 0x0, 0x0, 0x0)
+    TeamPosition: (Hash, 0x0, 0x0, 0x0)
     pass
 
 class PurchaseDialogBase(ModalDialogViewController):
@@ -9345,7 +9345,7 @@ class PurchaseDialogBase(ModalDialogViewController):
     ResizableBackdrop: (Hash, 0x0, 0x0, 0x0)
     pass
 
-class 0x690f8fb5(PlayerStatsPanelViewController):
+class PlayerAugmentsViewController(PlayerStatsPanelViewController):
     PanelBgAltTop: (Hash, 0x0, 0x0, 0x0)
     Scene: (Hash, 0x0, 0x0, 0x0)
     PanelBg: (Hash, 0x0, 0x0, 0x0)
@@ -9362,18 +9362,18 @@ class UiUnitStatusData():
     CenterJustifyStatusIconAndText: (Bool, 0x0, 0x0, 0x0)
     pass
 
-class 0x6970c508(ViewController):
+class TftEventHubLargeViewController(ViewController):
     BaseLoadable: (Link, 0x0, 0x0, UiPropertyLoadable)
-    0x566a2caa: (Embed, 0x0, 0x0, 0xbf5c4715)
-    0x67c56f9d: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
-    0x6bc41154: (Pointer, 0x0, 0x0, 0xa48aca10)
+    EventPassThumbnail: (Embed, 0x0, 0x0, 0xbf5c4715)
+    TabletOverrideLoadable: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
+    EventTimer: (Pointer, 0x0, 0x0, TftEventTimer)
     InfoButton: (Hash, 0x0, 0x0, 0x0)
     0x7d200cc1: (Embed, 0x0, 0x0, 0x61902388)
-    0x88ea17ef: (Embed, 0x0, 0x0, 0xdd8ea5ae)
+    MissionScroller: (Embed, 0x0, 0x0, 0xdd8ea5ae)
     0x96dd8579: (Link, 0x0, 0x0, ModalDialogViewController)
     SceneRoot: (Hash, 0x0, 0x0, 0x0)
     CloseButton: (Hash, 0x0, 0x0, 0x0)
-    0xb9ed4a26: (Embed, 0x0, 0x0, 0x22dd5ebf)
+    TrovesThumbnail: (Embed, 0x0, 0x0, 0x22dd5ebf)
     0xe5388f19: (Hash, 0x0, 0x0, 0x0)
     pass
 
@@ -9400,8 +9400,8 @@ class LoadingScreenRegaliaData():
     pass
 
 class 0x69b74614():
-    0x327526de: (F32, 0x0, 0x0, 0x0)
-    0x33752871: (F32, 0x0, 0x0, 0x0)
+    TooltipOffsetY: (F32, 0x0, 0x0, 0x0)
+    TooltipOffsetX: (F32, 0x0, 0x0, 0x0)
     Button: (Hash, 0x0, 0x0, 0x0)
     TooltipTitleTra: (String, 0x0, 0x0, 0x0)
     TooltipDescriptionTra: (String, 0x0, 0x0, 0x0)
@@ -9419,17 +9419,17 @@ class GetGameStartCountdownTime(LevelScriptBlock):
     Dest: (Embed, 0x0, 0x0, FloatTableSet)
     pass
 
-class 0x69cdddcc(0x9d97d657):
-    0x14c80a10: (Bool, 0x0, 0x0, 0x0)
+class 0x69cdddcc(TftCutscenePositionProvider):
+    HasOffset: (Bool, 0x0, 0x0, 0x0)
     0x1ec4c9b5: (String, 0x0, 0x0, 0x0)
-    0x7ecd0c01: (Vec3, 0x0, 0x0, 0x0)
+    OffsetVector: (Vec3, 0x0, 0x0, 0x0)
     0x88034173: (String, 0x0, 0x0, 0x0)
     0xcbbb27a5: (Bool, 0x0, 0x0, 0x0)
-    0xdb90e18f: (String, 0x0, 0x0, 0x0)
+    Bone: (String, 0x0, 0x0, 0x0)
     pass
 
-class LolSpellScript(0x30f0efe0, Rscript):
-    0x131a7dbd: (Bool, 0x0, 0x0, 0x0)
+class LolSpellScript(GameScript, Rscript):
+    CastingBreaksStealth: (Bool, 0x0, 0x0, 0x0)
     PreloadData: (Embed, 0x0, 0x0, LolSpellPreloadData)
     mSequences: (Map, U32, Embed, Sequence)
     mSequences: (Map, U32, Pointer, Sequence)
@@ -9447,7 +9447,7 @@ class LolSpellScript(0x30f0efe0, Rscript):
 class ValueVector2():
     ConstantValue: (Vec2, 0x0, 0x0, 0x0)
     Dynamics: (Pointer, 0x0, 0x0, VfxAnimatedVector2fVariableData)
-    Dynamics: (Pointer, 0x0, 0x0, 0x42dc7bd1)
+    Dynamics: (Pointer, 0x0, 0x0, VfxVector2fBase)
     pass
 
 class GdsMapObjectBannerInfo(GdsMapObjectExtraInfo):
@@ -9501,14 +9501,14 @@ class SetTargetableBlock(IScriptBlock):
     pass
 
 class 0x6a68b4f1():
-    0x38ed5bd5: (Hash, 0x0, 0x0, 0x0)
-    0x3df9c95e: (Hash, 0x0, 0x0, 0x0)
-    0x71f39f63: (Hash, 0x0, 0x0, 0x0)
-    0x7fc876f0: (Hash, 0x0, 0x0, 0x0)
-    0x9abe42e5: (Hash, 0x0, 0x0, 0x0)
-    0xa4914101: (Hash, 0x0, 0x0, 0x0)
-    0xa873c4a3: (Hash, 0x0, 0x0, 0x0)
-    0xed531a17: (Hash, 0x0, 0x0, 0x0)
+    Victory: (Hash, 0x0, 0x0, 0x0)
+    Defeat: (Hash, 0x0, 0x0, 0x0)
+    Bye: (Hash, 0x0, 0x0, 0x0)
+    DefeatFx: (Hash, 0x0, 0x0, 0x0)
+    ByeFx: (Hash, 0x0, 0x0, 0x0)
+    FightingFx: (Hash, 0x0, 0x0, 0x0)
+    VictoryFx: (Hash, 0x0, 0x0, 0x0)
+    Fighting: (Hash, 0x0, 0x0, 0x0)
     pass
 
 class 0x6a694f75(IFxAction):
@@ -9543,7 +9543,7 @@ class VfxMeshDefinitionData():
     mAnimationName: (String, 0x0, 0x0, 0x0)
     pass
 
-class 0x6a97ad3(0x6074d548):
+class 0x6a97ad3(ILogicVector3Driver):
     pass
 
 class OptionItemSecondaryHotkeys2Column(IOptionItem):
@@ -9552,7 +9552,7 @@ class OptionItemSecondaryHotkeys2Column(IOptionItem):
     Header: (Embed, 0x0, 0x0, OptionItemSecondaryHotkeys2Column_Header)
     pass
 
-class 0x6aa8d21(FloatingInfoBarViewController):
+class TftFloatingInfoBarViewController(FloatingInfoBarViewController):
     pass
 
 class TftTraitInfoCardViewController(ViewController):
@@ -9564,12 +9564,12 @@ class TftTraitInfoCardViewController(ViewController):
     UnitPortraitSection: (Pointer, 0x0, 0x0, TftHudTraitUnitPortraitSection)
     TraitName: (Hash, 0x0, 0x0, 0x0)
     MobileOverrideLoadable: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
-    0x6de5e0b8: (Map, U8, Pointer, 0x215d037d)
+    0x6de5e0b8: (Map, U8, Pointer, TftTraitInfoCard)
     TraitIcon: (Hash, 0x0, 0x0, 0x0)
     SceneRegion: (Hash, 0x0, 0x0, 0x0)
     ResizableBackdrop: (Hash, 0x0, 0x0, 0x0)
     MobileOverrideBinName: (String, 0x0, 0x0, 0x0)
-    0x96550720: (Hash, 0x0, 0x0, 0x0)
+    UnitInfoTraitAnchor: (Hash, 0x0, 0x0, 0x0)
     TraitDescription: (Hash, 0x0, 0x0, 0x0)
     UnitInfoCardAnchor: (Hash, 0x0, 0x0, 0x0)
     BaseBinName: (String, 0x0, 0x0, 0x0)
@@ -9614,8 +9614,8 @@ class LolModesSubphaseData():
     Duration: (F32, 0x0, 0x0, 0x0)
     FlashOnTimeRemaining: (F32, 0x0, 0x0, 0x0)
     Type: (U8, 0x0, 0x0, 0x0)
-    0x722c698b: (Color, 0x0, 0x0, 0x0)
-    0x88cc61db: (F32, 0x0, 0x0, 0x0)
+    TimerBarDefaultColor: (Color, 0x0, 0x0, 0x0)
+    SecondFlashOnTimeRemaining: (F32, 0x0, 0x0, 0x0)
     0xa42117a5: (List2, 0x0, Link, 0xc10d4fdc)
     TimerBarColor: (Color, 0x0, 0x0, 0x0)
     pass
@@ -9642,25 +9642,25 @@ class SpellDataValueVector():
     pass
 
 class 0x6b37502b():
-    0x6e3efa5d: (List2, 0x0, U32, 0x0)
+    SpeciesIds: (List2, 0x0, U32, 0x0)
     Name: (String, 0x0, 0x0, 0x0)
     pass
 
 class 0x6b3ef1bd(IGameModeConfig):
-    0x19c50f94: (F32, 0x0, 0x0, 0x0)
+    SurrenderVoteCompleteDialogPersistsSec: (F32, 0x0, 0x0, 0x0)
     SurrenderAfkAutoVoteThresholdSec: (F32, 0x0, 0x0, 0x0)
     SurrenderRetryDelaySec: (F32, 0x0, 0x0, 0x0)
-    0x7ae49fa3: (U32, 0x0, 0x0, 0x0)
+    TeamSurrenderVoterCount: (U32, 0x0, 0x0, 0x0)
     0x9077ce38: (F32, 0x0, 0x0, 0x0)
     SurrenderVoteDurationSec: (F32, 0x0, 0x0, 0x0)
     SurrenderVoteCompleteEliminateDelaySec: (F32, 0x0, 0x0, 0x0)
     pass
 
-class 0x6b534eae(IScriptSequence):
+class ScriptBtFailure(IScriptSequence):
     Blocks: (List2, 0x0, Pointer, IScriptBlock)
     pass
 
-class 0x6b646a4(0xc82f0d9):
+class TftBlendedLinearHeightSolver(TftHeightSolverType):
     pass
 
 class 0x6b6ada59(IScriptBlock, IBehaviorScriptBlock):
@@ -9678,43 +9678,43 @@ class MinimapPingEffectDefinition():
     AlphaFadeSpeed: (F32, 0x0, 0x0, 0x0)
     pass
 
-class 0x6b863734(0x121b48aa):
-    0x350f6760: (U8, 0x0, 0x0, 0x0)
+class 0x6b863734(IMapVisibilityController):
+    VisFlags: (U8, 0x0, 0x0, 0x0)
     pass
 
-class 0x6b91544a(0xc03bb018):
+class 0x6b91544a(IGameModeConfigClient):
     0x46edf5aa: (F32, 0x0, 0x0, 0x0)
-    0x666abee0: (Bool, 0x0, 0x0, 0x0)
-    0x9cfb5e22: (F32, 0x0, 0x0, 0x0)
+    BlurTextures: (Bool, 0x0, 0x0, 0x0)
+    FadeInRate: (F32, 0x0, 0x0, 0x0)
     BlurKernelSigma: (F32, 0x0, 0x0, 0x0)
-    0xc62a9137: (List2, 0x0, Embed, 0x41c19efe)
-    0xc62a9137: (Map, Hash, Link, VfxSystemDefinitionData)
-    0xc858c907: (F32, 0x0, 0x0, 0x0)
-    0xf7aea3b2: (Bool, 0x0, 0x0, 0x0)
+    VfxSystems: (List2, 0x0, Embed, VfxPrimitiveCameraSegmentSeriesBeam)
+    VfxSystems: (Map, Hash, Link, VfxSystemDefinitionData)
+    FadeOutRate: (F32, 0x0, 0x0, 0x0)
+    UpscaleTextures: (Bool, 0x0, 0x0, 0x0)
     pass
 
-class 0x6ba2dab2():
-    0x2598b37b: (Bool, 0x0, 0x0, 0x0)
-    0x26444773: (Vec3, 0x0, 0x0, 0x0)
+class ReciprocityConfigData():
+    UseCharacter: (Bool, 0x0, 0x0, 0x0)
+    CharacterOffset: (Vec3, 0x0, 0x0, 0x0)
     0x289c2d47: (F32, 0x0, 0x0, 0x0)
     0x376cc7a8: (F32, 0x0, 0x0, 0x0)
-    0x38022a93: (String, 0x0, 0x0, 0x0)
-    0x71064bca: (F32, 0x0, 0x0, 0x0)
+    CharacterName: (String, 0x0, 0x0, 0x0)
+    DecayTimer: (F32, 0x0, 0x0, 0x0)
     0x804e130b: (F32, 0x0, 0x0, 0x0)
     0x8c0e1f6b: (Color, 0x0, 0x0, 0x0)
     0x9783708b: (F32, 0x0, 0x0, 0x0)
-    0xcc324529: (F32, 0x0, 0x0, 0x0)
+    CooldownTimer: (F32, 0x0, 0x0, 0x0)
     pass
 
-class 0x6bb5ba68():
-    0x2d6f5674: (Pointer, 0x0, 0x0, ILogicFloatDriver)
-    0x5a9403be: (String, 0x0, 0x0, 0x0)
-    0x6e6dcfed: (String, 0x0, 0x0, 0x0)
+class TextGimmeDataInstance():
+    ValueDriver: (Pointer, 0x0, 0x0, ILogicFloatDriver)
+    LocalizedTextFormat: (String, 0x0, 0x0, 0x0)
+    TextFormat: (String, 0x0, 0x0, 0x0)
     TextElement: (Hash, 0x0, 0x0, 0x0)
     pass
 
 class 0x6bbc3db6(0x288b8edc):
-    0x35e8662f: (List, 0x4, Link, SpellObject)
+    SpellObjects: (List, 0x4, Link, SpellObject)
     0xda28e4c: (Color, 0x0, 0x0, 0x0)
     pass
 
@@ -9771,8 +9771,8 @@ class TftMapCharacterLists():
     pass
 
 class 0x6c84152e():
-    0x2a648ec4: (Hash, 0x0, 0x0, 0x0)
-    0x9e6a7234: (Hash, 0x0, 0x0, 0x0)
+    ForVote: (Hash, 0x0, 0x0, 0x0)
+    AgainstVote: (Hash, 0x0, 0x0, 0x0)
     pass
 
 class 0x6ca013c9(IFxActionInstance):
@@ -9820,14 +9820,14 @@ class SceneScreenEdgeTransitionData(SceneBaseTransitionData):
 class 0x6cfd4c2(IBehaviorScriptBlock):
     pass
 
-class 0x6d1d5373():
-    0x14f3cff4: (Link, 0x0, 0x0, 0x5d765a43)
+class ConfigBool():
+    Enabler: (Link, 0x0, 0x0, IEnabler)
     Value: (Bool, 0x0, 0x0, 0x0)
     pass
 
-class 0x6d1ee7ae(IScriptBlock):
+class SetBit(IScriptBlock):
     BitIndex: (Pointer, 0x0, 0x0, IIntGet)
-    0xa5d2169c: (Embed, 0x0, 0x0, IntTableSet)
+    BitField: (Embed, 0x0, 0x0, IntTableSet)
     pass
 
 class LoginViewController(ViewController):
@@ -9838,15 +9838,15 @@ class LoginViewController(ViewController):
     0x60a8380: (Map, U32, Hash, 0x0)
     LoginData: (Embed, 0x0, 0x0, TftMobileLoginData)
     ButtonLayout: (Hash, 0x0, 0x0, 0x0)
-    0x7f6c17a6: (Hash, 0x0, 0x0, 0x0)
+    BuildVersionText: (Hash, 0x0, 0x0, 0x0)
     LoginLogoMapping: (Map, U32, Hash, 0x0)
     Buttons: (List, 0x4, Hash, 0x0)
     Buttons: (List, 0x5, Hash, 0x0)
-    0xb11e62a4: (List, 0x5, Hash, 0x0)
+    LoginProviderButtons: (List, 0x5, Hash, 0x0)
     pass
 
 class ILevelController():
-    0x2c9b7f0c: (String, 0x0, 0x0, 0x0)
+    Guid: (String, 0x0, 0x0, 0x0)
     0x3749ad96: (Hash, 0x0, 0x0, 0x0)
     pass
 
@@ -9909,12 +9909,12 @@ class GetFloatOptionFloatDriver(ILogicFloatDriver):
 
 class MapProjectedTexture(MapFrustum):
     ProjectedTexture: (String, 0x0, 0x0, 0x0)
-    0xa0a0468c: (Map, U32, String, 0x0)
+    AdditionalTextures: (Map, U32, String, 0x0)
     FalloffTexture: (String, 0x0, 0x0, 0x0)
     pass
 
 class 0x6de4753e():
-    0xee141295: (List2, 0x0, Embed, 0xffcac16f)
+    SkillLevels: (List2, 0x0, Embed, 0xffcac16f)
     pass
 
 class 0x6de65881(TableValue):
@@ -9923,18 +9923,18 @@ class 0x6de65881(TableValue):
 class InfoNubData():
     pass
 
-class AugmentData(0x51b98b7f):
+class AugmentData(IAugment):
     RootSpell: (Link, 0x0, 0x0, SpellObject)
-    0x19ae3e16: (String, 0x0, 0x0, 0x0)
+    AugmentNameId: (String, 0x0, 0x0, 0x0)
     NameTra: (String, 0x0, 0x0, 0x0)
     Enabled: (Bool, 0x0, 0x0, 0x0)
-    0x366935fc: (String, 0x0, 0x0, 0x0)
+    AugmentTooltipTra: (String, 0x0, 0x0, 0x0)
     AugmentSmallIconPath: (String, 0x0, 0x0, 0x0)
     Rarity: (U8, 0x0, 0x0, 0x0)
     mBuildTags: (U32, 0x0, 0x0, 0x0)
-    0x827dc19e: (I32, 0x0, 0x0, 0x0)
-    0x9afb2161: (String, 0x0, 0x0, 0x0)
-    0xc1716cff: (List, 0x0, U32, 0x0)
+    AugmentPlatformId: (I32, 0x0, 0x0, 0x0)
+    TooltipTra: (String, 0x0, 0x0, 0x0)
+    AugmentDisplayTags: (List, 0x0, U32, 0x0)
     mAugmentTags: (U32, 0x0, 0x0, 0x0)
     AugmentLargeIconPath: (String, 0x0, 0x0, 0x0)
     DescriptionTra: (String, 0x0, 0x0, 0x0)
@@ -9953,7 +9953,7 @@ class TftHudScoreboardData():
     mCombatStateSlideInTimeSecs: (F32, 0x0, 0x0, 0x0)
     pass
 
-class 0x6e5b2caf(0xe66ae1e4):
+class UiMetricVisionScore(UiMetricTypeSimpleI):
     pass
 
 class BuffStackingSettings():
@@ -9965,9 +9965,9 @@ class MissileRenderSpec():
     pass
 
 class SurrenderViewController(VotePanelViewController):
-    0x301e3a3b: (Hash, 0x0, 0x0, 0x0)
-    0x32f745b1: (Hash, 0x0, 0x0, 0x0)
-    0xc21259bd: (Hash, 0x0, 0x0, 0x0)
+    EarlyText: (Hash, 0x0, 0x0, 0x0)
+    RemakeText: (Hash, 0x0, 0x0, 0x0)
+    DefaultText: (Hash, 0x0, 0x0, 0x0)
     pass
 
 class UiTeamIdentityData():
@@ -9979,7 +9979,7 @@ class UiTeamIdentityData():
 class RegionElementData(UiElementData, BaseElementData):
     pass
 
-class 0x6ee453be(LogicDriverViewController):
+class LogicDriverButtonViewController(LogicDriverViewController):
     0xc7e51dac: (List2, 0x0, Embed, 0x26949c34)
     pass
 
@@ -10000,9 +10000,9 @@ class DelayStart(MissileBehaviorSpec):
 class NotificationsViewController(ViewController):
     pass
 
-class 0x6f1e4224():
-    0x1cc466c2: (Hash, 0x0, 0x0, 0x0)
-    0x28c7bec7: (Hash, 0x0, 0x0, 0x0)
+class AugmentSlot():
+    PenetrationRecently: (Hash, 0x0, 0x0, 0x0)
+    AugmentGridItem: (Hash, 0x0, 0x0, 0x0)
     Backdrop: (Hash, 0x0, 0x0, 0x0)
     HitArea: (Hash, 0x0, 0x0, 0x0)
     0xbbebf3d: (Hash, 0x0, 0x0, 0x0)
@@ -10023,7 +10023,7 @@ class 0x6f31ebae(IScriptBlock, IBehaviorScriptBlock):
 
 class TftTraitData():
     mName: (String, 0x0, 0x0, 0x0)
-    0x55746daa: (Bool, 0x0, 0x0, 0x0)
+    ShowTraitContribution: (Bool, 0x0, 0x0, 0x0)
     InnateTraitSets: (List, 0x0, Embed, TftBaseTraitSetData)
     0x741575c2: (String, 0x0, 0x0, 0x0)
     mDescriptionNameTra: (String, 0x0, 0x0, 0x0)
@@ -10043,11 +10043,11 @@ class TftTraitData():
     pass
 
 class 0x6f9b77c6():
-    0x22a42125: (List2, 0x0, Embed, 0x1d54119c)
+    TftBattlepassLevels: (List2, 0x0, Embed, 0x1d54119c)
     MinimumVersionForContent: (String, 0x0, 0x0, 0x0)
     Id: (String, 0x0, 0x0, 0x0)
     AssetListId: (String, 0x0, 0x0, 0x0)
-    0x76f8fa70: (String, 0x0, 0x0, 0x0)
+    PremiumTitleTraKey: (String, 0x0, 0x0, 0x0)
     PassItemId: (U32, 0x0, 0x0, 0x0)
     TitleTrakey: (String, 0x0, 0x0, 0x0)
     pass
@@ -10128,7 +10128,7 @@ class UnitFloatingInfoBarData(FloatingInfoBarData):
     Icons: (Pointer, 0x0, 0x0, HeroFloatingInfoIconsData)
     pass
 
-class 0x7058f943(ScriptTableSet):
+class VectorArrayTableSet(ScriptTableSet):
     pass
 
 class 0x70670a5f(0x7546469c):
@@ -10141,7 +10141,7 @@ class SwapChampionCheat(Cheat):
     pass
 
 class 0x7084628f(0x18871c61):
-    0xf886996: (Link, 0x0, 0x0, AnnouncementStyleBasic)
+    CustomAnnouncementStyle: (Link, 0x0, 0x0, AnnouncementStyleBasic)
     pass
 
 class HudStatStoneDeathRecapData():
@@ -10175,18 +10175,18 @@ class GameCalculationModified(IGameCalculation):
     mOverrideSpellLevel: (Option, 0x0, I32, 0x0)
     pass
 
-class 0x70fbfc5e(ViewController):
-    0x13ae144f: (Hash, 0x0, 0x0, 0x0)
+class TftCraftingViewController(ViewController):
+    CraftingContinueButtonDefinition: (Hash, 0x0, 0x0, 0x0)
     DescriptionText: (Hash, 0x0, 0x0, 0x0)
     BaseLoadable: (Link, 0x0, 0x0, UiPropertyLoadable)
-    0x5ac714a6: (Link, 0x0, 0x0, Sequence)
-    0x67c56f9d: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
-    0x94326b7e: (Hash, 0x0, 0x0, 0x0)
+    CraftingSequence: (Link, 0x0, 0x0, Sequence)
+    TabletOverrideLoadable: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
+    DisabledText: (Hash, 0x0, 0x0, 0x0)
     PriceText: (Hash, 0x0, 0x0, 0x0)
     ContentScene: (Hash, 0x0, 0x0, 0x0)
     0xbcbb9921: (Hash, 0x0, 0x0, 0x0)
     ConfirmButtonDefinition: (Hash, 0x0, 0x0, 0x0)
-    0xd463462e: (Hash, 0x0, 0x0, 0x0)
+    BackgroundMissingTexture: (Hash, 0x0, 0x0, 0x0)
     NameText: (Hash, 0x0, 0x0, 0x0)
     BackgroundTexture: (Hash, 0x0, 0x0, 0x0)
     pass
@@ -10198,16 +10198,16 @@ class FloatLiteralMaterialDriver(IDynamicMaterialFloatDriver, ILogicFloatDriver)
 class IsInTerrainParametricUpdater(IBooleanParametricUpdater):
     pass
 
-class 0x71195869(0xbfaf421f):
-    0x70e902e6: (U32, 0x0, 0x0, 0x0)
-    0x99a3ceae: (Link, 0x0, 0x0, StoreListingData)
-    0xbf19bffc: (Embed, 0x0, 0x0, 0x17c543dc)
-    0xdc47fab7: (Embed, 0x0, 0x0, 0x17c543dc)
+class StoreInstanceData(InstanceDataBase):
+    StoreCategory: (U32, 0x0, 0x0, 0x0)
+    StoreData: (Link, 0x0, 0x0, StoreListingData)
+    ForegroundVfx: (Embed, 0x0, 0x0, TextureOverride)
+    BackgroundVfx: (Embed, 0x0, 0x0, TextureOverride)
     pass
 
-class 0x71215bc9(BaseEventData):
+class JointOrientationEventData(BaseEventData):
     OrientationType: (U8, 0x0, 0x0, 0x0)
-    0xb3d5945c: (Pointer, 0x0, 0x0, 0x6074d548)
+    OrientationSource: (Pointer, 0x0, 0x0, ILogicVector3Driver)
     pass
 
 class TransitionClipData():
@@ -10222,7 +10222,7 @@ class ContextualConditionCustomTimer(IContextualCondition):
 class IFunctionalScriptBlock(IScriptBlock):
     pass
 
-class AtlasData(AtlasDataBase, 0x840074ef):
+class AtlasData(AtlasDataBase, IUiEffectTextureDataProvider):
     mTextureUv: (Vec4, 0x0, 0x0, 0x0)
     mTextureSourceResolutionHeight: (U16, 0x0, 0x0, 0x0)
     mTextureSourceResolutionHeight: (U32, 0x0, 0x0, 0x0)
@@ -10245,7 +10245,7 @@ class 0x71e690a9(ClipBaseData):
     0xe526b8f4: (List, 0x0, Embed, 0x7e59037)
     pass
 
-class 0x71eb4498(BaseLoadoutData):
+class ISkinAugment(BaseLoadoutData):
     pass
 
 class EffectAnimationElementData(EffectElementData):
@@ -10267,17 +10267,17 @@ class HasGearDynamicMaterialBoolDriver(ILogicBoolDriver, IDynamicMaterialBoolDri
     mGearIndex: (U8, 0x0, 0x0, 0x0)
     pass
 
-class 0x7230780e(ScriptTableGet, IFloatGet):
+class FloatCast(ScriptTableGet, IFloatGet):
     pass
 
 class 0x72553f91():
     Enabled: (Bool, 0x0, 0x0, 0x0)
     0x52b59840: (Bool, 0x0, 0x0, 0x0)
     0x6b2944: (Bool, 0x0, 0x0, 0x0)
-    0x74de708f: (Hash, 0x0, 0x0, 0x0)
-    0xaad54df: (Bool, 0x0, 0x0, 0x0)
+    SpeakerIcon: (Hash, 0x0, 0x0, 0x0)
+    ShowCountdown: (Bool, 0x0, 0x0, 0x0)
     TitleTra: (String, 0x0, 0x0, 0x0)
-    0xef70d928: (F32, 0x0, 0x0, 0x0)
+    TimeLength: (F32, 0x0, 0x0, 0x0)
     DescriptionTra: (String, 0x0, 0x0, 0x0)
     pass
 
@@ -10390,12 +10390,12 @@ class TftCombatRecapLineTemplate():
     StarBorders: (List, 0x4, Hash, 0x0)
     pass
 
-class 0x7385a47b(IRunFunctionBlock):
+class RunFunctionBlock(IRunFunctionBlock):
     Function: (Embed, 0x0, 0x0, FunctionTableGet)
     pass
 
-class 0x73d72ce0(IContextualCondition):
-    0x90aed842: (Bool, 0x0, 0x0, 0x0)
+class ContextualConditionWinningTeam(IContextualCondition):
+    IsSameTeam: (Bool, 0x0, 0x0, 0x0)
     pass
 
 class TechniqueDef():
@@ -10424,7 +10424,7 @@ class SummonerEmote():
     VfxSystem: (Hash, 0x0, 0x0, 0x0)
     VfxSystem: (Link, 0x0, 0x0, VfxSystemDefinitionData)
     AnnouncementIcon: (String, 0x0, 0x0, 0x0)
-    0x4121a673: (F32, 0x0, 0x0, 0x0)
+    UiScale: (F32, 0x0, 0x0, 0x0)
     SelectionIcon: (String, 0x0, 0x0, 0x0)
     RenderScale: (F32, 0x0, 0x0, 0x0)
     mFacingOption: (U8, 0x0, 0x0, 0x0)
@@ -10442,7 +10442,7 @@ class ClashLogo():
     pass
 
 class TftAugmentDisplayData():
-    0x3e8d4337: (List, 0x0, Hash, 0x0)
+    Texts: (List, 0x0, Hash, 0x0)
     Type: (U8, 0x0, 0x0, 0x0)
     Placeholder: (Hash, 0x0, 0x0, 0x0)
     Text: (Hash, 0x0, 0x0, 0x0)
@@ -10450,18 +10450,18 @@ class TftAugmentDisplayData():
     Icon: (Hash, 0x0, 0x0, 0x0)
     pass
 
-class 0x7498a50():
-    0x102dbcce: (F32, 0x0, 0x0, 0x0)
-    0x7b542d28: (Hash, 0x0, 0x0, 0x0)
+class HeroFloatingInfoBountyData():
+    TierOneThreshold: (F32, 0x0, 0x0, 0x0)
+    TierTwoIcon: (Hash, 0x0, 0x0, 0x0)
     0x9026ab9e: (Color, 0x0, 0x0, 0x0)
-    0xc8d3cdb0: (F32, 0x0, 0x0, 0x0)
+    TierTwoThreshold: (F32, 0x0, 0x0, 0x0)
     0xd2e55900: (Color, 0x0, 0x0, 0x0)
-    0xfbb82562: (Hash, 0x0, 0x0, 0x0)
+    TierOneIcon: (Hash, 0x0, 0x0, 0x0)
     pass
 
-class 0x74e94776():
-    0x3f9c379d: (Link, 0x0, 0x0, LevelScriptController)
-    0x4060ec22: (Hash, 0x0, 0x0, 0x0)
+class LevelScriptControllerFunctionLink():
+    LevelControllerLink: (Link, 0x0, 0x0, LevelScriptController)
+    FunctionName: (Hash, 0x0, 0x0, 0x0)
     pass
 
 class TftUnitInfoCustomButtonData():
@@ -10477,7 +10477,7 @@ class TftUnitInfoCustomButtonData():
 class ValueColor():
     ConstantValue: (Vec4, 0x0, 0x0, 0x0)
     Dynamics: (Pointer, 0x0, 0x0, VfxAnimatedColorVariableData)
-    Dynamics: (Pointer, 0x0, 0x0, 0x7c893a73)
+    Dynamics: (Pointer, 0x0, 0x0, VfxColorBase)
     pass
 
 class HudAbilityResourceThresholdIndicator():
@@ -10492,7 +10492,7 @@ class TftUnitUpgradeData():
 class LoadoutGridButtonData():
     Scene: (Hash, 0x0, 0x0, 0x0)
     Group: (Hash, 0x0, 0x0, 0x0)
-    0x9234480a: (Hash, 0x0, 0x0, 0x0)
+    GamePass: (Hash, 0x0, 0x0, 0x0)
     Check: (Hash, 0x0, 0x0, 0x0)
     Icon: (Hash, 0x0, 0x0, 0x0)
     Lock: (Hash, 0x0, 0x0, 0x0)
@@ -10509,8 +10509,8 @@ class UiClashTeam():
     LogoIcon: (Hash, 0x0, 0x0, 0x0)
     pass
 
-class 0x752442e():
-    0x49b1d9ae: (List2, 0x0, Pointer, 0xe2ff8b22)
+class CharacterQuestListData():
+    CharacterQuestList: (List2, 0x0, Pointer, 0xe2ff8b22)
     0x5f1426cf: (Bool, 0x0, 0x0, 0x0)
     0x702d99a3: (I32, 0x0, 0x0, 0x0)
     pass
@@ -10520,7 +10520,7 @@ class ModalDialogViewController(ViewController):
     0x38eaaebf: (Bool, 0x0, 0x0, 0x0)
     BaseLoadable: (Link, 0x0, 0x0, UiPropertyLoadable)
     MobileOverrideLoadable: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
-    0x67c56f9d: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
+    TabletOverrideLoadable: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
     CancelButtonDefinition: (Hash, 0x0, 0x0, 0x0)
     ViewPaneDefinition: (Pointer, 0x0, 0x0, ViewPaneDefinition)
     ContentScene: (Hash, 0x0, 0x0, 0x0)
@@ -10531,7 +10531,7 @@ class 0x7546469c():
     pass
 
 class 0x755cf26f(ISequenceAction):
-    0x9d3b176c: (Pointer, 0x0, 0x0, 0xbc280d0a)
+    SoundEvent: (Pointer, 0x0, 0x0, 0xbc280d0a)
     pass
 
 class LoadoutUpgradeDialogViewController(ModalDialogViewController):
@@ -10575,7 +10575,7 @@ class DeathRecapDamagerDetailedDisplayData():
 
 class ObjectiveCampDefinition():
     VfxAlignmentTake: (Hash, 0x0, 0x0, 0x0)
-    0x74d24c26: (Hash, 0x0, 0x0, 0x0)
+    ObjectiveCampName: (Hash, 0x0, 0x0, 0x0)
     VfxNoneToExpanded: (Hash, 0x0, 0x0, 0x0)
     VfxAlignmentGive: (Hash, 0x0, 0x0, 0x0)
     VfxExpandedToCollapsed: (Hash, 0x0, 0x0, 0x0)
@@ -10584,7 +10584,7 @@ class ObjectiveCampDefinition():
     VfxNoneToCollapsed: (Hash, 0x0, 0x0, 0x0)
     VfxPortraitLooping: (Hash, 0x0, 0x0, 0x0)
     PortraitIcon: (Hash, 0x0, 0x0, 0x0)
-    0xf948299b: (String, 0x0, 0x0, 0x0)
+    ObjectiveName: (String, 0x0, 0x0, 0x0)
     pass
 
 class PingRadialBaseDefaultCommandDefinition():
@@ -10608,12 +10608,12 @@ class 0x7634a32e(IBehaviorScriptBlock):
     pass
 
 class 0x7638f87c():
-    0x3cca8edc: (Embed, 0x0, 0x0, 0x51db35d3)
-    0x48d0a28b: (Hash, 0x0, 0x0, 0x0)
-    0x66cd937a: (Hash, 0x0, 0x0, 0x0)
+    RewardIconFrame: (Embed, 0x0, 0x0, 0x51db35d3)
+    RewardFrame: (Hash, 0x0, 0x0, 0x0)
+    RewardBackground: (Hash, 0x0, 0x0, 0x0)
     RewardIcon: (Hash, 0x0, 0x0, 0x0)
-    0xb1be4e53: (Hash, 0x0, 0x0, 0x0)
-    0xbea92ccf: (Hash, 0x0, 0x0, 0x0)
+    RewardHitRegion: (Hash, 0x0, 0x0, 0x0)
+    RewardDayText: (Hash, 0x0, 0x0, 0x0)
     Parent: (Hash, 0x0, 0x0, 0x0)
     pass
 
@@ -10709,9 +10709,9 @@ class 0x7709fefa(0xe561be2e):
     Data: (Pointer, 0x0, 0x0, 0x7319918a)
     pass
 
-class 0x771215f7():
-    0x29f1f29f: (List2, 0x0, Embed, 0x4a70b12c)
-    0xccc89809: (List2, 0x0, Embed, 0xe1555e0a)
+class SkinAugmentCategories():
+    BorderAugments: (List2, 0x0, Embed, 0x4a70b12c)
+    BasicAugments: (List2, 0x0, Embed, 0xe1555e0a)
     pass
 
 class OptionItemFilter_PromoteAccount(IOptionItemFilter):
@@ -10798,8 +10798,8 @@ class NextSpellVarsTable(ScriptTable):
 class 0x77fb37dd():
     Divider: (Hash, 0x0, 0x0, 0x0)
     Group: (Hash, 0x0, 0x0, 0x0)
-    0x6c986511: (Hash, 0x0, 0x0, 0x0)
-    0x6ec59133: (Hash, 0x0, 0x0, 0x0)
+    TeamOneIcon: (Hash, 0x0, 0x0, 0x0)
+    TeamTwoIcon: (Hash, 0x0, 0x0, 0x0)
     SpectateButton: (Hash, 0x0, 0x0, 0x0)
     pass
 
@@ -10818,12 +10818,12 @@ class DelayChildrenOnMovementCompleteSpec(MissileBehaviorSpec):
     mDelayTime: (F32, 0x0, 0x0, 0x0)
     pass
 
-class 0x784e827a(UiMetricUnitTypeI):
+class UiMetricUnitTypeSimpleI(UiMetricUnitTypeI):
     Text: (Hash, 0x0, 0x0, 0x0)
     Icon: (Hash, 0x0, 0x0, 0x0)
     pass
 
-class 0x786113b8(0x24f4a711, 0xf9ded696):
+class 0x786113b8(0x24f4a711, SelectSpellBlock):
     pass
 
 class EnableLookAtEventData(BaseEventData):
@@ -10831,10 +10831,10 @@ class EnableLookAtEventData(BaseEventData):
     mLockCurrentValues: (Bool, 0x0, 0x0, 0x0)
     pass
 
-class 0x787e8697(0x30f0efe0):
+class BuffScript(GameScript):
     pass
 
-class 0x7896c78b(0x5c108a08):
+class 0x7896c78b(ILolSpellScriptEvent):
     pass
 
 class BannerFlagData():
@@ -10854,7 +10854,7 @@ class BannerFlagData():
     pass
 
 class 0x78ea58c3(0x26d26471):
-    0x90d041d6: (List2, 0x0, Pointer, 0x26d26471)
+    OrConditions: (List2, 0x0, Pointer, 0x26d26471)
     pass
 
 class FloatingHealthBarBurstHealData():
@@ -10907,23 +10907,23 @@ class ModeSelectViewController(ViewController):
     Scene: (Hash, 0x0, 0x0, 0x0)
     SoundOnDeActivate: (String, 0x0, 0x0, 0x0)
     BaseLoadable: (Link, 0x0, 0x0, UiPropertyLoadable)
-    0x472fe791: (List2, 0x0, Link, MatchmakingQueue)
+    Queues: (List2, 0x0, Link, MatchmakingQueue)
     QueueDisplayData: (List, 0x0, Embed, QueueDisplayData)
     ModeSelectQueueButtonData: (Embed, 0x0, 0x0, ModeSelectQueueButtonData)
-    0x62a097c7: (Color, 0x0, 0x0, 0x0)
-    0x6bc41154: (Pointer, 0x0, 0x0, 0xa48aca10)
-    0x6e3b131a: (Color, 0x0, 0x0, 0x0)
+    DisabledIconColor: (Color, 0x0, 0x0, 0x0)
+    EventTimer: (Pointer, 0x0, 0x0, TftEventTimer)
+    DefaultIconColor: (Color, 0x0, 0x0, 0x0)
     PageRightButton: (Hash, 0x0, 0x0, 0x0)
     QueueSelectDisplaySlots: (List, 0x0, Hash, 0x0)
     PageLeftButtonDefinition: (Hash, 0x0, 0x0, 0x0)
-    0x862ab8b: (String, 0x0, 0x0, 0x0)
-    0x8b4a7c5d: (Pointer, 0x0, 0x0, 0xa48aca10)
+    DisabledIconTexture: (String, 0x0, 0x0, 0x0)
+    EventTimerDefinition: (Pointer, 0x0, 0x0, TftEventTimer)
     0x9e4be5ed: (Hash, 0x0, 0x0, 0x0)
     SoundOnActivate: (String, 0x0, 0x0, 0x0)
-    0xb0f73ebf: (Color, 0x0, 0x0, 0x0)
-    0xc0ab34d4: (Hash, 0x0, 0x0, 0x0)
+    HoverIconColor: (Color, 0x0, 0x0, 0x0)
+    IconBackground: (Hash, 0x0, 0x0, 0x0)
     Layout: (Hash, 0x0, 0x0, 0x0)
-    0xcd68b02a: (Color, 0x0, 0x0, 0x0)
+    ClickedIconColor: (Color, 0x0, 0x0, 0x0)
     PageLeftButton: (Hash, 0x0, 0x0, 0x0)
     pass
 
@@ -10935,14 +10935,14 @@ class VideoDefinition():
     Looping: (Bool, 0x0, 0x0, 0x0)
     pass
 
-class 0x797063e4():
-    0x421cb82f: (Embed, 0x0, 0x0, 0x6ba2dab2)
-    0x667cf805: (List2, 0x0, U32, 0x0)
-    0x7e281dc9: (List2, 0x0, U32, 0x0)
-    0xb3fa1319: (Hash, 0x0, 0x0, 0x0)
-    0xb3ff6da5: (Hash, 0x0, 0x0, 0x0)
-    0xca84d6f: (Hash, 0x0, 0x0, 0x0)
-    0xdf2e7464: (Hash, 0x0, 0x0, 0x0)
+class ReciprocityController():
+    ConfigData: (Embed, 0x0, 0x0, ReciprocityConfigData)
+    InteractionEmoteIds: (List2, 0x0, U32, 0x0)
+    CelebrationEmoteIds: (List2, 0x0, U32, 0x0)
+    PlayerFrameButton: (Hash, 0x0, 0x0, 0x0)
+    CelebrationEmote: (Hash, 0x0, 0x0, 0x0)
+    IntroEmote: (Hash, 0x0, 0x0, 0x0)
+    PlayerFrameButtonFill: (Hash, 0x0, 0x0, 0x0)
     pass
 
 class IOptionItem():
@@ -11018,8 +11018,8 @@ class KeyInputSourceBool(IInputSourceBool):
 class TftTrovesCelebrationChestSegmentData():
     ChestBackgroundTimingOffset: (F32, 0x0, 0x0, 0x0)
     SinglePullTierHintOffset: (F32, 0x0, 0x0, 0x0)
-    0x38dbf404: (Link, 0x0, 0x0, Sequence)
-    0x5b0cac7b: (Link, 0x0, 0x0, Sequence)
+    SingleSequence: (Link, 0x0, 0x0, Sequence)
+    MultiSequence: (Link, 0x0, 0x0, Sequence)
     MultiPullPrimaryTierHintStagger: (F32, 0x0, 0x0, 0x0)
     TotalDuration: (F32, 0x0, 0x0, 0x0)
     SinglePullTierHintVfx: (Map, U32, Hash, 0x0)
@@ -11034,34 +11034,34 @@ class TftTrovesCelebrationChestSegmentData():
     ChestAssetSingleVfx: (Hash, 0x0, 0x0, 0x0)
     pass
 
-class 0x7a18122a(ViewController):
+class TftPlayerChoiceViewController(ViewController):
     Scene: (Hash, 0x0, 0x0, 0x0)
-    0x2b8fe885: (Embed, 0x0, 0x0, 0xf3cf86a3)
+    OptionModalData: (Embed, 0x0, 0x0, 0xf3cf86a3)
     BaseLoadable: (Link, 0x0, 0x0, UiPropertyLoadable)
     MobileOverrideLoadable: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
-    0x9227218a: (Embed, 0x0, 0x0, 0x34cca270)
-    0xe0f169f8: (Hash, 0x0, 0x0, 0x0)
-    0xe845aa2: (Hash, 0x0, 0x0, 0x0)
+    OptionDisplayData: (Embed, 0x0, 0x0, 0x34cca270)
+    OptionRegion: (Hash, 0x0, 0x0, 0x0)
+    OptionHoverRegion: (Hash, 0x0, 0x0, 0x0)
     pass
 
 class 0x7a19656():
     TimerText: (Hash, 0x0, 0x0, 0x0)
-    0x55da67c2: (Hash, 0x0, 0x0, 0x0)
+    DetailPanel: (Hash, 0x0, 0x0, 0x0)
     0x6188e7b7: (Hash, 0x0, 0x0, 0x0)
-    0xbcab75e0: (Hash, 0x0, 0x0, 0x0)
-    0xf1700dec: (Hash, 0x0, 0x0, 0x0)
-    0xf47012a5: (Hash, 0x0, 0x0, 0x0)
+    TimerPanel: (Hash, 0x0, 0x0, 0x0)
+    DetailTextT1: (Hash, 0x0, 0x0, 0x0)
+    DetailTextT2: (Hash, 0x0, 0x0, 0x0)
     pass
 
 class 0x7a1a2d27():
-    0x28e52dc5: (Link, 0x0, 0x0, FloatTextFormattingData)
-    0x59c2bb27: (Link, 0x0, 0x0, FloatTextFormattingData)
-    0x7bb96c88: (Link, 0x0, 0x0, FloatTextFormattingData)
-    0x9000bc3c: (Link, 0x0, 0x0, FloatTextFormattingData)
-    0xa69d775b: (Link, 0x0, 0x0, FloatTextFormattingData)
-    0xbad7ddc6: (Link, 0x0, 0x0, FloatTextFormattingData)
-    0xbf42490e: (Link, 0x0, 0x0, FloatTextFormattingData)
-    0xdc42d221: (Link, 0x0, 0x0, FloatTextFormattingData)
+    CombinableDamageFormat: (Link, 0x0, 0x0, FloatTextFormattingData)
+    AbsorbedDamageFormat: (Link, 0x0, 0x0, FloatTextFormattingData)
+    DefaultTrueDamageFormat: (Link, 0x0, 0x0, FloatTextFormattingData)
+    CriticalMagicalDamageFormat: (Link, 0x0, 0x0, FloatTextFormattingData)
+    CriticalPhysicalDamageFormat: (Link, 0x0, 0x0, FloatTextFormattingData)
+    DefaultMagicalDamageFormat: (Link, 0x0, 0x0, FloatTextFormattingData)
+    CriticalTrueDamageFormat: (Link, 0x0, 0x0, FloatTextFormattingData)
+    DefaultPhysicalDamageFormat: (Link, 0x0, 0x0, FloatTextFormattingData)
     pass
 
 class PostGameUnitTemplate():
@@ -11084,8 +11084,8 @@ class TftUnitAttachmentStandardSlotData():
     Icon: (Hash, 0x0, 0x0, 0x0)
     pass
 
-class 0x7a2ff279():
-    0x90990350: (Hash, 0x0, 0x0, 0x0)
+class StoreViewMythic():
+    ManagedLayout: (Hash, 0x0, 0x0, 0x0)
     BackgroundTexture: (Hash, 0x0, 0x0, 0x0)
     pass
 
@@ -11192,11 +11192,11 @@ class MinimapPingData():
     pass
 
 class 0x7af6df8b(0x64c18f7d):
-    0x40604e5c: (F32, 0x0, 0x0, 0x0)
+    TeleportInnerRadius: (F32, 0x0, 0x0, 0x0)
     Debug: (Bool, 0x0, 0x0, 0x0)
-    0x59e4ca25: (F32, 0x0, 0x0, 0x0)
+    TeleportDistance: (F32, 0x0, 0x0, 0x0)
     MaxAngle: (F32, 0x0, 0x0, 0x0)
-    0xbdd1b103: (F32, 0x0, 0x0, 0x0)
+    TeleportOuterRadius: (F32, 0x0, 0x0, 0x0)
     MaxDistance: (F32, 0x0, 0x0, 0x0)
     MinAngle: (F32, 0x0, 0x0, 0x0)
     pass
@@ -11223,10 +11223,10 @@ class HealthBarIconSettings():
     pass
 
 class 0x7b40445f():
-    0x37d2fb01: (Hash, 0x0, 0x0, 0x0)
-    0x58ba3598: (List2, 0x0, Pointer, 0x1c73bda5)
-    0x879e2bc9: (Bool, 0x0, 0x0, 0x0)
-    0xa62e6d72: (List2, 0x0, Pointer, 0x9061c7b5)
+    ParticipantChampion: (Hash, 0x0, 0x0, 0x0)
+    QuestObjectiveList: (List2, 0x0, Pointer, CharacterQuestObjective)
+    IsOptional: (Bool, 0x0, 0x0, 0x0)
+    0xa62e6d72: (List2, 0x0, Pointer, CharacterInitRequirement)
     Tooltip: (String, 0x0, 0x0, 0x0)
     pass
 
@@ -11252,16 +11252,16 @@ class CelebrationViewController(ViewController):
     Scene: (Hash, 0x0, 0x0, 0x0)
     GenericBackgroundTexture: (Hash, 0x0, 0x0, 0x0)
     SubtitleTextHandle: (Hash, 0x0, 0x0, 0x0)
-    0x3346e0ab: (Hash, 0x0, 0x0, 0x0)
+    ClaimedRewardLayout: (Hash, 0x0, 0x0, 0x0)
     CelebrationCompanionForegroundVfx: (Hash, 0x0, 0x0, 0x0)
     BaseLoadable: (Link, 0x0, 0x0, UiPropertyLoadable)
     RarityIcons: (Map, U32, Hash, 0x0)
-    0x4c06b937: (Embed, 0x0, 0x0, 0x82ece567)
+    ClaimedRewardTemplate: (Embed, 0x0, 0x0, 0x82ece567)
     DefaultRatedTierTraKey: (String, 0x0, 0x0, 0x0)
     RankedBackgroundTexture: (Hash, 0x0, 0x0, 0x0)
     DelayedIconWaitTimeSec: (F32, 0x0, 0x0, 0x0)
     Labs: (Map, U32, Embed, CelebrationLabFields)
-    0x67c56f9d: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
+    TabletOverrideLoadable: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
     IconHandle: (Hash, 0x0, 0x0, 0x0)
     BodyTextHandle: (Hash, 0x0, 0x0, 0x0)
     CelebrationVignetteVfx: (Hash, 0x0, 0x0, 0x0)
@@ -11282,9 +11282,9 @@ class CelebrationViewController(ViewController):
     pass
 
 class 0x7b635114(ISequenceAction):
-    0x419478b: (List2, 0x0, Hash, 0x0)
+    ParticleEffects: (List2, 0x0, Hash, 0x0)
     0x5af11142: (Link, 0x0, 0x0, SequenceObjectSelector)
-    0xd9016eff: (U32, 0x0, 0x0, 0x0)
+    TierIndex: (U32, 0x0, 0x0, 0x0)
     pass
 
 class VoMarkerEvent():
@@ -11315,7 +11315,7 @@ class 0x7c118855():
     Multiplier: (F32, 0x0, 0x0, 0x0)
     pass
 
-class 0x7c1c1df4(ScriptTable):
+class NextSpellVars(ScriptTable):
     pass
 
 class CharacterLevelRequirement(ISpellRankUpRequirement):
@@ -11340,8 +11340,8 @@ class FloatingHealthBarBurstData():
     FadeSpeed: (F32, 0x0, 0x0, 0x0)
     pass
 
-class 0x7c5af3ac():
-    0x67b12a51: (Vec4, 0x0, 0x0, 0x0)
+class CherryUiPlayerPortraitData():
+    PortraitUv: (Vec4, 0x0, 0x0, 0x0)
     Frame: (Hash, 0x0, 0x0, 0x0)
     PortraitIcon: (Hash, 0x0, 0x0, 0x0)
     pass
@@ -11367,7 +11367,7 @@ class UiButtonAdditionalElements():
     HoverStateElements: (Embed, 0x0, 0x0, UiButtonAdditionalState)
     pass
 
-class 0x7c893a73():
+class VfxColorBase():
     pass
 
 class 0x7c8b2cd8(0x26d26471):
@@ -11385,7 +11385,7 @@ class CompanionData(BaseLoadoutData):
     mDisabled: (Bool, 0x0, 0x0, 0x0)
     WinStreakListForEvolution: (List, 0x0, U32, 0x0)
     mCharacter: (Hash, 0x0, 0x0, 0x0)
-    0x7a3fea92: (Hash, 0x0, 0x0, 0x0)
+    TrovesHighlightVfx: (Hash, 0x0, 0x0, 0x0)
     mStandaloneLoadoutsIcon: (String, 0x0, 0x0, 0x0)
     0x8e2a4357: (Hash, 0x0, 0x0, 0x0)
     mStandaloneLoadoutsLargeIcon: (String, 0x0, 0x0, 0x0)
@@ -11398,14 +11398,14 @@ class CompanionData(BaseLoadoutData):
     FinisherCutscene: (Pointer, 0x0, 0x0, TftFinisherCutscene)
     CompanionType: (U8, 0x0, 0x0, 0x0)
     mLoadScreen: (String, 0x0, 0x0, 0x0)
-    0xfe57aadd: (Embed, 0x0, 0x0, 0xa3992fd9)
+    RotationalShopItemData: (Embed, 0x0, 0x0, TftRotationalShopItemData)
     pass
 
-class 0x7cd4f88a():
-    0x2a856173: (F32, 0x0, 0x0, 0x0)
-    0x34d0622a: (F32, 0x0, 0x0, 0x0)
+class GammaParameters():
+    Contrast: (F32, 0x0, 0x0, 0x0)
+    Brightness: (F32, 0x0, 0x0, 0x0)
     Level: (F32, 0x0, 0x0, 0x0)
-    0xd029140a: (F32, 0x0, 0x0, 0x0)
+    Gamma: (F32, 0x0, 0x0, 0x0)
     pass
 
 class PfxAnimatedColorVariableData():
@@ -11435,12 +11435,12 @@ class SocialStatusIcons():
     AwayStatusIcon: (Hash, 0x0, 0x0, 0x0)
     pass
 
-class 0x7d09e1d2(0x5fb6e936):
-    0x2dcd4365: (String, 0x0, 0x0, 0x0)
-    0x459ca53e: (String, 0x0, 0x0, 0x0)
-    0x7ac0b2b6: (Link, 0x0, 0x0, TftUnitPropertyDefinition)
-    0x98059c83: (String, 0x0, 0x0, 0x0)
-    0xcba07e3e: (String, 0x0, 0x0, 0x0)
+class 0x7d09e1d2(TftInfoNubData):
+    InactiveTitleKey: (String, 0x0, 0x0, 0x0)
+    ActiveTitleKey: (String, 0x0, 0x0, 0x0)
+    UnitProperty: (Link, 0x0, 0x0, TftUnitPropertyDefinition)
+    InactiveBodyKey: (String, 0x0, 0x0, 0x0)
+    ActiveBodyKey: (String, 0x0, 0x0, 0x0)
     pass
 
 class TftStatData():
@@ -11469,7 +11469,7 @@ class TftNotificationData():
     mBottomlineTra: (String, 0x0, 0x0, 0x0)
     pass
 
-class 0x7d3206d():
+class IVfxShape():
     pass
 
 class EmoteItemData():
@@ -11528,27 +11528,27 @@ class ItemModifier():
     pass
 
 class 0x7dc4f3ec():
-    0x12123ddf: (Hash, 0x0, 0x0, 0x0)
-    0x12e3eb9: (Hash, 0x0, 0x0, 0x0)
-    0x298c0896: (Hash, 0x0, 0x0, 0x0)
-    0x2a89cfe6: (Hash, 0x0, 0x0, 0x0)
-    0x44e76bba: (Embed, 0x0, 0x0, LoadingScreenSummonerTitleData)
-    0x6a71e17e: (Hash, 0x0, 0x0, 0x0)
+    SubTeamNamePressed: (Hash, 0x0, 0x0, 0x0)
+    PlayerSlotShroud: (Hash, 0x0, 0x0, 0x0)
+    SubTeamNameSelected: (Hash, 0x0, 0x0, 0x0)
+    SubTeamNameHovered: (Hash, 0x0, 0x0, 0x0)
+    PlayerSlotTitleData: (Embed, 0x0, 0x0, LoadingScreenSummonerTitleData)
+    PlayerSlotIconFrame: (Hash, 0x0, 0x0, 0x0)
     0x75ef08f0: (Hash, 0x0, 0x0, 0x0)
-    0x82a180ab: (Hash, 0x0, 0x0, 0x0)
-    0x88e8c28c: (Hash, 0x0, 0x0, 0x0)
-    0x8e8d20af: (Hash, 0x0, 0x0, 0x0)
-    0x8f704e18: (Hash, 0x0, 0x0, 0x0)
-    0x948f7edd: (Hash, 0x0, 0x0, 0x0)
-    0xa79bef3c: (Hash, 0x0, 0x0, 0x0)
-    0xae12f: (Embed, 0x0, 0x0, LoadingScreenSummonerNameData)
+    PlayerSlotChampion: (Hash, 0x0, 0x0, 0x0)
+    PlayerSlot: (Hash, 0x0, 0x0, 0x0)
+    SubTeamPlayerRow: (Hash, 0x0, 0x0, 0x0)
+    SubTeamButton: (Hash, 0x0, 0x0, 0x0)
+    PlayerSlotIcon: (Hash, 0x0, 0x0, 0x0)
+    SubTeam: (Hash, 0x0, 0x0, 0x0)
+    PlayerSlotNameData: (Embed, 0x0, 0x0, LoadingScreenSummonerNameData)
     0xb2d1e4ec: (Hash, 0x0, 0x0, 0x0)
-    0xb454b363: (Hash, 0x0, 0x0, 0x0)
-    0xdc71538e: (Hash, 0x0, 0x0, 0x0)
-    0xdcaa9fe3: (Hash, 0x0, 0x0, 0x0)
-    0xeb7d439b: (Hash, 0x0, 0x0, 0x0)
-    0xef7a5e37: (Hash, 0x0, 0x0, 0x0)
-    0xfe152a6e: (Hash, 0x0, 0x0, 0x0)
+    PlayerSlotSplash: (Hash, 0x0, 0x0, 0x0)
+    SubTeamColumn: (Hash, 0x0, 0x0, 0x0)
+    SubTeamLogo: (Hash, 0x0, 0x0, 0x0)
+    SubTeamPlayerColumn: (Hash, 0x0, 0x0, 0x0)
+    SubTeamName: (Hash, 0x0, 0x0, 0x0)
+    SubTeamNameInactive: (Hash, 0x0, 0x0, 0x0)
     pass
 
 class SpellDataResourceClient():
@@ -11574,9 +11574,9 @@ class IndividualScoreUiData():
 class 0x7dfe3f97(0x26d26471):
     pass
 
-class 0x7dfe9095(0x51b98b7f):
-    0x93cb80de: (Hash, 0x0, 0x0, 0x0)
-    0xa5eee18a: (List2, 0x0, U8, 0x0)
+class AnvilData(IAugment):
+    ItemLink: (Hash, 0x0, 0x0, 0x0)
+    AnvilTypes: (List2, 0x0, U8, 0x0)
     pass
 
 class LoadingScreenChampionMasteryData():
@@ -11598,15 +11598,15 @@ class IncrementalPurchaseDialog(PurchaseDialogBase):
     IncrementalLimitText: (Hash, 0x0, 0x0, 0x0)
     IncrementalTenUpButton: (Hash, 0x0, 0x0, 0x0)
     IncrementalCloseButtonRegion: (Hash, 0x0, 0x0, 0x0)
-    0x40ab7c35: (Hash, 0x0, 0x0, 0x0)
+    IncrementalUpButtonText: (Hash, 0x0, 0x0, 0x0)
     IncrementalUpButton: (Hash, 0x0, 0x0, 0x0)
     IncrementalScene: (Hash, 0x0, 0x0, 0x0)
-    0x50d4c288: (Hash, 0x0, 0x0, 0x0)
-    0x671a4001: (Hash, 0x0, 0x0, 0x0)
+    IncrementalDownButtonText: (Hash, 0x0, 0x0, 0x0)
+    IncrementalTenDownButtonText: (Hash, 0x0, 0x0, 0x0)
     IncrementalPurchaseItemIcon: (Hash, 0x0, 0x0, 0x0)
     IncrementalQtyText: (Hash, 0x0, 0x0, 0x0)
     IncrementalBodyText: (Hash, 0x0, 0x0, 0x0)
-    0xdb528550: (Hash, 0x0, 0x0, 0x0)
+    IncrementalTenUpButtonText: (Hash, 0x0, 0x0, 0x0)
     IncrementalTenDownButton: (Hash, 0x0, 0x0, 0x0)
     IncrementalTitleText: (Hash, 0x0, 0x0, 0x0)
     IncrementalDownButton: (Hash, 0x0, 0x0, 0x0)
@@ -11618,11 +11618,11 @@ class UiSummonerSocialCardData():
     SummonerNameLink: (Hash, 0x0, 0x0, 0x0)
     SummonerIconLink: (Hash, 0x0, 0x0, 0x0)
     SceneLink: (Hash, 0x0, 0x0, 0x0)
-    0xfb0b6bed: (Hash, 0x0, 0x0, 0x0)
+    TaglineLink: (Hash, 0x0, 0x0, 0x0)
     pass
 
 class 0x7e173e2f(ILogicFloatDriver):
-    0x5150a6a1: (Link, 0x0, 0x0, 0x121b48aa)
+    VisibilityController: (Link, 0x0, 0x0, IMapVisibilityController)
     pass
 
 class MapCharacterListContainer():
@@ -11653,7 +11653,7 @@ class FxActionAnimate(IFxAction):
     PauseOnEnd: (Bool, 0x0, 0x0, 0x0)
     Loop: (Bool, 0x0, 0x0, 0x0)
     TargetObject: (Embed, 0x0, 0x0, FxTarget)
-    TargetObject: (Embed, 0x0, 0x0, 0x5c086dbd)
+    TargetObject: (Embed, 0x0, 0x0, FxObjectSelector)
     AnimName: (String, 0x0, 0x0, 0x0)
     ScalePlaybackSpeedToDuration: (Bool, 0x0, 0x0, 0x0)
     pass
@@ -11701,7 +11701,7 @@ class HudLevelUpData():
     Inertia: (F32, 0x0, 0x0, 0x0)
     pass
 
-class 0x7eafed49(ScriptBtSequence):
+class ScriptBtRootSequence(ScriptBtSequence):
     pass
 
 class TftSurrenderViewController(VotePanelViewController):
@@ -11712,15 +11712,15 @@ class TftSurrenderViewController(VotePanelViewController):
     TitleText: (Hash, 0x0, 0x0, 0x0)
     pass
 
-class 0x7ed069aa(ViewController):
+class TftEventHubXsViewController(ViewController):
     BaseLoadable: (Link, 0x0, 0x0, UiPropertyLoadable)
-    0x67c56f9d: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
-    0x6bc41154: (Pointer, 0x0, 0x0, 0xa48aca10)
+    TabletOverrideLoadable: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
+    EventTimer: (Pointer, 0x0, 0x0, TftEventTimer)
     InfoButton: (Hash, 0x0, 0x0, 0x0)
-    0x88ea17ef: (Embed, 0x0, 0x0, 0xdd8ea5ae)
+    MissionScroller: (Embed, 0x0, 0x0, 0xdd8ea5ae)
     SceneRoot: (Hash, 0x0, 0x0, 0x0)
     CloseButton: (Hash, 0x0, 0x0, 0x0)
-    0xb9ed4a26: (Embed, 0x0, 0x0, 0x22dd5ebf)
+    TrovesThumbnail: (Embed, 0x0, 0x0, 0x22dd5ebf)
     TitleText: (Hash, 0x0, 0x0, 0x0)
     pass
 
@@ -11748,8 +11748,8 @@ class HudMessageBox(ViewController):
     pass
 
 class 0x7f2f1cd7(0x48eb8d47):
-    0x3f954075: (Bool, 0x0, 0x0, 0x0)
-    0x862a54e3: (I32, 0x0, 0x0, 0x0)
+    OrEqualTo: (Bool, 0x0, 0x0, 0x0)
+    LessThan: (I32, 0x0, 0x0, 0x0)
     pass
 
 class MapActionPlaySoundAtLocation(MapAction):
@@ -11757,7 +11757,7 @@ class MapActionPlaySoundAtLocation(MapAction):
     LocationName: (String, 0x0, 0x0, 0x0)
     pass
 
-class 0x7f3f668b(0x5d765a43):
+class EnableAlways(IEnabler):
     pass
 
 class ILoadoutInfoPanel():
@@ -11778,7 +11778,7 @@ class MinimapPingEffectAndTextureData():
     pass
 
 class HudStatStoneData():
-    0x2dd6b42e: (String, 0x0, 0x0, 0x0)
+    mStatStoneRetiredIconName: (String, 0x0, 0x0, 0x0)
     mStatStoneRetiredIconMiniName: (String, 0x0, 0x0, 0x0)
     0x4ea59d14: (Bool, 0x0, 0x0, 0x0)
     pass
@@ -11799,7 +11799,7 @@ class VfxEmitterLegacySimple():
     ScaleUpFromOrigin: (Bool, 0x0, 0x0, 0x0)
     pass
 
-class 0x7f8e3828(IResource):
+class TextureResource(IResource):
     TexturePath: (String, 0x0, 0x0, 0x0)
     pass
 
@@ -11810,7 +11810,7 @@ class GameModeEventManager():
     EventLists: (Map, String, Link, GameModeEventList)
     pass
 
-class 0x7fa75f35():
+class TftGameStartSequenceSimpleObject():
     pass
 
 class SyncedAnimationEventData(BaseEventData):
@@ -11846,7 +11846,7 @@ class AnimationFractionDynamicMaterialFloatDriver(IDynamicMaterialFloatDriver, I
 class TargetingTypeData():
     pass
 
-class 0x7fdaad8b():
+class ICharacter():
     pass
 
 class ViewControllerSet():
@@ -11870,25 +11870,25 @@ class ClampSubPartsCalculationPart(IGameCalculationPart):
     mFloor: (Option, 0x0, F32, 0x0)
     pass
 
-class 0x803f8c9d():
+class TftHudColorData():
     0x2558b51: (Color, 0x0, 0x0, 0x0)
     TftThreeStarColor: (Color, 0x0, 0x0, 0x0)
     TftActiveButtonTextColor: (Color, 0x0, 0x0, 0x0)
     0x3fdee6e4: (List, 0x4, Color, 0x0)
     0x425297af: (Color, 0x0, 0x0, 0x0)
-    0x5633fd55: (Color, 0x0, 0x0, 0x0)
+    TftFriendlyColor: (Color, 0x0, 0x0, 0x0)
     TftInactiveButtonTextColor: (Color, 0x0, 0x0, 0x0)
     0x6b1a20e0: (Color, 0x0, 0x0, 0x0)
     0x6cfe6e40: (Color, 0x0, 0x0, 0x0)
     TftShopDropRateTextColors: (List, 0x5, Color, 0x0)
     TftActiveTextColor: (Color, 0x0, 0x0, 0x0)
     0xce60fb10: (Color, 0x0, 0x0, 0x0)
-    0xd53fe94d: (List2, 0x0, Color, 0x0)
+    TftShopDropRateTextColorsList: (List2, 0x0, Color, 0x0)
     TftChosenColor: (Color, 0x0, 0x0, 0x0)
     TftInactiveTextColor: (Color, 0x0, 0x0, 0x0)
     pass
 
-class 0x8066ac1f(EffectElementData):
+class EffectGlowConstantElementData(EffectElementData):
     FlipX: (Bool, 0x0, 0x0, 0x0)
     FlipY: (Bool, 0x0, 0x0, 0x0)
     MinimumGlowMod: (F32, 0x0, 0x0, 0x0)
@@ -11933,7 +11933,7 @@ class ProgressionGraph():
     pass
 
 class 0x810de4e7(ISequenceAction):
-    0xde5d7211: (U8, 0x0, 0x0, 0x0)
+    ContinueAt: (U8, 0x0, 0x0, 0x0)
     pass
 
 class FloatingTextGlobalConfig():
@@ -11995,10 +11995,10 @@ class UiLevelUpButtonEasingData():
     pass
 
 class 0x8190bc9f():
-    0x6efa5b3f: (Hash, 0x0, 0x0, 0x0)
+    QuantityText: (Hash, 0x0, 0x0, 0x0)
     ItemTemplate: (Hash, 0x0, 0x0, 0x0)
     LegendaryVfx: (Hash, 0x0, 0x0, 0x0)
-    0xbb14f928: (Hash, 0x0, 0x0, 0x0)
+    CurrencyTemplate: (Hash, 0x0, 0x0, 0x0)
     Parent: (Hash, 0x0, 0x0, 0x0)
     pass
 
@@ -12033,7 +12033,7 @@ class 0x81fe2d71(IBehaviorScriptBlock):
     pass
 
 class 0x820c053(ILogicBoolDriver):
-    0x77f110db: (Hash, 0x0, 0x0, 0x0)
+    SkinAugment: (Hash, 0x0, 0x0, 0x0)
     pass
 
 class ConformToPathEventData(BaseEventData):
@@ -12046,7 +12046,7 @@ class VfxMigrationResources():
     ResourceMap: (Map, Hash, Link, VfxSystemDefinitionData)
     pass
 
-class 0x823ea3e3(0xf9ded696):
+class SelectJungleSpellBlock(SelectSpellBlock):
     pass
 
 class 0x8263e1d():
@@ -12063,7 +12063,7 @@ class TftMapItemData():
     NameId: (String, 0x0, 0x0, 0x0)
     Name: (String, 0x0, 0x0, 0x0)
     EffectAmounts: (List, 0x0, Embed, TftEffectAmount)
-    0xedeac8bd: (String, 0x0, 0x0, 0x0)
+    ArmoryIconPath: (String, 0x0, 0x0, 0x0)
     pass
 
 class ItemRecommendationContextList():
@@ -12075,10 +12075,10 @@ class ItemRecommendationContextList():
 class UiElementGroupMeterData(UiElementGroupData):
     TipStyle: (Pointer, 0x0, 0x0, TipStyleBase)
     TipStyle: (U8, 0x0, 0x0, 0x0)
-    BarElements: (List, 0x0, Link, 0x231dd1a2)
+    BarElements: (List, 0x0, Link, ElementDataI)
     BarElements: (List, 0x0, Link, UiElementIData)
     BarElements: (List2, 0x0, Link, UiElementIData)
-    BarTipElements: (List, 0x0, Link, 0x231dd1a2)
+    BarTipElements: (List, 0x0, Link, ElementDataI)
     FillDirection: (U8, 0x0, 0x0, 0x0)
     IsEnabled: (Bool, 0x0, 0x0, 0x0)
     StartPercentage: (F32, 0x0, 0x0, 0x0)
@@ -12090,23 +12090,23 @@ class 0x82b08474(BaseLoadoutData):
     mBuffData: (Embed, 0x0, 0x0, BuffData)
     pass
 
-class 0x82ba1aba(0x5c108a08):
+class 0x82ba1aba(ILolSpellScriptEvent):
     pass
 
 class CherryCombatInfoDisplayViewController(ViewController):
     Scene: (Hash, 0x0, 0x0, 0x0)
     0x28c91c47: (Hash, 0x0, 0x0, 0x0)
-    0x3c4ca1c2: (Embed, 0x0, 0x0, 0x3519dc31)
+    CameoDisplayData: (Embed, 0x0, 0x0, 0x3519dc31)
     BaseLoadable: (Link, 0x0, 0x0, UiPropertyLoadable)
-    0x45632964: (Embed, 0x0, 0x0, 0xc65006fb)
+    TeamRightDisplay: (Embed, 0x0, 0x0, CherryCombatInfoDisplayTeam)
     0x493e057d: (String, 0x0, 0x0, 0x0)
     0x5c649b88: (Hash, 0x0, 0x0, 0x0)
-    0x5e47d84d: (Embed, 0x0, 0x0, 0xc65006fb)
+    TeamLeftDisplay: (Embed, 0x0, 0x0, CherryCombatInfoDisplayTeam)
     0x641fb629: (String, 0x0, 0x0, 0x0)
     0x7a8c9cb1: (Hash, 0x0, 0x0, 0x0)
-    0x8690b977: (Color, 0x0, 0x0, 0x0)
+    SelfLifeHealthTextColor: (Color, 0x0, 0x0, 0x0)
     0x8c0f3208: (F32, 0x0, 0x0, 0x0)
-    0x95cbd1b3: (Color, 0x0, 0x0, 0x0)
+    EnemyLifeHealthTextColor: (Color, 0x0, 0x0, 0x0)
     0xb620637e: (Hash, 0x0, 0x0, 0x0)
     0xc0f962db: (F32, 0x0, 0x0, 0x0)
     0xc7463e46: (String, 0x0, 0x0, 0x0)
@@ -12140,20 +12140,20 @@ class SbObjectiveBounties():
     BaronScore: (Hash, 0x0, 0x0, 0x0)
     BaronValue: (Hash, 0x0, 0x0, 0x0)
     0x7681fe9f: (Hash, 0x0, 0x0, 0x0)
-    0x7dd39acc: (Hash, 0x0, 0x0, 0x0)
+    HordeIcon: (Hash, 0x0, 0x0, 0x0)
     RiftHeraldScore: (Hash, 0x0, 0x0, 0x0)
     RiftHeraldCampName: (Hash, 0x0, 0x0, 0x0)
     0xaec651cc: (Hash, 0x0, 0x0, 0x0)
     DragonsIcon: (Hash, 0x0, 0x0, 0x0)
     TowerIcon: (Hash, 0x0, 0x0, 0x0)
     RiftHeraldIcon: (Hash, 0x0, 0x0, 0x0)
-    0xcc6c4209: (Hash, 0x0, 0x0, 0x0)
+    HordeScore: (Hash, 0x0, 0x0, 0x0)
     0xcfe173b: (Hash, 0x0, 0x0, 0x0)
     BaronIcon: (Hash, 0x0, 0x0, 0x0)
-    0xf2706c6e: (Hash, 0x0, 0x0, 0x0)
+    HordeValue: (Hash, 0x0, 0x0, 0x0)
     pass
 
-class 0x83212e16():
+class IStringCalculation():
     pass
 
 class VfxEmitterAudio():
@@ -12184,20 +12184,20 @@ class StoreDialogViewController(ModalDialogViewController):
     pass
 
 class 0x834e2e8d():
-    0x112cdf96: (List, 0x4, Embed, 0x529a504e)
-    0x21918751: (Hash, 0x0, 0x0, 0x0)
+    Tall: (List, 0x4, Embed, UiRotationalStoreItemTileData)
+    Error: (Hash, 0x0, 0x0, 0x0)
     Region: (Hash, 0x0, 0x0, 0x0)
     Divider: (Hash, 0x0, 0x0, 0x0)
-    Timer: (Pointer, 0x0, 0x0, 0xa48aca10)
+    Timer: (Pointer, 0x0, 0x0, TftEventTimer)
     Group: (Hash, 0x0, 0x0, 0x0)
-    0x7f2346e9: (List, 0x8, Embed, 0x529a504e)
+    Single: (List, 0x8, Embed, UiRotationalStoreItemTileData)
     Title: (Hash, 0x0, 0x0, 0x0)
     0xbbfd8261: (String, 0x0, 0x0, 0x0)
-    0xc2ecdf53: (List, 0x6, Embed, 0x529a504e)
-    0xceee9c73: (List, 0x3, Embed, 0x529a504e)
+    Long: (List, 0x6, Embed, UiRotationalStoreItemTileData)
+    LargeSquare: (List, 0x3, Embed, UiRotationalStoreItemTileData)
     pass
 
-class 0x8353a901(BehaviorScript):
+class LolBehaviorScript(BehaviorScript):
     Sequences: (Map, U32, Embed, ScriptBtSequence)
     pass
 
@@ -12207,7 +12207,7 @@ class ReturnChildrenOnMovementCompleteSpec(MissileBehaviorSpec):
     mReturnTime: (F32, 0x0, 0x0, 0x0)
     pass
 
-class 0x8386aed8(ScriptTable):
+class TempTable1(ScriptTable):
     pass
 
 class 0x839f4f73():
@@ -12229,20 +12229,20 @@ class 0x839f4f73():
 class CherryTeamFlyoutPanelViewController(ViewController):
     0x1bb70a95: (F32, 0x0, 0x0, 0x0)
     Scene: (Hash, 0x0, 0x0, 0x0)
-    0x2a0d903e: (Hash, 0x0, 0x0, 0x0)
+    BackgroundFrame: (Hash, 0x0, 0x0, 0x0)
     TeamOpponentTemplate: (Embed, 0x0, 0x0, CherryTeamFlyoutPanelTeamTemplate)
     BaseLoadable: (Link, 0x0, 0x0, UiPropertyLoadable)
     TeamSelfTemplate: (Embed, 0x0, 0x0, CherryTeamFlyoutPanelTeamTemplate)
     pass
 
-class 0x83d6eef9():
+class ViewControllerListFilterI():
     pass
 
 class ContextualConditionCharacterPlayingAnimation(ICharacterSubcondition):
     mAnimationNameHash: (Hash, 0x0, 0x0, 0x0)
     pass
 
-class 0x840074ef():
+class IUiEffectTextureDataProvider():
     pass
 
 class 0x8411fe45(IBehaviorScriptBlock):
@@ -12261,7 +12261,7 @@ class 0x8444401a():
     0x3bee2696: (Hash, 0x0, 0x0, 0x0)
     0x6daf08ed: (String, 0x0, 0x0, 0x0)
     0x91bad98c: (U8, 0x0, 0x0, 0x0)
-    0xa4d7de97: (Embed, 0x0, 0x0, 0x135a0579)
+    MatchupSlot: (Embed, 0x0, 0x0, 0x135a0579)
     Layout: (Hash, 0x0, 0x0, 0x0)
     pass
 
@@ -12289,24 +12289,24 @@ class HomeViewController(ViewController):
     ThemeMusicState: (String, 0x0, 0x0, 0x0)
     TeamPlannerButtonDefinition: (Hash, 0x0, 0x0, 0x0)
     WelcomeDialogViewController: (Link, 0x0, 0x0, ModalDialogViewController)
-    0x59a22832: (Hash, 0x0, 0x0, 0x0)
+    BattlepassSpacer: (Hash, 0x0, 0x0, 0x0)
     LevelText: (Hash, 0x0, 0x0, 0x0)
-    0x67c56f9d: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
-    0x6bc41154: (Pointer, 0x0, 0x0, 0xa48aca10)
+    TabletOverrideLoadable: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
+    EventTimer: (Pointer, 0x0, 0x0, TftEventTimer)
     ModeSelectButton: (Hash, 0x0, 0x0, 0x0)
     PremiumText: (Hash, 0x0, 0x0, 0x0)
     VietnameseRatingLabel: (Hash, 0x0, 0x0, 0x0)
-    0x7bf4b178: (Pointer, 0x0, 0x0, 0x5b5667ce)
+    PlayGameButtonHint: (Pointer, 0x0, 0x0, TftHintUiData)
     PlayGameButtonDefinition: (Hash, 0x0, 0x0, 0x0)
-    0x86a69e37: (U32, 0x0, 0x0, 0x0)
-    0x86a69e37: (U8, 0x0, 0x0, 0x0)
+    RewardsMeterAnimEaseType: (U32, 0x0, 0x0, 0x0)
+    RewardsMeterAnimEaseType: (U8, 0x0, 0x0, 0x0)
     ButtonVerticalLayout: (Hash, 0x0, 0x0, 0x0)
     0x8e3bfb69: (Link, 0x0, 0x0, ModalDialogViewController)
     TrovesButton: (Hash, 0x0, 0x0, 0x0)
-    0x97ed27f: (Embed, 0x0, 0x0, 0x5a4abe00)
-    0x9a11d8ca: (Hash, 0x0, 0x0, 0x0)
+    PromoBannerView: (Embed, 0x0, 0x0, HomeViewPromoBanner)
+    RewardReadyPip: (Hash, 0x0, 0x0, 0x0)
     PromoDialogViewController: (Link, 0x0, 0x0, ModalDialogViewController)
-    0xaa245e7f: (Hash, 0x0, 0x0, 0x0)
+    PassText: (Hash, 0x0, 0x0, 0x0)
     SpecialOfferView: (Embed, 0x0, 0x0, HomeViewSpecialOffer)
     SpecialOfferButtonDefinition: (Hash, 0x0, 0x0, 0x0)
     TeamPlannerButton: (Hash, 0x0, 0x0, 0x0)
@@ -12314,17 +12314,17 @@ class HomeViewController(ViewController):
     PlayGameButton: (Hash, 0x0, 0x0, 0x0)
     SpecialOfferToastScene: (Hash, 0x0, 0x0, 0x0)
     XboxGamePassEndedDialogViewController: (Link, 0x0, 0x0, ModalDialogViewController)
-    0xbff088c9: (Embed, 0x0, 0x0, 0x6241da2)
+    StoreNewPip: (Embed, 0x0, 0x0, 0x6241da2)
     EventHubButton: (Hash, 0x0, 0x0, 0x0)
-    0xc77981b1: (Pointer, 0x0, 0x0, 0x5b5667ce)
+    RewardsHintMessage: (Pointer, 0x0, 0x0, TftHintUiData)
     ModeSelectCustomButtonData: (List, 0x0, Embed, ModeSelectButtonData)
     StoreButton: (Hash, 0x0, 0x0, 0x0)
     ThemeMusicStateGroup: (String, 0x0, 0x0, 0x0)
     0xd24a7af6: (Hash, 0x0, 0x0, 0x0)
     BattlepassToastView: (Embed, 0x0, 0x0, HomeViewSpecialOffer)
     StoreButtonDefinition: (Hash, 0x0, 0x0, 0x0)
-    0xdc1d621e: (F32, 0x0, 0x0, 0x0)
-    0xdcabd2fa: (Embed, 0x0, 0x0, 0x6241da2)
+    RewardsMeterAnimTimeSecs: (F32, 0x0, 0x0, 0x0)
+    NewPip: (Embed, 0x0, 0x0, 0x6241da2)
     ModeSelectDefaultButtonIcons: (Embed, 0x0, 0x0, UiElementGroupButtonAdditionalElements)
     ModeSelectDefaultButtonData: (Hash, 0x0, 0x0, 0x0)
     BattlepassButtonDefinition: (Hash, 0x0, 0x0, 0x0)
@@ -12352,26 +12352,26 @@ class HealthBarSettingsData():
     mHealthPerTick: (F32, 0x0, 0x0, 0x0)
     pass
 
-class 0x84972e16(0x3e02c8d9):
-    0x10e3dbdd: (List2, 0x0, Link, 0x84972e16)
-    0x136fc91f: (List2, 0x0, Link, TftItemData)
-    0x359dd774: (List2, 0x0, I32, 0x0)
-    0x3e3701e5: (List2, 0x0, Hash, 0x0)
-    0x4371a441: (Link, 0x0, 0x0, 0xae2530a4)
-    0x6299ab7e: (F32, 0x0, 0x0, 0x0)
+class TftEncounterData(0x3e02c8d9):
+    ExcludedEncounters: (List2, 0x0, Link, TftEncounterData)
+    ExcludedAugments: (List2, 0x0, Link, TftItemData)
+    AllowedStages: (List2, 0x0, I32, 0x0)
+    ExcludedEncounterTags: (List2, 0x0, Hash, 0x0)
+    EncounterTooltip: (Link, 0x0, 0x0, TftTooltipData)
+    EncounterLength: (F32, 0x0, 0x0, 0x0)
     0x74cf1ad1: (String, 0x0, 0x0, 0x0)
-    0x7c9e6829: (U8, 0x0, 0x0, 0x0)
-    0x84ffb06f: (List2, 0x0, Hash, 0x0)
+    EncounterLocation: (U8, 0x0, 0x0, 0x0)
+    ExcludedAugmentTags: (List2, 0x0, Hash, 0x0)
     Name: (String, 0x0, 0x0, 0x0)
     BuffName: (String, 0x0, 0x0, 0x0)
     VfxResourceResolver: (Hash, 0x0, 0x0, 0x0)
-    0x9ffb1b: (String, 0x0, 0x0, 0x0)
-    0xa09626f2: (List2, 0x0, Link, TftItemData)
-    0xa607bda2: (U8, 0x0, 0x0, 0x0)
+    SkinName: (String, 0x0, 0x0, 0x0)
+    ItemList: (List2, 0x0, Link, TftItemData)
+    RoundPlacement: (U8, 0x0, 0x0, 0x0)
     0xac397529: (F32, 0x0, 0x0, 0x0)
     ScriptData: (Map, String, Pointer, GameModeConstant)
-    0xd292c403: (List2, 0x0, Hash, 0x0)
-    0xd7750a6a: (List2, 0x0, Link, 0xb3f382ff)
+    EncounterTags: (List2, 0x0, Hash, 0x0)
+    ExcludedPortals: (List2, 0x0, Link, 0xb3f382ff)
     0xee030e3d: (U8, 0x0, 0x0, 0x0)
     0xf1f30bb9: (List2, 0x0, I32, 0x0)
     pass
@@ -12389,16 +12389,16 @@ class BattleBunnyMissFortuneViewController(0x6d8274d, ViewController):
     Loadable: (Link, 0x0, 0x0, UiPropertyLoadable)
     TransitionOnState: (Hash, 0x0, 0x0, 0x0)
     TransitionOffState: (Hash, 0x0, 0x0, 0x0)
-    0xfa660ed6: (List, 0x0, Embed, UiElementToggle)
+    BunnyElements: (List, 0x0, Embed, UiElementToggle)
     pass
 
 class 0x84c56837():
-    0x18a7beee: (Hash, 0x0, 0x0, 0x0)
-    0x18a7beee: (List2, 0x0, Hash, 0x0)
-    0xbf7cb59: (Hash, 0x0, 0x0, 0x0)
-    0xbf7cb59: (List2, 0x0, Hash, 0x0)
-    0xe7347b1a: (Hash, 0x0, 0x0, 0x0)
-    0xe7347b1a: (List2, 0x0, Hash, 0x0)
+    Empty: (Hash, 0x0, 0x0, 0x0)
+    Empty: (List2, 0x0, Hash, 0x0)
+    Win: (Hash, 0x0, 0x0, 0x0)
+    Win: (List2, 0x0, Hash, 0x0)
+    Loss: (Hash, 0x0, 0x0, 0x0)
+    Loss: (List2, 0x0, Hash, 0x0)
     pass
 
 class ChatViewData():
@@ -12439,7 +12439,7 @@ class TftMapGroupData():
     pass
 
 class StaticMaterialPassDef():
-    0x166c54c5: (Hash, 0x0, 0x0, 0x0)
+    StencilReferenceId: (Hash, 0x0, 0x0, 0x0)
     SrcColorBlendFactor: (U32, 0x0, 0x0, 0x0)
     FogColor: (Color, 0x0, 0x0, 0x0)
     BlendEnable: (Bool, 0x0, 0x0, 0x0)
@@ -12488,7 +12488,7 @@ class StealthCharacterFade():
 class 0x856ba9bc(ViewController):
     pass
 
-class 0x8586b1fe(ScriptTable):
+class TempTable3(ScriptTable):
     pass
 
 class ForceSpawnNeutralCampsCheat(Cheat):
@@ -12676,14 +12676,14 @@ class OffScreenPoiPing():
     TextField: (U8, 0x0, 0x0, 0x0)
     0x343fb1dd: (Bool, 0x0, 0x0, 0x0)
     ScalingData: (Embed, 0x0, 0x0, PoiScalingData)
-    0x68c0f16a: (Bool, 0x0, 0x0, 0x0)
+    ShowIfOnScreen: (Bool, 0x0, 0x0, 0x0)
     MaxDistanceFromCenterOfScreen: (U32, 0x0, 0x0, 0x0)
     ParticleEffect: (Hash, 0x0, 0x0, 0x0)
     PingType: (U8, 0x0, 0x0, 0x0)
-    0xbe6c1727: (Bool, 0x0, 0x0, 0x0)
+    ShowDistance: (Bool, 0x0, 0x0, 0x0)
     ShowChampionProtrait: (Bool, 0x0, 0x0, 0x0)
-    0xc7c1ce: (Pointer, 0x0, 0x0, PoiFadeData)
-    0xcaa78dfd: (U8, 0x0, 0x0, 0x0)
+    FadeComponent: (Pointer, 0x0, 0x0, PoiFadeData)
+    AnchorTo: (U8, 0x0, 0x0, 0x0)
     Frame: (Hash, 0x0, 0x0, 0x0)
     Icon: (Hash, 0x0, 0x0, 0x0)
     PingCombinationRange: (F32, 0x0, 0x0, 0x0)
@@ -12691,8 +12691,8 @@ class OffScreenPoiPing():
     pass
 
 class 0x85ec5cc(ModalDialogViewController):
-    0x6389b18: (Hash, 0x0, 0x0, 0x0)
-    0xdda690be: (Hash, 0x0, 0x0, 0x0)
+    CheckBox: (Hash, 0x0, 0x0, 0x0)
+    TextButton: (Hash, 0x0, 0x0, 0x0)
     pass
 
 class BerserkTargetingParameters():
@@ -12754,14 +12754,14 @@ class NullMovementSpec(MissileMovementSpec):
     mWaitForChildren: (Bool, 0x0, 0x0, 0x0)
     pass
 
-class 0x8686b391(ScriptTable):
+class TempTable2(ScriptTable):
     pass
 
 class LoadingScreenEmblemData():
     EmblemElements: (Map, U32, Hash, 0x0)
     pass
 
-class 0x869baa57(0xd4f5c384):
+class TftBannerCurrencyReward(TftBannerReward):
     CurrencyId: (String, 0x0, 0x0, 0x0)
     pass
 
@@ -12831,7 +12831,7 @@ class SpellRankTextUiData():
     RankText: (List, 0x4, Hash, 0x0)
     pass
 
-class 0x86f801a2(0x5c108a08):
+class 0x86f801a2(ILolSpellScriptEvent):
     pass
 
 class TftDamageSkin(BaseLoadoutData):
@@ -12842,8 +12842,8 @@ class TftDamageSkin(BaseLoadoutData):
     FxDataContainer: (Pointer, 0x0, 0x0, TftDamageFxContainer)
     StandaloneLoadoutsIcon: (String, 0x0, 0x0, 0x0)
     Rarity: (U32, 0x0, 0x0, 0x0)
-    0x5f793adb: (Pointer, 0x0, 0x0, TftCutscene)
-    0x7a3fea92: (Hash, 0x0, 0x0, 0x0)
+    DamageSkinMinionCutscene: (Pointer, 0x0, 0x0, TftCutscene)
+    TrovesHighlightVfx: (Hash, 0x0, 0x0, 0x0)
     SkinId: (U32, 0x0, 0x0, 0x0)
     CeremonyDurationInSeconds: (F32, 0x0, 0x0, 0x0)
     0x8e2a4357: (Hash, 0x0, 0x0, 0x0)
@@ -12851,11 +12851,11 @@ class TftDamageSkin(BaseLoadoutData):
     VfxResourceResolver: (Hash, 0x0, 0x0, 0x0)
     VfxResourceResolver: (Link, 0x0, 0x0, ResourceResolver)
     DamageBuffName: (String, 0x0, 0x0, 0x0)
-    0xb563891: (Pointer, 0x0, 0x0, 0xb6e2a19)
-    0xd8b1733d: (Pointer, 0x0, 0x0, TftCutscene)
+    Ceremony: (Pointer, 0x0, 0x0, TftDamageSkinCeremony)
+    DamageSkinCutscene: (Pointer, 0x0, 0x0, TftCutscene)
     0xe3bee29c: (Pointer, 0x0, 0x0, TftCutscene)
     StandaloneLoadoutsLargeIcon: (String, 0x0, 0x0, 0x0)
-    0xfe57aadd: (Embed, 0x0, 0x0, 0xa3992fd9)
+    RotationalShopItemData: (Embed, 0x0, 0x0, TftRotationalShopItemData)
     pass
 
 class IsAnimationPlayingDynamicMaterialBoolDriver(ILogicBoolDriver, IDynamicMaterialBoolDriver):
@@ -12865,10 +12865,10 @@ class IsAnimationPlayingDynamicMaterialBoolDriver(ILogicBoolDriver, IDynamicMate
 class 0x872c245e():
     pass
 
-class 0x8776327e():
+class CounterDefinition():
     Id: (String, 0x0, 0x0, 0x0)
     Name: (String, 0x0, 0x0, 0x0)
-    0xc032a714: (I32, 0x0, 0x0, 0x0)
+    StartValue: (I32, 0x0, 0x0, 0x0)
     Direction: (U32, 0x0, 0x0, 0x0)
     pass
 
@@ -12896,15 +12896,15 @@ class UiDraggableBasic():
     UseStickyDrag: (Bool, 0x0, 0x0, 0x0)
     pass
 
-class 0x87e99ac8(0xc82f0d9):
-    0xa79f9562: (F32, 0x0, 0x0, 0x0)
+class TftCurveTheDifferenceHeightSolver(TftHeightSolverType):
+    InitialTargetHeightOffset: (F32, 0x0, 0x0, 0x0)
     pass
 
 class 0x87ef793c():
-    0x168262f3: (U32, 0x0, 0x0, 0x0)
-    0x26498ca4: (I32, 0x0, 0x0, 0x0)
+    MinStage: (U32, 0x0, 0x0, 0x0)
+    MinPlayerLevel: (I32, 0x0, 0x0, 0x0)
     0x2699a1ad: (Map, String, Pointer, GameModeConstant)
-    0xd58367c5: (U32, 0x0, 0x0, 0x0)
+    MinRound: (U32, 0x0, 0x0, 0x0)
     pass
 
 class TargeterDefinitionCone(TargeterDefinition):
@@ -12925,7 +12925,7 @@ class TargeterDefinitionCone(TargeterDefinition):
     pass
 
 class 0x880c52da(0x76bc0857):
-    0x5150a6a1: (Link, 0x0, 0x0, 0x121b48aa)
+    VisibilityController: (Link, 0x0, 0x0, IMapVisibilityController)
     pass
 
 class TftArmoryButtonStyleData():
@@ -12964,18 +12964,18 @@ class PlaybookViewController(ViewController):
     SoundOnDeActivate: (String, 0x0, 0x0, 0x0)
     EquipButton: (Hash, 0x0, 0x0, 0x0)
     BaseLoadable: (Link, 0x0, 0x0, UiPropertyLoadable)
-    0x5bc4a26c: (Link, 0x0, 0x0, ModalDialogViewController)
+    PlaybookHelpViewController: (Link, 0x0, 0x0, ModalDialogViewController)
     InfoPanel: (Embed, 0x0, 0x0, PlaybookInfoPanel)
     SoundOnActivate: (String, 0x0, 0x0, 0x0)
     CloseButton: (Hash, 0x0, 0x0, 0x0)
-    0xb62ac251: (Hash, 0x0, 0x0, 0x0)
+    DetailsButton: (Hash, 0x0, 0x0, 0x0)
     GridItemButton: (Hash, 0x0, 0x0, 0x0)
-    0xca8e1da2: (Hash, 0x0, 0x0, 0x0)
+    HelpButton: (Hash, 0x0, 0x0, 0x0)
     BackButton: (Hash, 0x0, 0x0, 0x0)
     ItemListPanelData: (Embed, 0x0, 0x0, PlaybookItemListPanelData)
-    0xe496de6f: (Embed, 0x0, 0x0, 0x4fb9f226)
+    AugmentItemData: (Embed, 0x0, 0x0, PlaybookAugmentItemData)
     GridButtonData: (Embed, 0x0, 0x0, PlaybookGridButtonData)
-    0xf9021d56: (Embed, 0x0, 0x0, 0x65a0d565)
+    AugmentPanelData: (Embed, 0x0, 0x0, PlaybookAugmentPanelData)
     pass
 
 class InputEventBase():
@@ -12989,7 +12989,7 @@ class GameModeConstantVector3f(GameModeConstant):
 
 class 0x88b225d6():
     Value: (F32, 0x0, 0x0, 0x0)
-    0xfb8dc969: (F32, 0x0, 0x0, 0x0)
+    KeyFrame: (F32, 0x0, 0x0, 0x0)
     pass
 
 class LoadoutsButtonData():
@@ -13017,12 +13017,12 @@ class GdsMapObjectAnimationInfo(GdsMapObjectExtraInfo):
     DefaultAnimation: (String, 0x0, 0x0, 0x0)
     pass
 
-class 0x89360966(IScriptBlock):
-    0x36a62b1: (Embed, 0x0, 0x0, CustomTableSet)
+class CopyCustomTableBlock(IScriptBlock):
+    OutTable: (Embed, 0x0, 0x0, CustomTableSet)
     Table: (Embed, 0x0, 0x0, CustomTableGet)
     pass
 
-class 0x894c1e67(MapComponent):
+class MapRoundData(MapComponent):
     0x3e2cdad7: (List2, 0x0, Link, LolModesRoundsListData)
     Rounds: (List2, 0x0, Link, LolModesRoundData)
     pass
@@ -13031,7 +13031,7 @@ class 0x89553bc9(ISequenceActionInstance):
     pass
 
 class 0x896a8301():
-    0x9d7e26ac: (List2, 0x0, Link, 0x172f5c92)
+    ConfigOverrides: (List2, 0x0, Link, 0x172f5c92)
     pass
 
 class 0x8989c373(IScriptBlock, IBehaviorScriptBlock):
@@ -13041,8 +13041,8 @@ class PerkReplacementList():
     mReplacements: (List, 0x0, Pointer, PerkReplacement)
     pass
 
-class 0x8991dc1():
-    0x763cc4ab: (Map, U16, Embed, 0xfa3c7ffa)
+class NeutralTimerStateManager():
+    NeutralTimerStates: (Map, U16, Embed, NeutralTimerState)
     pass
 
 class UiElementGroupManagedLayoutData(UiElementGroupData, ElementGroupData):
@@ -13066,7 +13066,7 @@ class GameModeMapData():
     mLevelScripts: (List, 0x0, String, 0x0)
     mGameModeConstants: (Link, 0x0, 0x0, GameModeConstants)
     mMinimapBackgroundConfig: (Link, 0x0, 0x0, MinimapBackgroundConfig)
-    0x49b1d9ae: (Link, 0x0, 0x0, 0x752442e)
+    CharacterQuestList: (Link, 0x0, 0x0, CharacterQuestListData)
     mCombatTextOverride: (Link, 0x0, 0x0, CombatTextOverride)
     ItemLists: (List2, 0x0, Link, GameModeItemList)
     mMapLocators: (Link, 0x0, 0x0, MapLocatorArray)
@@ -13081,7 +13081,7 @@ class GameModeMapData():
     mRenderStyle: (Link, 0x0, 0x0, RenderStyleData)
     mChampionIndicatorEnabled: (Bool, 0x0, 0x0, 0x0)
     GameModeEventManager: (Link, 0x0, 0x0, GameModeEventManager)
-    0x8000e37b: (List2, 0x0, Link, 0xc03bb018)
+    ConfigsClient: (List2, 0x0, Link, IGameModeConfigClient)
     MutatorControlledLoadingScreenBackgrounds: (List, 0x0, String, 0x0)
     mMinionsUseAttackAffectFlagsForTargeting: (Bool, 0x0, 0x0, 0x0)
     SpellPickChoiceSpellLists: (List2, 0x0, Link, GameModeSpellList)
@@ -13099,7 +13099,7 @@ class GameModeMapData():
     mMissionBuffData: (Link, 0x0, 0x0, MissionBuffData)
     LuaObjectOverrides: (Link, 0x0, 0x0, LuaObjectOverrides)
     StartupCheats: (List2, 0x0, Hash, 0x0)
-    0xd32dd16e: (String, 0x0, 0x0, 0x0)
+    AdditionalPropertyDataPath: (String, 0x0, 0x0, 0x0)
     LevelControllers: (List2, 0x0, Link, ILevelController)
     LevelControllers: (Pointer, 0x0, 0x0, LevelControllerManager)
     mHudScoreData: (Hash, 0x0, 0x0, 0x0)
@@ -13119,11 +13119,11 @@ class GameModeMapData():
     mExperienceCurveData: (Link, 0x0, 0x0, ExperienceCurveData)
     pass
 
-class 0x89d77be2(ISkinnedShadingModel):
+class SkinnedUnlitShadingModel(ISkinnedShadingModel):
     pass
 
-class UiElementGroupData(0x231dd1a2, UiElementIData):
-    Elements: (List, 0x0, Link, 0x231dd1a2)
+class UiElementGroupData(ElementDataI, UiElementIData):
+    Elements: (List, 0x0, Link, ElementDataI)
     Elements: (List, 0x0, Link, UiElementIData)
     pass
 
@@ -13170,7 +13170,7 @@ class BehaviorTreeConfig():
 
 class MapLightingVolume(MapPlaceable):
     PbrSunAdditionalScale: (F32, 0x0, 0x0, 0x0)
-    0x1dfffa84: (Link, 0x0, 0x0, 0x121b48aa)
+    0x1dfffa84: (Link, 0x0, 0x0, IMapVisibilityController)
     FogColor: (Vec4, 0x0, 0x0, 0x0)
     FogEmissiveRemap: (F32, 0x0, 0x0, 0x0)
     FogLowQualityModeEmissiveRemap: (F32, 0x0, 0x0, 0x0)
@@ -13192,8 +13192,8 @@ class MapLightingVolume(MapPlaceable):
     HorizonColor: (Vec4, 0x0, 0x0, 0x0)
     pass
 
-class 0x8a40e45d(0x2667586c):
-    0xa2fcf0a1: (Hash, 0x0, 0x0, 0x0)
+class CharacterQuestReward(ICharacterQuestReward):
+    RewardRecipient: (Hash, 0x0, 0x0, 0x0)
     Spell: (Hash, 0x0, 0x0, 0x0)
     pass
 
@@ -13216,7 +13216,7 @@ class ResourceMeterIconData(ResourceMeterBaseData):
     DefaultBar: (Hash, 0x0, 0x0, 0x0)
     pass
 
-class LoopBlock(IScriptBlock, 0x4359be6):
+class LoopBlock(IScriptBlock, ILoopScriptBlock):
     Sequence: (Embed, 0x0, 0x0, ScriptSequence)
     InclusiveIteration: (Bool, 0x0, 0x0, 0x0)
     Start: (Pointer, 0x0, 0x0, IIntGet)
@@ -13246,7 +13246,7 @@ class ViewPaneDefinition():
 
 class 0x8aef29d3(IBehaviorScriptBlock):
     Sequence: (Embed, 0x0, 0x0, ScriptBtOverrideResolveState)
-    0xa301d674: (Pointer, 0x0, 0x0, IBoolGet)
+    ResolveState: (Pointer, 0x0, 0x0, IBoolGet)
     pass
 
 class HasBuffDynamicMaterialBoolDriver(ILogicBoolDriver, IDynamicMaterialBoolDriver):
@@ -13255,7 +13255,7 @@ class HasBuffDynamicMaterialBoolDriver(ILogicBoolDriver, IDynamicMaterialBoolDri
     mDeactivateEarlySeconds: (F32, 0x0, 0x0, 0x0)
     pass
 
-class 0x8b04b4cb(0xc03bb018):
+class 0x8b04b4cb(IGameModeConfigClient):
     IsEnabled: (Bool, 0x0, 0x0, 0x0)
     pass
 
@@ -13272,30 +13272,30 @@ class FxActionMoveTo(FxActionMoveBase):
 
 class 0x8b38bb8d():
     Position: (Hash, 0x0, 0x0, 0x0)
-    0xe9d017b2: (Hash, 0x0, 0x0, 0x0)
+    RecOverrideItem: (Hash, 0x0, 0x0, 0x0)
     pass
 
-class Character(0x7fdaad8b):
+class Character(ICharacter):
     Name: (String, 0x0, 0x0, 0x0)
     pass
 
 class TftPassRewardBase():
-    0x178f85d1: (String, 0x0, 0x0, 0x0)
+    ImageOverridePath: (String, 0x0, 0x0, 0x0)
     HasBorder: (Bool, 0x0, 0x0, 0x0)
     0x2484d6c3: (Bool, 0x0, 0x0, 0x0)
-    0x36fff7ce: (String, 0x0, 0x0, 0x0)
+    NameTraKeyOverride: (String, 0x0, 0x0, 0x0)
     Quantity: (U32, 0x0, 0x0, 0x0)
-    0x5536e62e: (Link, 0x0, 0x0, 0x2088c90c)
+    RewardAsset: (Link, 0x0, 0x0, TftPassAsset)
     IsKeystone: (Bool, 0x0, 0x0, 0x0)
     MilestoneId: (String, 0x0, 0x0, 0x0)
     NameTraKey: (String, 0x0, 0x0, 0x0)
-    0x7e60d271: (String, 0x0, 0x0, 0x0)
+    DescriptionTraKeyOverride: (String, 0x0, 0x0, 0x0)
     IsPremium: (Bool, 0x0, 0x0, 0x0)
     0x96f93ea0: (U32, 0x0, 0x0, 0x0)
-    0xc4b95c3d: (Bool, 0x0, 0x0, 0x0)
+    Override: (Bool, 0x0, 0x0, 0x0)
     ImageOverride: (Hash, 0x0, 0x0, 0x0)
     Quanitity: (U32, 0x0, 0x0, 0x0)
-    0xeda83934: (Bool, 0x0, 0x0, 0x0)
+    IsBonus: (Bool, 0x0, 0x0, 0x0)
     pass
 
 class EffectCreationData():
@@ -13337,10 +13337,10 @@ class SkinMeshDataProperties_MaterialOverride():
     NormalMapTexture: (String, 0x0, 0x0, 0x0)
     pass
 
-class 0x8b912b1(IFxLocation):
+class FxLocationAttachment(IFxLocation):
     Attachment: (String, 0x0, 0x0, 0x0)
     Object: (Embed, 0x0, 0x0, FxTarget)
-    Object: (Embed, 0x0, 0x0, 0x5c086dbd)
+    Object: (Embed, 0x0, 0x0, FxObjectSelector)
     pass
 
 class HudStatPanelStatStoneData():
@@ -13357,11 +13357,11 @@ class 0x8bb623e8():
     Offset: (Vec3, 0x0, 0x0, 0x0)
     0x1f11b7e5: (Bool, 0x0, 0x0, 0x0)
     0x1f7df8df: (Bool, 0x0, 0x0, 0x0)
-    0x29033d31: (Bool, 0x0, 0x0, 0x0)
+    AutoOffset: (Bool, 0x0, 0x0, 0x0)
     0x2a71e3f2: (Bool, 0x0, 0x0, 0x0)
     0x2d76c615: (Bool, 0x0, 0x0, 0x0)
     0x2f493796: (Bool, 0x0, 0x0, 0x0)
-    0x31ae32f8: (Bool, 0x0, 0x0, 0x0)
+    AdaptiveSkill: (Bool, 0x0, 0x0, 0x0)
     0x3c444000: (F32, 0x0, 0x0, 0x0)
     0x3e40d50c: (Bool, 0x0, 0x0, 0x0)
     0x420eed36: (Bool, 0x0, 0x0, 0x0)
@@ -13371,46 +13371,46 @@ class 0x8bb623e8():
     0x6a501efe: (Bool, 0x0, 0x0, 0x0)
     0x72b3e7ce: (Bool, 0x0, 0x0, 0x0)
     0x74ef37dc: (I32, 0x0, 0x0, 0x0)
-    0x7b47a94: (F32, 0x0, 0x0, 0x0)
-    0x7d263bc3: (F32, 0x0, 0x0, 0x0)
+    LockLeftOffset: (F32, 0x0, 0x0, 0x0)
+    UpOffset: (F32, 0x0, 0x0, 0x0)
     0x7fab95cc: (F32, 0x0, 0x0, 0x0)
-    0x802ef4c5: (F32, 0x0, 0x0, 0x0)
+    ControlRatio: (F32, 0x0, 0x0, 0x0)
     0x81cbe214: (F32, 0x0, 0x0, 0x0)
     0x8b2f2060: (Bool, 0x0, 0x0, 0x0)
-    0x8d27516: (F32, 0x0, 0x0, 0x0)
-    0x8d8aade3: (F32, 0x0, 0x0, 0x0)
+    OutConstantSpeed: (F32, 0x0, 0x0, 0x0)
+    LockRightOffset: (F32, 0x0, 0x0, 0x0)
     0x8eb85226: (F32, 0x0, 0x0, 0x0)
-    0x8fe3a1a: (F32, 0x0, 0x0, 0x0)
+    DownOffset: (F32, 0x0, 0x0, 0x0)
     0x9a7674c6: (F32, 0x0, 0x0, 0x0)
-    0x9b3c674c: (F32, 0x0, 0x0, 0x0)
-    0xa02f91f8: (Bool, 0x0, 0x0, 0x0)
-    0xa08ac1ac: (F32, 0x0, 0x0, 0x0)
-    0xa3b87335: (F32, 0x0, 0x0, 0x0)
-    0xa9fe323a: (Bool, 0x0, 0x0, 0x0)
-    0xacb7dded: (F32, 0x0, 0x0, 0x0)
+    HighlightedMovingBool: (F32, 0x0, 0x0, 0x0)
+    IsLerp: (Bool, 0x0, 0x0, 0x0)
+    MinOffset: (F32, 0x0, 0x0, 0x0)
+    OutLerpA: (F32, 0x0, 0x0, 0x0)
+    OutIsLerp: (Bool, 0x0, 0x0, 0x0)
+    LockDownOffset: (F32, 0x0, 0x0, 0x0)
     0xbcf692f1: (F32, 0x0, 0x0, 0x0)
-    0xc04b0255: (Bool, 0x0, 0x0, 0x0)
-    0xc1970a60: (F32, 0x0, 0x0, 0x0)
+    IsConstant: (Bool, 0x0, 0x0, 0x0)
+    ConstantSpeed: (F32, 0x0, 0x0, 0x0)
     0xc4122105: (Bool, 0x0, 0x0, 0x0)
-    0xc46c9a2a: (U32, 0x0, 0x0, 0x0)
-    0xc66d39d3: (F32, 0x0, 0x0, 0x0)
-    0xdbb75b10: (Bool, 0x0, 0x0, 0x0)
-    0xe1d2a478: (U32, 0x0, 0x0, 0x0)
+    OffsetType: (U32, 0x0, 0x0, 0x0)
+    LeftOffset: (F32, 0x0, 0x0, 0x0)
+    IsReset: (Bool, 0x0, 0x0, 0x0)
+    FollowType: (U32, 0x0, 0x0, 0x0)
     0xe29f9f32: (F32, 0x0, 0x0, 0x0)
     0xe5bed1d4: (F32, 0x0, 0x0, 0x0)
-    0xe86a8a2b: (F32, 0x0, 0x0, 0x0)
-    0xeea7d7ea: (F32, 0x0, 0x0, 0x0)
+    LerpA: (F32, 0x0, 0x0, 0x0)
+    RightOffset: (F32, 0x0, 0x0, 0x0)
     0xf1db58ae: (F32, 0x0, 0x0, 0x0)
-    0xfab77944: (F32, 0x0, 0x0, 0x0)
+    LockUpOffset: (F32, 0x0, 0x0, 0x0)
     0xfb6aa814: (F32, 0x0, 0x0, 0x0)
-    0xfefc1e87: (Bool, 0x0, 0x0, 0x0)
+    OutIsConstant: (Bool, 0x0, 0x0, 0x0)
     pass
 
 class EffectValueCalculationPart(IGameCalculationPart, ISpellCalculationPart):
     mEffectIndex: (I32, 0x0, 0x0, 0x0)
     pass
 
-class UiMetricCreepScore(UiMetricTypeI, 0xe66ae1e4):
+class UiMetricCreepScore(UiMetricTypeI, UiMetricTypeSimpleI):
     CsIcon: (Hash, 0x0, 0x0, 0x0)
     CsText: (Hash, 0x0, 0x0, 0x0)
     pass
@@ -13429,17 +13429,17 @@ class FloatingTextTypeData():
     DisplayTypes: (List, 0x0, Link, FloatTextDisplayOverrides)
     pass
 
-class 0x8c27cd22(BaseLoadoutData):
-    MapContainers: (List2, 0x0, Embed, 0x90893201)
+class StrawberryMap(BaseLoadoutData):
+    MapContainers: (List2, 0x0, Embed, StrawberryMapContainer)
     MapContainer: (String, 0x0, 0x0, 0x0)
     pass
 
 class UiElementEffectLineData(UiElementEffectData):
     mThickness: (F32, 0x0, 0x0, 0x0)
     mRightSlicePercentage: (F32, 0x0, 0x0, 0x0)
-    TextureData: (Pointer, 0x0, 0x0, 0x840074ef)
+    TextureData: (Pointer, 0x0, 0x0, IUiEffectTextureDataProvider)
     mAtlas: (Pointer, 0x0, 0x0, AtlasData)
-    mAtlas: (Pointer, 0x0, 0x0, 0x840074ef)
+    mAtlas: (Pointer, 0x0, 0x0, IUiEffectTextureDataProvider)
     pass
 
 class IndicatorTypeGlobal(ILineIndicatorType):
@@ -13448,7 +13448,7 @@ class IndicatorTypeGlobal(ILineIndicatorType):
 
 class FloatingInfoBarViewController(ViewController):
     BaseLoadable: (Link, 0x0, 0x0, UiPropertyLoadable)
-    0x6f2b10db: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
+    MobileLoadable: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
     InfoBarStyleSourceMap: (Map, U8, Link, FloatingInfoBarData)
     ObjectName: (String, 0x0, 0x0, 0x0)
     UnitStatusPriorityList: (Link, 0x0, 0x0, UnitStatusPriorityList)
@@ -13474,7 +13474,7 @@ class BountyIndicator():
     0xebb44d40: (String, 0x0, 0x0, 0x0)
     pass
 
-class 0x8d22df1b():
+class TftCharacterRoleCardHeader():
     Description: (Hash, 0x0, 0x0, 0x0)
     Title: (Hash, 0x0, 0x0, 0x0)
     Icon: (Hash, 0x0, 0x0, 0x0)
@@ -13524,7 +13524,7 @@ class ChampionTransformSelectionViewController(ViewController):
 class SkinnedStandardShadingModel(ISkinnedShadingModel):
     pass
 
-class UiMetricLaneMinionI(UiMetricUnitTypeI, 0x784e827a):
+class UiMetricLaneMinionI(UiMetricUnitTypeI, UiMetricUnitTypeSimpleI):
     Text: (Hash, 0x0, 0x0, 0x0)
     Icon: (Hash, 0x0, 0x0, 0x0)
     pass
@@ -13540,10 +13540,10 @@ class StateAnimClipData(ClipBaseData):
     ChildClipName: (Hash, 0x0, 0x0, 0x0)
     pass
 
-class 0x8e30b80e(0x9d97d657):
-    0x31e70c2f: (String, 0x0, 0x0, 0x0)
+class 0x8e30b80e(TftCutscenePositionProvider):
+    BlackboardPosition: (String, 0x0, 0x0, 0x0)
     0x9e3d0a40: (String, 0x0, 0x0, 0x0)
-    0xe7d0a706: (String, 0x0, 0x0, 0x0)
+    BlackboardOrientation: (String, 0x0, 0x0, 0x0)
     pass
 
 class CompanionSpeciesData():
@@ -13559,9 +13559,9 @@ class TftCutscene():
     pass
 
 class 0x8e65fb6b(0x6ca3cfd):
-    0x2d6f5674: (Pointer, 0x0, 0x0, ILogicFloatDriver)
-    0x5a9403be: (String, 0x0, 0x0, 0x0)
-    0x6e6dcfed: (String, 0x0, 0x0, 0x0)
+    ValueDriver: (Pointer, 0x0, 0x0, ILogicFloatDriver)
+    LocalizedTextFormat: (String, 0x0, 0x0, 0x0)
+    TextFormat: (String, 0x0, 0x0, 0x0)
     pass
 
 class 0x8e8282a9(MapComponent):
@@ -13645,7 +13645,7 @@ class BarracksLink():
     Team: (U32, 0x0, 0x0, 0x0)
     pass
 
-class 0x8f1ade1():
+class ISkinAugmentModifier():
     pass
 
 class SceneAlphaTransitionData(SceneBaseTransitionData):
@@ -13700,9 +13700,9 @@ class TftFinisherData():
     UiHideShop: (Bool, 0x0, 0x0, 0x0)
     pass
 
-class 0x8f92cfab(0xbfaf421f):
-    0x60038edd: (Embed, 0x0, 0x0, 0x17c543dc)
-    0xca2967bf: (String, 0x0, 0x0, 0x0)
+class 0x8f92cfab(InstanceDataBase):
+    ForegroundImage: (Embed, 0x0, 0x0, TextureOverride)
+    UrlTra: (String, 0x0, 0x0, 0x0)
     pass
 
 class WallFollowMovement(MissileMovementSpec):
@@ -13721,7 +13721,7 @@ class WallFollowMovement(MissileMovementSpec):
     pass
 
 class 0x8fb9d292():
-    0xd0ede884: (List2, 0x0, Embed, 0x896a8301)
+    ConfigTypes: (List2, 0x0, Embed, 0x896a8301)
     pass
 
 class HasBuffSpawnConditionData(VfxSpawnConditionData):
@@ -13736,7 +13736,7 @@ class RegaliaRankedCrestMap():
     RankingToCrestEntryMap: (Map, String, Embed, RegaliaRankedCrestEntry)
     pass
 
-class 0x900ae818(0xb115222b):
+class LevelScriptOnEnd(ILevelScriptEvent):
     pass
 
 class EndOfGameCeremonyBehavior(ILevelBehavior):
@@ -13800,15 +13800,15 @@ class StaticMaterialShaderSamplerDef():
     AddressW: (U32, 0x0, 0x0, 0x0)
     pass
 
-class 0x9061c7b5():
-    0x37d2fb01: (Hash, 0x0, 0x0, 0x0)
-    0x40d43c67: (Hash, 0x0, 0x0, 0x0)
-    0x876e9599: (U8, 0x0, 0x0, 0x0)
+class CharacterInitRequirement():
+    ParticipantChampion: (Hash, 0x0, 0x0, 0x0)
+    RequiredChampion: (Hash, 0x0, 0x0, 0x0)
+    mRelativeTeam: (U8, 0x0, 0x0, 0x0)
     pass
 
 class MapDynamicSpotlight(MapSpotlightBase):
     Type: (U8, 0x0, 0x0, 0x0)
-    0x5150a6a1: (Link, 0x0, 0x0, 0x121b48aa)
+    VisibilityController: (Link, 0x0, 0x0, IMapVisibilityController)
     UpdaterType: (Link, 0x0, 0x0, MapLightUpdaterType)
     HdrScale: (F32, 0x0, 0x0, 0x0)
     pass
@@ -13820,11 +13820,11 @@ class MultiLineTextElementData(BaseElementData):
     mTextAlignmentHorizontal: (U8, 0x0, 0x0, 0x0)
     pass
 
-class 0x90893201():
+class StrawberryMapContainer():
     MapContainer: (String, 0x0, 0x0, 0x0)
     pass
 
-class 0x90af7a04(0x2efc296d):
+class 0x90af7a04(ITftBehaviorScriptEvent):
     pass
 
 class 0x90afdb57(TableValue):
@@ -13841,7 +13841,7 @@ class FloatComparisonMaterialDriver(ILogicBoolDriver, IDynamicMaterialBoolDriver
     pass
 
 class 0x90f7282b(IGameModeConfig):
-    0xe6a808ba: (Bool, 0x0, 0x0, 0x0)
+    IsLuaEnabled: (Bool, 0x0, 0x0, 0x0)
     pass
 
 class FadeOverTimeBehavior(ITargeterFadeBehavior):
@@ -13885,9 +13885,9 @@ class SummonerBadgeData():
     VerticalOffset: (F32, 0x0, 0x0, 0x0)
     pass
 
-class 0x91c0b1c(MapLocator):
-    0x106bef1e: (Pointer, 0x0, 0x0, 0x106bef1e)
-    0x106bef1e: (Pointer, 0x0, 0x0, 0x74e94776)
+class MapScriptLocator(MapLocator):
+    LevelScriptFunctionLink: (Pointer, 0x0, 0x0, LevelScriptFunctionLink)
+    LevelScriptFunctionLink: (Pointer, 0x0, 0x0, LevelScriptControllerFunctionLink)
     ScriptName: (String, 0x0, 0x0, 0x0)
     pass
 
@@ -13985,10 +13985,10 @@ class MissionCategoryButtonDefinition():
     pass
 
 class 0x92b6b7fa(IScriptBlock):
-    0x7332c626: (Pointer, 0x0, 0x0, IIntGet)
+    MaxValue: (Pointer, 0x0, 0x0, IIntGet)
     0xdec56440: (List2, 0x0, Pointer, IIntGet)
-    0xdf8b8c58: (Embed, 0x0, 0x0, CustomTableSet)
-    0xf1a5a54c: (Pointer, 0x0, 0x0, IIntGet)
+    OutputTable: (Embed, 0x0, 0x0, CustomTableSet)
+    MinValue: (Pointer, 0x0, 0x0, IIntGet)
     pass
 
 class EnterFowVisibility(MissileVisibilitySpec):
@@ -14026,14 +14026,14 @@ class 0x93228fac():
     ButtonDefinition: (Hash, 0x0, 0x0, 0x0)
     pass
 
-class 0x93270e1b():
-    0x43851f70: (Hash, 0x0, 0x0, 0x0)
-    0x4fdb969d: (Bool, 0x0, 0x0, 0x0)
-    0x56cfc9ac: (String, 0x0, 0x0, 0x0)
-    0x5e2ec7c5: (U8, 0x0, 0x0, 0x0)
+class TftHintMessageData():
+    TargetElement: (Hash, 0x0, 0x0, 0x0)
+    ShowArrow: (Bool, 0x0, 0x0, 0x0)
+    MessageTrakey: (String, 0x0, 0x0, 0x0)
+    MessageAnchor: (U8, 0x0, 0x0, 0x0)
     pass
 
-class 0x939f012f(0x83d6eef9):
+class ViewControllerListFilter_Map(ViewControllerListFilterI):
     Map: (String, 0x0, 0x0, 0x0)
     pass
 
@@ -14050,30 +14050,30 @@ class ScoreLineSrSpectatorUiData(ScoreLineBaseUiData):
     pass
 
 class 0x93adc5b3(0x377491e8):
-    0xaa00d31a: (F32, 0x0, 0x0, 0x0)
+    DistanceBetween: (F32, 0x0, 0x0, 0x0)
     pass
 
 class ICatalogEntryOwner():
     pass
 
 class 0x93e412e0():
-    0x1c2f0ac4: (Hash, 0x0, 0x0, 0x0)
-    0x24cec4a3: (Hash, 0x0, 0x0, 0x0)
-    0x35658f8: (Hash, 0x0, 0x0, 0x0)
+    MeterCompleteLeft: (Hash, 0x0, 0x0, 0x0)
+    LevelPipDefault: (Hash, 0x0, 0x0, 0x0)
+    FrameCompleteIcon: (Hash, 0x0, 0x0, 0x0)
     Group: (Hash, 0x0, 0x0, 0x0)
     LevelText: (Hash, 0x0, 0x0, 0x0)
-    0x6efa5b3f: (Hash, 0x0, 0x0, 0x0)
-    0x7ac22689: (Hash, 0x0, 0x0, 0x0)
-    0x90990350: (Hash, 0x0, 0x0, 0x0)
-    0x92974dd8: (Hash, 0x0, 0x0, 0x0)
-    0x9c17d418: (Hash, 0x0, 0x0, 0x0)
-    0xa2137b2a: (Hash, 0x0, 0x0, 0x0)
-    0xac97dba2: (Hash, 0x0, 0x0, 0x0)
-    0xaf3074b1: (Hash, 0x0, 0x0, 0x0)
-    0xe115c684: (Hash, 0x0, 0x0, 0x0)
-    0xebe34313: (Hash, 0x0, 0x0, 0x0)
+    QuantityText: (Hash, 0x0, 0x0, 0x0)
+    MeterHolderLeft: (Hash, 0x0, 0x0, 0x0)
+    ManagedLayout: (Hash, 0x0, 0x0, 0x0)
+    FrameAvailableIcon: (Hash, 0x0, 0x0, 0x0)
+    LevelPipActive: (Hash, 0x0, 0x0, 0x0)
+    MeterHolderRight: (Hash, 0x0, 0x0, 0x0)
+    MilestoneRewardsIconBackground: (Hash, 0x0, 0x0, 0x0)
+    MeterCompleteRight: (Hash, 0x0, 0x0, 0x0)
+    MeterHolderStart: (Hash, 0x0, 0x0, 0x0)
+    LevelPipClaimed: (Hash, 0x0, 0x0, 0x0)
     HitRegion: (Hash, 0x0, 0x0, 0x0)
-    0xffb45d12: (Hash, 0x0, 0x0, 0x0)
+    MilestoneRewardsIcon: (Hash, 0x0, 0x0, 0x0)
     pass
 
 class ExperienceCurveData():
@@ -14095,7 +14095,7 @@ class 0x93f9cdb7(IScriptBlock, IBehaviorScriptBlock):
     pass
 
 class 0x9407508d(IScriptBlock, IBehaviorScriptBlock):
-    Sequence: (Embed, 0x0, 0x0, 0x6b534eae)
+    Sequence: (Embed, 0x0, 0x0, ScriptBtFailure)
     pass
 
 class DebugPrintToChatBlock(IDebugScriptBlock, IScriptBlock):
@@ -14245,7 +14245,7 @@ class BaseLoadoutData(CatalogEntry, ICatalogEntryOwner):
     mContentId: (String, 0x0, 0x0, 0x0)
     mDescriptionTraKey: (String, 0x0, 0x0, 0x0)
     mNameTraKey: (String, 0x0, 0x0, 0x0)
-    0xfe57aadd: (Embed, 0x0, 0x0, 0xa3992fd9)
+    RotationalShopItemData: (Embed, 0x0, 0x0, TftRotationalShopItemData)
     pass
 
 class BasicAttackSlotIntDriver(ILogicIntDriver):
@@ -14265,7 +14265,7 @@ class X3dSharedConstantBufferDef():
 class NeutralMinionCampClearedLogic(IStatStoneLogicDriver):
     pass
 
-class 0x9634a3b1(0x784e827a):
+class UiMetricUnitVisionScore(UiMetricUnitTypeSimpleI):
     pass
 
 class 0x964f0775(IContextualCondition):
@@ -14283,7 +14283,7 @@ class SkipTerrain(MissileBehaviorSpec):
     pass
 
 class 0x968ce2ad():
-    0xa649f6d0: (Link, 0x0, 0x0, 0xe75aad84)
+    WaveToSpawn: (Link, 0x0, 0x0, 0xe75aad84)
     pass
 
 class GameModeTeamFightViewController(TeamFightViewController):
@@ -14323,7 +14323,7 @@ class CombatTextOverride():
     OverriddenToggles: (Map, U8, Bool, 0x0)
     pass
 
-class 0x9738ad75(0xb115222b):
+class LevelScriptOnInit(ILevelScriptEvent):
     pass
 
 class HudCalloutIdentifier():
@@ -14349,16 +14349,16 @@ class TftItemList():
 class 0x9784901f():
     0x2ea2ef00: (Hash, 0x0, 0x0, 0x0)
     0x39b2057a: (Hash, 0x0, 0x0, 0x0)
-    0x884f4289: (Hash, 0x0, 0x0, 0x0)
-    0xae38eee5: (Hash, 0x0, 0x0, 0x0)
+    PhaseIcon: (Hash, 0x0, 0x0, 0x0)
+    PhaseHitRegion: (Hash, 0x0, 0x0, 0x0)
     pass
 
-class 0x9789b6():
+class PromoBannerElement():
     Target: (U32, 0x0, 0x0, 0x0)
     Id: (String, 0x0, 0x0, 0x0)
     Tier: (U32, 0x0, 0x0, 0x0)
-    0x83c10d42: (List2, 0x0, Embed, 0xa77231b9)
-    0xb3f182f6: (U8, 0x0, 0x0, 0x0)
+    InstanceData: (List2, 0x0, Embed, 0xa77231b9)
+    PreferredOrder: (U8, 0x0, 0x0, 0x0)
     pass
 
 class 0x97b4592f():
@@ -14409,18 +14409,18 @@ class ItemRecommendationOverrideStartingItemSet():
     mStartingItems: (List, 0x0, Hash, 0x0)
     pass
 
-class 0x9861884e():
-    0xdeefba24: (List2, 0x0, Embed, 0x60ca3f49)
+class MapWorldParticles():
+    Particles: (List2, 0x0, Embed, MapWorldParticle)
     0xe21f1d86: (Bool, 0x0, 0x0, 0x0)
-    0xe5daa737: (String, 0x0, 0x0, 0x0)
+    EmitterBone: (String, 0x0, 0x0, 0x0)
     pass
 
 class VelocityDynamicMaterialFloatDriver(IDynamicMaterialFloatDriver, ILogicFloatDriver):
     pass
 
-class 0x98f54b56():
+class TftTraitAssignment():
     Trait: (Link, 0x0, 0x0, TftTraitData)
-    0x8390f398: (List2, 0x0, Hash, 0x0)
+    CharacterList: (List2, 0x0, Hash, 0x0)
     pass
 
 class OptionItemFilter_Ios(IOptionItemFilter):
@@ -14525,7 +14525,7 @@ class DamageSpellTextureData():
     UnknownDamageIconTextureName: (String, 0x0, 0x0, 0x0)
     pass
 
-class 0x99f44e83(0x5c108a08):
+class 0x99f44e83(ILolSpellScriptEvent):
     pass
 
 class DeathTimesScalingPoint():
@@ -14563,7 +14563,7 @@ class PatchingViewController(ViewController):
     KoreanAgeRatingIcon: (Hash, 0x0, 0x0, 0x0)
     StatusMessageText: (Hash, 0x0, 0x0, 0x0)
     OpenTeamPlannerButton: (Hash, 0x0, 0x0, 0x0)
-    0x7f6c17a6: (Hash, 0x0, 0x0, 0x0)
+    BuildVersionText: (Hash, 0x0, 0x0, 0x0)
     LoginLogoMapping: (Map, U32, Hash, 0x0)
     BeginPatchingButton: (Hash, 0x0, 0x0, 0x0)
     OpenTeamPlannerButtonDefinition: (Hash, 0x0, 0x0, 0x0)
@@ -14577,7 +14577,7 @@ class 0x9a573886(0x5a8ba29d):
     pass
 
 class PartnerGroupPlacements():
-    0x1f558adc: (List, 0x4, Color, 0x0)
+    PartnerGroupColors: (List, 0x4, Color, 0x0)
     PlacementTexts: (List, 0x4, Hash, 0x0)
     PlacementBanners: (List, 0x4, Hash, 0x0)
     PartnerGroupBanners: (List, 0x4, Hash, 0x0)
@@ -14585,11 +14585,11 @@ class PartnerGroupPlacements():
 
 class CherryConfigs(IGameModeConfig):
     0x31ff922d: (List2, 0x0, Embed, 0x31ff922d)
-    0x32263cf0: (List, 0x0, Embed, 0x1495c79f)
-    0x32263cf0: (List2, 0x0, Embed, 0x1495c79f)
+    ArenaData: (List, 0x0, Embed, CherryArenaData)
+    ArenaData: (List2, 0x0, Embed, CherryArenaData)
     CombatRoundDamage: (List, 0x0, U8, 0x0)
-    0x85e383b4: (List, 0x0, Color, 0x0)
-    0x85e383b4: (List2, 0x0, Color, 0x0)
+    AugmentColors: (List, 0x0, Color, 0x0)
+    AugmentColors: (List2, 0x0, Color, 0x0)
     0xa5fc6415: (List, 0x0, U32, 0x0)
     CameraBoundsAsPercentageOfMapBounds: (F32, 0x0, 0x0, 0x0)
     0xf021feb3: (U8, 0x0, 0x0, 0x0)
@@ -14599,7 +14599,7 @@ class 0x9a7de981(0x6ca3cfd):
     Value: (String, 0x0, 0x0, 0x0)
     pass
 
-class 0x9a817e2(IGameModeConfig):
+class ReciprocityConfig(IGameModeConfig):
     0x15470412: (F32, 0x0, 0x0, 0x0)
     0x3240c71d: (F32, 0x0, 0x0, 0x0)
     ThrottleLimit: (U8, 0x0, 0x0, 0x0)
@@ -14690,17 +14690,17 @@ class 0x9b1b08e6():
     Background: (Hash, 0x0, 0x0, 0x0)
     EarnedChallengeName: (Hash, 0x0, 0x0, 0x0)
     Title: (Hash, 0x0, 0x0, 0x0)
-    0xca486165: (Hash, 0x0, 0x0, 0x0)
+    EarnedChallengeTokenIcon: (Hash, 0x0, 0x0, 0x0)
     pass
 
 class MapPathSegment():
     EndPosition: (Vec3, 0x0, 0x0, 0x0)
     pass
 
-class 0x9b3d3626():
+class SkinBorder():
     0x146a6dde: (List2, 0x0, I32, 0x0)
     CatalogEntry: (Embed, 0x0, 0x0, CatalogEntry)
-    0x32c5d2fe: (List2, 0x0, Embed, 0xde28699e)
+    0x32c5d2fe: (List2, 0x0, Embed, SkinBorderOrder)
     LocalizedName: (String, 0x0, 0x0, 0x0)
     Priority: (U8, 0x0, 0x0, 0x0)
     Image: (String, 0x0, 0x0, 0x0)
@@ -14708,9 +14708,9 @@ class 0x9b3d3626():
     pass
 
 class UiElementEffectRotatingIconData(UiElementEffectData):
-    TextureData: (Pointer, 0x0, 0x0, 0x840074ef)
+    TextureData: (Pointer, 0x0, 0x0, IUiEffectTextureDataProvider)
     mAtlas: (Pointer, 0x0, 0x0, AtlasData)
-    mAtlas: (Pointer, 0x0, 0x0, 0x840074ef)
+    mAtlas: (Pointer, 0x0, 0x0, IUiEffectTextureDataProvider)
     pass
 
 class SpellLevelUpInfo():
@@ -14805,7 +14805,7 @@ class MissionsPanelViewController(ViewController):
     BaseLoadable: (Link, 0x0, 0x0, UiPropertyLoadable)
     EventMissionsCompletedText: (Hash, 0x0, 0x0, 0x0)
     MissionFullManagedLayout: (Hash, 0x0, 0x0, 0x0)
-    0x67c56f9d: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
+    TabletOverrideLoadable: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
     EventMissionsCompletedKey: (String, 0x0, 0x0, 0x0)
     EventEmptyGroup: (Hash, 0x0, 0x0, 0x0)
     ViewPaneDefinition: (Embed, 0x0, 0x0, ViewPaneDefinition)
@@ -14885,7 +14885,7 @@ class ContextualConditionMultikillSize(IContextualCondition):
 class CallOnMissileBounce(MissileTriggeredActionSpec):
     pass
 
-class 0x9bd21f30(ILogicBoolDriver, IDynamicMaterialBoolDriver):
+class GetFxObjectDynamicMaterialBoolDriver(ILogicBoolDriver, IDynamicMaterialBoolDriver):
     mKeyName: (String, 0x0, 0x0, 0x0)
     pass
 
@@ -14911,31 +14911,31 @@ class ReplayVisibilityMenuViewController(ViewController):
     MinimapVisibilityKey: (String, 0x0, 0x0, 0x0)
     pass
 
-class 0x9bdea32a(ViewController):
+class TftPayoutViewController(ViewController):
     ProgressBar: (Hash, 0x0, 0x0, 0x0)
     BaseLoadable: (Link, 0x0, 0x0, UiPropertyLoadable)
     MainScene: (Hash, 0x0, 0x0, 0x0)
-    0x578106f8: (List2, 0x0, Embed, 0x209fa685)
+    RewardBars: (List2, 0x0, Embed, 0x209fa685)
     MobileOverrideLoadable: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
     0x5d768e72: (Hash, 0x0, 0x0, 0x0)
     0x6373e403: (F32, 0x0, 0x0, 0x0)
-    0x68377fdd: (F32, 0x0, 0x0, 0x0)
+    BannerDurationSecs: (F32, 0x0, 0x0, 0x0)
     0x6e6af651: (F32, 0x0, 0x0, 0x0)
     0x87eb3d0: (F32, 0x0, 0x0, 0x0)
-    0x994161a7: (Hash, 0x0, 0x0, 0x0)
-    0xa3b20a4f: (Hash, 0x0, 0x0, 0x0)
+    RewardNumber: (Hash, 0x0, 0x0, 0x0)
+    RewardNumberDisplay: (Hash, 0x0, 0x0, 0x0)
     0xb2a69226: (Color, 0x0, 0x0, 0x0)
     0xc60338b8: (String, 0x0, 0x0, 0x0)
-    0xcf691092: (String, 0x0, 0x0, 0x0)
+    RewardTrakey: (String, 0x0, 0x0, 0x0)
     pass
 
 class 0x9c1d99c0():
-    0x28e52dc5: (Link, 0x0, 0x0, FloatTextFormattingData)
-    0x3a956d86: (Link, 0x0, 0x0, FloatTextFormattingData)
+    CombinableDamageFormat: (Link, 0x0, 0x0, FloatTextFormattingData)
+    CriticalDamageFormat: (Link, 0x0, 0x0, FloatTextFormattingData)
     Spells: (List2, 0x0, Hash, 0x0)
     0x80cf3335: (Embed, 0x0, 0x0, 0x7a1a2d27)
     Spell: (Hash, 0x0, 0x0, 0x0)
-    0xef36d754: (Link, 0x0, 0x0, FloatTextFormattingData)
+    DefaultDamageFormat: (Link, 0x0, 0x0, FloatTextFormattingData)
     pass
 
 class DamageTypeMeter():
@@ -15023,7 +15023,7 @@ class VfxEmitterDefinitionData():
     ColorRenderFlags: (U16, 0x0, 0x0, 0x0)
     ColorRenderFlags: (U8, 0x0, 0x0, 0x0)
     TexDivMult: (Vec2, 0x0, 0x0, 0x0)
-    0x166c54c5: (Hash, 0x0, 0x0, 0x0)
+    StencilReferenceId: (Hash, 0x0, 0x0, 0x0)
     ReflectionOpacityGlancing: (F32, 0x0, 0x0, 0x0)
     VoiceOverPersistentName: (String, 0x0, 0x0, 0x0)
     TimeActiveDuringPeriod: (Option, 0x0, F32, 0x0)
@@ -15103,13 +15103,13 @@ class VfxEmitterDefinitionData():
     UvTransformCenterMult: (Vec2, 0x0, 0x0, 0x0)
     ParticleLingerType: (U32, 0x0, 0x0, 0x0)
     ParticleLingerType: (U8, 0x0, 0x0, 0x0)
-    0x38b0b8cc: (Flag, 0x0, 0x0, 0x0)
+    TextureMultFlipU: (Flag, 0x0, 0x0, 0x0)
     FresnelColor: (Embed, 0x0, 0x0, VfxAnimatedColorVariableData)
     FresnelColor: (Embed, 0x0, 0x0, ValueColor)
-    0x3bb0bd85: (Flag, 0x0, 0x0, 0x0)
+    TextureMultFlipV: (Flag, 0x0, 0x0, 0x0)
     EmitterLinger: (F32, 0x0, 0x0, 0x0)
     EmitterLinger: (Option, 0x0, F32, 0x0)
-    0x3bf0b4ed: (Pointer, 0x0, 0x0, 0x7d3206d)
+    SpawnShape: (Pointer, 0x0, 0x0, IVfxShape)
     Texture: (String, 0x0, 0x0, 0x0)
     DisableBackfaceCull: (Bool, 0x0, 0x0, 0x0)
     EmitterName: (String, 0x0, 0x0, 0x0)
@@ -15125,7 +15125,7 @@ class VfxEmitterDefinitionData():
     ColorblindVisibility: (U8, 0x0, 0x0, 0x0)
     KeywordsIncluded: (List, 0x0, String, 0x0)
     TextureAddressModeBase: (U32, 0x0, 0x0, 0x0)
-    0x4b901db3: (Pointer, 0x0, 0x0, 0x2820c167)
+    CustomMaterial: (Pointer, 0x0, 0x0, VfxMaterialDefinitionData)
     OffsetLifeScalingSymmetryMode: (U32, 0x0, 0x0, 0x0)
     OffsetLifeScalingSymmetryMode: (U8, 0x0, 0x0, 0x0)
     FlexShapeDefinition: (Pointer, 0x0, 0x0, VfxFlexShapeDefinitionData)
@@ -15143,7 +15143,7 @@ class VfxEmitterDefinitionData():
     EmissionSurfaceDefinition: (Pointer, 0x0, 0x0, VfxEmissionSurfaceData)
     ReflectionFresnelColor: (Embed, 0x0, 0x0, VfxAnimatedColorVariableData)
     ReflectionFresnelColor: (Embed, 0x0, 0x0, ValueColor)
-    0x563d4a22: (Embed, 0x0, 0x0, ValueVector3)
+    EmitterPosition: (Embed, 0x0, 0x0, ValueVector3)
     BirthRotation0: (Embed, 0x0, 0x0, ValueVector3)
     BirthRotation0: (Embed, 0x0, 0x0, VfxAnimatedVector3fVariableData)
     BirthRotation1: (Embed, 0x0, 0x0, ValueFloat)
@@ -15392,10 +15392,10 @@ class AddHealthCheat(Cheat):
     mTarget: (U32, 0x0, 0x0, 0x0)
     pass
 
-class 0x9d62f7e(0xa8f2f8d9):
-    0x753d0247: (Hash, 0x0, 0x0, 0x0)
+class 0x9d62f7e(ITargetingRangeValue):
+    NamedDataValue: (Hash, 0x0, 0x0, 0x0)
     Spell: (Hash, 0x0, 0x0, 0x0)
-    0xed5e0ca1: (U32, 0x0, 0x0, 0x0)
+    SpellLevel: (U32, 0x0, 0x0, 0x0)
     pass
 
 class BehaviorMapConfig():
@@ -15421,15 +15421,15 @@ class 0x9d79fb9f():
     Champion: (Link, 0x0, 0x0, Champion)
     pass
 
-class 0x9d8138a6():
+class UiSliderBarDefinition():
     ObjectPath: (Hash, 0x0, 0x0, 0x0)
-    SliderClickedState: (Embed, 0x0, 0x0, 0xf2cfc48c)
+    SliderClickedState: (Embed, 0x0, 0x0, UiSliderBarState)
     SliderHitRegion: (Link, 0x0, 0x0, RegionElementData)
-    SliderHoveredState: (Embed, 0x0, 0x0, 0xf2cfc48c)
+    SliderHoveredState: (Embed, 0x0, 0x0, UiSliderBarState)
     0x99774fc7: (Bool, 0x0, 0x0, 0x0)
     SoundEvents: (Pointer, 0x0, 0x0, 0x2da50c9f)
-    BarHoveredState: (Embed, 0x0, 0x0, 0xf2cfc48c)
-    DefaultState: (Embed, 0x0, 0x0, 0xf2cfc48c)
+    BarHoveredState: (Embed, 0x0, 0x0, UiSliderBarState)
+    DefaultState: (Embed, 0x0, 0x0, UiSliderBarState)
     Direction: (U8, 0x0, 0x0, 0x0)
     BarHitRegion: (Link, 0x0, 0x0, RegionElementData)
     pass
@@ -15440,7 +15440,7 @@ class ClientStateCommonSettings():
     mSecondsInBackgroundForceTerminateOnAndroid: (U32, 0x0, 0x0, 0x0)
     pass
 
-class 0x9d97d657():
+class TftCutscenePositionProvider():
     pass
 
 class ContextualConditionNeutralMinionCampName(IContextualCondition):
@@ -15455,7 +15455,7 @@ class CastOnMovementComplete(MissileBehaviorSpec):
     RollForCriticalHitResult: (Bool, 0x0, 0x0, 0x0)
     pass
 
-class 0x9db74d34(IFxActionInstance):
+class FxActionSfxBeamInstance(IFxActionInstance):
     pass
 
 class ContextualConditionTimeSinceStealthStateChange(IContextualCondition):
@@ -15507,8 +15507,8 @@ class PfxFieldOrbitalDefinitionData():
     pass
 
 class 0x9e1e8775(0xbc413e21):
-    0x5a9403be: (String, 0x0, 0x0, 0x0)
-    0x6e6dcfed: (String, 0x0, 0x0, 0x0)
+    LocalizedTextFormat: (String, 0x0, 0x0, 0x0)
+    TextFormat: (String, 0x0, 0x0, 0x0)
     TextElement: (Hash, 0x0, 0x0, 0x0)
     pass
 
@@ -15534,12 +15534,12 @@ class TftArmoryViewController(ViewController):
     GoldScene: (Hash, 0x0, 0x0, 0x0)
     Background: (Hash, 0x0, 0x0, 0x0)
     MainScene: (Hash, 0x0, 0x0, 0x0)
-    0x533b3cd8: (Hash, 0x0, 0x0, 0x0)
+    PreArmoryVfx: (Hash, 0x0, 0x0, 0x0)
     TimeoutPreventClicksOnShow: (F32, 0x0, 0x0, 0x0)
     HideButtonScene: (Hash, 0x0, 0x0, 0x0)
     RefreshCost: (I32, 0x0, 0x0, 0x0)
     MobileOverrideLoadable: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
-    0x67282199: (String, 0x0, 0x0, 0x0)
+    RadiantItemTag: (String, 0x0, 0x0, 0x0)
     TimerElementGroup: (Hash, 0x0, 0x0, 0x0)
     RefreshButton: (Hash, 0x0, 0x0, 0x0)
     RecipeHintTraKey: (String, 0x0, 0x0, 0x0)
@@ -15568,21 +15568,21 @@ class TftArmoryViewController(ViewController):
     SelectAllButton: (Hash, 0x0, 0x0, 0x0)
     pass
 
-class 0x9e2e49e8(0x856ba9bc):
+class StrawberryRoundsViewController(0x856ba9bc):
     TimerText: (Hash, 0x0, 0x0, 0x0)
     Scene: (Hash, 0x0, 0x0, 0x0)
-    0x2cc9ea0f: (List, 0x3, Embed, 0x43aaf187)
-    0x352a241c: (String, 0x0, 0x0, 0x0)
+    LeftPhaseIcons: (List, 0x3, Embed, 0x43aaf187)
+    RoundLabelTra: (String, 0x0, 0x0, 0x0)
     0x3aa6852c: (Hash, 0x0, 0x0, 0x0)
     BaseLoadable: (Link, 0x0, 0x0, UiPropertyLoadable)
-    0x4555fbb0: (Embed, 0x0, 0x0, 0xbe081d2c)
-    0x47dc6b2c: (Embed, 0x0, 0x0, 0x43aaf187)
-    0x4b7703b3: (Hash, 0x0, 0x0, 0x0)
-    0x8d7fe1ae: (List, 0x3, Embed, 0x43aaf187)
-    0x9507344d: (Color, 0x0, 0x0, 0x0)
+    TimerLeftBar: (Embed, 0x0, 0x0, 0xbe081d2c)
+    CurrentPhaseIcon: (Embed, 0x0, 0x0, 0x43aaf187)
+    RoundLabel: (Hash, 0x0, 0x0, 0x0)
+    RightPhaseIcons: (List, 0x3, Embed, 0x43aaf187)
+    TimerTextDefaultColor: (Color, 0x0, 0x0, 0x0)
     0xb03d7e4b: (Color, 0x0, 0x0, 0x0)
     0xb1f34e3f: (Embed, 0x0, 0x0, 0x45f140fc)
-    0xb2d6cb55: (Embed, 0x0, 0x0, 0xbe081d2c)
+    TimerRightBar: (Embed, 0x0, 0x0, 0xbe081d2c)
     0xcf3fe190: (Hash, 0x0, 0x0, 0x0)
     0xd24a0877: (Map, U8, String, 0x0)
     0xe527f39d: (Hash, 0x0, 0x0, 0x0)
@@ -15640,7 +15640,7 @@ class 0x9eb07cec(IEnvironmentShadingModel):
     pass
 
 class 0x9eba3f83(0x65a1bb16):
-    0x5f366897: (Pointer, 0x0, 0x0, ILogicFloatDriver)
+    DurationDriver: (Pointer, 0x0, 0x0, ILogicFloatDriver)
     pass
 
 class 0x9ec23f4d(ConditionBoolClipData):
@@ -15656,7 +15656,7 @@ class 0x9eeb82e6(MissileBehaviorSpec):
     mMaximumTerrainWallsToSkip: (Option, 0x0, U32, 0x0)
     pass
 
-class 0x9ef09bad():
+class MapPlaceableBase():
     Transform: (Mtx44, 0x0, 0x0, 0x0)
     pass
 
@@ -15670,19 +15670,19 @@ class NumberCalculationPart(IGameCalculationPart, ISpellCalculationPart):
     pass
 
 class 0x9f30b8a6(IGameModeConfig):
-    0x1037fba9: (Pointer, 0x0, 0x0, 0xe6f0047)
+    ObjectiveBountyConfig: (Pointer, 0x0, 0x0, 0xe6f0047)
     0x10bf9ca9: (F32, 0x0, 0x0, 0x0)
     0x11f10a40: (U32, 0x0, 0x0, 0x0)
     0x1eacb90a: (F32, 0x0, 0x0, 0x0)
-    0x411dc52e: (U32, 0x0, 0x0, 0x0)
+    BaseGold: (U32, 0x0, 0x0, 0x0)
     0x561b796d: (U32, 0x0, 0x0, 0x0)
-    0x6664d41e: (U32, 0x0, 0x0, 0x0)
+    FirstBloodBonus: (U32, 0x0, 0x0, 0x0)
     0x8c1b120: (F32, 0x0, 0x0, 0x0)
     0x907442e7: (U32, 0x0, 0x0, 0x0)
     0x937cc95a: (U32, 0x0, 0x0, 0x0)
     0xa966473c: (Pointer, 0x0, 0x0, 0xb53e2f1a)
-    0xae0964fb: (Pointer, 0x0, 0x0, 0x24e1cb45)
-    0xb29567fa: (U32, 0x0, 0x0, 0x0)
+    NegativeBountyConfig: (Pointer, 0x0, 0x0, 0x24e1cb45)
+    AssistDurationOverride: (U32, 0x0, 0x0, 0x0)
     0xf3518902: (Pointer, 0x0, 0x0, 0xf01e253c)
     0xfe1b406e: (U32, 0x0, 0x0, 0x0)
     pass
@@ -15705,28 +15705,28 @@ class ISpellCalculationPartWithBuffCounter(ISpellCalculationPart):
 
 class TftCutsceneCinematicBarsClip(TftCutsceneClip):
     EnableLetterBox: (Bool, 0x0, 0x0, 0x0)
-    0x3f2fbb85: (F32, 0x0, 0x0, 0x0)
+    PillarBoxRatio: (F32, 0x0, 0x0, 0x0)
     LetterBoxViewRatio: (F32, 0x0, 0x0, 0x0)
     EnablePillarBox: (Bool, 0x0, 0x0, 0x0)
     PillarBoxViewAspectRatio: (F32, 0x0, 0x0, 0x0)
-    0xc801928c: (U32, 0x0, 0x0, 0x0)
+    RatioType: (U32, 0x0, 0x0, 0x0)
     BlackboardAssociatedPlayers: (List2, 0x0, String, 0x0)
-    0xf3f3f7c9: (F32, 0x0, 0x0, 0x0)
+    LetterBoxRatio: (F32, 0x0, 0x0, 0x0)
     pass
 
 class TftMatchupBannerViewController(ViewController):
-    0x2f1a04cc: (Hash, 0x0, 0x0, 0x0)
+    RoundText: (Hash, 0x0, 0x0, 0x0)
     BaseLoadable: (Link, 0x0, 0x0, UiPropertyLoadable)
     MainScene: (Hash, 0x0, 0x0, 0x0)
     BannerVfx: (Hash, 0x0, 0x0, 0x0)
     MobileOverrideLoadable: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
     0x5d768e72: (Hash, 0x0, 0x0, 0x0)
     TotalDuration: (F32, 0x0, 0x0, 0x0)
-    0x68377fdd: (F32, 0x0, 0x0, 0x0)
+    BannerDurationSecs: (F32, 0x0, 0x0, 0x0)
     0x6e9023c0: (List2, 0x0, String, 0x0)
     LeftPlayer: (Embed, 0x0, 0x0, TftMatchupBannerUiContainer)
     RightPlayer: (Embed, 0x0, 0x0, TftMatchupBannerUiContainer)
-    0xa1a8bf5a: (Hash, 0x0, 0x0, 0x0)
+    RoundNumber: (Hash, 0x0, 0x0, 0x0)
     BannerVfxEnableTime: (F32, 0x0, 0x0, 0x0)
     pass
 
@@ -15736,7 +15736,7 @@ class UnitStatusIndicator():
     mBarOffset: (Vec2, 0x0, 0x0, 0x0)
     pass
 
-class 0x9fbfb7cf(ScriptTableSet):
+class IntArrayTableSet(ScriptTableSet):
     pass
 
 class CustomTableGet(ScriptTableGet, IScriptValueGet):
@@ -15747,7 +15747,7 @@ class CustomTableGet(ScriptTableGet, IScriptValueGet):
 class FxActionSfxBase(IFxAction):
     EventName: (String, 0x0, 0x0, 0x0)
     AudioSource: (Embed, 0x0, 0x0, FxTarget)
-    AudioSource: (Embed, 0x0, 0x0, 0x5c086dbd)
+    AudioSource: (Embed, 0x0, 0x0, FxObjectSelector)
     UseCharacterTags: (Bool, 0x0, 0x0, 0x0)
     ForceStopWhenDone: (Bool, 0x0, 0x0, 0x0)
     pass
@@ -15771,9 +15771,9 @@ class SurrenderData():
     mMinTimeBetweenSurrenders: (F32, 0x0, 0x0, 0x0)
     pass
 
-class 0xa0406423():
+class GroupRepeat():
     Count: (I32, 0x0, 0x0, 0x0)
-    0xbe2af3eb: (I32, 0x0, 0x0, 0x0)
+    Scope: (I32, 0x0, 0x0, 0x0)
     Multiplier: (F32, 0x0, 0x0, 0x0)
     pass
 
@@ -15803,7 +15803,7 @@ class HudItemShopData():
     ItemShopSellOverlayScene: (Hash, 0x0, 0x0, 0x0)
     CommonlyBuiltIconDefinition: (Hash, 0x0, 0x0, 0x0)
     PlayerDebtText: (Hash, 0x0, 0x0, 0x0)
-    0x39bc5dc5: (Hash, 0x0, 0x0, 0x0)
+    TabViewItemSetsScene: (Hash, 0x0, 0x0, 0x0)
     TabButtonDefinition: (Hash, 0x0, 0x0, 0x0)
     SearchItemDescriptionDefinition: (Embed, 0x0, 0x0, HudItemShopItemDetailsDefinition)
     SearchIconDefinition: (Hash, 0x0, 0x0, 0x0)
@@ -15847,7 +15847,7 @@ class HudItemShopData():
     ItemShopSellOverlaySellIconDefaultDefinition: (Hash, 0x0, 0x0, 0x0)
     RecItemSlotsDefinition: (List, 0x3, Hash, 0x0)
     Scaling: (Embed, 0x0, 0x0, 0x86baa4d)
-    0xa135cbb0: (Hash, 0x0, 0x0, 0x0)
+    TabViewAllItemsScene: (Hash, 0x0, 0x0, 0x0)
     InvertGroupDisplayOrderButtonDefinition: (Hash, 0x0, 0x0, 0x0)
     0xa8ca51f6: (List2, 0x0, Hash, 0x0)
     MarksmanItemsFilterButtonDefinition: (Hash, 0x0, 0x0, 0x0)
@@ -15860,7 +15860,7 @@ class HudItemShopData():
     AllItemsItemRegion: (Hash, 0x0, 0x0, 0x0)
     PageTemplateItemIconDefinition: (Hash, 0x0, 0x0, 0x0)
     ItemShopSellOverlayDragAreaDefinition: (Hash, 0x0, 0x0, 0x0)
-    0xbcda38ac: (Embed, 0x0, 0x0, HudItemShopQuickBuyData)
+    QuickbuyConsumablesData: (Embed, 0x0, 0x0, HudItemShopQuickBuyData)
     QuickbuyBootsData: (Embed, 0x0, 0x0, HudItemShopQuickBuyData)
     SearchViewPaneDefinition: (Embed, 0x0, 0x0, ViewPaneDefinition)
     0xcccb5e11: (Bool, 0x0, 0x0, 0x0)
@@ -15881,17 +15881,17 @@ class HudItemShopData():
     AllItemsHeaderTextDimmed: (Hash, 0x0, 0x0, 0x0)
     ItemIconTemplateScene: (Hash, 0x0, 0x0, 0x0)
     AllItemsHeaderRegion: (Hash, 0x0, 0x0, 0x0)
-    0xf7ffd989: (Hash, 0x0, 0x0, 0x0)
+    ItemShopSearchViewScene: (Hash, 0x0, 0x0, 0x0)
     RecItemCardTagScale: (F32, 0x0, 0x0, 0x0)
     VerticalBuildTreeConnector: (Hash, 0x0, 0x0, 0x0)
     ItemShopSellOverlaySellIconHoverDefinition: (Hash, 0x0, 0x0, 0x0)
-    0xfe567b1: (Hash, 0x0, 0x0, 0x0)
+    TabViewRecItemsScene: (Hash, 0x0, 0x0, 0x0)
     pass
 
 class 0xa0b62126(MapAction):
     Duration: (F32, 0x0, 0x0, 0x0)
-    0xb16c581f: (Color, 0x0, 0x0, 0x0)
-    0xeca5d69e: (Hash, 0x0, 0x0, 0x0)
+    TargetColor: (Color, 0x0, 0x0, 0x0)
+    TargetLightingVolume: (Hash, 0x0, 0x0, 0x0)
     pass
 
 class 0xa0c66b29(0x64c18f7d):
@@ -15906,7 +15906,7 @@ class TftMapSetData():
     TraitUnitProperties: (List2, 0x0, String, 0x0)
     0x9fd292f5: (String, 0x0, 0x0, 0x0)
     TftGameType: (U32, 0x0, 0x0, 0x0)
-    0xc58015b5: (List2, 0x0, String, 0x0)
+    ItemUnitProperties: (List2, 0x0, String, 0x0)
     AugmentContainerTexture: (String, 0x0, 0x0, 0x0)
     ObjectName: (String, 0x0, 0x0, 0x0)
     TraitLists: (List, 0x0, Pointer, TftMapTraitList)
@@ -15928,7 +15928,7 @@ class OrInputSourceBool(IInputSourceBool):
     pass
 
 class ViewControllerFilter_And(ViewControllerFilterI):
-    0x883c4bff: (List2, 0x0, Pointer, ViewControllerFilterI)
+    FilterList: (List2, 0x0, Pointer, ViewControllerFilterI)
     Filters: (List, 0x0, Pointer, ViewControllerFilterI)
     Filters: (List2, 0x0, Pointer, ViewControllerFilterI)
     pass
@@ -15949,11 +15949,11 @@ class GameModeConstantString(GameModeConstant):
     mValue: (String, 0x0, 0x0, 0x0)
     pass
 
-class 0xa190d964():
-    0xcd6f2cf9: (List2, 0x0, Link, 0xae2530a4)
+class TftTooltipList():
+    Tooltips: (List2, 0x0, Link, TftTooltipData)
     pass
 
-class 0xa19405b3(0x5c108a08):
+class 0xa19405b3(ILolSpellScriptEvent):
     pass
 
 class ContextualConditionCharacterUnitTags(ICharacterSubcondition):
@@ -15968,10 +15968,10 @@ class MinimapBackground():
     pass
 
 class DoubleSidedTipStyle(TipStyleBase):
-    ReverseDirectionalTipElements: (List, 0x0, Link, 0x231dd1a2)
+    ReverseDirectionalTipElements: (List, 0x0, Link, ElementDataI)
     ReverseDirectionalTipElements: (List, 0x0, Link, UiElementIData)
     ReverseDirectionalTipElements: (List2, 0x0, Link, UiElementIData)
-    Sliver: (Link, 0x0, 0x0, 0x231dd1a2)
+    Sliver: (Link, 0x0, 0x0, ElementDataI)
     Sliver: (Link, 0x0, 0x0, UiElementIData)
     pass
 
@@ -16024,30 +16024,30 @@ class ItemRecommendationMatrixRow():
 
 class CherryTeamFlyoutPanelTeamTemplate():
     Scene: (Hash, 0x0, 0x0, 0x0)
-    0x23fd2f24: (Embed, 0x0, 0x0, 0xcc2c0827)
-    0x2514a5: (Embed, 0x0, 0x0, 0xae468ed4)
-    0x28c620a0: (Hash, 0x0, 0x0, 0x0)
-    0x2961d08c: (Embed, 0x0, 0x0, 0xa450b25)
-    0x337254f3: (Embed, 0x0, 0x0, 0xa450b25)
-    0x34e505c8: (Hash, 0x0, 0x0, 0x0)
+    HoverGlow: (Embed, 0x0, 0x0, 0xcc2c0827)
+    FightTeamFrame: (Embed, 0x0, 0x0, CherryTeamFlyoutPanelFightTeamFrame)
+    HealthTextScene: (Hash, 0x0, 0x0, 0x0)
+    FightTeamBackground: (Embed, 0x0, 0x0, IconStateData)
+    0x337254f3: (Embed, 0x0, 0x0, IconStateData)
+    TeamButton: (Hash, 0x0, 0x0, 0x0)
     Bounds: (Hash, 0x0, 0x0, 0x0)
-    0x4ea12677: (Embed, 0x0, 0x0, 0xa450b25)
-    0x4f0ab780: (Hash, 0x0, 0x0, 0x0)
+    0x4ea12677: (Embed, 0x0, 0x0, IconStateData)
+    ChampionLayout: (Hash, 0x0, 0x0, 0x0)
     0x5388a5b: (Hash, 0x0, 0x0, 0x0)
-    0x5502013c: (Hash, 0x0, 0x0, 0x0)
+    TeamChampionsButton: (Hash, 0x0, 0x0, 0x0)
     DefaultFillMeterColor: (Color, 0x0, 0x0, 0x0)
     Player1: (Embed, 0x0, 0x0, CherryTeamFlyoutPanelTeamTemplateChampion)
     Player2: (Embed, 0x0, 0x0, CherryTeamFlyoutPanelTeamTemplateChampion)
     LastLifeHealthTextColor: (Color, 0x0, 0x0, 0x0)
     HealthText: (Hash, 0x0, 0x0, 0x0)
     TeamIcon: (Hash, 0x0, 0x0, 0x0)
-    Frames: (Embed, 0x0, 0x0, 0xea6e0122)
-    0x8301eb38: (Embed, 0x0, 0x0, CherryTeamFlyoutPanelTeamTemplateChampion)
+    Frames: (Embed, 0x0, 0x0, CherryTeamFlyoutPanelTeamFrame)
+    ChampionTemplate: (Embed, 0x0, 0x0, CherryTeamFlyoutPanelTeamTemplateChampion)
     DefaultHealthTextColor: (Color, 0x0, 0x0, 0x0)
     FillMeter: (Hash, 0x0, 0x0, 0x0)
     0xa4577e5a: (Embed, 0x0, 0x0, 0x6a68b4f1)
     0xd4fa36ff: (Hash, 0x0, 0x0, 0x0)
-    0xde57b1e6: (Hash, 0x0, 0x0, 0x0)
+    ChampionScene: (Hash, 0x0, 0x0, 0x0)
     LastLifeFillMeterColor: (Color, 0x0, 0x0, 0x0)
     pass
 
@@ -16073,9 +16073,9 @@ class ContextualConditionCharacter(IContextualCondition):
     mCharacterType: (U8, 0x0, 0x0, 0x0)
     pass
 
-class 0xa2cc36e2(MapAction):
+class MapActionAttachMapParticle(MapAction):
     Duration: (F32, 0x0, 0x0, 0x0)
-    0x592ef6c3: (String, 0x0, 0x0, 0x0)
+    MapParticle: (String, 0x0, 0x0, 0x0)
     0x7df5733d: (Pointer, 0x0, 0x0, 0xc9440657)
     pass
 
@@ -16085,10 +16085,10 @@ class TftMapSkin(BaseLoadoutData):
     AudioBankPaths: (List, 0x0, String, 0x0)
     StandaloneLoadoutsIcon: (String, 0x0, 0x0, 0x0)
     Rarity: (U32, 0x0, 0x0, 0x0)
-    0x67db3cec: (U32, 0x0, 0x0, 0x0)
+    GoldMineSkinId: (U32, 0x0, 0x0, 0x0)
     AwayGoldMineSkinId: (U16, 0x0, 0x0, 0x0)
     StandaloneLoadoutIcon: (String, 0x0, 0x0, 0x0)
-    0x7a3fea92: (Hash, 0x0, 0x0, 0x0)
+    TrovesHighlightVfx: (Hash, 0x0, 0x0, 0x0)
     ArenaIntroCutscene: (Pointer, 0x0, 0x0, TftCutscene)
     0x8e2a4357: (Hash, 0x0, 0x0, 0x0)
     Characters: (List2, 0x0, Hash, 0x0)
@@ -16096,9 +16096,9 @@ class TftMapSkin(BaseLoadoutData):
     MapContainer: (String, 0x0, 0x0, 0x0)
     ResourceResolver: (Hash, 0x0, 0x0, 0x0)
     StandaloneLoadoutsLargeIcon: (String, 0x0, 0x0, 0x0)
-    0xfa965c94: (Pointer, 0x0, 0x0, TftCutscene)
+    ArenaTransformCutscene: (Pointer, 0x0, 0x0, TftCutscene)
     GroupLink: (String, 0x0, 0x0, 0x0)
-    0xfe57aadd: (Embed, 0x0, 0x0, 0xa3992fd9)
+    RotationalShopItemData: (Embed, 0x0, 0x0, TftRotationalShopItemData)
     pass
 
 class Mapgeo():
@@ -16150,17 +16150,17 @@ class TftOptionsViewController(OptionsViewController):
     ActiveTabScrollRegion: (Hash, 0x0, 0x0, 0x0)
     BaseLoadable: (Link, 0x0, 0x0, UiPropertyLoadable)
     MobileOverrideLoadable: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
-    0x7f6c17a6: (Hash, 0x0, 0x0, 0x0)
-    0xc43cfe31: (Hash, 0x0, 0x0, 0x0)
+    BuildVersionText: (Hash, 0x0, 0x0, 0x0)
+    BuildVersionTextFooter: (Hash, 0x0, 0x0, 0x0)
     0xd2dfde63: (Bool, 0x0, 0x0, 0x0)
     pass
 
-class 0xa3271e82():
+class ElementDataBase():
     Id: (String, 0x0, 0x0, 0x0)
-    0xb3f182f6: (U8, 0x0, 0x0, 0x0)
+    PreferredOrder: (U8, 0x0, 0x0, 0x0)
     pass
 
-class EffectElementData(0x223e46b7, IconElementData, BaseElementData, UiElementAssetData):
+class EffectElementData(UiAssetElementData, IconElementData, BaseElementData, UiElementAssetData):
     mEffectParams0: (Vec4, 0x0, 0x0, 0x0)
     mTexture1: (String, 0x0, 0x0, 0x0)
     mEffectColor0: (Color, 0x0, 0x0, 0x0)
@@ -16178,10 +16178,10 @@ class UiTeamFightTeamScoreData():
     ScoreText: (Hash, 0x0, 0x0, 0x0)
     pass
 
-class 0xa3992fd9():
-    0x87696dab: (String, 0x0, 0x0, 0x0)
-    0x8cada859: (String, 0x0, 0x0, 0x0)
-    0xb807fa19: (String, 0x0, 0x0, 0x0)
+class TftRotationalShopItemData():
+    BackgroundTexturePath: (String, 0x0, 0x0, 0x0)
+    LcuBackgroundTexturePath: (String, 0x0, 0x0, 0x0)
+    MobileBackgroundTexturePath: (String, 0x0, 0x0, 0x0)
     pass
 
 class BarElementParams():
@@ -16210,7 +16210,7 @@ class RetiredStatStoneData():
     StatStoneRetiredIconMiniName: (String, 0x0, 0x0, 0x0)
     pass
 
-class 0xa3dad89(IScriptBlock):
+class BreakBlock(IScriptBlock):
     pass
 
 class InputEvent2Axis(InputEventBase):
@@ -16223,10 +16223,10 @@ class InputEvent2Axis(InputEventBase):
     CombineMode: (U32, 0x0, 0x0, 0x0)
     pass
 
-class 0xa4036762():
+class TftGameStartSequenceSimpleEvent():
     UiElement: (Hash, 0x0, 0x0, 0x0)
     StartTimeSecs: (F32, 0x0, 0x0, 0x0)
-    0xb49779d0: (Pointer, 0x0, 0x0, 0x7fa75f35)
+    UiObject: (Pointer, 0x0, 0x0, TftGameStartSequenceSimpleObject)
     DurationSecs: (F32, 0x0, 0x0, 0x0)
     pass
 
@@ -16237,7 +16237,7 @@ class TftCutsceneClip(TftCutsceneEntry):
 class LoadoutCompanionInfoPanel(ILoadoutInfoPanel):
     UpgradeEntitlementErrorTooltipText: (String, 0x0, 0x0, 0x0)
     JustObtainedIcon: (List, 0x3, Hash, 0x0)
-    0x51ed69a7: (Hash, 0x0, 0x0, 0x0)
+    GamePassIcon: (Hash, 0x0, 0x0, 0x0)
     UnownedStarShardIcon: (List, 0x3, Hash, 0x0)
     UpgradeButtonDisabledFromEntitlementText: (String, 0x0, 0x0, 0x0)
     Tier2ButtonFeedbackVfx: (Hash, 0x0, 0x0, 0x0)
@@ -16264,15 +16264,15 @@ class TftMapTraitContributionData():
     TraitData: (Embed, 0x0, 0x0, TftMapTraitData)
     pass
 
-class 0xa4290ed0():
-    0xf17df00a: (List2, 0x0, String, 0x0)
+class RegionDataBase():
+    Regions: (List2, 0x0, String, 0x0)
     pass
 
 class 0xa431a429(0x69cdddcc):
-    0x3a6f2adb: (F32, 0x0, 0x0, 0x0)
-    0x6f4978f9: (F32, 0x0, 0x0, 0x0)
-    0xc1888b8c: (Vec3, 0x0, 0x0, 0x0)
-    0xecf560a: (Vec3, 0x0, 0x0, 0x0)
+    Arc: (F32, 0x0, 0x0, 0x0)
+    ArcRadius: (F32, 0x0, 0x0, 0x0)
+    RotationForward: (Vec3, 0x0, 0x0, 0x0)
+    RotationAxis: (Vec3, 0x0, 0x0, 0x0)
     pass
 
 class BankUnit():
@@ -16292,10 +16292,10 @@ class 0xa44b28c0():
     0xfd894807: (Hash, 0x0, 0x0, 0x0)
     pass
 
-class 0xa450b25():
-    0x154331ac: (Hash, 0x0, 0x0, 0x0)
+class IconStateData():
+    IconActiveHover: (Hash, 0x0, 0x0, 0x0)
     0x5786f895: (Hash, 0x0, 0x0, 0x0)
-    0x954a4a29: (Hash, 0x0, 0x0, 0x0)
+    IconInactiveHover: (Hash, 0x0, 0x0, 0x0)
     0xcf3d6a50: (Hash, 0x0, 0x0, 0x0)
     pass
 
@@ -16308,10 +16308,10 @@ class SettingsViewController(ViewController):
     pass
 
 class CherryTeamFlyoutPanelTeamTemplateChampion():
-    0x1de20879: (Hash, 0x0, 0x0, 0x0)
+    PortraitGridItem: (Hash, 0x0, 0x0, 0x0)
     PortraitFrame: (Hash, 0x0, 0x0, 0x0)
-    0xa07aab6f: (Hash, 0x0, 0x0, 0x0)
-    0xa64e4068: (Embed, 0x0, 0x0, 0xc7ca4925)
+    PortraitReference: (Hash, 0x0, 0x0, 0x0)
+    PortraitFrames: (Embed, 0x0, 0x0, 0xc7ca4925)
     PortraitIcon: (Hash, 0x0, 0x0, 0x0)
     pass
 
@@ -16319,15 +16319,15 @@ class LuaPropertyDataBoolean(LuaPropertyData):
     Value: (Bool, 0x0, 0x0, 0x0)
     pass
 
-class 0xa48aca10():
+class TftEventTimer():
     TimerText: (Hash, 0x0, 0x0, 0x0)
     Scene: (Hash, 0x0, 0x0, 0x0)
     0x2374a39f: (String, 0x0, 0x0, 0x0)
     0x8938c438: (String, 0x0, 0x0, 0x0)
     0xe1c84837: (Hash, 0x0, 0x0, 0x0)
     TimerIcon: (Hash, 0x0, 0x0, 0x0)
-    0xf107b593: (Hash, 0x0, 0x0, 0x0)
-    0xf614d04b: (Hash, 0x0, 0x0, 0x0)
+    TimerFrame: (Hash, 0x0, 0x0, 0x0)
+    GreyedTimerText: (Hash, 0x0, 0x0, 0x0)
     pass
 
 class ViewControllerFilterI():
@@ -16337,7 +16337,7 @@ class OptionItemFilter_ReplayApi(IOptionItemFilter):
     pass
 
 class 0xa495afda():
-    0x72b36ecf: (Hash, 0x0, 0x0, 0x0)
+    RecipientChampion: (Hash, 0x0, 0x0, 0x0)
     Spell: (Hash, 0x0, 0x0, 0x0)
     pass
 
@@ -16359,7 +16359,7 @@ class HudPlayerResourceBars():
     ExperienceBar: (Hash, 0x0, 0x0, 0x0)
     pass
 
-class 0xa4cf68bd(0xd59ad1fe):
+class 0xa4cf68bd(LevelScriptLegacyBlock):
     pass
 
 class TooltipInstanceSpell(TooltipInstance):
@@ -16379,11 +16379,11 @@ class Missile(GameObject):
 
 class LoadingScreenTips():
     TipBodyText: (Hash, 0x0, 0x0, 0x0)
-    0x87599d02: (Hash, 0x0, 0x0, 0x0)
+    CondensedTipIcon: (Hash, 0x0, 0x0, 0x0)
     pass
 
 class 0xa50ab26():
-    0x40469c43: (Hash, 0x0, 0x0, 0x0)
+    OwnerChampion: (Hash, 0x0, 0x0, 0x0)
     Tooltip: (String, 0x0, 0x0, 0x0)
     pass
 
@@ -16398,7 +16398,7 @@ class TftAugmentInfoViewController(ViewController):
     Slots: (List, 0x0, Embed, TftAugmentDisplayData)
     BaseLoadable: (Link, 0x0, 0x0, UiPropertyLoadable)
     MobileOverrideLoadable: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
-    0x63791a24: (Hash, 0x0, 0x0, 0x0)
+    TitleIcon: (Hash, 0x0, 0x0, 0x0)
     TitleText: (Hash, 0x0, 0x0, 0x0)
     pass
 
@@ -16462,7 +16462,7 @@ class LoadingScreenPlayerCardClassicSpellData():
     Icon: (Hash, 0x0, 0x0, 0x0)
     pass
 
-class 0xa5e0e842(ScriptTable):
+class AvatarVars(ScriptTable):
     pass
 
 class ResourceMeterSkinData():
@@ -16479,7 +16479,7 @@ class SummonerIconData():
     pass
 
 class 0xa5f064ff():
-    0x3e976b10: (List2, 0x0, Link, 0xb3f382ff)
+    RegionPortals: (List2, 0x0, Link, 0xb3f382ff)
     0x48a30fbc: (List, 0x3, String, 0x0)
     pass
 
@@ -16531,8 +16531,8 @@ class EngineFeatureToggles():
     UnifiedDeathEffect: (Bool, 0x0, 0x0, 0x0)
     pass
 
-class 0xa658f586(0xa3271e82):
-    0x83c10d42: (List2, 0x0, Embed, 0x71195869)
+class StoreElementData(ElementDataBase):
+    InstanceData: (List2, 0x0, Embed, StoreInstanceData)
     pass
 
 class OptionItemFilter_And(IOptionItemFilter):
@@ -16566,9 +16566,9 @@ class TftMobileLoginQueueData():
     Scene: (Hash, 0x0, 0x0, 0x0)
     BackgroundIcon: (Hash, 0x0, 0x0, 0x0)
     CurrentPositionText: (Hash, 0x0, 0x0, 0x0)
-    0x7bc052ba: (Hash, 0x0, 0x0, 0x0)
+    VnLogo: (Hash, 0x0, 0x0, 0x0)
     WaitingTimeText: (Hash, 0x0, 0x0, 0x0)
-    0xcbe4dd63: (Hash, 0x0, 0x0, 0x0)
+    TwLogo: (Hash, 0x0, 0x0, 0x0)
     pass
 
 class PracticeToolViewController(ViewController):
@@ -16603,9 +16603,9 @@ class UiElementEffectAnimationData(UiElementEffectData):
     mPerPixelUvsX: (Bool, 0x0, 0x0, 0x0)
     NumberOfFramesPerRowInAtlas: (F32, 0x0, 0x0, 0x0)
     TotalNumberOfFrames: (F32, 0x0, 0x0, 0x0)
-    TextureData: (Pointer, 0x0, 0x0, 0x840074ef)
+    TextureData: (Pointer, 0x0, 0x0, IUiEffectTextureDataProvider)
     mAtlas: (Pointer, 0x0, 0x0, AtlasData)
-    mAtlas: (Pointer, 0x0, 0x0, 0x840074ef)
+    mAtlas: (Pointer, 0x0, 0x0, IUiEffectTextureDataProvider)
     mFlipY: (Bool, 0x0, 0x0, 0x0)
     mFinishBehavior: (U8, 0x0, 0x0, 0x0)
     mFlipX: (Bool, 0x0, 0x0, 0x0)
@@ -16613,7 +16613,7 @@ class UiElementEffectAnimationData(UiElementEffectData):
     pass
 
 class LoadoutArenaSkinInfoPanel(ILoadoutInfoPanel):
-    0x51ed69a7: (Hash, 0x0, 0x0, 0x0)
+    GamePassIcon: (Hash, 0x0, 0x0, 0x0)
     ItemLockIcon: (Hash, 0x0, 0x0, 0x0)
     RarityIcon: (List, 0x5, Hash, 0x0)
     ItemIconText: (Hash, 0x0, 0x0, 0x0)
@@ -16634,16 +16634,16 @@ class HudReplayData():
 
 class 0xa77231b9():
     0x1648560b: (String, 0x0, 0x0, 0x0)
-    0x2572b807: (List2, 0x0, String, 0x0)
+    RegionsEnabled: (List2, 0x0, String, 0x0)
     Enabled: (Bool, 0x0, 0x0, 0x0)
     Target: (String, 0x0, 0x0, 0x0)
     Id: (String, 0x0, 0x0, 0x0)
-    0x4edf6ffb: (String, 0x0, 0x0, 0x0)
-    0x6daeba42: (List2, 0x0, String, 0x0)
-    0x771dee0e: (String, 0x0, 0x0, 0x0)
-    0xc84d1c19: (Embed, 0x0, 0x0, 0xe7face9d)
-    0xd67244d0: (Embed, 0x0, 0x0, 0xe7face9d)
-    0xe0e0dd98: (Bool, 0x0, 0x0, 0x0)
+    StartDate: (String, 0x0, 0x0, 0x0)
+    RegionsDisabled: (List2, 0x0, String, 0x0)
+    EndDate: (String, 0x0, 0x0, 0x0)
+    ForegroundAssets: (Embed, 0x0, 0x0, 0xe7face9d)
+    BackgroundAssets: (Embed, 0x0, 0x0, 0xe7face9d)
+    TargetIsTrakey: (Bool, 0x0, 0x0, 0x0)
     TitleText: (String, 0x0, 0x0, 0x0)
     pass
 
@@ -16655,7 +16655,7 @@ class TftCutsceneCamSfxClip(TftCutsceneClip):
 
 class MapAudio(GenericMapPlaceable):
     EventName: (String, 0x0, 0x0, 0x0)
-    0x5150a6a1: (Link, 0x0, 0x0, 0x121b48aa)
+    VisibilityController: (Link, 0x0, 0x0, IMapVisibilityController)
     MaxIntervalSec: (F32, 0x0, 0x0, 0x0)
     AudioType: (U32, 0x0, 0x0, 0x0)
     StartTime: (F32, 0x0, 0x0, 0x0)
@@ -16674,7 +16674,7 @@ class TftHintMessageViewController(ViewController):
     MessageAnchorElements: (Map, Hash, Hash, 0x0)
     ArrowIcons: (List, 0x4, Hash, 0x0)
     Text: (Hash, 0x0, 0x0, 0x0)
-    0xf2c6b8dd: (Hash, 0x0, 0x0, 0x0)
+    VfxScene: (Hash, 0x0, 0x0, 0x0)
     pass
 
 class EffectKeyFrame():
@@ -16724,15 +16724,15 @@ class NotScriptCondition(IScriptCondition):
     Condition: (Pointer, 0x0, 0x0, IScriptCondition)
     pass
 
-class 0xa8676bc9(0xf486858e):
+class LevelController(BaseLevelController):
     Properties: (Map, Hash, Pointer, GameModeConstant)
     Script: (Link, 0x0, 0x0, LevelControlScript)
     Enabled: (Bool, 0x0, 0x0, 0x0)
     pass
 
-class 0xa8722702():
+class TftEncounterList():
     0x23c80d88: (List2, 0x0, Link, 0x42c94584)
-    0x4e5fff2b: (List2, 0x0, Link, 0x84972e16)
+    Encounters: (List2, 0x0, Link, TftEncounterData)
     pass
 
 class LoadingScreenGameModeBackground():
@@ -16741,7 +16741,7 @@ class LoadingScreenGameModeBackground():
 
 class PostGameLabFields():
     RatedIconData: (List, 0x0, Embed, NamedIconData)
-    0xa22c7f48: (Map, String, String, 0x0)
+    RatedTiersLocKeys: (Map, String, String, 0x0)
     RatedTierLocKeys: (Map, U32, String, 0x0)
     RatedLoadingIconVfx: (Hash, 0x0, 0x0, 0x0)
     RatedIcons: (Map, U32, Hash, 0x0)
@@ -16777,11 +16777,11 @@ class VfxSpawnConditions():
     mConditionalVfxData: (List, 0x0, Pointer, VfxSpawnConditionData)
     pass
 
-class 0xa8f2f8d9():
+class ITargetingRangeValue():
     pass
 
-class 0xa8fc25d8(0x83d6eef9):
-    Filters: (List, 0x0, Pointer, 0x83d6eef9)
+class ViewControllerListFilter_And(ViewControllerListFilterI):
+    Filters: (List, 0x0, Pointer, ViewControllerListFilterI)
     pass
 
 class RemoveFromCustomTableBlock(IScriptBlock):
@@ -16836,7 +16836,7 @@ class TftGameStartSequenceTurbo(TftGameStartSequence):
     GameStartVfxBottom: (Hash, 0x0, 0x0, 0x0)
     pass
 
-class 0xa96a5ee7(0x24f4a711):
+class SelectRetreatSpellBlock(0x24f4a711):
     pass
 
 class OptionItemSliderFloat(OptionItemSlider):
@@ -16888,12 +16888,12 @@ class GameModeConstantFloatPerLevel(GameModeConstant):
     mValues: (List, 0x0, F32, 0x0)
     pass
 
-class 0xaa229297(ViewController):
+class TftEventHubViewController(ViewController):
     BaseLoadable: (Link, 0x0, 0x0, UiPropertyLoadable)
     0x45b34874: (Embed, 0x0, 0x0, 0x1668b3e5)
     0x5e0fc30b: (Embed, 0x0, 0x0, 0xba9f6aca)
-    0x67c56f9d: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
-    0x6bc41154: (Pointer, 0x0, 0x0, 0xa48aca10)
+    TabletOverrideLoadable: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
+    EventTimer: (Pointer, 0x0, 0x0, TftEventTimer)
     InfoButton: (Hash, 0x0, 0x0, 0x0)
     0xa0dd31e5: (Embed, 0x0, 0x0, 0x4e16b860)
     SceneRoot: (Hash, 0x0, 0x0, 0x0)
@@ -16914,7 +16914,7 @@ class OptionTemplateCheckbox(IOptionTemplate):
     pass
 
 class 0xaa3a17e9(MapAction):
-    0xe37ce7a8: (Hash, 0x0, 0x0, 0x0)
+    CutsceneKey: (Hash, 0x0, 0x0, 0x0)
     pass
 
 class MinimapIconRotate(MinimapIconBehavior):
@@ -16963,7 +16963,7 @@ class ToastNotificationsViewController(ViewController):
     BaseLoadable: (Link, 0x0, 0x0, UiPropertyLoadable)
     ToastDurationSecs: (F32, 0x0, 0x0, 0x0)
     BodyText: (Hash, 0x0, 0x0, 0x0)
-    0xb698d01e: (Hash, 0x0, 0x0, 0x0)
+    PassRewardIcon: (Hash, 0x0, 0x0, 0x0)
     EventIcon: (Hash, 0x0, 0x0, 0x0)
     TitleText: (Hash, 0x0, 0x0, 0x0)
     pass
@@ -16977,7 +16977,7 @@ class SequenceTiming():
 class CustomTableSet(ScriptTableSet):
     pass
 
-class 0xaad8e7d2():
+class ScoreLinePortraitUiData():
     TimerText: (Hash, 0x0, 0x0, 0x0)
     0x27502925: (Hash, 0x0, 0x0, 0x0)
     FrameUnderlay: (Hash, 0x0, 0x0, 0x0)
@@ -17002,7 +17002,7 @@ class SceneData():
 
 class 0xab02008c(0xa8a6ac21):
     Source: (Link, 0x0, 0x0, SequenceObjectSelector)
-    0xc2e77088: (String, 0x0, 0x0, 0x0)
+    DebugOverride: (String, 0x0, 0x0, 0x0)
     pass
 
 class ShaderSamplerDef():
@@ -17022,7 +17022,7 @@ class FxActionSfxBaseInstance(IFxActionInstance):
 class 0xab31041e(IGameModeConfig):
     0x2f6611e5: (U8, 0x0, 0x0, 0x0)
     0x4dccb36a: (Map, U32, U32, 0x0)
-    0xd4957af1: (List2, 0x0, Pointer, 0x64c18f7d)
+    GlobalBehaviors: (List2, 0x0, Pointer, 0x64c18f7d)
     pass
 
 class AtlasData9Slice(AtlasDataBase):
@@ -17032,11 +17032,11 @@ class AtlasData9Slice(AtlasDataBase):
     TextureVs: (Vec4, 0x0, 0x0, 0x0)
     pass
 
-class 0xab3db96c(ViewController):
+class TftCustomAnnouncementViewController(ViewController):
     BaseLoadable: (Link, 0x0, 0x0, UiPropertyLoadable)
     MobileOverrideLoadable: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
     Style: (U8, 0x0, 0x0, 0x0)
-    0xc4b1c5aa: (Embed, 0x0, 0x0, 0x55937f1)
+    AnnouncementData: (Embed, 0x0, 0x0, TftCustomAnnouncementData)
     pass
 
 class QuestDefinition():
@@ -17051,7 +17051,7 @@ class 0xab597393(Cheat):
     pass
 
 class 0xab5db4f2(0xbc413e21):
-    0x89044465: (U8, 0x0, 0x0, 0x0)
+    ColorEasing: (U8, 0x0, 0x0, 0x0)
     Colors: (List2, 0x0, Pointer, 0xd1b1f16)
     pass
 
@@ -17059,7 +17059,7 @@ class LolGameStateViewController(GameStateViewController):
     DrawAreaList: (Embed, 0x0, 0x0, DrawAreaList)
     pass
 
-class 0xab8d65bc(0x5fb6e936):
+class TftTraitInfoNubData(TftInfoNubData):
     Trait: (Link, 0x0, 0x0, TftTraitData)
     TitleKey: (String, 0x0, 0x0, 0x0)
     pass
@@ -17073,8 +17073,8 @@ class SwitchMaterialDriver(IDynamicMaterialDriver, ILogicDriver):
 class IInputSourceFloat():
     pass
 
-class 0xaba89ace(0x21e5666c):
-    0x18f3a14e: (Hash, 0x0, 0x0, 0x0)
+class GlobalCcBehaviorData(ICcBehaviorData):
+    GlobalCcBehavior: (Hash, 0x0, 0x0, 0x0)
     pass
 
 class CustomDamageStatStoneData(StatStoneData):
@@ -17090,7 +17090,7 @@ class RotateMapLightUpdater(IMapLightUpdater):
     AxisSpeed: (Vec3, 0x0, 0x0, 0x0)
     pass
 
-class 0xac7a5f1d():
+class MapAreaGroupCheck():
     AreasToCheck: (List2, 0x0, U32, 0x0)
     AreaCheckQuantifier: (U32, 0x0, 0x0, 0x0)
     pass
@@ -17125,7 +17125,7 @@ class CrowdControlFilter(IStatStoneLogicDriver):
     Knockback: (Bool, 0x0, 0x0, 0x0)
     pass
 
-class VfxAnimatedVector3fVariableData(0x14e6a52c):
+class VfxAnimatedVector3fVariableData(VfxVector3fBase):
     Values: (List, 0x0, Vec3, 0x0)
     Times: (List, 0x0, F32, 0x0)
     ProbabilityTables: (List, 0x3, Pointer, VfxProbabilityTableData)
@@ -17176,17 +17176,17 @@ class HealthBarFadeData():
     pass
 
 class TftGameHeaderViewController(GameStateViewController, ViewController):
-    0x14907c9e: (Hash, 0x0, 0x0, 0x0)
+    TftEncounterToggleButton: (Hash, 0x0, 0x0, 0x0)
     TftGameTeamPlannerButton: (Hash, 0x0, 0x0, 0x0)
-    0x1f5d989b: (String, 0x0, 0x0, 0x0)
+    TeamPlannerDisabledTooltipTraKey: (String, 0x0, 0x0, 0x0)
     BadgeVfx: (Hash, 0x0, 0x0, 0x0)
     TftGameHeaderScene: (Hash, 0x0, 0x0, 0x0)
     BadgeBg: (Hash, 0x0, 0x0, 0x0)
     OptionsMenuTooltipTraKey: (String, 0x0, 0x0, 0x0)
     TeamPlannerTooltipTraKey: (String, 0x0, 0x0, 0x0)
-    0x7d2e0885: (Hash, 0x0, 0x0, 0x0)
+    MusicSourceButton: (Hash, 0x0, 0x0, 0x0)
     TftTraitsItemsToggleButton: (Hash, 0x0, 0x0, 0x0)
-    0x7f619889: (Hash, 0x0, 0x0, 0x0)
+    MusicSourceInfo: (Hash, 0x0, 0x0, 0x0)
     BadgeText: (Hash, 0x0, 0x0, 0x0)
     TooltipAnchorCentering: (U8, 0x0, 0x0, 0x0)
     BatteryLevels: (List, 0xa, Hash, 0x0)
@@ -17216,12 +17216,12 @@ class MapSpotlightBase(MapProjectedTexture):
     pass
 
 class 0xae005c94(IGameModeConfig):
-    0x29fdcf54: (List2, 0x0, Link, 0x55dd7d5)
+    ProgressionTracks: (List2, 0x0, Link, ProgressTrack)
     pass
 
-class 0xae2530a4():
+class TftTooltipData():
     IconPath: (String, 0x0, 0x0, 0x0)
-    0x84e50169: (U8, 0x0, 0x0, 0x0)
+    Replication: (U8, 0x0, 0x0, 0x0)
     Name: (String, 0x0, 0x0, 0x0)
     TitleTra: (String, 0x0, 0x0, 0x0)
     DescriptionTra: (String, 0x0, 0x0, 0x0)
@@ -17230,9 +17230,9 @@ class 0xae2530a4():
 class IBoolGet(IRsValueGet, IScriptValueGet):
     pass
 
-class 0xae468ed4():
-    0x2961d08c: (Embed, 0x0, 0x0, 0xa450b25)
-    0x423a5de4: (Hash, 0x0, 0x0, 0x0)
+class CherryTeamFlyoutPanelFightTeamFrame():
+    FightTeamBackground: (Embed, 0x0, 0x0, IconStateData)
+    FightIcon: (Hash, 0x0, 0x0, 0x0)
     OpponentIcon: (Hash, 0x0, 0x0, 0x0)
     pass
 
@@ -17272,11 +17272,11 @@ class Joint():
 class 0xaeb4bf1(IScriptBlock, IBehaviorScriptBlock):
     pass
 
-class 0xaeda4e3a(ModalDialogViewController):
+class TftCraftingDialogViewController(ModalDialogViewController):
     0x317bc379: (Hash, 0x0, 0x0, 0x0)
-    0x50b38f66: (Hash, 0x0, 0x0, 0x0)
-    0x5ac714a6: (Link, 0x0, 0x0, Sequence)
-    0x9ac25712: (String, 0x0, 0x0, 0x0)
+    ErrorTitleText: (Hash, 0x0, 0x0, 0x0)
+    CraftingSequence: (Link, 0x0, 0x0, Sequence)
+    ErrorBodyTra: (String, 0x0, 0x0, 0x0)
     BodyText: (Hash, 0x0, 0x0, 0x0)
     0xe6a5be46: (String, 0x0, 0x0, 0x0)
     TitleText: (Hash, 0x0, 0x0, 0x0)
@@ -17322,7 +17322,7 @@ class TftUnitShopViewController(ViewController):
     GoldFrame: (Hash, 0x0, 0x0, 0x0)
     BuyExpButtonScene: (Hash, 0x0, 0x0, 0x0)
     MobileDelays: (Embed, 0x0, 0x0, TftShopMobileDelays)
-    0x92e71215: (Map, Hash, Hash, 0x0)
+    RerollButtonStyles: (Map, Hash, Hash, 0x0)
     SellTextHandle: (List, 0x2, Hash, 0x0)
     0x9a02c4cf: (Hash, 0x0, 0x0, 0x0)
     RerollButtonTextHandle: (Hash, 0x0, 0x0, 0x0)
@@ -17352,7 +17352,7 @@ class TftUnitShopViewController(ViewController):
     GoldDisplaySceneHandle: (Hash, 0x0, 0x0, 0x0)
     pass
 
-class 0xaf15d530(0xc03bb018):
+class ScoreboardGameModeConfig(IGameModeConfigClient):
     ScoreboardTeamScoreTypes: (U32, 0x0, 0x0, 0x0)
     0xc72e2257: (U32, 0x0, 0x0, 0x0)
     pass
@@ -17367,13 +17367,13 @@ class MapActionBuildUpMapParticle(MapAction):
 class DragDirection(TargetingTypeData):
     pass
 
-class 0xaf5a8fff(ViewController):
+class PregameChatViewController(ViewController):
     Scene: (Hash, 0x0, 0x0, 0x0)
     FriendOptionsButton: (Hash, 0x0, 0x0, 0x0)
     CloseButton: (Hash, 0x0, 0x0, 0x0)
     pass
 
-class 0xaf7ac937():
+class ElementGroupSliderSoundEvents():
     OnBarClickedEvent: (String, 0x0, 0x0, 0x0)
     OnDragEndEvent: (String, 0x0, 0x0, 0x0)
     OnDragStartEvent: (String, 0x0, 0x0, 0x0)
@@ -17410,15 +17410,15 @@ class OptionsTab():
     ShowOn: (U8, 0x0, 0x0, 0x0)
     pass
 
-class 0xafb0749d(0xec1355b3):
-    Segments: (List2, 0x0, Embed, 0xf63704f)
+class BezierPath(IPath):
+    Segments: (List2, 0x0, Embed, BezierSegment)
     pass
 
-class 0xafb64ec3():
+class TftBannerTableEntry():
     Id: (String, 0x0, 0x0, 0x0)
     Weight: (U32, 0x0, 0x0, 0x0)
     Name: (String, 0x0, 0x0, 0x0)
-    BannerNode: (Link, 0x0, 0x0, 0x1fe3bf63)
+    BannerNode: (Link, 0x0, 0x0, TftBannerNode)
     pass
 
 class RsTableSet():
@@ -17467,7 +17467,7 @@ class 0xb0617ced(0xac83c7b):
 class HealthBarTextData():
     HealthValueText: (Hash, 0x0, 0x0, 0x0)
     IncludeMaxHealth: (Bool, 0x0, 0x0, 0x0)
-    0xaf0a3c62: (U8, 0x0, 0x0, 0x0)
+    DisplayMode: (U8, 0x0, 0x0, 0x0)
     HealthRegenText: (Hash, 0x0, 0x0, 0x0)
     pass
 
@@ -17475,8 +17475,8 @@ class AnimatedBuildingCommon(BuildingClient):
     pass
 
 class 0xb09016f6():
-    0x725bd4d5: (Pointer, 0x0, 0x0, IGameCalculation)
-    0x77e5e41c: (U32, 0x0, 0x0, 0x0)
+    EffectCalculation: (Pointer, 0x0, 0x0, IGameCalculation)
+    EffectTag: (U32, 0x0, 0x0, 0x0)
     pass
 
 class VfxTextureMultDefinitionData():
@@ -17527,21 +17527,21 @@ class TftMapTraitData():
 
 class ObjectiveVoteResultData():
     TimeLeft: (Hash, 0x0, 0x0, 0x0)
-    0x2129c616: (Hash, 0x0, 0x0, 0x0)
+    RejectCountBg: (Hash, 0x0, 0x0, 0x0)
     VfxGroup: (Hash, 0x0, 0x0, 0x0)
     ForCountIcon: (Hash, 0x0, 0x0, 0x0)
-    0x32135189: (Hash, 0x0, 0x0, 0x0)
+    ForCountPlayerBg: (Hash, 0x0, 0x0, 0x0)
     Background: (Hash, 0x0, 0x0, 0x0)
     BoundingRegion: (Hash, 0x0, 0x0, 0x0)
     ObjectivePortrait: (Hash, 0x0, 0x0, 0x0)
     ForIcon: (Hash, 0x0, 0x0, 0x0)
     Group: (Hash, 0x0, 0x0, 0x0)
-    0x78f418c0: (Hash, 0x0, 0x0, 0x0)
-    0x7ac10a71: (Hash, 0x0, 0x0, 0x0)
+    ForCountBg: (Hash, 0x0, 0x0, 0x0)
+    DividerBg: (Hash, 0x0, 0x0, 0x0)
     ObjectivePortraitVotingAligned: (Hash, 0x0, 0x0, 0x0)
     TimeLeftCampIcon: (Hash, 0x0, 0x0, 0x0)
     CountBg: (Hash, 0x0, 0x0, 0x0)
-    0x95b24ea2: (Hash, 0x0, 0x0, 0x0)
+    PendingCountIcon: (Hash, 0x0, 0x0, 0x0)
     PendingIcon: (Hash, 0x0, 0x0, 0x0)
     ForCount: (Hash, 0x0, 0x0, 0x0)
     TimeLeftBg: (Hash, 0x0, 0x0, 0x0)
@@ -17549,7 +17549,7 @@ class ObjectiveVoteResultData():
     RejectCount: (Hash, 0x0, 0x0, 0x0)
     TimeExpiredCampIcon: (Hash, 0x0, 0x0, 0x0)
     RejectIcon: (Hash, 0x0, 0x0, 0x0)
-    0xdddd6443: (Hash, 0x0, 0x0, 0x0)
+    RejectCountPlayerBg: (Hash, 0x0, 0x0, 0x0)
     RejectCountIcon: (Hash, 0x0, 0x0, 0x0)
     pass
 
@@ -17559,7 +17559,7 @@ class LoadingScreenSummonerNameData():
     SummonerName: (List, 0x0, Hash, 0x0)
     pass
 
-class 0xb0df288d(IGameModeConfig):
+class LolModesReplayConfig(IGameModeConfig):
     0x7eec920b: (Bool, 0x0, 0x0, 0x0)
     pass
 
@@ -17579,7 +17579,7 @@ class ToolEducationData():
     SkillOrder: (I32, 0x0, 0x0, 0x0)
     pass
 
-class 0xb115222b(0x4c895a1d):
+class ILevelScriptEvent(IScriptEvent):
     pass
 
 class ColorLogicDriverLightUpdater(IMapLightUpdater):
@@ -17624,12 +17624,12 @@ class VfxFlexShapeDefinitionData():
     pass
 
 class NavHeaderViewController(ViewController):
-    0x1b3148a9: (Embed, 0x0, 0x0, 0xcc217f06)
-    0x29b080e0: (Embed, 0x0, 0x0, 0xcc217f06)
+    TftCoinsWidget: (Embed, 0x0, 0x0, TftCurrencyWidget)
+    StarShardsWidget: (Embed, 0x0, 0x0, TftCurrencyWidget)
     StarShardsDecreaseVfx: (Hash, 0x0, 0x0, 0x0)
     StarShardsButton: (Hash, 0x0, 0x0, 0x0)
     TrovesTokenStoreListing: (Link, 0x0, 0x0, StoreListingData)
-    0x3dcaaadb: (Pointer, 0x0, 0x0, 0x5b5667ce)
+    MissionsButtonHint: (Pointer, 0x0, 0x0, TftHintUiData)
     BaseLoadable: (Link, 0x0, 0x0, UiPropertyLoadable)
     NavigationText: (Hash, 0x0, 0x0, 0x0)
     PlayerNameTextUnranked: (Hash, 0x0, 0x0, 0x0)
@@ -17638,13 +17638,13 @@ class NavHeaderViewController(ViewController):
     Background: (Hash, 0x0, 0x0, 0x0)
     ProfileWidgetScene: (Hash, 0x0, 0x0, 0x0)
     PlayerRankText: (Hash, 0x0, 0x0, 0x0)
-    0x53e676c5: (Embed, 0x0, 0x0, 0xcc217f06)
+    0x53e676c5: (Embed, 0x0, 0x0, TftCurrencyWidget)
     StarShardsStoreDialog: (Hash, 0x0, 0x0, 0x0)
     StarShardsStoreDialog: (Link, 0x0, 0x0, StoreDialogViewController)
     PlayerIcon: (Hash, 0x0, 0x0, 0x0)
     TftCoinsIncreaseSourceVfx: (Hash, 0x0, 0x0, 0x0)
     SettingsButton: (Hash, 0x0, 0x0, 0x0)
-    0x67c56f9d: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
+    TabletOverrideLoadable: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
     TrovesTokensIncreaseSourceVfx: (Hash, 0x0, 0x0, 0x0)
     0x6d205220: (Hash, 0x0, 0x0, 0x0)
     TrovesTokensButton: (Hash, 0x0, 0x0, 0x0)
@@ -17662,9 +17662,9 @@ class NavHeaderViewController(ViewController):
     NotificationsButton: (Hash, 0x0, 0x0, 0x0)
     SocialButton: (Hash, 0x0, 0x0, 0x0)
     FiatStoreDialog: (Hash, 0x0, 0x0, 0x0)
-    0x9b36efaf: (Embed, 0x0, 0x0, 0xcc217f06)
+    0x9b36efaf: (Embed, 0x0, 0x0, TftCurrencyWidget)
     SocialBadgeVfx: (Hash, 0x0, 0x0, 0x0)
-    0xc00c3194: (Embed, 0x0, 0x0, 0xcc217f06)
+    TrovesTokensWidget: (Embed, 0x0, 0x0, TftCurrencyWidget)
     0xcdbd2759: (Hash, 0x0, 0x0, 0x0)
     BackButton: (Hash, 0x0, 0x0, 0x0)
     BatteryLevels: (List, 0xa, Hash, 0x0)
@@ -17683,13 +17683,13 @@ class 0xb142b357():
     0xd2190b18: (String, 0x0, 0x0, 0x0)
     pass
 
-class 0xb1474db1(ScriptTable):
+class WorldVars(ScriptTable):
     pass
 
 class 0xb1757147(IFxAction):
     Looping: (Bool, 0x0, 0x0, 0x0)
     Particle: (Link, 0x0, 0x0, VfxSystemDefinitionData)
-    Object: (Embed, 0x0, 0x0, 0x5c086dbd)
+    Object: (Embed, 0x0, 0x0, FxObjectSelector)
     pass
 
 class HudScaleSettingsData():
@@ -17716,18 +17716,18 @@ class HeroFloatingInfoBorderTypeData():
     pass
 
 class 0xb1c7f3d2(0x48eb8d47):
-    0xbd51112a: (I32, 0x0, 0x0, 0x0)
+    EqualTo: (I32, 0x0, 0x0, 0x0)
     pass
 
 class 0xb1c81e63():
     0x237182f6: (Bool, 0x0, 0x0, 0x0)
     Description: (String, 0x0, 0x0, 0x0)
-    0x6df2c8a2: (I32, 0x0, 0x0, 0x0)
+    DelayFrames: (I32, 0x0, 0x0, 0x0)
     0x770acb64: (List, 0x0, I32, 0x0)
     Path: (String, 0x0, 0x0, 0x0)
     Name: (String, 0x0, 0x0, 0x0)
     0xb119d28: (Bool, 0x0, 0x0, 0x0)
-    0xb1a84d1c: (I32, 0x0, 0x0, 0x0)
+    HeroId: (I32, 0x0, 0x0, 0x0)
     Actions: (List, 0x0, Pointer, 0xbbac8ee0)
     0xbe87260f: (Bool, 0x0, 0x0, 0x0)
     0xd598ba1: (List, 0x0, I32, 0x0)
@@ -17743,11 +17743,11 @@ class LoadoutViewController(ViewController):
     StarShardsStoreDialog: (Hash, 0x0, 0x0, 0x0)
     0x6394d0ce: (Hash, 0x0, 0x0, 0x0)
     DamageSkinInfoPanel: (Embed, 0x0, 0x0, LoadoutDamageSkinInfoPanel)
-    0x67c56f9d: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
+    TabletOverrideLoadable: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
     EmoteInfoPanel: (Embed, 0x0, 0x0, LoadoutEmoteInfoPanel)
     LoadoutScene: (Hash, 0x0, 0x0, 0x0)
     ArenaSkinLoadoutItemListPanelData: (Embed, 0x0, 0x0, LoadoutItemListPanelData)
-    0x8abea360: (Embed, 0x0, 0x0, 0xcc217f06)
+    StarShardCurrencyWidget: (Embed, 0x0, 0x0, TftCurrencyWidget)
     StarShardCurrencyButton: (Hash, 0x0, 0x0, 0x0)
     SoundOnActivate: (String, 0x0, 0x0, 0x0)
     EmoteLoadoutItemListPanelData: (Embed, 0x0, 0x0, LoadoutItemListPanelData)
@@ -17795,13 +17795,13 @@ class UObject(LogicDriverSource):
     pass
 
 class 0xb2430347():
-    0x90990350: (Hash, 0x0, 0x0, 0x0)
+    ManagedLayout: (Hash, 0x0, 0x0, 0x0)
     BackgroundTexture: (Hash, 0x0, 0x0, 0x0)
     pass
 
 class MapPlaceableContainer():
     Items: (Map, Hash, Pointer, MapPlaceable)
-    Items: (Map, Hash, Pointer, 0x9ef09bad)
+    Items: (Map, Hash, Pointer, MapPlaceableBase)
     pass
 
 class 0xb26bd951():
@@ -17864,19 +17864,19 @@ class MatchHistoryPlayerTemplate():
     UnitCountText: (Hash, 0x0, 0x0, 0x0)
     pass
 
-class 0xb2bf2c82():
+class TftEncounterSlotData():
     Description: (Hash, 0x0, 0x0, 0x0)
     Title: (Hash, 0x0, 0x0, 0x0)
     0x9a800d92: (Hash, 0x0, 0x0, 0x0)
     Icon: (Hash, 0x0, 0x0, 0x0)
-    0xf94c60e3: (Hash, 0x0, 0x0, 0x0)
+    ActiveBackground: (Hash, 0x0, 0x0, 0x0)
     GroupLink: (Hash, 0x0, 0x0, 0x0)
     pass
 
-class 0xb2c5db9d():
+class TftLobbyCustomAssets():
     0x19e7962f: (String, 0x0, 0x0, 0x0)
     0x6349b77b: (String, 0x0, 0x0, 0x0)
-    0x7d90eb32: (String, 0x0, 0x0, 0x0)
+    CustomBackgroundTexturePath: (String, 0x0, 0x0, 0x0)
     0x90b42524: (String, 0x0, 0x0, 0x0)
     pass
 
@@ -17926,7 +17926,7 @@ class PfxFieldAccelerationDefinitionData():
 class HudItemShopQuickBuyData():
     DefaultIndex: (I32, 0x0, 0x0, 0x0)
     Items: (List, 0x0, Hash, 0x0)
-    0xae2dee44: (U32, 0x0, 0x0, 0x0)
+    NumberOfRows: (U32, 0x0, 0x0, 0x0)
     SwapData: (Embed, 0x0, 0x0, 0xd149dd3f)
     SortPopularToFront: (Bool, 0x0, 0x0, 0x0)
     ItemsPerRow: (U32, 0x0, 0x0, 0x0)
@@ -17952,7 +17952,7 @@ class ChallengeConfigData():
     LocalizedDescription: (String, 0x0, 0x0, 0x0)
     pass
 
-class 0xb3674a86(0x7fa75f35):
+class 0xb3674a86(TftGameStartSequenceSimpleObject):
     UiElement: (Hash, 0x0, 0x0, 0x0)
     pass
 
@@ -17990,7 +17990,7 @@ class TooltipViewController(ViewController):
     HrBottom: (Hash, 0x0, 0x0, 0x0)
     MainTextElement: (Hash, 0x0, 0x0, 0x0)
     TitleRightElement: (Hash, 0x0, 0x0, 0x0)
-    0x67c56f9d: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
+    TabletOverrideLoadable: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
     DefaultAdjustments: (Embed, 0x0, 0x0, PerLocaleTooltipAdjustments)
     TooltipPopupTimeout: (F32, 0x0, 0x0, 0x0)
     HrTopSubScene: (Hash, 0x0, 0x0, 0x0)
@@ -18037,7 +18037,7 @@ class HudKillCalloutTemplateData():
     0x40cfe5a8: (Hash, 0x0, 0x0, 0x0)
     SlotArea: (Hash, 0x0, 0x0, 0x0)
     Background: (Hash, 0x0, 0x0, 0x0)
-    0x74eec679: (Embed, 0x0, 0x0, HudCalloutIdentifier)
+    GlobalSpellIcon: (Embed, 0x0, 0x0, HudCalloutIdentifier)
     0x848b3faa: (Hash, 0x0, 0x0, 0x0)
     EventIconKillNormal: (Hash, 0x0, 0x0, 0x0)
     EventIconKillBounty: (Hash, 0x0, 0x0, 0x0)
@@ -18054,27 +18054,27 @@ class ContextualConditionCharacterHealth(ICharacterSubcondition):
     pass
 
 class 0xb3f382ff():
-    0x13187351: (Link, 0x0, 0x0, SkinCharacterDataProperties)
+    AugmentSkin: (Link, 0x0, 0x0, SkinCharacterDataProperties)
     0x308bb787: (Hash, 0x0, 0x0, 0x0)
     Color: (Color, 0x0, 0x0, 0x0)
-    0x3f829b60: (String, 0x0, 0x0, 0x0)
+    LongDescriptionTra: (String, 0x0, 0x0, 0x0)
     Rarity: (U8, 0x0, 0x0, 0x0)
     Type: (U32, 0x0, 0x0, 0x0)
-    0x66114c0e: (String, 0x0, 0x0, 0x0)
+    RegionTra: (String, 0x0, 0x0, 0x0)
     IconPath: (String, 0x0, 0x0, 0x0)
-    0x89123f7e: (String, 0x0, 0x0, 0x0)
+    RegionName: (String, 0x0, 0x0, 0x0)
     Name: (String, 0x0, 0x0, 0x0)
     BuffName: (String, 0x0, 0x0, 0x0)
     0x98f61e8c: (Bool, 0x0, 0x0, 0x0)
     0xafefa499: (Hash, 0x0, 0x0, 0x0)
-    0xb85bc3e0: (String, 0x0, 0x0, 0x0)
-    0xb9ec3a3a: (String, 0x0, 0x0, 0x0)
+    PortraitIconPath: (String, 0x0, 0x0, 0x0)
+    ShortDescriptionTra: (String, 0x0, 0x0, 0x0)
     0xbe30f705: (Hash, 0x0, 0x0, 0x0)
     EffectAmounts: (List2, 0x0, Embed, TftEffectAmount)
     0xc397a6d5: (Hash, 0x0, 0x0, 0x0)
     0xca451de5: (List2, 0x0, Link, TftItemData)
     0xd25b1f2c: (Hash, 0x0, 0x0, 0x0)
-    0xeb234cf7: (String, 0x0, 0x0, 0x0)
+    LocationTra: (String, 0x0, 0x0, 0x0)
     DescriptionTra: (String, 0x0, 0x0, 0x0)
     pass
 
@@ -18139,9 +18139,9 @@ class RotatingWaveBehavior(IMinionWaveBehavior):
     pass
 
 class 0xb4517220():
-    0x55caed82: (Hash, 0x0, 0x0, 0x0)
+    Complete: (Hash, 0x0, 0x0, 0x0)
     Active: (Hash, 0x0, 0x0, 0x0)
-    0xef01af58: (Hash, 0x0, 0x0, 0x0)
+    Inactive: (Hash, 0x0, 0x0, 0x0)
     pass
 
 class LogicDriverConditionalElementsEntry():
@@ -18190,8 +18190,8 @@ class 0xb4f87c91():
     Queue: (U8, 0x0, 0x0, 0x0)
     pass
 
-class 0xb51e8bff():
-    Overlays: (List2, 0x0, Embed, 0xe1127f16)
+class MapNavGridOverlays():
+    Overlays: (List2, 0x0, Embed, MapNavGridOverlay)
     pass
 
 class VfxChildParticleSetDefinitionData():
@@ -18205,7 +18205,7 @@ class VfxChildParticleSetDefinitionData():
     pass
 
 class 0xb5215699(0xab5db4f2, 0xbc413e21):
-    0x4ada0ec6: (Hash, 0x0, 0x0, 0x0)
+    RadialElement: (Hash, 0x0, 0x0, 0x0)
     pass
 
 class 0xb53e2f1a():
@@ -18215,7 +18215,7 @@ class 0xb53e2f1a():
 
 class 0xb55e6cc4(0x64c18f7d):
     Duration: (F32, 0x0, 0x0, 0x0)
-    0x416010f5: (F32, 0x0, 0x0, 0x0)
+    TargetSkinScale: (F32, 0x0, 0x0, 0x0)
     pass
 
 class TftCutsceneHidePlayerClip(TftCutsceneClip):
@@ -18227,26 +18227,26 @@ class KeyFrameFloatMapClipAccessoryData(ClipAccessoryData):
     KeyFrameFloatmap: (Map, F32, F32, 0x0)
     pass
 
-class 0xb56e3cf2(MapComponent):
+class StrawberryMapData(MapComponent):
     0x3e2cdad7: (List2, 0x0, Link, LolModesRoundsListData)
     0x7cf5e3eb: (Link, 0x0, 0x0, 0x276246d8)
     pass
 
-class 0xb574b3af(MapPlaceable):
-    0x2bbec768: (U32, 0x0, 0x0, 0x0)
-    0x36e579fc: (U32, 0x0, 0x0, 0x0)
-    0x48e3661f: (Color, 0x0, 0x0, 0x0)
-    0x4c99d37d: (Link, 0x0, 0x0, 0x4664ae0a)
-    0x4fd47f50: (Pointer, 0x0, 0x0, 0x76bc0857)
-    0x67eaeb5b: (U32, 0x0, 0x0, 0x0)
-    0x6af0a9f6: (Color, 0x0, 0x0, 0x0)
-    0x7c20c98e: (List2, 0x0, Vec3, 0x0)
+class RegionBoundary(MapPlaceable):
+    GroupIndex: (U32, 0x0, 0x0, 0x0)
+    DrawHeight: (U32, 0x0, 0x0, 0x0)
+    FillColor: (Color, 0x0, 0x0, 0x0)
+    RenderInfo: (Link, 0x0, 0x0, 0x4664ae0a)
+    InstanceParams: (Pointer, 0x0, 0x0, 0x76bc0857)
+    RegionTag: (U32, 0x0, 0x0, 0x0)
+    LineColor: (Color, 0x0, 0x0, 0x0)
+    Vertices: (List2, 0x0, Vec3, 0x0)
     Priority: (F32, 0x0, 0x0, 0x0)
-    0xa771a57: (Pointer, 0x0, 0x0, 0x2da963dd)
-    0xa97376aa: (Hash, 0x0, 0x0, 0x0)
+    ConfigOverride: (Pointer, 0x0, 0x0, RegionBoundaryConfig)
+    NavGridOverlay: (Hash, 0x0, 0x0, 0x0)
     0xa9e6b95: (F32, 0x0, 0x0, 0x0)
     Margin: (F32, 0x0, 0x0, 0x0)
-    0xdc0043a: (Link, 0x0, 0x0, 0xdc0043a)
+    NavigationGroup: (Link, 0x0, 0x0, NavigationGroup)
     pass
 
 class SpellCalculation(ISpellCalculation):
@@ -18261,7 +18261,7 @@ class ToggleRegenCheat(Cheat):
     mTarget: (U32, 0x0, 0x0, 0x0)
     pass
 
-class 0xb5bd148c(Cheat):
+class ToggleNetworkCheat(Cheat):
     pass
 
 class JointSnapEventData(BaseEventData):
@@ -18297,26 +18297,26 @@ class IGameCalculationPartWithStats(IGameCalculationPart):
 class IGameCalculationPart():
     pass
 
-class 0xb6079b1a(PlayerStatsPanelViewController):
+class StrawberryHeroStatsViewController(PlayerStatsPanelViewController):
     BasicStats: (Hash, 0x0, 0x0, 0x0)
-    0x43a26ef5: (Embed, 0x0, 0x0, 0xfc331f53)
+    AugmentSlots: (Embed, 0x0, 0x0, 0xfc331f53)
     Background: (Hash, 0x0, 0x0, 0x0)
-    StatsUiData: (Embed, 0x0, 0x0, 0x250bc9c6)
+    StatsUiData: (Embed, 0x0, 0x0, DisplayStatsUiData)
     pass
 
-class 0xb60f0432(0x30f0efe0):
+class CharScript(GameScript):
     pass
 
 class 0xb62c8675(UiMetricTypeI):
     Scene: (Hash, 0x0, 0x0, 0x0)
-    0x33f4cd86: (Embed, 0x0, 0x0, 0xa8c6f5f0)
+    CrownIcons: (Embed, 0x0, 0x0, 0xa8c6f5f0)
     BaseLoadable: (Link, 0x0, 0x0, UiPropertyLoadable)
     0x462800b7: (Embed, 0x0, 0x0, 0xa8c6f5f0)
-    0x75f3e00b: (Embed, 0x0, 0x0, 0xf43ad1ce)
-    0x7bb9cb80: (Embed, 0x0, 0x0, 0xa8c6f5f0)
-    0xaae31154: (Embed, 0x0, 0x0, 0xa8c6f5f0)
+    MetersPanel: (Embed, 0x0, 0x0, 0xf43ad1ce)
+    SorakaIcons: (Embed, 0x0, 0x0, 0xa8c6f5f0)
+    TowerIcons: (Embed, 0x0, 0x0, 0xa8c6f5f0)
     0xb057cf4b: (U8, 0x0, 0x0, 0x0)
-    0xcc11a5: (Embed, 0x0, 0x0, 0x7a19656)
+    DetailsPanel: (Embed, 0x0, 0x0, 0x7a19656)
     pass
 
 class ModeSelectButtonData():
@@ -18345,7 +18345,7 @@ class VfxFieldOrbitalDefinitionData():
     Direction: (Embed, 0x0, 0x0, VfxAnimatedVector3fVariableData)
     pass
 
-class 0xb68a82eb(0xb115222b):
+class LevelScriptOnLoad(ILevelScriptEvent):
     pass
 
 class IFxAction():
@@ -18375,10 +18375,10 @@ class UiElementEffectCircleMaskCooldownData(UiElementEffectData):
     mEffectColor1: (Color, 0x0, 0x0, 0x0)
     pass
 
-class 0xb6e2a19():
-    0x31a106d0: (Pointer, 0x0, 0x0, TftCutscene)
+class TftDamageSkinCeremony():
+    MainCutscene: (Pointer, 0x0, 0x0, TftCutscene)
     0x918227c9: (Map, String, Pointer, TftCutscene)
-    0xe757bc0b: (Pointer, 0x0, 0x0, TftCutscene)
+    UnitCutscene: (Pointer, 0x0, 0x0, TftCutscene)
     pass
 
 class TftPassWelcomeData():
@@ -18388,7 +18388,7 @@ class TftPassWelcomeData():
     BodyTraKey: (String, 0x0, 0x0, 0x0)
     pass
 
-class 0xb6ec1214(0xd13cf0c3):
+class StringHashGet(IStringHashGet):
     Value: (Hash, 0x0, 0x0, 0x0)
     pass
 
@@ -18421,7 +18421,7 @@ class Perk(BasePerk):
     pass
 
 class 0xb6f43e50(ILogicFloatDriver):
-    0x42ad1ccb: (F32, 0x0, 0x0, 0x0)
+    StartFloat: (F32, 0x0, 0x0, 0x0)
     0x5fdb41c2: (Hash, 0x0, 0x0, 0x0)
     0xba092281: (Bool, 0x0, 0x0, 0x0)
     pass
@@ -18430,7 +18430,7 @@ class ScissorRegionElementData(UiElementData, BaseElementData):
     mSceneToScissor: (Link, 0x0, 0x0, SceneData)
     pass
 
-class 0xb70577d6(PurchaseDialogBase):
+class SeasonalSinglePurchaseDialog(PurchaseDialogBase):
     SingleTitleText: (Hash, 0x0, 0x0, 0x0)
     SinglePurchaseItemIcon: (Hash, 0x0, 0x0, 0x0)
     SingleCloseButtonRegion: (Hash, 0x0, 0x0, 0x0)
@@ -18441,10 +18441,10 @@ class 0xb70577d6(PurchaseDialogBase):
 class 0xb72a7d67():
     CharacterRecord: (String, 0x0, 0x0, 0x0)
     0x397fe037: (Bool, 0x0, 0x0, 0x0)
-    0x3a1171ce: (String, 0x0, 0x0, 0x0)
+    LuaScript: (String, 0x0, 0x0, 0x0)
     Skins: (Map, U32, Embed, 0xb979c2f)
     0xbd69e44b: (U32, 0x0, 0x0, 0x0)
-    0xec182a7b: (String, 0x0, 0x0, 0x0)
+    CharacterNameOverride: (String, 0x0, 0x0, 0x0)
     pass
 
 class FxCategory():
@@ -18469,10 +18469,10 @@ class MaterialSwitchDataCollection():
 
 class CreateNeutralCamp(LevelScriptBlock):
     MinimapIcon: (String, 0x0, 0x0, 0x0)
-    0x1fc18d68: (Pointer, 0x0, 0x0, IVectorGet)
+    FacingLocation: (Pointer, 0x0, 0x0, IVectorGet)
     SpawnBehavior: (Pointer, 0x0, 0x0, INeutralCampSpawnBehavior)
     SpawnDurationSecs: (Pointer, 0x0, 0x0, IFloatGet)
-    0x47c6026a: (Pointer, 0x0, 0x0, IVectorGet)
+    MinimapIconOffset: (Pointer, 0x0, 0x0, IVectorGet)
     StopSpawnTimeSecs: (Pointer, 0x0, 0x0, IFloatGet)
     RespawnDelaySecs: (Pointer, 0x0, 0x0, IFloatGet)
     0x7633e7cf: (Pointer, 0x0, 0x0, IVectorGet)
@@ -18485,7 +18485,7 @@ class CreateNeutralCamp(LevelScriptBlock):
     0x9ab1e29d: (Pointer, 0x0, 0x0, IBoolGet)
     CampLevel: (U16, 0x0, 0x0, 0x0)
     Team: (U32, 0x0, 0x0, 0x0)
-    0xb6234fe7: (Pointer, 0x0, 0x0, IIntGet)
+    MaxSpawnLimit: (Pointer, 0x0, 0x0, IIntGet)
     Location: (Pointer, 0x0, 0x0, IVectorGet)
     LeashRadius: (Pointer, 0x0, 0x0, IFloatGet)
     OutCampId: (Embed, 0x0, 0x0, IntTableSet)
@@ -18505,8 +18505,8 @@ class AbilitiesUiData():
 
 class 0xb7b2875(ViewController):
     BaseLoadable: (Link, 0x0, 0x0, UiPropertyLoadable)
-    0x67c56f9d: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
-    0x9c572ea4: (Hash, 0x0, 0x0, 0x0)
+    TabletOverrideLoadable: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
+    RewardLayout: (Hash, 0x0, 0x0, 0x0)
     SceneRoot: (Hash, 0x0, 0x0, 0x0)
     CloseButton: (Hash, 0x0, 0x0, 0x0)
     0xcbfa2678: (Embed, 0x0, 0x0, 0x7638f87c)
@@ -18548,13 +18548,13 @@ class 0xb8998b83():
     pass
 
 class 0xb8a49c96():
-    0x7f8fc16d: (Hash, 0x0, 0x0, 0x0)
-    0x8c678ff0: (Hash, 0x0, 0x0, 0x0)
+    RedSkin: (Hash, 0x0, 0x0, 0x0)
+    BlueSkin: (Hash, 0x0, 0x0, 0x0)
     Meter: (Hash, 0x0, 0x0, 0x0)
     pass
 
 class ContextualConditionBuffCounterReachedLimitFromZero(IContextualConditionBuff):
-    mcounterHighestReached: (U8, 0x0, 0x0, 0x0)
+    mCounterHighestReached: (U8, 0x0, 0x0, 0x0)
     mBuff: (Hash, 0x0, 0x0, 0x0)
     pass
 
@@ -18622,7 +18622,7 @@ class HybridMaterialDef(CustomShaderDef):
     pass
 
 class 0xb9b1bd74(MapComponent):
-    0x26335f67: (Map, Hash, Link, TftCutscene)
+    CutsceneEntries: (Map, Hash, Link, TftCutscene)
     pass
 
 class TftGameStartSequence():
@@ -18721,31 +18721,31 @@ class PerkSubStyleBonus():
     pass
 
 class TftCutsceneProxyClip(TftCutsceneClip):
-    0x31c5cbb6: (Bool, 0x0, 0x0, 0x0)
+    EnableVfx: (Bool, 0x0, 0x0, 0x0)
     BlackboardGameObjectProxy: (String, 0x0, 0x0, 0x0)
     BlackboardGameObjectOriginal: (String, 0x0, 0x0, 0x0)
     pass
 
-class 0xba945ee1(0x31fd952a):
+class VfxShapeBox(VfxShapeVolume):
     Size: (Vec3, 0x0, 0x0, 0x0)
     pass
 
 class 0xba9f6aca():
     0x439b26dc: (String, 0x0, 0x0, 0x0)
-    0xa10b49a: (Hash, 0x0, 0x0, 0x0)
+    TroveBannerIcon: (Hash, 0x0, 0x0, 0x0)
     FailureText: (String, 0x0, 0x0, 0x0)
     0xabd0de07: (String, 0x0, 0x0, 0x0)
-    0xcec67027: (String, 0x0, 0x0, 0x0)
-    0xec18e169: (Hash, 0x0, 0x0, 0x0)
-    0xfddc357d: (Hash, 0x0, 0x0, 0x0)
+    FailureTexturePath: (String, 0x0, 0x0, 0x0)
+    TroveNameText: (Hash, 0x0, 0x0, 0x0)
+    TroveButton: (Hash, 0x0, 0x0, 0x0)
     pass
 
-class 0xbaaecb0(ViewController):
+class TftCraftingCelebrationViewController(ViewController):
     Scene: (Hash, 0x0, 0x0, 0x0)
     0x22c15c3b: (String, 0x0, 0x0, 0x0)
     BaseLoadable: (Link, 0x0, 0x0, UiPropertyLoadable)
-    0x5ac714a6: (Link, 0x0, 0x0, Sequence)
-    0x67c56f9d: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
+    CraftingSequence: (Link, 0x0, 0x0, Sequence)
+    TabletOverrideLoadable: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
     0x7cbd3f05: (Hash, 0x0, 0x0, 0x0)
     ContinueButton: (Hash, 0x0, 0x0, 0x0)
     0x923b6b2e: (Link, 0x0, 0x0, SequenceObjectSelector)
@@ -18770,14 +18770,14 @@ class TftHudTraitUnitSlotData():
     Corner: (Hash, 0x0, 0x0, 0x0)
     Region: (Hash, 0x0, 0x0, 0x0)
     UnitSceneLink: (Hash, 0x0, 0x0, 0x0)
-    0x809608b6: (Hash, 0x0, 0x0, 0x0)
+    Padding: (Hash, 0x0, 0x0, 0x0)
     BorderLevelThree: (Hash, 0x0, 0x0, 0x0)
     BorderLevelFour: (Hash, 0x0, 0x0, 0x0)
     BorderLevelTwo: (Hash, 0x0, 0x0, 0x0)
     BorderLevelFive: (Hash, 0x0, 0x0, 0x0)
     UnitShade: (Hash, 0x0, 0x0, 0x0)
     BorderLevelOne: (Hash, 0x0, 0x0, 0x0)
-    0xf90fa726: (Hash, 0x0, 0x0, 0x0)
+    UnitGroupLink: (Hash, 0x0, 0x0, 0x0)
     pass
 
 class 0xbaf9ac75():
@@ -18787,12 +18787,12 @@ class 0xbaf9ac75():
 
 class LevelControllerManager():
     Controllers: (List, 0x0, Link, ILevelController)
-    Controllers: (List, 0x0, Link, 0xf486858e)
+    Controllers: (List, 0x0, Link, BaseLevelController)
     pass
 
 class 0xbafc3e15(0x67c526d3):
-    0xc9a57091: (String, 0x0, 0x0, 0x0)
-    0xed5e0ca1: (Pointer, 0x0, 0x0, ILogicFloatDriver)
+    ValueName: (String, 0x0, 0x0, 0x0)
+    SpellLevel: (Pointer, 0x0, 0x0, ILogicFloatDriver)
     pass
 
 class 0xbb06bf0a():
@@ -18836,18 +18836,18 @@ class TriggerOnMovementComplete(MissileTriggerSpec):
     mDelay: (I32, 0x0, 0x0, 0x0)
     pass
 
-class 0xbb94c710(0x83d6eef9):
+class ViewControllerListFilter_Clash(ViewControllerListFilterI):
     pass
 
-class 0xbba8c3c3(IGameModeConfig):
-    0x4d2dcb4: (List, 0x0, Link, 0xed7b9fb)
+class CherryCameoList(IGameModeConfig):
+    CameoList: (List, 0x0, Link, CherryCameo)
     pass
 
 class 0xbbac8ee0():
     0x4e3b1910: (Pointer, 0x0, 0x0, 0x8bb623e8)
-    0x7344f79e: (String, 0x0, 0x0, 0x0)
+    RuleId: (String, 0x0, 0x0, 0x0)
     0x876b6bd0: (String, 0x0, 0x0, 0x0)
-    0xd2f7a647: (U32, 0x0, 0x0, 0x0)
+    ActionType: (U32, 0x0, 0x0, 0x0)
     pass
 
 class BoolTableGet(RsTableGet, ScriptTableGet, TableGet, IBoolGet):
@@ -18859,7 +18859,7 @@ class BoolTableGet(RsTableGet, ScriptTableGet, TableGet, IBoolGet):
 
 class ProgressionNodeData():
     0xbd372927: (List, 0x0, Link, BaseLoadoutData)
-    0xc2488500: (String, 0x0, 0x0, 0x0)
+    BuffScriptPath: (String, 0x0, 0x0, 0x0)
     pass
 
 class UiTeamFightOffScreenDifferentiationData():
@@ -19080,7 +19080,7 @@ class TftDropRateSlot():
     pass
 
 class 0xbcec55fa(0x114828a9):
-    0x548e8cea: (F32, 0x0, 0x0, 0x0)
+    OuterRadius: (F32, 0x0, 0x0, 0x0)
     InnerRadius: (F32, 0x0, 0x0, 0x0)
     pass
 
@@ -19120,10 +19120,10 @@ class CustomTargeterDefinitions():
     pass
 
 class 0xbd3b9f20():
-    0x3db8cf31: (U32, 0x0, 0x0, 0x0)
-    0x93eda67c: (U8, 0x0, 0x0, 0x0)
+    FinalSpawnCountPerInterval: (U32, 0x0, 0x0, 0x0)
+    CurveType: (U8, 0x0, 0x0, 0x0)
     0xc3628f91: (Bool, 0x0, 0x0, 0x0)
-    0xec1f44b9: (F32, 0x0, 0x0, 0x0)
+    MaxDuration: (F32, 0x0, 0x0, 0x0)
     pass
 
 class 0xbd5ba640():
@@ -19158,10 +19158,10 @@ class PfxGroupDefinitionData():
     VisibilityRadius: (F32, 0x0, 0x0, 0x0)
     pass
 
-class 0xbdc90544():
-    0x48a8e1f4: (Color, 0x0, 0x0, 0x0)
-    0x9a159fb8: (Link, 0x0, 0x0, 0xbf11c509)
-    0xc2644f75: (List2, 0x0, Embed, 0x2bfb084c)
+class NavGridConfig():
+    ErrorColor: (Color, 0x0, 0x0, 0x0)
+    TerrainConfig: (Link, 0x0, 0x0, NavGridTerrainConfig)
+    RegionGroups: (List2, 0x0, Embed, 0x2bfb084c)
     pass
 
 class FixedDistanceIgnoringTerrain(MissileBehaviorSpec):
@@ -19174,7 +19174,7 @@ class FixedDistanceIgnoringTerrain(MissileBehaviorSpec):
 
 class MapCharacterList():
     Characters: (List, 0x0, Link, Character)
-    Characters: (List2, 0x0, Link, 0x7fdaad8b)
+    Characters: (List2, 0x0, Link, ICharacter)
     Characters: (List2, 0x0, Link, Character)
     pass
 
@@ -19182,19 +19182,19 @@ class 0xbded2d7f():
     Map: (Map, U32, U32, 0x0)
     pass
 
-class 0xbdeef3a1(0xa3271e82):
-    0x83c10d42: (List2, 0x0, Embed, 0x671b2d4)
+class BrowserElementData(ElementDataBase):
+    InstanceData: (List2, 0x0, Embed, BrowserInstanceData)
     pass
 
 class 0xbe081d2c():
-    0x22ed07f6: (Hash, 0x0, 0x0, 0x0)
+    TimerDefaultFill: (Hash, 0x0, 0x0, 0x0)
     0x81cbec5f: (Hash, 0x0, 0x0, 0x0)
     0x9ba9ed34: (Hash, 0x0, 0x0, 0x0)
     0xbcde5149: (Hash, 0x0, 0x0, 0x0)
     pass
 
 class LoadScreenTipConfiguration():
-    0x12c0717f: (Bool, 0x0, 0x0, 0x0)
+    mShowTips: (Bool, 0x0, 0x0, 0x0)
     mShowInCustomGames: (Bool, 0x0, 0x0, 0x0)
     mShowPbiTipsOnLoadingScreen: (Bool, 0x0, 0x0, 0x0)
     mDurationInGame: (F32, 0x0, 0x0, 0x0)
@@ -19215,7 +19215,7 @@ class HeroFloatingInfoBarData(FloatingInfoBarData):
     BurstData: (Embed, 0x0, 0x0, FloatingHealthBarBurstData)
     BurstHealMeterEnemy: (Hash, 0x0, 0x0, 0x0)
     ScriptedThresholdTypes: (Map, Hash, Hash, 0x0)
-    0x56d8c006: (Pointer, 0x0, 0x0, 0x7498a50)
+    BountyData: (Pointer, 0x0, 0x0, HeroFloatingInfoBountyData)
     BurstHealMeterSelfColorblind: (Hash, 0x0, 0x0, 0x0)
     DeathAnimEnemy: (Hash, 0x0, 0x0, 0x0)
     UnitStatus: (Embed, 0x0, 0x0, UiUnitStatusData)
@@ -19224,7 +19224,7 @@ class HeroFloatingInfoBarData(FloatingInfoBarData):
     BurstFadeMeterOther: (Hash, 0x0, 0x0, 0x0)
     Healthbar: (Embed, 0x0, 0x0, HealthBarData)
     ParBar: (Pointer, 0x0, 0x0, AbilityResourceBarData)
-    0xb11c9c1f: (Pointer, 0x0, 0x0, 0xd6a5e331)
+    ResistData: (Pointer, 0x0, 0x0, HeroFloatingInfoResistData)
     CharacterStateIndicators: (Pointer, 0x0, 0x0, HeroFloatingInfoCharacterStateIndicatorData)
     DamageFlashMeter: (Hash, 0x0, 0x0, 0x0)
     SarBar: (Pointer, 0x0, 0x0, AbilityResourceBarData)
@@ -19310,7 +19310,7 @@ class OutnumberedConstraintInfo(ListenerConstraintInfo):
     DistanceToEncompass: (F32, 0x0, 0x0, 0x0)
     pass
 
-class BaseElementData(0x231dd1a2):
+class BaseElementData(ElementDataI):
     mAnchorOptional: (Option, 0x0, Vec2, 0x0)
     mName: (String, 0x0, 0x0, 0x0)
     mBlockInputEvents: (Bool, 0x0, 0x0, 0x0)
@@ -19342,7 +19342,7 @@ class BaseElementData(0x231dd1a2):
 
 class TftSocialPanelViewController(SocialPanelViewController):
     BaseLoadable: (Link, 0x0, 0x0, UiPropertyLoadable)
-    0x67c56f9d: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
+    TabletOverrideLoadable: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
     BaseFriendsListScissorRegion: (Hash, 0x0, 0x0, 0x0)
     ExpandedFriendsListScissorRegion: (Hash, 0x0, 0x0, 0x0)
     pass
@@ -19378,7 +19378,7 @@ class UnitShopItemData():
     HitTarget: (Hash, 0x0, 0x0, 0x0)
     Rarity6CostHealthVfx: (Hash, 0x0, 0x0, 0x0)
     UnitCostText: (Hash, 0x0, 0x0, 0x0)
-    0xa7b240e5: (Hash, 0x0, 0x0, 0x0)
+    TeamPlanReminder: (Hash, 0x0, 0x0, 0x0)
     Styles: (Map, Hash, Hash, 0x0)
     Special4Vfx: (Hash, 0x0, 0x0, 0x0)
     SoldStretch: (Hash, 0x0, 0x0, 0x0)
@@ -19391,7 +19391,7 @@ class UnitShopItemData():
     HighlightTwostar: (Hash, 0x0, 0x0, 0x0)
     pass
 
-class 0xbf11c509():
+class NavGridTerrainConfig():
     Tags: (List2, 0x0, Embed, 0xd82714cc)
     pass
 
@@ -19423,14 +19423,14 @@ class 0xbf5c4715():
 class 0xbf6d152c(IScriptBlock, IBehaviorScriptBlock):
     pass
 
-class 0xbfaf421f():
-    0x22b028fd: (Pointer, 0x0, 0x0, 0xa4290ed0)
+class InstanceDataBase():
+    RegionData: (Pointer, 0x0, 0x0, RegionDataBase)
     Enabled: (Bool, 0x0, 0x0, 0x0)
     Id: (String, 0x0, 0x0, 0x0)
-    0x3ac7aa82: (Embed, 0x0, 0x0, 0x17c543dc)
-    0x4edf6ffb: (String, 0x0, 0x0, 0x0)
-    0x771dee0e: (String, 0x0, 0x0, 0x0)
-    0xc67a19bb: (String, 0x0, 0x0, 0x0)
+    BackgroundImage: (Embed, 0x0, 0x0, TextureOverride)
+    StartDate: (String, 0x0, 0x0, 0x0)
+    EndDate: (String, 0x0, 0x0, 0x0)
+    TitleTextTra: (String, 0x0, 0x0, 0x0)
     pass
 
 class VfxEmissionSurfaceData():
@@ -19445,7 +19445,7 @@ class VfxEmissionSurfaceData():
     Submeshes: (List, 0x0, Hash, 0x0)
     pass
 
-class 0xbffa2626(ViewController):
+class PlayerStatsViewController(ViewController):
     BasicStats: (Hash, 0x0, 0x0, 0x0)
     Background: (Hash, 0x0, 0x0, 0x0)
     ObjectName: (String, 0x0, 0x0, 0x0)
@@ -19476,7 +19476,7 @@ class PlayerStatStonesViewController(PlayerStatsPanelViewController, ViewControl
 
 class 0xc006cb7a():
     0x244806e9: (U32, 0x0, 0x0, 0x0)
-    0xe09fa060: (U32, 0x0, 0x0, 0x0)
+    MaxCount: (U32, 0x0, 0x0, 0x0)
     pass
 
 class 0xc00f3a0f():
@@ -19488,17 +19488,17 @@ class ContextualConditionMapRegionName(IContextualCondition):
     mRegionName: (String, 0x0, 0x0, 0x0)
     pass
 
-class 0xc0301300(0x5c4922b6):
+class VfxAnimatedFloat(VfxFloatBase):
     Values: (List, 0x0, F32, 0x0)
     Values: (List2, 0x0, F32, 0x0)
     Times: (List, 0x0, F32, 0x0)
     Times: (List2, 0x0, F32, 0x0)
     0x7c9bcfd5: (List, 0x0, U32, 0x0)
-    0x938b38b3: (List2, 0x0, U8, 0x0)
+    Modes: (List2, 0x0, U8, 0x0)
     ProbabilityTables: (List, 0x1, Pointer, VfxProbabilityTableData)
     pass
 
-class 0xc03bb018(0x3e5051fa):
+class IGameModeConfigClient(IGameModeConfigBase):
     pass
 
 class ItemDataAvailability():
@@ -19511,7 +19511,7 @@ class 0xc053efcc(IBehaviorScriptBlock):
     pass
 
 class 0xc057ee47(TftCutsceneClip):
-    0xbd62ded9: (Vec4, 0x0, 0x0, 0x0)
+    LightingOverride: (Vec4, 0x0, 0x0, 0x0)
     BlackboardAssociatedPlayers: (List2, 0x0, String, 0x0)
     pass
 
@@ -19527,23 +19527,23 @@ class UiMetricVietnameseRatingLabel(UiMetricTypeI):
     pass
 
 class 0xc0bb891d():
-    0x1782dd2f: (Hash, 0x0, 0x0, 0x0)
-    0x55caed82: (Hash, 0x0, 0x0, 0x0)
-    0x6b9ffd3e: (Hash, 0x0, 0x0, 0x0)
-    0x71932351: (Hash, 0x0, 0x0, 0x0)
-    0x8fc7cf0f: (Hash, 0x0, 0x0, 0x0)
-    0xaa4a9078: (Hash, 0x0, 0x0, 0x0)
-    0xb717735: (Hash, 0x0, 0x0, 0x0)
-    0xd221d784: (Hash, 0x0, 0x0, 0x0)
+    CompleteDefault: (Hash, 0x0, 0x0, 0x0)
+    Complete: (Hash, 0x0, 0x0, 0x0)
+    ActiveSelected: (Hash, 0x0, 0x0, 0x0)
+    InactiveSelected: (Hash, 0x0, 0x0, 0x0)
+    ActiveHover: (Hash, 0x0, 0x0, 0x0)
+    ActiveDefault: (Hash, 0x0, 0x0, 0x0)
+    InactiveDefault: (Hash, 0x0, 0x0, 0x0)
+    CompleteHover: (Hash, 0x0, 0x0, 0x0)
     Active: (Hash, 0x0, 0x0, 0x0)
-    0xef01af58: (Hash, 0x0, 0x0, 0x0)
-    0xf06d87ba: (Hash, 0x0, 0x0, 0x0)
+    Inactive: (Hash, 0x0, 0x0, 0x0)
+    InactiveHover: (Hash, 0x0, 0x0, 0x0)
     HitRegion: (Hash, 0x0, 0x0, 0x0)
-    0xfa79ea0b: (Hash, 0x0, 0x0, 0x0)
+    CompleteSelected: (Hash, 0x0, 0x0, 0x0)
     pass
 
 class MapAnimatedProp(GenericMapPlaceable):
-    0x5150a6a1: (Link, 0x0, 0x0, 0x121b48aa)
+    VisibilityController: (Link, 0x0, 0x0, IMapVisibilityController)
     PropName: (String, 0x0, 0x0, 0x0)
     EyeCandy: (Bool, 0x0, 0x0, 0x0)
     IdleAnimationName: (String, 0x0, 0x0, 0x0)
@@ -19625,18 +19625,18 @@ class 0xc132bfa(IScriptBlock, IBehaviorScriptBlock):
     pass
 
 class 0xc15041c4(0xc9440657):
-    0x12ee7425: (String, 0x0, 0x0, 0x0)
+    OverrideAnimation: (String, 0x0, 0x0, 0x0)
     PropName: (String, 0x0, 0x0, 0x0)
     0x7a9fe21a: (Bool, 0x0, 0x0, 0x0)
     0x7dde758d: (U8, 0x0, 0x0, 0x0)
-    0xd883bbe5: (String, 0x0, 0x0, 0x0)
+    PropBoneName: (String, 0x0, 0x0, 0x0)
     pass
 
 class UiElementEffectInstanced(UiElementEffect):
     pass
 
-class 0xc19ac06c():
-    Characters: (List2, 0x0, Link, 0x66b4f2c4)
+class TftCharacterList():
+    Characters: (List2, 0x0, Link, TftCharacter)
     pass
 
 class GameModeEventList():
@@ -19654,9 +19654,9 @@ class UiElementEffectDesaturateData(UiElementEffectData):
     mPerPixelUvsX: (Bool, 0x0, 0x0, 0x0)
     MaximumSaturation: (F32, 0x0, 0x0, 0x0)
     MinimumSaturation: (F32, 0x0, 0x0, 0x0)
-    TextureData: (Pointer, 0x0, 0x0, 0x840074ef)
+    TextureData: (Pointer, 0x0, 0x0, IUiEffectTextureDataProvider)
     mAtlas: (Pointer, 0x0, 0x0, AtlasData)
-    mAtlas: (Pointer, 0x0, 0x0, 0x840074ef)
+    mAtlas: (Pointer, 0x0, 0x0, IUiEffectTextureDataProvider)
     mFlipY: (Bool, 0x0, 0x0, 0x0)
     mFlipX: (Bool, 0x0, 0x0, 0x0)
     pass
@@ -19669,12 +19669,12 @@ class KillingSpreeFilter(IStatStoneLogicDriver):
     pass
 
 class 0xc24051e7(MapAction):
-    0x691ea25: (U32, 0x0, 0x0, 0x0)
+    Constant: (U32, 0x0, 0x0, 0x0)
     ConstantValue: (Vec4, 0x0, 0x0, 0x0)
-    0xf1157821: (F32, 0x0, 0x0, 0x0)
+    LerpTime: (F32, 0x0, 0x0, 0x0)
     pass
 
-class 0xc261f71e(0x5c108a08):
+class 0xc261f71e(ILolSpellScriptEvent):
     pass
 
 class TftTraitTrackerViewController(ViewController):
@@ -19727,9 +19727,9 @@ class OptionItemColumns(IOptionItem):
     pass
 
 class 0xc2b1af7f(ISequenceAction):
-    0x4203ebdb: (Bool, 0x0, 0x0, 0x0)
-    0x4f4d3bf7: (Pointer, 0x0, 0x0, 0xe561be2e)
-    0xe898aa4d: (Bool, 0x0, 0x0, 0x0)
+    DisableOnEnd: (Bool, 0x0, 0x0, 0x0)
+    Element: (Pointer, 0x0, 0x0, 0xe561be2e)
+    EnableOnStart: (Bool, 0x0, 0x0, 0x0)
     pass
 
 class RunSpeedRatioFloatDriver(ILogicFloatDriver):
@@ -19778,14 +19778,14 @@ class 0xc3737f3e():
     0x4827dc62: (String, 0x0, 0x0, 0x0)
     0x5a6d6bfe: (Embed, 0x0, 0x0, 0x911f126a)
     BackgroundIcon: (Hash, 0x0, 0x0, 0x0)
-    0xbd4a5ca2: (String, 0x0, 0x0, 0x0)
-    0xbf19bffc: (Hash, 0x0, 0x0, 0x0)
-    0xc84d1c19: (Embed, 0x0, 0x0, 0x131f5725)
+    DefaultBackgroundTexturePath: (String, 0x0, 0x0, 0x0)
+    ForegroundVfx: (Hash, 0x0, 0x0, 0x0)
+    ForegroundAssets: (Embed, 0x0, 0x0, 0x131f5725)
     0xd407c07d: (Hash, 0x0, 0x0, 0x0)
-    0xd5eede81: (Hash, 0x0, 0x0, 0x0)
-    0xd67244d0: (Embed, 0x0, 0x0, 0x131f5725)
-    0xda6801e9: (String, 0x0, 0x0, 0x0)
-    0xdc47fab7: (Hash, 0x0, 0x0, 0x0)
+    ForegroundIcon: (Hash, 0x0, 0x0, 0x0)
+    BackgroundAssets: (Embed, 0x0, 0x0, 0x131f5725)
+    DefaultForegroundTexturePath: (String, 0x0, 0x0, 0x0)
+    BackgroundVfx: (Hash, 0x0, 0x0, 0x0)
     TitleText: (Hash, 0x0, 0x0, 0x0)
     pass
 
@@ -19794,24 +19794,24 @@ class GetHqBlock(IScriptBlock):
     pass
 
 class 0xc38aee72(ISequenceAction):
-    0x4203ebdb: (Bool, 0x0, 0x0, 0x0)
+    DisableOnEnd: (Bool, 0x0, 0x0, 0x0)
     0xd07dcd34: (Link, 0x0, 0x0, SequenceObjectSelector)
-    0xe898aa4d: (Bool, 0x0, 0x0, 0x0)
+    EnableOnStart: (Bool, 0x0, 0x0, 0x0)
     pass
 
 class TftUnitPropertyValueBool(TftUnitPropertyValue):
     Value: (Bool, 0x0, 0x0, 0x0)
     pass
 
-class UiSceneViewPaneData(0x202c6c9, SceneData):
+class UiSceneViewPaneData(UiSceneData, SceneData):
     DragRegionElement: (Link, 0x0, 0x0, RegionElementData)
     DragRegionElement: (Link, 0x0, 0x0, UiElementRegionData)
     ScissorRegionElement: (Link, 0x0, 0x0, ScissorRegionElementData)
     ScissorRegionElement: (Link, 0x0, 0x0, UiElementScissorRegionData)
     Slider: (Link, 0x0, 0x0, UiElementGroupSliderData)
-    ScrollingScene: (Link, 0x0, 0x0, 0x202c6c9)
+    ScrollingScene: (Link, 0x0, 0x0, UiSceneData)
     ScrollingScene: (Link, 0x0, 0x0, SceneData)
-    0xa4b26c65: (Link, 0x0, 0x0, UiElementRegionData)
+    BufferRegionElement: (Link, 0x0, 0x0, UiElementRegionData)
     ScrollDirection: (U8, 0x0, 0x0, 0x0)
     ScrollRegionElement: (Link, 0x0, 0x0, RegionElementData)
     ScrollRegionElement: (Link, 0x0, 0x0, UiElementRegionData)
@@ -19831,7 +19831,7 @@ class MapCubemapRegion():
 class Destroy(MissileTriggeredActionSpec):
     pass
 
-class 0xc4936408(0x5d765a43):
+class 0xc4936408(IEnabler):
     pass
 
 class StateLogicEventData(BaseEventData):
@@ -19853,11 +19853,11 @@ class FxActionVfxBeamInstance(IFxActionInstance):
 class 0xc4aef724():
     pass
 
-class 0xc4b6fb6():
-    0x26c61566: (Hash, 0x0, 0x0, 0x0)
-    0x588a734a: (Hash, 0x0, 0x0, 0x0)
-    0xbc2c3f87: (Hash, 0x0, 0x0, 0x0)
-    0xe52e8845: (Hash, 0x0, 0x0, 0x0)
+class AugmentDisplayTagData():
+    AugmentDisplayTagSpacer: (Hash, 0x0, 0x0, 0x0)
+    AugmentDisplayTagRow: (Hash, 0x0, 0x0, 0x0)
+    AugmentDisplayTagFrame: (Hash, 0x0, 0x0, 0x0)
+    AugmentDisplayTagText: (Hash, 0x0, 0x0, 0x0)
     pass
 
 class HudTeamScoreMeterProperties():
@@ -19928,13 +19928,13 @@ class CharacterOverrides():
     AttachmentOverrides: (Map, String, String, 0x0)
     pass
 
-class 0xc65006fb():
+class CherryCombatInfoDisplayTeam():
     0x3ad87f88: (Hash, 0x0, 0x0, 0x0)
     TeamIcon: (Hash, 0x0, 0x0, 0x0)
     0x7ba0782e: (Hash, 0x0, 0x0, 0x0)
     FillMeter: (Hash, 0x0, 0x0, 0x0)
-    0xcdd1c749: (Hash, 0x0, 0x0, 0x0)
-    0xda882c4e: (Hash, 0x0, 0x0, 0x0)
+    TeamHitRegion: (Hash, 0x0, 0x0, 0x0)
+    TeamTooltipAnchor: (Hash, 0x0, 0x0, 0x0)
     0xe51c9c6c: (Hash, 0x0, 0x0, 0x0)
     pass
 
@@ -19946,11 +19946,11 @@ class 0xc66495db(IBehaviorScriptBlock):
     pass
 
 class 0xc668ae80():
-    0x476cbaec: (F32, 0x0, 0x0, 0x0)
-    0x5eedc55a: (String, 0x0, 0x0, 0x0)
-    0x6f49fbb: (Vec4, 0x0, 0x0, 0x0)
+    ColorBScale: (F32, 0x0, 0x0, 0x0)
+    NamePrefix: (String, 0x0, 0x0, 0x0)
+    ColorA: (Vec4, 0x0, 0x0, 0x0)
     ColorB: (Vec4, 0x0, 0x0, 0x0)
-    0x8bbd4fb3: (F32, 0x0, 0x0, 0x0)
+    ColorAScale: (F32, 0x0, 0x0, 0x0)
     pass
 
 class ToolInheritsData():
@@ -19988,9 +19988,9 @@ class RoleOpponentConstraintInfo(ListenerConstraintInfo):
 
 class ChampionItemRecommendations():
     BaseCounterAdviceSets: (List, 0x0, Hash, 0x0)
-    0x380e7a73: (List, 0x0, Embed, BaseItemAdvice)
+    ExtraCounterAdvice: (List, 0x0, Embed, BaseItemAdvice)
     mContextListLink: (Hash, 0x0, 0x0, 0x0)
-    0x9e2eeefa: (List, 0x0, Hash, 0x0)
+    CounterAdviceSets: (List, 0x0, Hash, 0x0)
     BaseCounterAdvice: (List, 0x0, Embed, BaseItemAdvice)
     mOverrideSetLink: (Hash, 0x0, 0x0, 0x0)
     pass
@@ -20000,7 +20000,7 @@ class 0xc77834ec(ViewController):
     BaseLoadable: (Link, 0x0, 0x0, UiPropertyLoadable)
     0x6d28c8a1: (Hash, 0x0, 0x0, 0x0)
     LeaveButton: (Hash, 0x0, 0x0, 0x0)
-    0x8faaebab: (Hash, 0x0, 0x0, 0x0)
+    GameOverScene: (Hash, 0x0, 0x0, 0x0)
     VictoryGroupHandle: (Hash, 0x0, 0x0, 0x0)
     pass
 
@@ -20015,13 +20015,13 @@ class EsportsTeamData():
     pass
 
 class 0xc7ca4925():
-    0x414e277a: (Hash, 0x0, 0x0, 0x0)
-    0x418e3f54: (Hash, 0x0, 0x0, 0x0)
-    0xa0c89a30: (Hash, 0x0, 0x0, 0x0)
+    FrameEnemy: (Hash, 0x0, 0x0, 0x0)
+    FrameAlly: (Hash, 0x0, 0x0, 0x0)
+    FrameSelf: (Hash, 0x0, 0x0, 0x0)
     pass
 
 class TipStyleBase():
-    DirectionalTipElements: (List, 0x0, Link, 0x231dd1a2)
+    DirectionalTipElements: (List, 0x0, Link, ElementDataI)
     DirectionalTipElements: (List, 0x0, Link, UiElementIData)
     DirectionalTipElements: (List2, 0x0, Link, UiElementIData)
     pass
@@ -20034,7 +20034,7 @@ class LolFeatureToggles():
     SelfMitigationLog: (Bool, 0x0, 0x0, 0x0)
     0x1243f0b: (Bool, 0x0, 0x0, 0x0)
     ChallengerRecall: (Bool, 0x0, 0x0, 0x0)
-    0x12bf4c6c: (Bool, 0x0, 0x0, 0x0)
+    GameModeItemLists: (Bool, 0x0, 0x0, 0x0)
     MoreAccurateBuffTimeouts: (Bool, 0x0, 0x0, 0x0)
     0x1556b55e: (Bool, 0x0, 0x0, 0x0)
     PromoController: (Bool, 0x0, 0x0, 0x0)
@@ -20330,7 +20330,7 @@ class LolFeatureToggles():
     TftUnitCombatUpdate: (Bool, 0x0, 0x0, 0x0)
     UseRiotRelationshipsForAllUnits: (Bool, 0x0, 0x0, 0x0)
     TftKeywords: (Bool, 0x0, 0x0, 0x0)
-    0xbba48a10: (Bool, 0x0, 0x0, 0x0)
+    UseRollForCriticalHit: (Bool, 0x0, 0x0, 0x0)
     0xbc0ba76a: (Bool, 0x0, 0x0, 0x0)
     UpdatedParabolicMovementMath: (Bool, 0x0, 0x0, 0x0)
     UnifiedClock: (Bool, 0x0, 0x0, 0x0)
@@ -20412,7 +20412,7 @@ class LolFeatureToggles():
     0xefe584bb: (Bool, 0x0, 0x0, 0x0)
     LiveClientDataApi: (Bool, 0x0, 0x0, 0x0)
     UseNativeJungleBrain: (Bool, 0x0, 0x0, 0x0)
-    0xf1b323f1: (Bool, 0x0, 0x0, 0x0)
+    ResistVisualization: (Bool, 0x0, 0x0, 0x0)
     ItemUndo: (Bool, 0x0, 0x0, 0x0)
     BbConvertedBlockSoon: (Bool, 0x0, 0x0, 0x0)
     UseAchievements: (Bool, 0x0, 0x0, 0x0)
@@ -20439,7 +20439,7 @@ class LolFeatureToggles():
     pass
 
 class 0xc7e628b9():
-    0x1ad1c31: (I32, 0x0, 0x0, 0x0)
+    SpellLevelOverride: (I32, 0x0, 0x0, 0x0)
     0x2ba4fd8f: (Hash, 0x0, 0x0, 0x0)
     0xa2877ddb: (Hash, 0x0, 0x0, 0x0)
     Spell: (Hash, 0x0, 0x0, 0x0)
@@ -20452,7 +20452,7 @@ class RsValueGet():
 class EmoteIdIntDriver(ILogicIntDriver):
     pass
 
-class 0xc82f0d9():
+class TftHeightSolverType():
     pass
 
 class UiElementEffectGlowConstantData(UiElementEffectData):
@@ -20461,8 +20461,8 @@ class UiElementEffectGlowConstantData(UiElementEffectData):
     MinimumGlowMod: (F32, 0x0, 0x0, 0x0)
     MaximumGlowMod: (F32, 0x0, 0x0, 0x0)
     Atlas: (Pointer, 0x0, 0x0, AtlasData)
-    Atlas: (Pointer, 0x0, 0x0, 0x840074ef)
-    TextureData: (Pointer, 0x0, 0x0, 0x840074ef)
+    Atlas: (Pointer, 0x0, 0x0, IUiEffectTextureDataProvider)
+    TextureData: (Pointer, 0x0, 0x0, IUiEffectTextureDataProvider)
     PerPixelUvsX: (Bool, 0x0, 0x0, 0x0)
     pass
 
@@ -20471,14 +20471,14 @@ class UiMetricBattery(UiMetricTypeI):
     pass
 
 class 0xc83d315a():
-    0x4c74291f: (Embed, 0x0, 0x0, 0xcc4b5b2d)
-    0x758ada3d: (String, 0x0, 0x0, 0x0)
-    0x7ca989b5: (String, 0x0, 0x0, 0x0)
-    0xc82097d4: (F32, 0x0, 0x0, 0x0)
+    MapLightInfo: (Embed, 0x0, 0x0, MapLightingInfo)
+    CubemapPath: (String, 0x0, 0x0, 0x0)
+    CubemapProbeGuid: (String, 0x0, 0x0, 0x0)
+    CubemapScale: (F32, 0x0, 0x0, 0x0)
     pass
 
 class 0xc83dc592(0x66b38743):
-    0xcb0a7522: (String, 0x0, 0x0, 0x0)
+    MutatorName: (String, 0x0, 0x0, 0x0)
     pass
 
 class MissileTriggerSpec(MissileBehaviorSpec):
@@ -20540,7 +20540,7 @@ class LeagueFlavor():
     FlavorName: (String, 0x0, 0x0, 0x0)
     pass
 
-class 0xc921ca8f(0x4247cbb9):
+class AiGenericClient(AiGenericCommon):
     pass
 
 class UiPositionFullScreen(UiPositionBase):
@@ -20555,23 +20555,23 @@ class 0xc9440657():
 class IsMapPropHoveredDynamicMaterialBoolDriver(ILogicBoolDriver, IDynamicMaterialBoolDriver):
     pass
 
-class 0xc9566499():
+class HudReciprocityButton():
     Button: (Hash, 0x0, 0x0, 0x0)
     HotkeyText: (Hash, 0x0, 0x0, 0x0)
     ProgressFill: (Hash, 0x0, 0x0, 0x0)
     pass
 
-class 0xc9619884():
-    0x91c65290: (U32, 0x0, 0x0, 0x0)
+class ObjectiveVoteCampDefinition():
+    CampIndex: (U32, 0x0, 0x0, 0x0)
     PortraitIcon: (Hash, 0x0, 0x0, 0x0)
-    0xf948299b: (String, 0x0, 0x0, 0x0)
+    ObjectiveName: (String, 0x0, 0x0, 0x0)
     pass
 
 class 0xc993142a():
-    0x48d0a28b: (Hash, 0x0, 0x0, 0x0)
-    0x66cd937a: (Hash, 0x0, 0x0, 0x0)
+    RewardFrame: (Hash, 0x0, 0x0, 0x0)
+    RewardBackground: (Hash, 0x0, 0x0, 0x0)
     RewardIcon: (Hash, 0x0, 0x0, 0x0)
-    0xbea92ccf: (Hash, 0x0, 0x0, 0x0)
+    RewardDayText: (Hash, 0x0, 0x0, 0x0)
     Parent: (Hash, 0x0, 0x0, 0x0)
     pass
 
@@ -20583,7 +20583,7 @@ class 0xc9dd46d2():
     pass
 
 class UiElementScissorRegionData(UiElementData):
-    SceneToScissor: (Link, 0x0, 0x0, 0x202c6c9)
+    SceneToScissor: (Link, 0x0, 0x0, UiSceneData)
     SceneToScissor: (Link, 0x0, 0x0, SceneData)
     mSceneToScissor: (Link, 0x0, 0x0, SceneData)
     pass
@@ -20602,8 +20602,8 @@ class TftUnitInfoTraitDisplayData():
 
 class 0xca1b1bdd(0x2755f1f9):
     Axis: (Vec2, 0x0, 0x0, 0x0)
-    0x6d3d9c1: (F32, 0x0, 0x0, 0x0)
-    0xe164f83a: (F32, 0x0, 0x0, 0x0)
+    GapWidth: (F32, 0x0, 0x0, 0x0)
+    SideLength: (F32, 0x0, 0x0, 0x0)
     pass
 
 class VfxSpawnConditionData():
@@ -20630,7 +20630,7 @@ class RatioConversion():
     pass
 
 class 0xca458424(ILogicFloatDriver):
-    0x5150a6a1: (Link, 0x0, 0x0, 0x121b48aa)
+    VisibilityController: (Link, 0x0, 0x0, IMapVisibilityController)
     pass
 
 class HudShopButton():
@@ -20642,7 +20642,7 @@ class HudShopButton():
 class 0xca4d32d1():
     pass
 
-class 0xca7e5285(0x5c108a08):
+class 0xca7e5285(ILolSpellScriptEvent):
     pass
 
 class OverrideAutoAttackCastTimeData():
@@ -20662,7 +20662,7 @@ class IContextualCondition():
     pass
 
 class NudgeIntoBrush(TargetingTypeData):
-    0xe4e655d3: (F32, 0x0, 0x0, 0x0)
+    NudgeDistance: (F32, 0x0, 0x0, 0x0)
     pass
 
 class FixedTimeSplineMovement(GenericSplineMovementSpec):
@@ -20679,12 +20679,12 @@ class OptionTemplateBorder(IOptionTemplate):
 class LoginRootScene(RootScene):
     pass
 
-class 0xcb20c47a(0xa8f2f8d9):
-    0xfadc0cd2: (F32, 0x0, 0x0, 0x0)
+class TargetingRangeValue(ITargetingRangeValue):
+    Range: (F32, 0x0, 0x0, 0x0)
     pass
 
 class 0xcb3604f0(IScriptCondition):
-    0x5ad01cc3: (U8, 0x0, 0x0, 0x0)
+    Emote: (U8, 0x0, 0x0, 0x0)
     pass
 
 class DefaultVisibilitySpec(MissileVisibilitySpec):
@@ -20780,18 +20780,18 @@ class DestroyCustomTableBlock(IScriptBlock):
     CustomTable: (Embed, 0x0, 0x0, CustomTableSet)
     pass
 
-class 0xcc217f06():
-    0x327526de: (F32, 0x0, 0x0, 0x0)
-    0x33752871: (F32, 0x0, 0x0, 0x0)
+class TftCurrencyWidget():
+    TooltipOffsetY: (F32, 0x0, 0x0, 0x0)
+    TooltipOffsetX: (F32, 0x0, 0x0, 0x0)
     0x3b061cb9: (Bool, 0x0, 0x0, 0x0)
     TooltipTitleTra: (String, 0x0, 0x0, 0x0)
     TooltipDescriptionTra: (String, 0x0, 0x0, 0x0)
-    0xd5f7b496: (Hash, 0x0, 0x0, 0x0)
+    CurrencyButton: (Hash, 0x0, 0x0, 0x0)
     TooltipButton: (Hash, 0x0, 0x0, 0x0)
     pass
 
 class 0xcc2c0827():
-    0x4d823f17: (Hash, 0x0, 0x0, 0x0)
+    BaseHoverGlow: (Hash, 0x0, 0x0, 0x0)
     0xd3467f57: (Hash, 0x0, 0x0, 0x0)
     pass
 
@@ -20803,7 +20803,7 @@ class BlendData():
     pass
 
 class 0xcc35f742(0xf9e5b8b9):
-    0x86af2be3: (Pointer, 0x0, 0x0, ILogicFloatDriver)
+    Denominator: (Pointer, 0x0, 0x0, ILogicFloatDriver)
     pass
 
 class TftDragDropGroupProperty():
@@ -20823,7 +20823,7 @@ class TftUnitInfoItemDisplayData():
     Icon: (Hash, 0x0, 0x0, 0x0)
     pass
 
-class 0xcc4b5b2d():
+class MapLightingInfo():
     PbrSunAdditionalScale: (F32, 0x0, 0x0, 0x0)
     FogColor: (Vec4, 0x0, 0x0, 0x0)
     FogEmissiveRemap: (F32, 0x0, 0x0, 0x0)
@@ -20862,7 +20862,7 @@ class HasReceivedAnimEmoteEventBoolDriver(ILogicBoolDriver):
 class KeyFrameFloatClipReaderDriver(ILogicFloatDriver):
     DefaultFloat: (F32, 0x0, 0x0, 0x0)
     ClipAccessoryToRead: (Hash, 0x0, 0x0, 0x0)
-    0x42ad1ccb: (F32, 0x0, 0x0, 0x0)
+    StartFloat: (F32, 0x0, 0x0, 0x0)
     PersistentFloatChanges: (Bool, 0x0, 0x0, 0x0)
     0xba092281: (Bool, 0x0, 0x0, 0x0)
     pass
@@ -20890,7 +20890,7 @@ class 0xccb78d30(IFxActionInstance):
     pass
 
 class 0xccb921b(0x9a573886):
-    0xe308ee03: (Pointer, 0x0, 0x0, ILogicFloatDriver)
+    DelayTimeDriver: (Pointer, 0x0, 0x0, ILogicFloatDriver)
     pass
 
 class SocialPanelFriendsListItemData():
@@ -20915,7 +20915,7 @@ class UiMetricMultiDragonKillsSrX(UiMetricTypeI):
     DragonTypeIcons: (Map, Hash, Embed, MultiDragonTypeSourceUiData)
     pass
 
-class 0xccea6e3a(0xb115222b):
+class LevelScriptOnReset(ILevelScriptEvent):
     pass
 
 class TftUnitPropertyValue():
@@ -20960,9 +20960,9 @@ class PlayerFrameViewController(ViewController):
     AbilitiesUiData: (Embed, 0x0, 0x0, AbilitiesUiData)
     SummonerSpellSpecialist: (Embed, 0x0, 0x0, UiPerkSummonerSpecialistToggles)
     PositiveBuffs: (Embed, 0x0, 0x0, BuffDisplayList)
-    0xf30a6eea: (Embed, 0x0, 0x0, 0xf30a6eea)
+    LevelUpUiData: (Embed, 0x0, 0x0, LevelUpUiData)
     SpellCastMessage: (Hash, 0x0, 0x0, 0x0)
-    0xfda22aa1: (Embed, 0x0, 0x0, 0xfda22aa1)
+    HudCenterFrameGlowData: (Embed, 0x0, 0x0, HudCenterFrameGlowData)
     pass
 
 class StatBySubPartCalculationPart(IGameCalculationPartWithStats, ISpellCalculationPartWithStats, ISpellCalculationPart):
@@ -20987,8 +20987,8 @@ class MapSkin():
     mResourceResolver: (Link, 0x0, 0x0, ResourceResolver)
     mNavigationMesh: (String, 0x0, 0x0, 0x0)
     MaterialSwap: (Pointer, 0x0, 0x0, MapMaterialSwap)
-    0x6ec003a: (Link, 0x0, 0x0, 0x9861884e)
-    0x7cd4f88a: (Pointer, 0x0, 0x0, 0x7cd4f88a)
+    WorldParticles: (Link, 0x0, 0x0, MapWorldParticles)
+    GammaParameters: (Pointer, 0x0, 0x0, GammaParameters)
     Name: (String, 0x0, 0x0, 0x0)
     mResourceResolvers: (List, 0x0, Link, ResourceResolver)
     mObjectSkinFallbacks: (Map, Hash, I32, 0x0)
@@ -21095,7 +21095,7 @@ class CursorDataCaptureCooldownContext():
     pass
 
 class ElementGroupButtonState():
-    DisplayElements: (List, 0x0, Link, 0x231dd1a2)
+    DisplayElements: (List, 0x0, Link, ElementDataI)
     TextElement: (Link, 0x0, 0x0, TextElementData)
     pass
 
@@ -21178,7 +21178,7 @@ class LuaObjectOverrides():
     pass
 
 class 0xce8f4190():
-    0x68067b08: (Embed, 0x0, 0x0, 0x502b0c72)
+    Settings: (Embed, 0x0, 0x0, 0x502b0c72)
     pass
 
 class DoDamage(IBlock):
@@ -21237,20 +21237,20 @@ class BoolDefaultTableGet(IBoolGet):
     Default: (Bool, 0x0, 0x0, 0x0)
     pass
 
-class 0xcee56575(TftCutsceneClip):
+class TftCutsceneMissileClip(TftCutsceneClip):
     0x15909afd: (F32, 0x0, 0x0, 0x0)
-    0x1bcac48f: (String, 0x0, 0x0, 0x0)
-    Source: (Pointer, 0x0, 0x0, 0x9d97d657)
+    SourceObject: (String, 0x0, 0x0, 0x0)
+    Source: (Pointer, 0x0, 0x0, TftCutscenePositionProvider)
     0x1f0b4b9f: (String, 0x0, 0x0, 0x0)
-    Target: (Pointer, 0x0, 0x0, 0x9d97d657)
-    0x478efd6e: (String, 0x0, 0x0, 0x0)
+    Target: (Pointer, 0x0, 0x0, TftCutscenePositionProvider)
+    HitEffectKey: (String, 0x0, 0x0, 0x0)
     0x491746de: (String, 0x0, 0x0, 0x0)
-    0x53ea5a91: (F32, 0x0, 0x0, 0x0)
+    MissileRadius: (F32, 0x0, 0x0, 0x0)
     0x5e6afcf4: (String, 0x0, 0x0, 0x0)
-    HeightSolver: (Pointer, 0x0, 0x0, 0xc82f0d9)
+    HeightSolver: (Pointer, 0x0, 0x0, TftHeightSolverType)
     0x789f4661: (Bool, 0x0, 0x0, 0x0)
     0x7d4eb6e7: (String, 0x0, 0x0, 0x0)
-    0x994018d1: (F32, 0x0, 0x0, 0x0)
+    DamagePercent: (F32, 0x0, 0x0, 0x0)
     EffectKey: (String, 0x0, 0x0, 0x0)
     0xa0d7eb85: (String, 0x0, 0x0, 0x0)
     0xa32d933a: (Bool, 0x0, 0x0, 0x0)
@@ -21272,7 +21272,7 @@ class ContextualActionData(IResource):
     pass
 
 class 0xcf4a55da(MapComponent):
-    Overlays: (Link, 0x0, 0x0, 0xb51e8bff)
+    Overlays: (Link, 0x0, 0x0, MapNavGridOverlays)
     pass
 
 class LookAtSpellTargetDistanceParametricUpdater(IFloatParametricUpdater):
@@ -21286,8 +21286,8 @@ class SourceHasBuffFilter(IStatStoneLogicDriver):
     Invisibility: (Bool, 0x0, 0x0, 0x0)
     pass
 
-class 0xcfce5be5(0x30f0efe0, Rscript):
-    0x454a414e: (Map, Hash, Embed, ScriptFunction)
+class ItemScript(GameScript, Rscript):
+    Functions: (Map, Hash, Embed, ScriptFunction)
     Sequences: (Map, Hash, Embed, ScriptSequence)
     pass
 
@@ -21396,8 +21396,8 @@ class 0xd082b191(IFxAction):
 
 class TftCutsceneArenaLocatorInitializer(TftCutsceneInitializer):
     LocatorBlackboardName: (String, 0x0, 0x0, 0x0)
-    0xa02b6be0: (String, 0x0, 0x0, 0x0)
-    0xb75de03c: (String, 0x0, 0x0, 0x0)
+    ArenaLocatorBlackboardName: (String, 0x0, 0x0, 0x0)
+    ArenaPositionLocatorName: (String, 0x0, 0x0, 0x0)
     IsLocatorArenaSpecific: (Bool, 0x0, 0x0, 0x0)
     CutscenePositionLocatorName: (String, 0x0, 0x0, 0x0)
     pass
@@ -21459,7 +21459,7 @@ class UiTextureProviderMeshData(IUiTextureDataProvider):
     AnimationGraphData: (Link, 0x0, 0x0, AnimationGraphData)
     pass
 
-class 0xd13cf0c3():
+class IStringHashGet():
     pass
 
 class 0xd149dd3f():
@@ -21500,7 +21500,7 @@ class TftItemData():
     mDisplayNameTra: (String, 0x0, 0x0, 0x0)
     mId: (I32, 0x0, 0x0, 0x0)
     mId: (U32, 0x0, 0x0, 0x0)
-    0xc9becee9: (Link, 0x0, 0x0, StaticMaterialDef)
+    IconMaterial: (Link, 0x0, 0x0, StaticMaterialDef)
     mArmoryIconOverridePath: (String, 0x0, 0x0, 0x0)
     ItemBuffTarget: (U8, 0x0, 0x0, 0x0)
     MutuallyExclusiveItems: (List, 0x0, Link, TftItemData)
@@ -21525,7 +21525,7 @@ class 0xd19d72ee():
     ProgressText: (Hash, 0x0, 0x0, 0x0)
     RewardText: (Hash, 0x0, 0x0, 0x0)
     RewardIcon: (Hash, 0x0, 0x0, 0x0)
-    0xe418aa98: (Hash, 0x0, 0x0, 0x0)
+    ProgressCompleteIcon: (Hash, 0x0, 0x0, 0x0)
     0xedc62dad: (Hash, 0x0, 0x0, 0x0)
     TitleText: (Hash, 0x0, 0x0, 0x0)
     pass
@@ -21535,9 +21535,9 @@ class 0xd1ae9686():
 
 class 0xd1b1f16():
     Color: (Pointer, 0x0, 0x0, ILogicDriver)
-    0x6edc6f6e: (List2, 0x0, Color, 0x0)
-    0xc9af5666: (F32, 0x0, 0x0, 0x0)
-    0xed5e0ca1: (Pointer, 0x0, 0x0, ILogicFloatDriver)
+    ColorValues: (List2, 0x0, Color, 0x0)
+    StartingValue: (F32, 0x0, 0x0, 0x0)
+    SpellLevel: (Pointer, 0x0, 0x0, ILogicFloatDriver)
     pass
 
 class MaterialDef(IMaterialDef):
@@ -21587,7 +21587,7 @@ class HudItemShopExpandingPanelDefinition():
     Closed: (Hash, 0x0, 0x0, 0x0)
     pass
 
-class LooseUiTextureData3SliceV(0x5657b533, LooseUiTextureData):
+class LooseUiTextureData3SliceV(LooseUiTextureDataBase, LooseUiTextureData):
     TopBottomHeights: (Vec2, 0x0, 0x0, 0x0)
     EdgeSizes: (Vec2, 0x0, 0x0, 0x0)
     EdgeSizesTopBottom: (Vec2, 0x0, 0x0, 0x0)
@@ -21605,11 +21605,11 @@ class EffectFillPercentageElementData(EffectElementData):
     mFlipX: (Bool, 0x0, 0x0, 0x0)
     pass
 
-class 0xd232712d():
-    0x38fa3995: (String, 0x0, 0x0, 0x0)
-    0x793a9f27: (Bool, 0x0, 0x0, 0x0)
+class DisplayStatUiData():
+    StatNameTra: (String, 0x0, 0x0, 0x0)
+    IsDetailedStat: (Bool, 0x0, 0x0, 0x0)
     StatType: (U8, 0x0, 0x0, 0x0)
-    0xaf8606b: (U8, 0x0, 0x0, 0x0)
+    NewStatType: (U8, 0x0, 0x0, 0x0)
     TexturePath: (String, 0x0, 0x0, 0x0)
     pass
 
@@ -21645,8 +21645,8 @@ class TftCutsceneColorFxClip(TftCutsceneBasePostFxClip):
     Color: (Color, 0x0, 0x0, 0x0)
     pass
 
-class 0xd3595b68():
-    0x63393d3b: (List, 0x0, Embed, BaseItemAdvice)
+class ChampionBaseItemAdvice():
+    mBaseItemAdvices: (List, 0x0, Embed, BaseItemAdvice)
     pass
 
 class HasBuffOfTypeBoolDriver(ILogicBoolDriver):
@@ -21716,7 +21716,7 @@ class HudGameModeScoreData():
     mTeamGameScorePingMessage: (String, 0x0, 0x0, 0x0)
     0xc72e2257: (U32, 0x0, 0x0, 0x0)
     mUseEncounterUi: (Bool, 0x0, 0x0, 0x0)
-    0xcc659802: (Bool, 0x0, 0x0, 0x0)
+    EnableObjectiveBounties: (Bool, 0x0, 0x0, 0x0)
     mEventCount: (U8, 0x0, 0x0, 0x0)
     mModeKeyName: (String, 0x0, 0x0, 0x0)
     mAllowDynamicVisibility: (Bool, 0x0, 0x0, 0x0)
@@ -21782,46 +21782,46 @@ class IconElementGradientExtension(IconElementDataExtension):
     0xda784e92: (Bool, 0x0, 0x0, 0x0)
     pass
 
-class 0xd45c705b(ViewController):
+class TftTrovesViewControllerV2(ViewController):
     FailureSubtitleTraKey: (String, 0x0, 0x0, 0x0)
     TftBannerIconData: (Embed, 0x0, 0x0, TftBannerIconData)
     Scene: (Hash, 0x0, 0x0, 0x0)
-    0x2f7b8d35: (Hash, 0x0, 0x0, 0x0)
+    CraftButton: (Hash, 0x0, 0x0, 0x0)
     BannerList: (Hash, 0x0, 0x0, 0x0)
     SubtitleText: (Hash, 0x0, 0x0, 0x0)
     BaseLoadable: (Link, 0x0, 0x0, UiPropertyLoadable)
     0x40810d53: (Link, 0x0, 0x0, ModalDialogViewController)
     NoActiveBannersIcon: (Hash, 0x0, 0x0, 0x0)
-    0x494e73ac: (Hash, 0x0, 0x0, 0x0)
-    0x51ca6461: (Embed, 0x0, 0x0, 0x93e412e0)
+    Roll10TextDisable: (Hash, 0x0, 0x0, 0x0)
+    MilestoneRewardsTemplate: (Embed, 0x0, 0x0, 0x93e412e0)
     FailureIcon: (Hash, 0x0, 0x0, 0x0)
     MoreInfoButton: (Hash, 0x0, 0x0, 0x0)
-    0x5ca6f7d0: (Hash, 0x0, 0x0, 0x0)
-    0x67c56f9d: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
+    Roll10Text: (Hash, 0x0, 0x0, 0x0)
+    TabletOverrideLoadable: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
     ActiveBannerParent: (Hash, 0x0, 0x0, 0x0)
-    0x7719d8aa: (Hash, 0x0, 0x0, 0x0)
+    CraftTextDisable: (Hash, 0x0, 0x0, 0x0)
     FailureTitleTraKey: (String, 0x0, 0x0, 0x0)
     Roll1Button: (Hash, 0x0, 0x0, 0x0)
-    0x87099332: (Hash, 0x0, 0x0, 0x0)
-    0x90d74224: (Pointer, 0x0, 0x0, 0xa48aca10)
-    0x9ae7a82d: (String, 0x0, 0x0, 0x0)
-    0x9c9e1f69: (Hash, 0x0, 0x0, 0x0)
+    CraftText: (Hash, 0x0, 0x0, 0x0)
+    BannerTimer: (Pointer, 0x0, 0x0, TftEventTimer)
+    RedeemTrakey: (String, 0x0, 0x0, 0x0)
+    MilestoneTooltipIcon: (Hash, 0x0, 0x0, 0x0)
     0xa4419c92: (Map, String, String, 0x0)
     FailureText: (Hash, 0x0, 0x0, 0x0)
-    0xaf63cfac: (Hash, 0x0, 0x0, 0x0)
-    0xb1c0a323: (Hash, 0x0, 0x0, 0x0)
+    MilestoneTooltipButton: (Hash, 0x0, 0x0, 0x0)
+    CraftTextClicked: (Hash, 0x0, 0x0, 0x0)
     Roll10Button: (Hash, 0x0, 0x0, 0x0)
-    0xb539a1cd: (Hash, 0x0, 0x0, 0x0)
-    0xbb5bf1ae: (Hash, 0x0, 0x0, 0x0)
+    CraftSubtitle: (Hash, 0x0, 0x0, 0x0)
+    Roll1TextDisable: (Hash, 0x0, 0x0, 0x0)
     NoContentSubtitleTraKey: (String, 0x0, 0x0, 0x0)
     NoContentTitleTraKey: (String, 0x0, 0x0, 0x0)
-    0xcbe58697: (Hash, 0x0, 0x0, 0x0)
-    0xd34f2c66: (Hash, 0x0, 0x0, 0x0)
-    0xd9777a69: (Hash, 0x0, 0x0, 0x0)
-    0xdbc00b43: (Hash, 0x0, 0x0, 0x0)
+    Roll1TextClicked: (Hash, 0x0, 0x0, 0x0)
+    Roll1Text: (Hash, 0x0, 0x0, 0x0)
+    Roll10TextClicked: (Hash, 0x0, 0x0, 0x0)
+    BannerBackground: (Hash, 0x0, 0x0, 0x0)
     0xe00d8f17: (String, 0x0, 0x0, 0x0)
     0xeceb0f26: (String, 0x0, 0x0, 0x0)
-    0xf562af26: (String, 0x0, 0x0, 0x0)
+    OwnedTrakey: (String, 0x0, 0x0, 0x0)
     TitleText: (Hash, 0x0, 0x0, 0x0)
     0xfbff5912: (String, 0x0, 0x0, 0x0)
     pass
@@ -21860,7 +21860,7 @@ class SpellLockDeltaTimeData():
 class FloatTableSet(RsTableSet, ScriptTableSet):
     pass
 
-class 0xd4f5c384(0x1fe3bf63):
+class TftBannerReward(TftBannerNode):
     Quantity: (U32, 0x0, 0x0, 0x0)
     Rarity: (U32, 0x0, 0x0, 0x0)
     RewardTexturePath: (String, 0x0, 0x0, 0x0)
@@ -21870,17 +21870,17 @@ class IsOwnerAliveConditionData(VfxSpawnConditionData):
     pass
 
 class 0xd55b5c23(IContextualCondition):
-    0x56581a11: (U32, 0x0, 0x0, 0x0)
+    DamageResultType: (U32, 0x0, 0x0, 0x0)
     pass
 
 class StringTableSet(RsTableSet, ScriptTableSet):
     pass
 
-class 0xd59ad1fe(LevelScriptBlock):
+class LevelScriptLegacyBlock(LevelScriptBlock):
     pass
 
-class UiMetricUnitCreepScore(UiMetricUnitTypeI, 0x784e827a):
-    0x5e509067: (Bool, 0x0, 0x0, 0x0)
+class UiMetricUnitCreepScore(UiMetricUnitTypeI, UiMetricUnitTypeSimpleI):
+    ShowDisguise: (Bool, 0x0, 0x0, 0x0)
     CsIcon: (Hash, 0x0, 0x0, 0x0)
     CsText: (Hash, 0x0, 0x0, 0x0)
     pass
@@ -21903,7 +21903,7 @@ class 0xd5b41170():
     pass
 
 class 0xd5c5318a():
-    0x2d6f5674: (Pointer, 0x0, 0x0, 0x6ca3cfd)
+    ValueDriver: (Pointer, 0x0, 0x0, 0x6ca3cfd)
     Key: (String, 0x0, 0x0, 0x0)
     pass
 
@@ -21922,7 +21922,7 @@ class UnitShopItemTraitData():
 class FxActionSfx(IFxAction):
     EventName: (String, 0x0, 0x0, 0x0)
     AudioSource: (Embed, 0x0, 0x0, FxTarget)
-    AudioSource: (Embed, 0x0, 0x0, 0x5c086dbd)
+    AudioSource: (Embed, 0x0, 0x0, FxObjectSelector)
     Position: (Embed, 0x0, 0x0, FxTransform)
     UseCharacterTags: (Bool, 0x0, 0x0, 0x0)
     Location: (Pointer, 0x0, 0x0, IFxLocation)
@@ -22008,19 +22008,19 @@ class EsportsBannerOptions():
     pass
 
 class 0xd65c937c():
-    0x1782dd2f: (String, 0x0, 0x0, 0x0)
-    0x44615582: (Hash, 0x0, 0x0, 0x0)
-    0x6b9ffd3e: (String, 0x0, 0x0, 0x0)
-    0x71932351: (String, 0x0, 0x0, 0x0)
-    0x7240c2fa: (Hash, 0x0, 0x0, 0x0)
-    0x8fc7cf0f: (String, 0x0, 0x0, 0x0)
-    0xaa4a9078: (String, 0x0, 0x0, 0x0)
-    0xb717735: (String, 0x0, 0x0, 0x0)
-    0xd221d784: (String, 0x0, 0x0, 0x0)
-    0xd2831241: (Hash, 0x0, 0x0, 0x0)
-    0xf06d87ba: (String, 0x0, 0x0, 0x0)
+    CompleteDefault: (String, 0x0, 0x0, 0x0)
+    TrackerGroup: (Hash, 0x0, 0x0, 0x0)
+    ActiveSelected: (String, 0x0, 0x0, 0x0)
+    InactiveSelected: (String, 0x0, 0x0, 0x0)
+    TrackerIcon: (Hash, 0x0, 0x0, 0x0)
+    ActiveHover: (String, 0x0, 0x0, 0x0)
+    ActiveDefault: (String, 0x0, 0x0, 0x0)
+    InactiveDefault: (String, 0x0, 0x0, 0x0)
+    CompleteHover: (String, 0x0, 0x0, 0x0)
+    TrackerLayout: (Hash, 0x0, 0x0, 0x0)
+    InactiveHover: (String, 0x0, 0x0, 0x0)
     HitRegion: (Hash, 0x0, 0x0, 0x0)
-    0xfa79ea0b: (String, 0x0, 0x0, 0x0)
+    CompleteSelected: (String, 0x0, 0x0, 0x0)
     pass
 
 class AiUnitConfigSkinLink():
@@ -22056,10 +22056,10 @@ class TftItemCombineTooltipData():
     ItemIconOne: (Hash, 0x0, 0x0, 0x0)
     pass
 
-class 0xd6a5e331():
-    0x4a1c6359: (F32, 0x0, 0x0, 0x0)
+class HeroFloatingInfoResistData():
+    MagicResistThreshold: (F32, 0x0, 0x0, 0x0)
     0x7870d4f: (Hash, 0x0, 0x0, 0x0)
-    0x8eccbe27: (F32, 0x0, 0x0, 0x0)
+    ArmorThreshold: (F32, 0x0, 0x0, 0x0)
     0xcd61161d: (Hash, 0x0, 0x0, 0x0)
     0xdbfad963: (Hash, 0x0, 0x0, 0x0)
     pass
@@ -22068,7 +22068,7 @@ class TftMapTraitList():
     Traits: (List, 0x0, Pointer, TftMapTraitData)
     pass
 
-class 0xd6ce2ab0(RadialMenuViewController):
+class EmoteAlternativeRadialViewController(RadialMenuViewController):
     BaseLoadable: (Link, 0x0, 0x0, UiPropertyLoadable)
     pass
 
@@ -22076,17 +22076,17 @@ class TftBattlepassViewController(ViewController):
     MilestoneProgressMeter: (Embed, 0x0, 0x0, UiMilestoneProgressMeter)
     MilestonesViewPane: (Hash, 0x0, 0x0, 0x0)
     SelectedMilestoneHighlight: (Hash, 0x0, 0x0, 0x0)
-    0x3ac7aa82: (Hash, 0x0, 0x0, 0x0)
+    BackgroundImage: (Hash, 0x0, 0x0, 0x0)
     BaseLoadable: (Link, 0x0, 0x0, UiPropertyLoadable)
     SelectedRewardBanner: (Embed, 0x0, 0x0, TftBattlepassSelectedRewardBannerUiData)
     WelcomeDialogViewController: (Link, 0x0, 0x0, ModalDialogViewController)
-    0x57cffcc: (Map, String, Embed, 0x5cb6b755)
+    ThemeDataMap: (Map, String, Embed, 0x5cb6b755)
     SelectedRewardBannerScene: (Hash, 0x0, 0x0, 0x0)
     MilestoneTimelineEnd: (Embed, 0x0, 0x0, UiMilestoneTimelineEnd)
     RewardBannerTransitionOut: (Embed, 0x0, 0x0, HudMenuTransitionData)
-    0x67c56f9d: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
+    TabletOverrideLoadable: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
     LootTableButton: (Hash, 0x0, 0x0, 0x0)
-    0x75259ad3: (Link, 0x0, 0x0, ModalDialogViewController)
+    ModalDialogViewController: (Link, 0x0, 0x0, ModalDialogViewController)
     ViewPaneDefinition: (Embed, 0x0, 0x0, ViewPaneDefinition)
     SelectedReward: (Embed, 0x0, 0x0, TftBattlepassSelectedRewardUiData)
     PassTitle: (Hash, 0x0, 0x0, 0x0)
@@ -22094,7 +22094,7 @@ class TftBattlepassViewController(ViewController):
     UpgradePassButton: (Hash, 0x0, 0x0, 0x0)
     RewardBannerDurationSecs: (F32, 0x0, 0x0, 0x0)
     BattlepassScene: (Hash, 0x0, 0x0, 0x0)
-    0xeacb8daf: (Embed, 0x0, 0x0, 0x5cb6b755)
+    DefaultThemeData: (Embed, 0x0, 0x0, 0x5cb6b755)
     0xf3399e0e: (Hash, 0x0, 0x0, 0x0)
     PassSubtitle: (Hash, 0x0, 0x0, 0x0)
     pass
@@ -22189,13 +22189,13 @@ class UiMetricTeamGold(UiMetricTypeI):
 class CelebrationLabFields():
     RatedTierVfx: (Map, U32, Hash, 0x0)
     RatedTierTraKeys: (Map, U32, String, 0x0)
-    0xd4751353: (Map, String, String, 0x0)
+    RatedTiersTraKeys: (Map, String, String, 0x0)
     pass
 
 class HealthDynamicMaterialFloatDriver(IDynamicMaterialFloatDriver, ILogicFloatDriver):
     pass
 
-class 0xd8662a22(0x5c108a08):
+class 0xd8662a22(ILolSpellScriptEvent):
     pass
 
 class 0xd866344b():
@@ -22209,7 +22209,7 @@ class 0xd86db9b6(0xb72a7d67):
 class ObjectiveVotetTallyData():
     ForCountIcon: (Hash, 0x0, 0x0, 0x0)
     CountBg: (Hash, 0x0, 0x0, 0x0)
-    0x95b24ea2: (Hash, 0x0, 0x0, 0x0)
+    PendingCountIcon: (Hash, 0x0, 0x0, 0x0)
     ForCount: (Hash, 0x0, 0x0, 0x0)
     VfxPlayerReject: (Hash, 0x0, 0x0, 0x0)
     RejectCount: (Hash, 0x0, 0x0, 0x0)
@@ -22227,7 +22227,7 @@ class OptionItemFilter_Map(IOptionItemFilter):
 class ViewControllerList():
     ViewControllers: (List, 0x0, String, 0x0)
     ViewControllers: (List2, 0x0, String, 0x0)
-    Filter: (Pointer, 0x0, 0x0, 0x83d6eef9)
+    Filter: (Pointer, 0x0, 0x0, ViewControllerListFilterI)
     Filter: (Pointer, 0x0, 0x0, ViewControllerFilterI)
     pass
 
@@ -22237,11 +22237,11 @@ class UiElementMeterSkin():
     ReverseDirectionalTipElements: (List, 0x0, Hash, 0x0)
     ReverseDirectionalTipElements: (List2, 0x0, Hash, 0x0)
     0x4b68f340: (List2, 0x0, Hash, 0x0)
-    0x82a8b60e: (List2, 0x0, Hash, 0x0)
+    BarElementList: (List2, 0x0, Hash, 0x0)
     Sliver: (Hash, 0x0, 0x0, 0x0)
     BarElements: (List, 0x0, Hash, 0x0)
     BarElements: (List2, 0x0, Hash, 0x0)
-    0xed15b77e: (List2, 0x0, Hash, 0x0)
+    TipElementList: (List2, 0x0, Hash, 0x0)
     pass
 
 class ChangeMissileSpeed(MissileTriggeredActionSpec):
@@ -22255,7 +22255,7 @@ class TftUxTunables():
     TftMatchmakingIconColor: (Color, 0x0, 0x0, 0x0)
     pass
 
-class 0xd97f9bd3(0xcee56575):
+class 0xd97f9bd3(TftCutsceneMissileClip):
     SplineInfo: (Pointer, 0x0, 0x0, ISplineInfo)
     pass
 
@@ -22263,7 +22263,7 @@ class MatchmakingQueue():
     RankedType: (U8, 0x0, 0x0, 0x0)
     IllustrationIconPath: (String, 0x0, 0x0, 0x0)
     Description: (String, 0x0, 0x0, 0x0)
-    0x6c2a39e: (String, 0x0, 0x0, 0x0)
+    SmallIconPath: (String, 0x0, 0x0, 0x0)
     MaxPartySize: (U8, 0x0, 0x0, 0x0)
     ShortName: (String, 0x0, 0x0, 0x0)
     TftDisplayName: (String, 0x0, 0x0, 0x0)
@@ -22318,7 +22318,7 @@ class ResetGoldCheat(Cheat):
 
 class LoadingScreenPlayerCardsViewController(ViewController):
     CardTemplate: (Pointer, 0x0, 0x0, LoadingScreenPlayerCardBaseData)
-    0x3bdfdf95: (Pointer, 0x0, 0x0, 0xacb2dba1)
+    SpacerData: (Pointer, 0x0, 0x0, 0xacb2dba1)
     BaseLoadable: (Link, 0x0, 0x0, UiPropertyLoadable)
     LowerCardRegion: (Hash, 0x0, 0x0, 0x0)
     UpperCardRegion: (Hash, 0x0, 0x0, 0x0)
@@ -22327,7 +22327,7 @@ class LoadingScreenPlayerCardsViewController(ViewController):
 
 class ScoreLineBaseUiData():
     Scene: (Hash, 0x0, 0x0, 0x0)
-    Portrait: (Embed, 0x0, 0x0, 0xaad8e7d2)
+    Portrait: (Embed, 0x0, 0x0, ScoreLinePortraitUiData)
     Portrait: (Embed, 0x0, 0x0, UiPlayerPortraitData)
     FowSlotHighlight: (Hash, 0x0, 0x0, 0x0)
     DragBarSlot: (Hash, 0x0, 0x0, 0x0)
@@ -22359,10 +22359,10 @@ class TargetTeamFilter(IStatStoneLogicDriver):
 class IDynamicMaterialBoolDriver(IDynamicMaterialFloatDriver):
     pass
 
-class 0xda724c76(0xc82f0d9):
-    0x16746aa2: (F32, 0x0, 0x0, 0x0)
-    0x27bdb791: (F32, 0x0, 0x0, 0x0)
-    0xe1833fac: (F32, 0x0, 0x0, 0x0)
+class TftSinusoidalHeightSolver(TftHeightSolverType):
+    Amplitude: (F32, 0x0, 0x0, 0x0)
+    NumberOfPeriods: (F32, 0x0, 0x0, 0x0)
+    PhaseShift: (F32, 0x0, 0x0, 0x0)
     VerticalOffset: (F32, 0x0, 0x0, 0x0)
     pass
 
@@ -22385,7 +22385,7 @@ class OverrideResourceResolver(IResourceResolver):
 
 class GdsMapObject(GenericMapPlaceable):
     Type: (U8, 0x0, 0x0, 0x0)
-    0x5150a6a1: (Link, 0x0, 0x0, 0x121b48aa)
+    VisibilityController: (Link, 0x0, 0x0, IMapVisibilityController)
     EyeCandy: (Bool, 0x0, 0x0, 0x0)
     IgnoreCollisionOnPlacement: (Bool, 0x0, 0x0, 0x0)
     MapObjectSkinId: (U32, 0x0, 0x0, 0x0)
@@ -22412,7 +22412,7 @@ class 0xdae7f670(IScriptBt):
     Blocks: (List2, 0x0, Pointer, IBehaviorScriptBlock)
     pass
 
-class ItemSelectionViewController(0x3fc15f90, ViewController):
+class ItemSelectionViewController(ItemSelectionBaseViewController, ViewController):
     ItemSlots: (List, 0x0, Embed, UiItemSelectionSlotData)
     Scene: (Hash, 0x0, 0x0, 0x0)
     Loadable: (Link, 0x0, 0x0, UiPropertyLoadable)
@@ -22447,12 +22447,12 @@ class DeathRecapShowcase():
     SlotsLayout: (Hash, 0x0, 0x0, 0x0)
     pass
 
-class 0xdb6be360():
+class TargetingPriorityList():
     mAffectsStatusFlags: (U32, 0x0, 0x0, 0x0)
-    0xc716e4ad: (U32, 0x0, 0x0, 0x0)
+    mSpellFlags: (U32, 0x0, 0x0, 0x0)
     Radius: (F32, 0x0, 0x0, 0x0)
     mAffectsTypeFlags: (U32, 0x0, 0x0, 0x0)
-    0xfb8157bc: (List2, 0x0, Pointer, 0x13314f94)
+    TargetingParametersList: (List2, 0x0, Pointer, TargetingParameters)
     pass
 
 class IconElementDataExtension():
@@ -22491,13 +22491,13 @@ class OptionItemSliderVolume(OptionItemSliderFloat):
     MuteOption: (U16, 0x0, 0x0, 0x0)
     pass
 
-class 0xdb966ec9(TftUnitPropertyValue):
+class TftUnitPropertyValueIntegerSet(TftUnitPropertyValue):
     Value: (List2, 0x0, I32, 0x0)
     pass
 
 class 0xdb9a90ba(0xe561be2e):
     Source: (Link, 0x0, 0x0, SequenceObjectSelector)
-    0xc2e77088: (Hash, 0x0, 0x0, 0x0)
+    DebugOverride: (Hash, 0x0, 0x0, 0x0)
     pass
 
 class UiTeamFightTeamMemberData():
@@ -22528,7 +22528,7 @@ class FxTiming():
     pass
 
 class TftTrovesCelebrationStandardSegmentData():
-    0x292c27df: (F32, 0x0, 0x0, 0x0)
+    InterItemTimingOffset: (F32, 0x0, 0x0, 0x0)
     EntryRevealSfx: (String, 0x0, 0x0, 0x0)
     InterItemTimingOffsetEpic: (F32, 0x0, 0x0, 0x0)
     EntrySfxOffset: (F32, 0x0, 0x0, 0x0)
@@ -22541,7 +22541,7 @@ class TftTrovesCelebrationStandardSegmentData():
     FirstItemTimingOffsetEpic: (F32, 0x0, 0x0, 0x0)
     InterItemTimingOffsetRare: (F32, 0x0, 0x0, 0x0)
     InterItemTimingOffsetLegendary: (F32, 0x0, 0x0, 0x0)
-    0xb2d1f547: (F32, 0x0, 0x0, 0x0)
+    FirstItemTimingOffset: (F32, 0x0, 0x0, 0x0)
     BackgroundTimingOffset: (F32, 0x0, 0x0, 0x0)
     StandardRewardTemplateLegendary: (Hash, 0x0, 0x0, 0x0)
     0xfdfabc7d: (F32, 0x0, 0x0, 0x0)
@@ -22560,12 +22560,12 @@ class 0xdbede580(ModalDialogViewController):
     pass
 
 class ScriptCheat(Cheat):
-    0x59540b18: (Bool, 0x0, 0x0, 0x0)
+    UseTargetAsSource: (Bool, 0x0, 0x0, 0x0)
     mTarget: (U32, 0x0, 0x0, 0x0)
     mScriptCallback: (Hash, 0x0, 0x0, 0x0)
     pass
 
-class 0xdc0043a():
+class NavigationGroup():
     0x5f001719: (Bool, 0x0, 0x0, 0x0)
     Hash: (Hash, 0x0, 0x0, 0x0)
     pass
@@ -22580,11 +22580,11 @@ class ResourceMeterGroupData(ResourceMeterBaseData):
 
 class 0xdc24bc6f():
     0x439b26dc: (String, 0x0, 0x0, 0x0)
-    0xa10b49a: (Hash, 0x0, 0x0, 0x0)
+    TroveBannerIcon: (Hash, 0x0, 0x0, 0x0)
     FailureText: (String, 0x0, 0x0, 0x0)
     0xabd0de07: (String, 0x0, 0x0, 0x0)
-    0xcec67027: (String, 0x0, 0x0, 0x0)
-    0xfddc357d: (Hash, 0x0, 0x0, 0x0)
+    FailureTexturePath: (String, 0x0, 0x0, 0x0)
+    TroveButton: (Hash, 0x0, 0x0, 0x0)
     pass
 
 class MaterialSamplerDataCollection():
@@ -22598,7 +22598,7 @@ class 0xdc53945d(ViewController):
     0x1ea15738: (List, 0x5, Hash, 0x0)
     Scene: (Hash, 0x0, 0x0, 0x0)
     BaseLoadable: (Link, 0x0, 0x0, UiPropertyLoadable)
-    0x813bb92d: (Hash, 0x0, 0x0, 0x0)
+    RetryButton: (Hash, 0x0, 0x0, 0x0)
     CloseButton: (Hash, 0x0, 0x0, 0x0)
     pass
 
@@ -22652,8 +22652,8 @@ class HudReplaySliderIconData():
     mTooltipStyle: (U8, 0x0, 0x0, 0x0)
     BlueTeamElementUnselectedColor: (Color, 0x0, 0x0, 0x0)
     ElementT0: (Hash, 0x0, 0x0, 0x0)
-    0xfdc84bd4: (Hash, 0x0, 0x0, 0x0)
-    0xfec84d67: (Hash, 0x0, 0x0, 0x0)
+    ElementTextT0: (Hash, 0x0, 0x0, 0x0)
+    ElementTextT1: (Hash, 0x0, 0x0, 0x0)
     pass
 
 class FontResolutionData():
@@ -22672,7 +22672,7 @@ class IsOwnerHeroConditionData(VfxSpawnConditionData):
 class EffectCircleMaskDesaturateElementData(EffectDesaturateElementData):
     pass
 
-class 0xdd017d46(0x784e827a):
+class UiMetricUnitBounty(UiMetricUnitTypeSimpleI):
     pass
 
 class Cone(TargetingTypeData):
@@ -22716,13 +22716,13 @@ class DecelToLocationMovementSpec(MissileMovementSpec):
     pass
 
 class 0xdd661aab():
-    0x192c4c24: (List2, 0x0, Hash, 0x0)
+    TriggerSpells: (List2, 0x0, Hash, 0x0)
     0x8f7842e4: (List2, 0x0, Pointer, 0x55f6bf86)
-    0xafc61f9b: (Pointer, 0x0, 0x0, 0xc7e628b9)
+    OverrideParams: (Pointer, 0x0, 0x0, 0xc7e628b9)
     Condition: (Pointer, 0x0, 0x0, 0xfd51006c)
     pass
 
-class 0xdd681b43(ScriptTable):
+class NextBuffVars(ScriptTable):
     pass
 
 class ParticleSystemElementData(UiElementData, BaseElementData):
@@ -22731,17 +22731,17 @@ class ParticleSystemElementData(UiElementData, BaseElementData):
     mVfxSystem: (Link, 0x0, 0x0, VfxSystemDefinitionData)
     PlayDuringTransition: (Bool, 0x0, 0x0, 0x0)
     VfxAdjustmentScale: (F32, 0x0, 0x0, 0x0)
-    0x94b088ea: (Bool, 0x0, 0x0, 0x0)
+    mUseUserScale: (Bool, 0x0, 0x0, 0x0)
     mMaxPlayCount: (U32, 0x0, 0x0, 0x0)
     pass
 
 class 0xdd8ea5ae():
-    0x4225a524: (Hash, 0x0, 0x0, 0x0)
+    TopBarIcon: (Hash, 0x0, 0x0, 0x0)
     0x550cba72: (Hash, 0x0, 0x0, 0x0)
     0x720b91e8: (Hash, 0x0, 0x0, 0x0)
-    0x7e531835: (Hash, 0x0, 0x0, 0x0)
+    MissionCompleteText: (Hash, 0x0, 0x0, 0x0)
     0x88131f9a: (Embed, 0x0, 0x0, 0x4fbb3f5d)
-    0x90c1b7b7: (Hash, 0x0, 0x0, 0x0)
+    TimeRemainingText: (Hash, 0x0, 0x0, 0x0)
     0xe2f95b32: (Hash, 0x0, 0x0, 0x0)
     pass
 
@@ -22755,12 +22755,12 @@ class PerkSlot():
     mSlotLabelKey: (String, 0x0, 0x0, 0x0)
     pass
 
-class 0xddac6756(0xbfaf421f):
+class TroveInstanceData(InstanceDataBase):
     BannerData: (Hash, 0x0, 0x0, 0x0)
     0xbaca3b7b: (Bool, 0x0, 0x0, 0x0)
-    0xbf19bffc: (Embed, 0x0, 0x0, 0x17c543dc)
-    0xd407c07d: (Embed, 0x0, 0x0, 0x17c543dc)
-    0xdc47fab7: (Embed, 0x0, 0x0, 0x17c543dc)
+    ForegroundVfx: (Embed, 0x0, 0x0, TextureOverride)
+    0xd407c07d: (Embed, 0x0, 0x0, TextureOverride)
+    BackgroundVfx: (Embed, 0x0, 0x0, TextureOverride)
     pass
 
 class ChallengeCompletionLevel():
@@ -22792,7 +22792,7 @@ class PostGameViewController(ViewController):
     PlayAgainButton: (Hash, 0x0, 0x0, 0x0)
     Labs: (Map, U32, Embed, PostGameLabFields)
     PlayerFields: (Embed, 0x0, 0x0, PlayerFields)
-    0x67c56f9d: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
+    TabletOverrideLoadable: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
     0x71309e56: (I32, 0x0, 0x0, 0x0)
     CurrentPlayerHighlight: (Hash, 0x0, 0x0, 0x0)
     WinStreakVfx: (Hash, 0x0, 0x0, 0x0)
@@ -22814,7 +22814,7 @@ class PostGameViewController(ViewController):
     CurrentRatingText: (Hash, 0x0, 0x0, 0x0)
     WinstreakText: (Hash, 0x0, 0x0, 0x0)
     BackgroundTexture: (Hash, 0x0, 0x0, 0x0)
-    0xfd920198: (Hash, 0x0, 0x0, 0x0)
+    SceneDivider: (Hash, 0x0, 0x0, 0x0)
     pass
 
 class MapContainer():
@@ -22826,7 +22826,7 @@ class MapContainer():
     MapPath: (String, 0x0, 0x0, 0x0)
     ConvertStreamsToHalfFloat: (Bool, 0x0, 0x0, 0x0)
     LowestWalkableHeight: (F32, 0x0, 0x0, 0x0)
-    meshCombineRadius: (F32, 0x0, 0x0, 0x0)
+    MeshCombineRadius: (F32, 0x0, 0x0, 0x0)
     pass
 
 class ICharacterSubcondition():
@@ -22841,7 +22841,7 @@ class TftAttachmentSlotStyleData():
 class IsInGrassDynamicMaterialBoolDriver(ILogicBoolDriver, IDynamicMaterialBoolDriver):
     pass
 
-class 0xde28699e():
+class SkinBorderOrder():
     Layer: (U8, 0x0, 0x0, 0x0)
     SkinId: (I32, 0x0, 0x0, 0x0)
     Priority: (U8, 0x0, 0x0, 0x0)
@@ -22860,14 +22860,14 @@ class TftTrovesCelebrationViewController(ViewController):
     0x58134905: (Link, 0x0, 0x0, SequenceObjectSelector)
     0x629d7fe5: (Link, 0x0, 0x0, SequenceObjectSelector)
     DefaultTheme: (Link, 0x0, 0x0, TftTrovesCelebrationThemeData)
-    0x67c56f9d: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
+    TabletOverrideLoadable: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
     SingleStandardItemLegendaryVfx: (Hash, 0x0, 0x0, 0x0)
     SingleStandardItemVfx: (Hash, 0x0, 0x0, 0x0)
     StandardItemRarityTexturePaths: (Map, U32, String, 0x0)
     0x7e6bb126: (Link, 0x0, 0x0, SequenceObjectSelector)
     StandardContentLayout: (Hash, 0x0, 0x0, 0x0)
     0x880040f3: (Link, 0x0, 0x0, SequenceObjectSelector)
-    0x8825ec03: (Hash, 0x0, 0x0, 0x0)
+    VignetteTitle: (Hash, 0x0, 0x0, 0x0)
     0x8a6d374d: (Link, 0x0, 0x0, SequenceObjectSelector)
     0x8bbe1dcd: (Link, 0x0, 0x0, VfxSystemDefinitionData)
     ContinueButton: (Hash, 0x0, 0x0, 0x0)
@@ -22877,23 +22877,23 @@ class TftTrovesCelebrationViewController(ViewController):
     0xa7b45c64: (Link, 0x0, 0x0, SequenceObjectSelector)
     0xaad46f66: (Hash, 0x0, 0x0, 0x0)
     0xabdd4859: (Link, 0x0, 0x0, VfxSystemDefinitionData)
-    0xad8aa34c: (Hash, 0x0, 0x0, 0x0)
+    CommonScene: (Hash, 0x0, 0x0, 0x0)
     DefaultStandardItemStarLevelTexturePath: (String, 0x0, 0x0, 0x0)
     0xc1d80535: (Link, 0x0, 0x0, SequenceObjectSelector)
     0xd7ce36cb: (Link, 0x0, 0x0, SequenceObjectSelector)
     ParentScene: (Hash, 0x0, 0x0, 0x0)
     0xeed1cb06: (Link, 0x0, 0x0, SequenceObjectSelector)
-    0xef7286c1: (Bool, 0x0, 0x0, 0x0)
-    0xf28bb814: (Hash, 0x0, 0x0, 0x0)
+    UseSequencer: (Bool, 0x0, 0x0, 0x0)
+    SingleStandardItemText: (Hash, 0x0, 0x0, 0x0)
     0xf9ae2168: (Link, 0x0, 0x0, SequenceObjectSelector)
-    0xfb688f7b: (String, 0x0, 0x0, 0x0)
+    VignetteTitleTraKey: (String, 0x0, 0x0, 0x0)
     pass
 
-class 0xde452e62(TftPassRewardBase):
+class TftPassRewardEntitlement(TftPassRewardBase):
     ItemId: (String, 0x0, 0x0, 0x0)
     Type: (String, 0x0, 0x0, 0x0)
     TypeId: (String, 0x0, 0x0, 0x0)
-    0xf8d0f0eb: (String, 0x0, 0x0, 0x0)
+    ItemTypeId: (String, 0x0, 0x0, 0x0)
     pass
 
 class StaticMaterialShaderParamDef():
@@ -22953,10 +22953,10 @@ class TftUnitInfoViewController(ViewController):
     AbilityTooltipUpperRightAnchor: (Hash, 0x0, 0x0, 0x0)
     MobileOverrideLoadable: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
     AbilityIcon: (Hash, 0x0, 0x0, 0x0)
-    0x6e7dd52e: (Hash, 0x0, 0x0, 0x0)
+    SellUnitButtonGoldText: (Hash, 0x0, 0x0, 0x0)
     TraitInfoCardHoverRegion: (Hash, 0x0, 0x0, 0x0)
     RangeHexVfx: (Hash, 0x0, 0x0, 0x0)
-    0x7f6a0e49: (Hash, 0x0, 0x0, 0x0)
+    ItemsOnlyRegion: (Hash, 0x0, 0x0, 0x0)
     PositioningButton: (Hash, 0x0, 0x0, 0x0)
     ItemHighlights: (List, 0x3, Hash, 0x0)
     PositioningText: (Hash, 0x0, 0x0, 0x0)
@@ -22983,34 +22983,34 @@ class TftUnitInfoViewController(ViewController):
     RarityUnderlays: (List, 0x6, Hash, 0x0)
     RarityUnderlays: (List, 0x8, Hash, 0x0)
     RarityUnderlays: (List, 0x9, Hash, 0x0)
-    0xe2e6e1df: (Hash, 0x0, 0x0, 0x0)
+    ItemsOnlyScene: (Hash, 0x0, 0x0, 0x0)
     0xeeea5fa1: (Hash, 0x0, 0x0, 0x0)
     GoldText: (Hash, 0x0, 0x0, 0x0)
     StatsUiData: (Embed, 0x0, 0x0, UnitStatsUiData)
     pass
 
-class 0xde86026a(0xf9ded696):
+class 0xde86026a(SelectSpellBlock):
     pass
 
 class UiElementEffectCircleMaskDesaturateData(UiElementEffectDesaturateData):
     pass
 
 class 0xdec5122e():
-    0xf042a7ea: (Embed, 0x0, 0x0, 0xc90736f4)
+    Comp: (Embed, 0x0, 0x0, 0xc90736f4)
     pass
 
 class ViewControllerFilter_Or(ViewControllerFilterI):
-    0x883c4bff: (List2, 0x0, Pointer, ViewControllerFilterI)
+    FilterList: (List2, 0x0, Pointer, ViewControllerFilterI)
     Filters: (List, 0x0, Pointer, ViewControllerFilterI)
     Filters: (List2, 0x0, Pointer, ViewControllerFilterI)
     pass
 
-class 0xded67873():
-    0x204f9e3c: (List, 0x3, F32, 0x0)
-    0x5f4887eb: (List, 0x3, Embed, HeroFloatingInfoBorderTypeData)
-    0xc9b71b3d: (List, 0x3, Embed, HeroFloatingInfoBorderTypeData)
-    0xd4b01b1e: (List, 0x3, F32, 0x0)
-    0xf94042c8: (List, 0x3, Embed, HeroFloatingInfoBorderTypeData)
+class HeroFloatingInfoResistBorderData():
+    ArmorThresholds: (List, 0x3, F32, 0x0)
+    ArmorBorders: (List, 0x3, Embed, HeroFloatingInfoBorderTypeData)
+    MagicResistBorders: (List, 0x3, Embed, HeroFloatingInfoBorderTypeData)
+    MagicResistThresholds: (List, 0x3, F32, 0x0)
+    ComboBorders: (List, 0x3, Embed, HeroFloatingInfoBorderTypeData)
     pass
 
 class ContextualConditionCharacterName(ICharacterSubcondition):
@@ -23058,7 +23058,7 @@ class LoadingScreenSettings():
 class 0xdf694fb2():
     0x9d6e31fd: (Hash, 0x0, 0x0, 0x0)
     0xc742ceb4: (Hash, 0x0, 0x0, 0x0)
-    0xf21efab0: (List2, 0x0, Hash, 0x0)
+    BottomHrMomentumPost: (List2, 0x0, Hash, 0x0)
     pass
 
 class ToggleInvulnerableCheat(Cheat):
@@ -23108,7 +23108,7 @@ class Map(WadFileDescriptor):
     FogOfWarProperties: (Link, 0x0, 0x0, FogOfWarProperties)
     AiUnits: (Map, Hash, Link, AiUnitGroup)
     VisibilityFlagDefines: (Embed, 0x0, 0x0, MapVisibilityFlagDefinitions)
-    0xa8ba5a4f: (List, 0x0, Embed, MapPlaceableLinkGroup)
+    Locations: (List, 0x0, Embed, MapPlaceableLinkGroup)
     MapStringId: (String, 0x0, 0x0, 0x0)
     0xd31ac6ce: (Embed, 0x0, 0x0, MapVisibilityFlagDefinitions)
     BasedOnMap: (Link, 0x0, 0x0, Map)
@@ -23192,7 +23192,7 @@ class 0xe067bdf9(IScriptBlock, IBehaviorScriptBlock):
 class MessageBoxDialog(ModalDialogViewController):
     HeaderTitleText: (Hash, 0x0, 0x0, 0x0)
     CancelButtonAdditionalIcons: (Embed, 0x0, 0x0, UiElementGroupButtonAdditionalElements)
-    0x1c466e91: (Hash, 0x0, 0x0, 0x0)
+    PlaceholderText: (Hash, 0x0, 0x0, 0x0)
     SoftKeyboardTransitionData: (Embed, 0x0, 0x0, HudMenuTransitionData)
     InputScene: (Hash, 0x0, 0x0, 0x0)
     MainBodyText: (Hash, 0x0, 0x0, 0x0)
@@ -23204,12 +23204,12 @@ class MessageBoxDialog(ModalDialogViewController):
     mSoftKeyboardTransitionData: (Embed, 0x0, 0x0, HudMenuTransitionData)
     ConfirmButtonAdditionalIcons: (Embed, 0x0, 0x0, UiElementGroupButtonAdditionalElements)
     ButtonScene: (Hash, 0x0, 0x0, 0x0)
-    0xba09dde4: (Hash, 0x0, 0x0, 0x0)
+    InputErrorText: (Hash, 0x0, 0x0, 0x0)
     CancelButtonIcons: (Hash, 0x0, 0x0, 0x0)
     pass
 
-class 0xe07edfa4(0x121b48aa):
-    0x4a66b8d0: (Bool, 0x0, 0x0, 0x0)
+class 0xe07edfa4(IMapVisibilityController):
+    DefaultVisible: (Bool, 0x0, 0x0, 0x0)
     Name: (Hash, 0x0, 0x0, 0x0)
     pass
 
@@ -23274,7 +23274,7 @@ class AllItemsPage():
 class ParametricMovementType_AngleFromTarget(ParametricMovementType):
     pass
 
-class 0xe1127f16():
+class MapNavGridOverlay():
     Name: (Hash, 0x0, 0x0, 0x0)
     NavGridFileName: (String, 0x0, 0x0, 0x0)
     RegionsFilename: (String, 0x0, 0x0, 0x0)
@@ -23297,7 +23297,7 @@ class TftBaseTraitSetData():
     pass
 
 class 0xe1555e0a():
-    AugmentGroup: (List2, 0x0, Link, 0x64a133b3)
+    AugmentGroup: (List2, 0x0, Link, BasicSkinAugment)
     pass
 
 class HudTeamFightData():
@@ -23306,10 +23306,10 @@ class HudTeamFightData():
     mOffscreenDifferentiation: (Pointer, 0x0, 0x0, HudTeamFightOffScreenDifferentiationData)
     pass
 
-class 0xe1a5f350(ViewController):
+class TftSoulFighterTournamentBracketsViewController(ViewController):
     0x17baadb7: (Hash, 0x0, 0x0, 0x0)
     Duration: (F32, 0x0, 0x0, 0x0)
-    0x372d5784: (List, 0x0, Embed, 0x1181085f)
+    StageConfigs: (List, 0x0, Embed, 0x1181085f)
     BaseLoadable: (Link, 0x0, 0x0, UiPropertyLoadable)
     MainScene: (Hash, 0x0, 0x0, 0x0)
     MobileOverrideLoadable: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
@@ -23383,14 +23383,14 @@ class TftStageViewController(ViewController):
     BackgroundTopCenter: (Hash, 0x0, 0x0, 0x0)
     TimingOutBackgroundTopRight: (Hash, 0x0, 0x0, 0x0)
     StageRightGroup: (Hash, 0x0, 0x0, 0x0)
-    0x3db992bb: (Hash, 0x0, 0x0, 0x0)
+    CollapseIcon: (Hash, 0x0, 0x0, 0x0)
     BaseLoadable: (Link, 0x0, 0x0, UiPropertyLoadable)
     StageLeftGroup: (Hash, 0x0, 0x0, 0x0)
     CollapsedStageScene: (Embed, 0x0, 0x0, TftStageSceneData)
     MobileOverrideLoadable: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
     Timer: (Hash, 0x0, 0x0, 0x0)
     TimerBarBackground: (Hash, 0x0, 0x0, 0x0)
-    0x839fadac: (Hash, 0x0, 0x0, 0x0)
+    ExpandIcon: (Hash, 0x0, 0x0, 0x0)
     GameModeIcon: (Hash, 0x0, 0x0, 0x0)
     PhaseIcons: (List, 0x5, Hash, 0x0)
     StageNumber: (Hash, 0x0, 0x0, 0x0)
@@ -23404,13 +23404,13 @@ class TftStageViewController(ViewController):
 
 class 0xe20ffd3f(IFxAction):
     Size: (I32, 0x0, 0x0, 0x0)
-    Target: (Embed, 0x0, 0x0, 0x5c086dbd)
+    Target: (Embed, 0x0, 0x0, FxObjectSelector)
     Color: (Color, 0x0, 0x0, 0x0)
     pass
 
-class 0xe21083b5(0x121b48aa):
-    0x3044938a: (List2, 0x0, Link, 0x121b48aa)
-    0xc9d3f06a: (U32, 0x0, 0x0, 0x0)
+class ChildMapVisibilityController(IMapVisibilityController):
+    Parents: (List2, 0x0, Link, IMapVisibilityController)
+    ParentMode: (U32, 0x0, 0x0, 0x0)
     pass
 
 class StaticMaterialSwitchDef():
@@ -23431,7 +23431,7 @@ class TargeterDefinitionAoe(TargeterDefinition):
     CenterLocator: (Embed, 0x0, 0x0, DrawablePositionLocator)
     pass
 
-class IGameModeConfig(0x3e5051fa):
+class IGameModeConfig(IGameModeConfigBase):
     pass
 
 class LoadingScreenLatencyThreshold():
@@ -23460,8 +23460,8 @@ class TftTrovesCelebrationHighlightSegmentData():
     Sequence: (Link, 0x0, 0x0, Sequence)
     HighlightEndVfx: (Hash, 0x0, 0x0, 0x0)
     0x65bf457: (String, 0x0, 0x0, 0x0)
-    0x6e44dfa1: (Link, 0x0, 0x0, Sequence)
-    0x988c4436: (Link, 0x0, 0x0, Sequence)
+    HighlightsSequence: (Link, 0x0, 0x0, Sequence)
+    NoHighlightsSequence: (Link, 0x0, 0x0, Sequence)
     HighlightEndTimingOffset: (F32, 0x0, 0x0, 0x0)
     0xb6160f23: (F32, 0x0, 0x0, 0x0)
     HighlightContentTimingOffset: (F32, 0x0, 0x0, 0x0)
@@ -23499,11 +23499,11 @@ class CollectiblesEsportsTeamData():
     pass
 
 class 0xe2ff8b22():
-    0x5348f67c: (Pointer, 0x0, 0x0, 0x487b1677)
+    GeneralCondition: (Pointer, 0x0, 0x0, 0x487b1677)
     0x6c8f6dcf: (List2, 0x0, Pointer, 0x304e703f)
-    0x72e2a629: (List2, 0x0, Pointer, 0x304e703f)
+    CompleteRewardList: (List2, 0x0, Pointer, 0x304e703f)
     0x7829e090: (List2, 0x0, Pointer, 0x304e703f)
-    0xa2bf8c3e: (String, 0x0, 0x0, 0x0)
+    QuestName: (String, 0x0, 0x0, 0x0)
     IsEnabled: (Bool, 0x0, 0x0, 0x0)
     pass
 
@@ -23536,7 +23536,7 @@ class DestroyOnExitMap(MissileBehaviorSpec):
 class UiElementParticleSystem(UiElement):
     pass
 
-class LooseUiTextureData9Slice(0x5657b533, LooseUiTextureData):
+class LooseUiTextureData9Slice(LooseUiTextureDataBase, LooseUiTextureData):
     TopBottomHeights: (Vec2, 0x0, 0x0, 0x0)
     LeftRightWidths: (Vec2, 0x0, 0x0, 0x0)
     EdgeSizesLeftRight: (Vec2, 0x0, 0x0, 0x0)
@@ -23586,8 +23586,8 @@ class VfxPrimitiveProjectionBase(VfxPrimitiveBase):
     mProjection: (Embed, 0x0, 0x0, VfxProjectionDefinitionData)
     pass
 
-class 0xe4a9b58a():
-    0x616c68f2: (List2, 0x0, Embed, 0x5f5925f1)
+class TftShopContentData():
+    TierBags: (List2, 0x0, Embed, 0x5f5925f1)
     pass
 
 class HasBuffData():
@@ -23619,9 +23619,9 @@ class ISpellCalculationPart():
 class UiElementEffectCooldownRadialData(UiElementEffectData):
     mPerPixelUvsX: (Bool, 0x0, 0x0, 0x0)
     mIsFill: (Bool, 0x0, 0x0, 0x0)
-    TextureData: (Pointer, 0x0, 0x0, 0x840074ef)
+    TextureData: (Pointer, 0x0, 0x0, IUiEffectTextureDataProvider)
     mAtlas: (Pointer, 0x0, 0x0, AtlasData)
-    mAtlas: (Pointer, 0x0, 0x0, 0x840074ef)
+    mAtlas: (Pointer, 0x0, 0x0, IUiEffectTextureDataProvider)
     mFlipY: (Bool, 0x0, 0x0, 0x0)
     mFlipX: (Bool, 0x0, 0x0, 0x0)
     pass
@@ -23662,12 +23662,12 @@ class TftShopData():
     mIconPath: (String, 0x0, 0x0, 0x0)
     SellOverwriteTra: (String, 0x0, 0x0, 0x0)
     SellMobileOverwriteTra: (String, 0x0, 0x0, 0x0)
-    0xadf82603: (U8, 0x0, 0x0, 0x0)
+    BaseCurrency: (U8, 0x0, 0x0, 0x0)
     mDescriptionTra: (String, 0x0, 0x0, 0x0)
     mDisplayNameTra: (String, 0x0, 0x0, 0x0)
     TeamPlannerPortraitPath: (String, 0x0, 0x0, 0x0)
     AbilityIconPath: (String, 0x0, 0x0, 0x0)
-    0xeaa2d9d: (I32, 0x0, 0x0, 0x0)
+    BaseCost: (I32, 0x0, 0x0, 0x0)
     mDescription: (String, 0x0, 0x0, 0x0)
     pass
 
@@ -23696,14 +23696,14 @@ class MapAlternateAsset():
     mGrassTintTextureName: (String, 0x0, 0x0, 0x0)
     pass
 
-class 0xe55f21a9(ViewController):
+class TftEncounterPanelViewController(ViewController):
     Scene: (Hash, 0x0, 0x0, 0x0)
     BaseLoadable: (Link, 0x0, 0x0, UiPropertyLoadable)
-    0x6feaf470: (Hash, 0x0, 0x0, 0x0)
-    0xbb4e51d0: (Embed, 0x0, 0x0, 0xb2bf2c82)
-    0xbca8fa3a: (Hash, 0x0, 0x0, 0x0)
-    0xdd522de7: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
-    0xfca00ea8: (Hash, 0x0, 0x0, 0x0)
+    EncounterPanelScene: (Hash, 0x0, 0x0, 0x0)
+    EncounterSlotTemplate: (Embed, 0x0, 0x0, TftEncounterSlotData)
+    EncounterToggleButton: (Hash, 0x0, 0x0, 0x0)
+    MobileOverride: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
+    EncounterVerticalList: (Hash, 0x0, 0x0, 0x0)
     pass
 
 class 0xe561be2e():
@@ -23773,7 +23773,7 @@ class LuaPropertyDataGlobals():
     PropertyDataMap: (Map, Hash, Pointer, LuaPropertyData)
     pass
 
-class 0xe603295(ScriptTableSet):
+class StringArrayTableSet(ScriptTableSet):
     pass
 
 class 0xe60a86d3(TableValue):
@@ -23790,8 +23790,8 @@ class 0xe6144e6d(0x64c18f7d):
 
 class 0xe6147387(BaseRigPoseModifierData):
     OrientationType: (U8, 0x0, 0x0, 0x0)
-    0xb3d5945c: (Pointer, 0x0, 0x0, 0x6074d548)
-    0xfff69e4c: (List2, 0x0, Hash, 0x0)
+    OrientationSource: (Pointer, 0x0, 0x0, ILogicVector3Driver)
+    Joints: (List2, 0x0, Hash, 0x0)
     pass
 
 class ILevelBehavior():
@@ -23800,10 +23800,10 @@ class ILevelBehavior():
 class 0xe622d482(ILogicFloatDriver):
     pass
 
-class 0xe64e6ec3():
+class ISkinAugmentInstance():
     pass
 
-class 0xe66ae1e4(UiMetricTypeI):
+class UiMetricTypeSimpleI(UiMetricTypeI):
     Text: (Hash, 0x0, 0x0, 0x0)
     Icon: (Hash, 0x0, 0x0, 0x0)
     pass
@@ -23821,11 +23821,11 @@ class TftTeamPlannerTierData():
     TierTitle: (Hash, 0x0, 0x0, 0x0)
     pass
 
-class 0xe6a020e3(0xcee56575):
+class TftCutsceneAcceleratingMissileClip(TftCutsceneMissileClip):
     Acceleration: (F32, 0x0, 0x0, 0x0)
-    0x501a91fe: (F32, 0x0, 0x0, 0x0)
-    0x86df0364: (F32, 0x0, 0x0, 0x0)
-    0xfbe2eb62: (F32, 0x0, 0x0, 0x0)
+    InitialSpeed: (F32, 0x0, 0x0, 0x0)
+    MaxSpeed: (F32, 0x0, 0x0, 0x0)
+    MinSpeed: (F32, 0x0, 0x0, 0x0)
     pass
 
 class AttackEvents(MissileTriggeredActionSpec):
@@ -23862,22 +23862,22 @@ class LuaPropertyDataEntry():
     pass
 
 class 0xe6f0047():
-    0x2431da35: (U32, 0x0, 0x0, 0x0)
+    DragonGoldValue: (U32, 0x0, 0x0, 0x0)
     0x296018d6: (U32, 0x0, 0x0, 0x0)
-    0x37a9ec14: (U32, 0x0, 0x0, 0x0)
-    0x3cd0d32e: (U32, 0x0, 0x0, 0x0)
+    DragonSoulGoldValue: (U32, 0x0, 0x0, 0x0)
+    BaronGoldValue: (U32, 0x0, 0x0, 0x0)
     0x490b09: (U32, 0x0, 0x0, 0x0)
-    0xb97305a: (U32, 0x0, 0x0, 0x0)
+    TurretGoldValue: (U32, 0x0, 0x0, 0x0)
     0xbbdccf4e: (U32, 0x0, 0x0, 0x0)
     0xc649ac3c: (U32, 0x0, 0x0, 0x0)
-    0xd43d2913: (U32, 0x0, 0x0, 0x0)
+    RiftHeraldGoldValue: (U32, 0x0, 0x0, 0x0)
     pass
 
 class AiUnitConfig(AiUnitConfigBase):
     pass
 
 class LolModesTeamConfig(IGameModeConfig):
-    0x32b3b7d8: (Pointer, 0x0, 0x0, LolModesTeamDisplayData)
+    ByeTeamDisplayData: (Pointer, 0x0, 0x0, LolModesTeamDisplayData)
     0x363278ea: (U8, 0x0, 0x0, 0x0)
     TeamDisplayData: (List, 0x0, Embed, LolModesTeamDisplayData)
     TeamDisplayData: (List2, 0x0, Embed, LolModesTeamDisplayData)
@@ -23915,26 +23915,26 @@ class FixedNeutralCampSpawnBehavior(INeutralCampSpawnBehavior):
 
 class 0xe75aad84():
     0x10a065ec: (List2, 0x0, U8, 0x0)
-    0x235a352b: (U32, 0x0, 0x0, 0x0)
-    0x23634663: (U32, 0x0, 0x0, 0x0)
+    MaxSpawnCount: (U32, 0x0, 0x0, 0x0)
+    SpawnCountPerInterval: (U32, 0x0, 0x0, 0x0)
     0x299c176c: (Bool, 0x0, 0x0, 0x0)
-    0x393a3e09: (Pointer, 0x0, 0x0, 0x114828a9)
-    0x393a3e09: (Pointer, 0x0, 0x0, 0x2755f1f9)
-    0x713c87ef: (Pointer, 0x0, 0x0, 0x7546469c)
-    0x713c87ef: (Pointer, 0x0, 0x0, 0x87a6a884)
-    0x80162b77: (F32, 0x0, 0x0, 0x0)
+    WaveShape: (Pointer, 0x0, 0x0, 0x114828a9)
+    WaveShape: (Pointer, 0x0, 0x0, 0x2755f1f9)
+    SpawnLocation: (Pointer, 0x0, 0x0, 0x7546469c)
+    SpawnLocation: (Pointer, 0x0, 0x0, 0x87a6a884)
+    SpawnIntervalSecs: (F32, 0x0, 0x0, 0x0)
     Name: (String, 0x0, 0x0, 0x0)
     Characters: (List2, 0x0, Embed, 0x4f4c4ffc)
     Behaviors: (List2, 0x0, Pointer, 0x64c18f7d)
     0xa8705448: (Pointer, 0x0, 0x0, 0x968ce2ad)
-    0xab994058: (U32, 0x0, 0x0, 0x0)
+    TeamToSpawn: (U32, 0x0, 0x0, 0x0)
     0xaebfc2af: (Bool, 0x0, 0x0, 0x0)
-    0xb1bda8e9: (Bool, 0x0, 0x0, 0x0)
-    0xb1e8a18c: (Pointer, 0x0, 0x0, 0xbd3b9f20)
+    CanDespawn: (Bool, 0x0, 0x0, 0x0)
+    SpawnCountOvertime: (Pointer, 0x0, 0x0, 0xbd3b9f20)
     0xb97e4d7e: (Bool, 0x0, 0x0, 0x0)
     0xdc6c6389: (Bool, 0x0, 0x0, 0x0)
-    0xe9419d84: (U32, 0x0, 0x0, 0x0)
-    0xfac6be52: (List2, 0x0, Embed, 0xeff830de)
+    ClusterSize: (U32, 0x0, 0x0, 0x0)
+    ConditionalBehaviors: (List2, 0x0, Embed, 0xeff830de)
     pass
 
 class BuffEffect():
@@ -23960,8 +23960,8 @@ class MaterialInstanceDef(IResource, IMaterialDef):
 class 0xe78a27ae(0x2b00c366):
     ItemId: (String, 0x0, 0x0, 0x0)
     0x2484d6c3: (Bool, 0x0, 0x0, 0x0)
-    0x5ad01cc3: (Link, 0x0, 0x0, SummonerEmote)
-    0xf8d0f0eb: (String, 0x0, 0x0, 0x0)
+    Emote: (Link, 0x0, 0x0, SummonerEmote)
+    ItemTypeId: (String, 0x0, 0x0, 0x0)
     pass
 
 class Challenge(BaseLoadoutData):
@@ -23971,14 +23971,14 @@ class Challenge(BaseLoadoutData):
 class EndOfGameViewController(ViewController):
     DefeatGroupHandle: (Hash, 0x0, 0x0, 0x0)
     BaseLoadable: (Link, 0x0, 0x0, UiPropertyLoadable)
-    0x4619d769: (Hash, 0x0, 0x0, 0x0)
+    VanguardScene: (Hash, 0x0, 0x0, 0x0)
     MainScene: (Hash, 0x0, 0x0, 0x0)
-    0x53bb831c: (Hash, 0x0, 0x0, 0x0)
+    VanguardBgScene: (Hash, 0x0, 0x0, 0x0)
     MobileOverrideLoadable: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
     ContinueButton: (Hash, 0x0, 0x0, 0x0)
     VictoryGroupHandle: (Hash, 0x0, 0x0, 0x0)
-    0x9ef8479e: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
-    0xda2d042a: (Hash, 0x0, 0x0, 0x0)
+    TencentOverrideLoadable: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
+    VanguardContinueButton: (Hash, 0x0, 0x0, 0x0)
     pass
 
 class UnitStatusPriorityList():
@@ -23999,7 +23999,7 @@ class DamageSourceTemplate():
     DamageProperties: (U32, 0x0, 0x0, 0x0)
     pass
 
-class 0xe7d2c6f3(0x2efc296d):
+class 0xe7d2c6f3(ITftBehaviorScriptEvent):
     pass
 
 class LabelElement():
@@ -24015,8 +24015,8 @@ class VerticalFacingType():
     pass
 
 class 0xe7face9d():
-    0x914db39: (String, 0x0, 0x0, 0x0)
-    0xefcafe35: (String, 0x0, 0x0, 0x0)
+    StaticTexturePath: (String, 0x0, 0x0, 0x0)
+    VfxTexturePath: (String, 0x0, 0x0, 0x0)
     pass
 
 class HudColorData():
@@ -24052,7 +24052,7 @@ class HudColorData():
     mLevelUpColor: (Color, 0x0, 0x0, 0x0)
     VoteYesColor: (Color, 0x0, 0x0, 0x0)
     mVoiceChatHaloTextureColor: (Color, 0x0, 0x0, 0x0)
-    0x5633fd55: (Color, 0x0, 0x0, 0x0)
+    TftFriendlyColor: (Color, 0x0, 0x0, 0x0)
     mEvolutionColor: (Color, 0x0, 0x0, 0x0)
     mDeathFriendlyTeamColor: (Color, 0x0, 0x0, 0x0)
     mItemCalloutBodyColor: (Color, 0x0, 0x0, 0x0)
@@ -24135,8 +24135,8 @@ class LobbyLabFields():
     PopupViewController: (Link, 0x0, 0x0, ModalDialogViewController)
     pass
 
-class 0xe8809281(IRunFunctionBlock):
-    Function: (Embed, 0x0, 0x0, 0x106bef1e)
+class RunLevelFunctionBlock(IRunFunctionBlock):
+    Function: (Embed, 0x0, 0x0, LevelScriptFunctionLink)
     pass
 
 class BerserkTargetingPriorityList():
@@ -24169,8 +24169,8 @@ class HqCommon(AnimatedBuilding):
     pass
 
 class 0xe8c34b52(IGameModeConfig):
-    0x201dd890: (Color, 0x0, 0x0, 0x0)
-    0x85e383b4: (Map, U8, Color, 0x0)
+    EliminatedColor: (Color, 0x0, 0x0, 0x0)
+    AugmentColors: (Map, U8, Color, 0x0)
     0xf021feb3: (U8, 0x0, 0x0, 0x0)
     pass
 
@@ -24200,7 +24200,7 @@ class ManagerSettings():
     pass
 
 class 0xe90af953():
-    0x4a2aa0cc: (Hash, 0x0, 0x0, 0x0)
+    Buff: (Hash, 0x0, 0x0, 0x0)
     0xbe161d6e: (U8, 0x0, 0x0, 0x0)
     pass
 
@@ -24212,8 +24212,8 @@ class 0xe92f8b6c(ViewController):
     0x1b7ff930: (Embed, 0x0, 0x0, 0x12b12bdf)
     0x23ff90f5: (String, 0x0, 0x0, 0x0)
     CardTemplate: (Pointer, 0x0, 0x0, LoadingScreenPlayerCardBaseData)
-    0x30423ebc: (Vec4, 0x0, 0x0, 0x0)
-    0x3bdfdf95: (Pointer, 0x0, 0x0, 0xacb2dba1)
+    PlayerSlotSplashUv: (Vec4, 0x0, 0x0, 0x0)
+    SpacerData: (Pointer, 0x0, 0x0, 0xacb2dba1)
     BaseLoadable: (Link, 0x0, 0x0, UiPropertyLoadable)
     0x42324784: (Embed, 0x0, 0x0, 0x7dc4f3ec)
     0x52a578b9: (Embed, 0x0, 0x0, 0x12b12bdf)
@@ -24224,7 +24224,7 @@ class 0xe92f8b6c(ViewController):
     0xa052ddda: (Hash, 0x0, 0x0, 0x0)
     0xadf9c6d7: (Embed, 0x0, 0x0, 0x7dc4f3ec)
     0xc2e4a761: (String, 0x0, 0x0, 0x0)
-    0xd623ede1: (Link, 0x0, 0x0, UiPropertyLoadable)
+    SubTeamsLoadable: (Link, 0x0, 0x0, UiPropertyLoadable)
     0xebeabff1: (Hash, 0x0, 0x0, 0x0)
     0xfff63be6: (String, 0x0, 0x0, 0x0)
     pass
@@ -24241,7 +24241,7 @@ class VfxPrimitivePlanarProjection(VfxPrimitiveProjectionBase):
     pass
 
 class 0xe9a3c91d(GameCalculation):
-    0x68508370: (Pointer, 0x0, 0x0, IGameCalculationPart)
+    mRangedMultiplier: (Pointer, 0x0, 0x0, IGameCalculationPart)
     pass
 
 class FontLocaleResolutions():
@@ -24263,7 +24263,7 @@ class NeutralTimerViewController(ViewController):
     NeutralTimers: (List, 0x0, Embed, NeutralTimers)
     HasEsportsUi: (Bool, 0x0, 0x0, 0x0)
     ObjectName: (String, 0x0, 0x0, 0x0)
-    0xfec6c537: (Link, 0x0, 0x0, UiPropertyLoadable)
+    EsportsLoadable: (Link, 0x0, 0x0, UiPropertyLoadable)
     pass
 
 class MaterialParameterDataCollection():
@@ -24285,15 +24285,15 @@ class ScoreLineCherryUiData(ScoreLineBaseUiData):
     ItemSlots: (Embed, 0x0, 0x0, DetailedItemSlots)
     ItemSlots: (Embed, 0x0, 0x0, SimpleItemSlots)
     Scene: (Hash, 0x0, 0x0, 0x0)
-    Portrait: (Embed, 0x0, 0x0, 0x7c5af3ac)
+    Portrait: (Embed, 0x0, 0x0, CherryUiPlayerPortraitData)
     ChatMuteButton: (Hash, 0x0, 0x0, 0x0)
-    0x43a26ef5: (Embed, 0x0, 0x0, 0xfc331f53)
+    AugmentSlots: (Embed, 0x0, 0x0, 0xfc331f53)
     OpenReportModalButton: (Hash, 0x0, 0x0, 0x0)
     DragBarSlot: (Hash, 0x0, 0x0, 0x0)
     PortraitRegion: (Hash, 0x0, 0x0, 0x0)
     SpellSlots: (Embed, 0x0, 0x0, ScoreLineSpellSlots)
     SelfSlotHighlight: (Hash, 0x0, 0x0, 0x0)
-    ChampionName: (Embed, 0x0, 0x0, 0x480cc223)
+    ChampionName: (Embed, 0x0, 0x0, ChampionNameUiData)
     0x9f82652b: (Hash, 0x0, 0x0, 0x0)
     MuteAllButton: (Hash, 0x0, 0x0, 0x0)
     SocialTooltipAnchor: (Hash, 0x0, 0x0, 0x0)
@@ -24358,24 +24358,24 @@ class LoadoutFeatureData(BinFileContainer):
 class FxActionTimeDilateInstance(IFxActionInstance):
     pass
 
-class 0xea5177f5(ViewController):
-    0x121d849: (Hash, 0x0, 0x0, 0x0)
-    0x128cfa88: (Embed, 0x0, 0x0, 0x77fb37dd)
+class CherrySpectateMatchDialogViewController(ViewController):
+    ButtonDefaultText: (Hash, 0x0, 0x0, 0x0)
+    MatchTemplate: (Embed, 0x0, 0x0, 0x77fb37dd)
     0x14810744: (String, 0x0, 0x0, 0x0)
     Scene: (Hash, 0x0, 0x0, 0x0)
-    0x2ec20ebc: (Hash, 0x0, 0x0, 0x0)
+    SpectateButtonHandle: (Hash, 0x0, 0x0, 0x0)
     BaseLoadable: (Link, 0x0, 0x0, UiPropertyLoadable)
-    0x5938ac8e: (Hash, 0x0, 0x0, 0x0)
-    0x5b66960a: (Hash, 0x0, 0x0, 0x0)
-    0x63d4bf7a: (Embed, 0x0, 0x0, 0x6634ed37)
-    0x6c986511: (Hash, 0x0, 0x0, 0x0)
-    0x6ec59133: (Hash, 0x0, 0x0, 0x0)
+    MatchGrid: (Hash, 0x0, 0x0, 0x0)
+    ButtonHoverText: (Hash, 0x0, 0x0, 0x0)
+    DialogText: (Embed, 0x0, 0x0, CherrySpectateMatchDialogText)
+    TeamOneIcon: (Hash, 0x0, 0x0, 0x0)
+    TeamTwoIcon: (Hash, 0x0, 0x0, 0x0)
     0x9e7b5cd7: (String, 0x0, 0x0, 0x0)
     ButtonText: (Hash, 0x0, 0x0, 0x0)
-    0xc9d78faf: (String, 0x0, 0x0, 0x0)
+    TitleOngoingTra: (String, 0x0, 0x0, 0x0)
     0xd9e1766a: (String, 0x0, 0x0, 0x0)
-    0xdf1ebde2: (Hash, 0x0, 0x0, 0x0)
-    0xea19600b: (Hash, 0x0, 0x0, 0x0)
+    ButtonPressedText: (Hash, 0x0, 0x0, 0x0)
+    SpectateTitleText: (Hash, 0x0, 0x0, 0x0)
     TitleText: (Hash, 0x0, 0x0, 0x0)
     pass
 
@@ -24402,13 +24402,13 @@ class ContextualConditionSpellIsReady(IContextualConditionSpell, IContextualCond
     mSpellIsReady: (Bool, 0x0, 0x0, 0x0)
     pass
 
-class 0xea6e0122():
-    0x1c20405e: (Embed, 0x0, 0x0, 0xa450b25)
-    0x51540388: (Hash, 0x0, 0x0, 0x0)
-    0x845a3b0d: (Embed, 0x0, 0x0, 0xa450b25)
+class CherryTeamFlyoutPanelTeamFrame():
+    EliminatedState: (Embed, 0x0, 0x0, IconStateData)
+    Critical: (Hash, 0x0, 0x0, 0x0)
+    CriticalState: (Embed, 0x0, 0x0, IconStateData)
     Default: (Hash, 0x0, 0x0, 0x0)
-    0xa5ebea7d: (Hash, 0x0, 0x0, 0x0)
-    DefaultState: (Embed, 0x0, 0x0, 0xa450b25)
+    Eliminated: (Hash, 0x0, 0x0, 0x0)
+    DefaultState: (Embed, 0x0, 0x0, IconStateData)
     pass
 
 class CreateCustomTableBlock(IScriptBlock):
@@ -24434,7 +24434,7 @@ class NotificationListItemData():
     LootIcon: (Hash, 0x0, 0x0, 0x0)
     UnreadIcon: (Hash, 0x0, 0x0, 0x0)
     BodyText: (Hash, 0x0, 0x0, 0x0)
-    0xb698d01e: (Hash, 0x0, 0x0, 0x0)
+    PassRewardIcon: (Hash, 0x0, 0x0, 0x0)
     TimestampText: (Hash, 0x0, 0x0, 0x0)
     AddFriendIcon: (Hash, 0x0, 0x0, 0x0)
     GenericIcon: (Hash, 0x0, 0x0, 0x0)
@@ -24447,7 +24447,7 @@ class 0xeacb459e(ViewController):
     BaseLoadable: (Link, 0x0, 0x0, UiPropertyLoadable)
     HealthBarData: (Embed, 0x0, 0x0, HealthBarData)
     0xe97a2996: (Hash, 0x0, 0x0, 0x0)
-    0xeb649d77: (Embed, 0x0, 0x0, UiUnitStatusData)
+    StatusData: (Embed, 0x0, 0x0, UiUnitStatusData)
     pass
 
 class AiUnitConfigBase():
@@ -24557,13 +24557,13 @@ class SummonerNameCreateViewController(ViewController):
     InputScene: (Hash, 0x0, 0x0, 0x0)
     BaseLoadable: (Link, 0x0, 0x0, UiPropertyLoadable)
     MainScene: (Hash, 0x0, 0x0, 0x0)
-    0x5fccadd0: (Hash, 0x0, 0x0, 0x0)
+    LoadingText: (Hash, 0x0, 0x0, 0x0)
     InputText: (Hash, 0x0, 0x0, 0x0)
     SubmitButtonDefinition: (Hash, 0x0, 0x0, 0x0)
     pass
 
 class 0xeb7bcb69(ISequenceAction):
-    0x419478b: (Map, U8, Hash, 0x0)
+    ParticleEffects: (Map, U8, Hash, 0x0)
     0x5af11142: (Link, 0x0, 0x0, SequenceObjectSelector)
     pass
 
@@ -24578,7 +24578,7 @@ class UpdaterData():
     Input: (Pointer, 0x0, 0x0, IBaseParametricUpdater)
     pass
 
-class 0xebc572c3(0x4c895a1d):
+class IScriptBtEvent(IScriptEvent):
     pass
 
 class PostGamePlayerTemplate():
@@ -24616,10 +24616,10 @@ class TftAnnouncementsViewController(ViewController):
     BaseBinName: (String, 0x0, 0x0, 0x0)
     pass
 
-class 0xebddd91a(IContextualConditionBuff):
+class ContextualConditionBuffCounterChanged(IContextualConditionBuff):
     0x395e4a90: (Bool, 0x0, 0x0, 0x0)
-    0x4a2aa0cc: (Hash, 0x0, 0x0, 0x0)
-    0x7f615b1b: (Bool, 0x0, 0x0, 0x0)
+    Buff: (Hash, 0x0, 0x0, 0x0)
+    ExcludeIncrements: (Bool, 0x0, 0x0, 0x0)
     0xfa24eccf: (Bool, 0x0, 0x0, 0x0)
     pass
 
@@ -24628,15 +24628,15 @@ class CustomAbilitiesUiData():
     ExtraAbilities: (Map, U32, Embed, SpellSlotDetailedUiDefinition)
     pass
 
-class 0xebec7251(0xc82f0d9):
-    0xd209ff45: (F32, 0x0, 0x0, 0x0)
+class TftGravityHeightSolver(TftHeightSolverType):
+    Gravity: (F32, 0x0, 0x0, 0x0)
     pass
 
 class LogicDriverBoolParametricUpdater(IBooleanParametricUpdater):
     Driver: (Pointer, 0x0, 0x0, ILogicBoolDriver)
     pass
 
-class 0xec1355b3(MapPlaceable):
+class IPath(MapPlaceable):
     pass
 
 class LossOfControlTemplate():
@@ -24714,9 +24714,9 @@ class TftTeamPlannerViewController(ViewController):
     PaginateTraitButtonTemplate: (Hash, 0x0, 0x0, 0x0)
     ActiveTraitBackground: (Hash, 0x0, 0x0, 0x0)
     MobileOverrideLoadable: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
-    0x6532e95: (Hash, 0x0, 0x0, 0x0)
-    0x67c56f9d: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
-    0x68135db9: (Hash, 0x0, 0x0, 0x0)
+    ActiveTraitsBg: (Hash, 0x0, 0x0, 0x0)
+    TabletOverrideLoadable: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
+    SnapshotButton: (Hash, 0x0, 0x0, 0x0)
     0x68b73b7b: (String, 0x0, 0x0, 0x0)
     TierData: (Embed, 0x0, 0x0, TftTeamPlannerTierData)
     TeamFullErrorDisplayTimeSecs: (F32, 0x0, 0x0, 0x0)
@@ -24726,8 +24726,8 @@ class TftTeamPlannerViewController(ViewController):
     PaginateTraitsButton: (Hash, 0x0, 0x0, 0x0)
     ViewPaneDefinition: (Embed, 0x0, 0x0, ViewPaneDefinition)
     ChampionListingData: (Embed, 0x0, 0x0, TftTeamPlannerChampionListingData)
-    0x98ecb565: (String, 0x0, 0x0, 0x0)
-    0xa004a31: (String, 0x0, 0x0, 0x0)
+    SnapshotTraKey: (String, 0x0, 0x0, 0x0)
+    ClearAllTrakey: (String, 0x0, 0x0, 0x0)
     0xa579b2bc: (Hash, 0x0, 0x0, 0x0)
     0xa88951d0: (Hash, 0x0, 0x0, 0x0)
     ActiveTraitButton: (Hash, 0x0, 0x0, 0x0)
@@ -24758,7 +24758,7 @@ class DamageUnitCheat(Cheat):
     mHitResult: (U32, 0x0, 0x0, 0x0)
     pass
 
-class 0xec468463(0xf9ded696):
+class 0xec468463(SelectSpellBlock):
     pass
 
 class 0xec733fe2(0xe07edfa4):
@@ -24781,7 +24781,7 @@ class UiChatPaneDefinition():
     ViewPane: (Hash, 0x0, 0x0, 0x0)
     pass
 
-class LooseUiTextureData(0x5657b533, 0x840074ef, IUiTextureDataProvider):
+class LooseUiTextureData(LooseUiTextureDataBase, IUiEffectTextureDataProvider, IUiTextureDataProvider):
     TextureName: (String, 0x0, 0x0, 0x0)
     pass
 
@@ -24792,7 +24792,7 @@ class MultiDragonSoulSlotUiData():
 
 class 0xeca2da9a():
     Inputs: (List2, 0x0, Pointer, ScriptTableSet)
-    0xfc881855: (List2, 0x0, Pointer, IScriptValueGet)
+    Outputs: (List2, 0x0, Pointer, IScriptValueGet)
     pass
 
 class HasNNearbyVisibleUnitsRequirement(ICastRequirement):
@@ -24815,17 +24815,17 @@ class VeritcalFacingMatchVelocity(VerticalFacingType):
 class 0xece8d41b():
     DescriptionText: (Hash, 0x0, 0x0, 0x0)
     ProgressText: (Hash, 0x0, 0x0, 0x0)
-    0x2877e305: (Hash, 0x0, 0x0, 0x0)
-    0x41f4aa1: (Hash, 0x0, 0x0, 0x0)
+    SecondRewardGroup: (Hash, 0x0, 0x0, 0x0)
+    FirstRewardGroup: (Hash, 0x0, 0x0, 0x0)
     RewardText: (Hash, 0x0, 0x0, 0x0)
     RewardIcon: (Hash, 0x0, 0x0, 0x0)
-    0x715da9a6: (Hash, 0x0, 0x0, 0x0)
-    0x794852ff: (Hash, 0x0, 0x0, 0x0)
-    0x805bd5e3: (Hash, 0x0, 0x0, 0x0)
-    0x9c572ea4: (Hash, 0x0, 0x0, 0x0)
-    0xc6abb2cb: (Hash, 0x0, 0x0, 0x0)
-    0xc6b053ff: (Hash, 0x0, 0x0, 0x0)
-    0xe418aa98: (Hash, 0x0, 0x0, 0x0)
+    RewardRegion: (Hash, 0x0, 0x0, 0x0)
+    SecondRewardIcon: (Hash, 0x0, 0x0, 0x0)
+    SecondRewardFrame: (Hash, 0x0, 0x0, 0x0)
+    RewardLayout: (Hash, 0x0, 0x0, 0x0)
+    FirstRewardIcon: (Hash, 0x0, 0x0, 0x0)
+    FirstRewardFrame: (Hash, 0x0, 0x0, 0x0)
+    ProgressCompleteIcon: (Hash, 0x0, 0x0, 0x0)
     0xedc62dad: (Hash, 0x0, 0x0, 0x0)
     TitleText: (Hash, 0x0, 0x0, 0x0)
     pass
@@ -24840,11 +24840,11 @@ class EnvironmentUnlitShadingModel(IEnvironmentShadingModel):
     pass
 
 class 0xed070692(IScriptBlock):
-    0xa4015da5: (Embed, 0x0, 0x0, IntTableSet)
+    SelectedTerrain: (Embed, 0x0, 0x0, IntTableSet)
     pass
 
 class 0xed124985(IScriptBlock):
-    0x12a17b4f: (Pointer, 0x0, 0x0, IMinionWaveBehavior)
+    OverrideBehavior: (Pointer, 0x0, 0x0, IMinionWaveBehavior)
     MinionType: (U8, 0x0, 0x0, 0x0)
     pass
 
@@ -24881,16 +24881,16 @@ class ViewController():
     pass
 
 class 0xed76e0cf(ISequenceAction):
-    0x9d3b176c: (String, 0x0, 0x0, 0x0)
+    SoundEvent: (String, 0x0, 0x0, 0x0)
     pass
 
-class 0xed7b9fb():
+class CherryCameo():
     Enabled: (Bool, 0x0, 0x0, 0x0)
     0x3942d706: (String, 0x0, 0x0, 0x0)
     SkinId: (U32, 0x0, 0x0, 0x0)
     ChampionName: (String, 0x0, 0x0, 0x0)
     0xbe8164b4: (String, 0x0, 0x0, 0x0)
-    0xe36bd611: (Hash, 0x0, 0x0, 0x0)
+    ChampionNameHash: (Hash, 0x0, 0x0, 0x0)
     0xf426fde9: (String, 0x0, 0x0, 0x0)
     pass
 
@@ -24900,14 +24900,14 @@ class FunctionDefinition():
     Sequence: (Embed, 0x0, 0x0, ScriptSequence)
     OutputParameters: (List, 0x0, Hash, 0x0)
     OutputParameters: (List, 0x0, String, 0x0)
-    0x4f1d51f0: (Embed, 0x0, 0x0, 0xeca2da9a)
+    FunctionDef: (Embed, 0x0, 0x0, 0xeca2da9a)
     pass
 
 class MultiKillLogic(IStatStoneLogicDriver):
     pass
 
-class 0xedb4ab83():
-    0x14f3cff4: (Link, 0x0, 0x0, 0x5d765a43)
+class ConfigFloat():
+    Enabler: (Link, 0x0, 0x0, IEnabler)
     Value: (F32, 0x0, 0x0, 0x0)
     pass
 
@@ -24933,7 +24933,7 @@ class EsportsData():
     Leagues: (List, 0x0, String, 0x0)
     pass
 
-class 0xee045a71(0x30f0efe0):
+class FunctionModule(GameScript):
     pass
 
 class TargetTypeFilter(IStatStoneLogicDriver):
@@ -24959,15 +24959,15 @@ class TargeterDefinitionSkipTerrain(TargeterDefinition):
     pass
 
 class 0xee28fb8d():
-    0x54b92b94: (Hash, 0x0, 0x0, 0x0)
-    0x628af3b0: (String, 0x0, 0x0, 0x0)
-    0x63f43935: (Hash, 0x0, 0x0, 0x0)
-    0x86feb6cc: (Hash, 0x0, 0x0, 0x0)
+    DetailedStatName: (Hash, 0x0, 0x0, 0x0)
+    DetailedStatTra: (String, 0x0, 0x0, 0x0)
+    DetailedHoverRegion: (Hash, 0x0, 0x0, 0x0)
+    DetailedGroup: (Hash, 0x0, 0x0, 0x0)
     0xab77f602: (Hash, 0x0, 0x0, 0x0)
-    0xe4b4a2b3: (Hash, 0x0, 0x0, 0x0)
+    DetailedStatAmount: (Hash, 0x0, 0x0, 0x0)
     pass
 
-class 0xee39916f(0x7d3206d):
+class 0xee39916f(IVfxShape):
     EmitOffset: (Vec3, 0x0, 0x0, 0x0)
     pass
 
@@ -25101,21 +25101,21 @@ class EffectGlowElementData(EffectElementData):
     pass
 
 class AugmentSlotData():
-    0x2f1fc9f9: (Hash, 0x0, 0x0, 0x0)
+    AugmentIconBackground: (Hash, 0x0, 0x0, 0x0)
     AugmentGroup: (Hash, 0x0, 0x0, 0x0)
     AugmentPickedVfx: (Hash, 0x0, 0x0, 0x0)
     0x4ddb7d67: (Hash, 0x0, 0x0, 0x0)
     AugmentDescription: (Hash, 0x0, 0x0, 0x0)
-    0x5f1b3269: (Hash, 0x0, 0x0, 0x0)
+    AugmentRefreshVfx: (Hash, 0x0, 0x0, 0x0)
     AugmentNotPickedVfx: (Hash, 0x0, 0x0, 0x0)
     AugmentIcon: (Hash, 0x0, 0x0, 0x0)
-    0x954bc86a: (Hash, 0x0, 0x0, 0x0)
-    0x9dcaddb: (Hash, 0x0, 0x0, 0x0)
-    0xb812c692: (Hash, 0x0, 0x0, 0x0)
-    0xbcce96da: (Hash, 0x0, 0x0, 0x0)
-    0xc4b6fb6: (Embed, 0x0, 0x0, 0xc4b6fb6)
-    0xd86980d8: (Hash, 0x0, 0x0, 0x0)
-    0xd94aa383: (Hash, 0x0, 0x0, 0x0)
+    AugmentIdleVfx: (Hash, 0x0, 0x0, 0x0)
+    AugmentName: (Hash, 0x0, 0x0, 0x0)
+    AugmentIconMedium: (Hash, 0x0, 0x0, 0x0)
+    AugmentHoverVfx: (Hash, 0x0, 0x0, 0x0)
+    AugmentDisplayTagData: (Embed, 0x0, 0x0, AugmentDisplayTagData)
+    AugmentIconLarge: (Hash, 0x0, 0x0, 0x0)
+    AugmentRefreshOverlayVfx: (Hash, 0x0, 0x0, 0x0)
     AugmentButton: (Hash, 0x0, 0x0, 0x0)
     pass
 
@@ -25128,14 +25128,14 @@ class ContextualConditionItemCanBePurchased(IContextualCondition):
     mItemCanBePurchased: (Bool, 0x0, 0x0, 0x0)
     pass
 
-class 0xeea0bf1(0x8f1ade1):
+class 0xeea0bf1(ISkinAugmentModifier):
     0x629c2476: (String, 0x0, 0x0, 0x0)
     0x7679ee15: (String, 0x0, 0x0, 0x0)
     0xa3ab316a: (String, 0x0, 0x0, 0x0)
     0xc29fd86f: (String, 0x0, 0x0, 0x0)
     pass
 
-class 0xeea7c9b8(IScriptBlock, IBehaviorScriptBlock):
+class TargetCatFrameVisibilityKey(IScriptBlock, IBehaviorScriptBlock):
     Sequence: (Embed, 0x0, 0x0, ScriptBtRandomWeightedSelector)
     Percentages: (List2, 0x0, Pointer, IIntGet)
     pass
@@ -25245,8 +25245,8 @@ class UiPerkSummonerSpecialistToggles():
     SelectorMenu: (Embed, 0x0, 0x0, UiPerkSummonerSpecialistSelector)
     pass
 
-class UiMetricUnitKda(UiMetricUnitTypeI, 0x784e827a):
-    0x5e509067: (Bool, 0x0, 0x0, 0x0)
+class UiMetricUnitKda(UiMetricUnitTypeI, UiMetricUnitTypeSimpleI):
+    ShowDisguise: (Bool, 0x0, 0x0, 0x0)
     KdaText: (Hash, 0x0, 0x0, 0x0)
     KdaIcon: (Hash, 0x0, 0x0, 0x0)
     pass
@@ -25275,7 +25275,7 @@ class CursorDataTeamContext():
     mData: (List, 0x3, Embed, CursorData)
     pass
 
-class 0xef77ac04():
+class ObjectiveVoteData():
     ForIcon: (Hash, 0x0, 0x0, 0x0)
     Group: (Hash, 0x0, 0x0, 0x0)
     PendingIcon: (Hash, 0x0, 0x0, 0x0)
@@ -25291,7 +25291,7 @@ class NeutralTimerElements():
     DeadIcon: (Hash, 0x0, 0x0, 0x0)
     AliveIcon: (Hash, 0x0, 0x0, 0x0)
     Backdrop: (Hash, 0x0, 0x0, 0x0)
-    0xb791aed6: (Hash, 0x0, 0x0, 0x0)
+    VoteReject: (Hash, 0x0, 0x0, 0x0)
     pass
 
 class PropertyLoadable():
@@ -25299,7 +25299,7 @@ class PropertyLoadable():
     pass
 
 class 0xefe2309(IVectorGet, IScriptValueGet):
-    0x598b82e8: (Hash, 0x0, 0x0, 0x0)
+    MapPlaceable: (Hash, 0x0, 0x0, 0x0)
     pass
 
 class 0xeff830de():
@@ -25311,21 +25311,21 @@ class DestroyChildrenOnMovementCompleteSpec(MissileBehaviorSpec):
     mDelay: (I32, 0x0, 0x0, 0x0)
     pass
 
-class LooseUiTextureData3SliceH(0x5657b533, LooseUiTextureData):
+class LooseUiTextureData3SliceH(LooseUiTextureDataBase, LooseUiTextureData):
     LeftRightWidths: (Vec2, 0x0, 0x0, 0x0)
     EdgeSizes: (Vec2, 0x0, 0x0, 0x0)
     EdgeSizesLeftRight: (Vec2, 0x0, 0x0, 0x0)
     pass
 
 class 0xf008d4c9(0xd97f9bd3):
-    0xd70f51d0: (F32, 0x0, 0x0, 0x0)
+    TimeToTarget: (F32, 0x0, 0x0, 0x0)
     pass
 
 class SinusoidalHeightSolver(HeightSolverType):
     mVerticalOffset: (F32, 0x0, 0x0, 0x0)
     mAmplitude: (F32, 0x0, 0x0, 0x0)
     mNumberOfPeriods: (F32, 0x0, 0x0, 0x0)
-    0xe1833fac: (F32, 0x0, 0x0, 0x0)
+    PhaseShift: (F32, 0x0, 0x0, 0x0)
     pass
 
 class 0xf00f3333(0x288b8edc):
@@ -25335,13 +25335,13 @@ class 0xf01e253c():
     0x18c1cf54: (U32, 0x0, 0x0, 0x0)
     0x20e00ac7: (List2, 0x0, Hash, 0x0)
     0x490b09: (U32, 0x0, 0x0, 0x0)
-    0x5af82298: (List2, 0x0, Hash, 0x0)
-    0x659ff111: (List2, 0x0, Hash, 0x0)
+    JungleItems: (List2, 0x0, Hash, 0x0)
+    JunglePlayerBuffs: (List2, 0x0, Hash, 0x0)
     0x77936f56: (List2, 0x0, Hash, 0x0)
-    0x8e96f788: (List2, 0x0, Hash, 0x0)
+    GainedReplay: (List2, 0x0, Hash, 0x0)
     0x92ac2c5f: (F32, 0x0, 0x0, 0x0)
     0xa5084a86: (F32, 0x0, 0x0, 0x0)
-    0xb46a506d: (F32, 0x0, 0x0, 0x0)
+    JunglePlayerWeight: (F32, 0x0, 0x0, 0x0)
     0xca245131: (List2, 0x0, Hash, 0x0)
     pass
 
@@ -25360,7 +25360,7 @@ class TftSellArea():
     SceneHandle: (Hash, 0x0, 0x0, 0x0)
     pass
 
-class StringTableGet(RsTableGet, ScriptTableGet, IStringGet, TableGet, 0xd13cf0c3):
+class StringTableGet(RsTableGet, ScriptTableGet, IStringGet, TableGet, IStringHashGet):
     Table: (Pointer, 0x0, 0x0, ScriptTable)
     Var: (Hash, 0x0, 0x0, 0x0)
     Var: (String, 0x0, 0x0, 0x0)
@@ -25462,9 +25462,9 @@ class SpawnAiTurret(LevelScriptBlock):
     MapObjectName: (String, 0x0, 0x0, 0x0)
     pass
 
-class 0xf195e56b():
+class BotsSpellData():
     0x38382c53: (List2, 0x0, Embed, 0x150d1b92)
-    0x450d68a0: (U32, 0x0, 0x0, 0x0)
+    DamageTag: (U32, 0x0, 0x0, 0x0)
     0x61c10808: (U32, 0x0, 0x0, 0x0)
     0x6d548702: (Pointer, 0x0, 0x0, IGameCalculation)
     0xec17e271: (List2, 0x0, Embed, 0xb09016f6)
@@ -25489,7 +25489,7 @@ class VotePanelViewController(ViewController):
 
 class 0xf1cf8988(0x8b33cf88):
     Source: (Link, 0x0, 0x0, SequenceObjectSelector)
-    0xc2e77088: (U32, 0x0, 0x0, 0x0)
+    DebugOverride: (U32, 0x0, 0x0, 0x0)
     pass
 
 class 0xf1fd1323():
@@ -25506,7 +25506,7 @@ class InputControlSet():
     pass
 
 class 0xf252334a(0x2755f1f9):
-    0x548e8cea: (F32, 0x0, 0x0, 0x0)
+    OuterRadius: (F32, 0x0, 0x0, 0x0)
     InnerRadius: (F32, 0x0, 0x0, 0x0)
     pass
 
@@ -25521,7 +25521,7 @@ class LuaTableData():
 
 class SubmeshVisibilityBoolDriver(ILogicBoolDriver):
     Visible: (Bool, 0x0, 0x0, 0x0)
-    0xd33d8404: (Bool, 0x0, 0x0, 0x0)
+    AnySubmesh: (Bool, 0x0, 0x0, 0x0)
     Submeshes: (List, 0x0, Hash, 0x0)
     pass
 
@@ -25555,13 +25555,13 @@ class MouseOverEffectData():
 class StoreCategoryButtonDefinition():
     Button: (Hash, 0x0, 0x0, 0x0)
     Category: (U32, 0x0, 0x0, 0x0)
-    0xdcabd2fa: (Embed, 0x0, 0x0, 0x6241da2)
+    NewPip: (Embed, 0x0, 0x0, 0x6241da2)
     ButtonDefinition: (Hash, 0x0, 0x0, 0x0)
     pass
 
 class MapActionSetVisibilityFlag(MapAction):
     TransitionTime: (F32, 0x0, 0x0, 0x0)
-    0xb58e5376: (U8, 0x0, 0x0, 0x0)
+    OperationType: (U8, 0x0, 0x0, 0x0)
     VisibilityFlags: (U8, 0x0, 0x0, 0x0)
     pass
 
@@ -25596,8 +25596,8 @@ class 0xf2bc55fb():
 
 class 0xf2c8525d(0x114828a9):
     Axis: (Vec2, 0x0, 0x0, 0x0)
-    0x6d3d9c1: (F32, 0x0, 0x0, 0x0)
-    0xe164f83a: (F32, 0x0, 0x0, 0x0)
+    GapWidth: (F32, 0x0, 0x0, 0x0)
+    SideLength: (F32, 0x0, 0x0, 0x0)
     pass
 
 class MissionBuffData():
@@ -25619,7 +25619,7 @@ class MissionBuffData():
     Dragon: (Embed, 0x0, 0x0, TeamBuffData)
     pass
 
-class 0xf2cfc48c():
+class UiSliderBarState():
     BarBackdrop: (Link, 0x0, 0x0, IconElementData)
     BarFill: (Link, 0x0, 0x0, IconElementData)
     SliderIcon: (Link, 0x0, 0x0, IconElementData)
@@ -25627,15 +25627,15 @@ class 0xf2cfc48c():
 
 class 0xf2dd2d14():
     0x10074827: (String, 0x0, 0x0, 0x0)
-    0x30637e3a: (String, 0x0, 0x0, 0x0)
+    TitleVictoryTra: (String, 0x0, 0x0, 0x0)
     0x3fca802: (String, 0x0, 0x0, 0x0)
-    0x4a72336b: (String, 0x0, 0x0, 0x0)
+    TitleDefeatTra: (String, 0x0, 0x0, 0x0)
     0x4c453e79: (String, 0x0, 0x0, 0x0)
-    0x5652b095: (String, 0x0, 0x0, 0x0)
+    TitleNextTra: (String, 0x0, 0x0, 0x0)
     0x8e3d338b: (String, 0x0, 0x0, 0x0)
     0x9128c36f: (String, 0x0, 0x0, 0x0)
-    0x9d97c953: (String, 0x0, 0x0, 0x0)
-    0xc05227a8: (Embed, 0x0, 0x0, 0xf3c319e2)
+    TitleFutureTra: (String, 0x0, 0x0, 0x0)
+    ByeLabels: (Embed, 0x0, 0x0, 0xf3c319e2)
     0xd0133f4a: (String, 0x0, 0x0, 0x0)
     0xe130f1de: (String, 0x0, 0x0, 0x0)
     pass
@@ -25655,12 +25655,12 @@ class LoadingScreenPlayerCardSwitcherData():
     pass
 
 class 0xf307d6c9(0x114828a9):
-    0x1fb22049: (Vec2, 0x0, 0x0, 0x0)
-    0xe82b9b56: (Pointer, 0x0, 0x0, 0x4f4c4ffc)
+    SpawnDirection: (Vec2, 0x0, 0x0, 0x0)
+    SpawnerCharacter: (Pointer, 0x0, 0x0, 0x4f4c4ffc)
     0xfd6b703e: (F32, 0x0, 0x0, 0x0)
     pass
 
-class 0xf30a6eea():
+class LevelUpUiData():
     PlayerBuffsScene: (Hash, 0x0, 0x0, 0x0)
     Spells: (List, 0x4, Embed, SpellLevelUpUiData)
     FxInScene: (Hash, 0x0, 0x0, 0x0)
@@ -25673,7 +25673,7 @@ class FixedShaderDef(IShaderDef):
     pass
 
 class CompanionLoadoutGridButtonData(LoadoutGridButtonData):
-    0x74381508: (Hash, 0x0, 0x0, 0x0)
+    FavoriteIcon: (Hash, 0x0, 0x0, 0x0)
     RarityIcon: (List, 0x0, Hash, 0x0)
     pass
 
@@ -25714,9 +25714,9 @@ class TimeMaterialDriver(IDynamicMaterialFloatDriver, ILogicFloatDriver):
     pass
 
 class 0xf37151c(TftCutsceneClip):
-    0x31e70c2f: (String, 0x0, 0x0, 0x0)
+    BlackboardPosition: (String, 0x0, 0x0, 0x0)
     0x40d522bc: (String, 0x0, 0x0, 0x0)
-    0xe7d0a706: (String, 0x0, 0x0, 0x0)
+    BlackboardOrientation: (String, 0x0, 0x0, 0x0)
     pass
 
 class EffectCircleMaskCooldownElementData(EffectElementData):
@@ -25797,7 +25797,7 @@ class 0xf3c319e2():
     pass
 
 class 0xf3cbe7b2(IGameCalculationPart):
-    0x88536426: (Hash, 0x0, 0x0, 0x0)
+    mSpellCalculationKey: (Hash, 0x0, 0x0, 0x0)
     pass
 
 class 0xf3cf86a3():
@@ -25825,16 +25825,16 @@ class TftShopDropRates():
     pass
 
 class 0xf43ad1ce():
-    0x19bbc023: (Hash, 0x0, 0x0, 0x0)
-    0x1abbc1b6: (Hash, 0x0, 0x0, 0x0)
+    IconShadowT1: (Hash, 0x0, 0x0, 0x0)
+    IconShadowT2: (Hash, 0x0, 0x0, 0x0)
     Team1Meter: (Embed, 0x0, 0x0, 0xb8a49c96)
     Frame: (Hash, 0x0, 0x0, 0x0)
     Team2Meter: (Embed, 0x0, 0x0, 0xb8a49c96)
     pass
 
-class ElementGroupData(0x231dd1a2):
-    Elements: (List, 0x0, Link, 0x231dd1a2)
-    Elements: (List2, 0x0, Link, 0x231dd1a2)
+class ElementGroupData(ElementDataI):
+    Elements: (List, 0x0, Link, ElementDataI)
+    Elements: (List2, 0x0, Link, ElementDataI)
     pass
 
 class ItemDataModifiable():
@@ -25902,7 +25902,7 @@ class ProgressionNode(BaseLoadoutData):
 class UiElementScissorRegion(UiElement):
     pass
 
-class 0xf486858e():
+class BaseLevelController():
     pass
 
 class ItemShopGameModeData():
@@ -25919,7 +25919,7 @@ class ItemShopGameModeData():
     RecFallbackMapId: (U32, 0x0, 0x0, 0x0)
     RecOverrideSmiteStartingItems: (List, 0x0, Hash, 0x0)
     CompletedItems: (List2, 0x0, Hash, 0x0)
-    0xe4143320: (Pointer, 0x0, 0x0, 0xac27b13a)
+    AllItemGroupDefinitionsOverride: (Pointer, 0x0, 0x0, 0xac27b13a)
     pass
 
 class TftRoundData():
@@ -25980,7 +25980,7 @@ class VfxEmitterFiltering():
     pass
 
 class 0xf4e577e(IGameModeConfig):
-    0xce50672: (List2, 0x0, Pointer, 0x51f54b8e)
+    ChampionComponents: (List2, 0x0, Pointer, 0x51f54b8e)
     pass
 
 class ContextualConditionItemPurchased(IContextualCondition):
@@ -25994,9 +25994,9 @@ class GeneralSettingsGroup():
     pass
 
 class 0xf5022dc7():
-    0x44fff45: (String, 0x0, 0x0, 0x0)
-    0x47704df2: (Link, 0x0, 0x0, QualitySetting)
-    0x6dbb4e22: (U32, 0x0, 0x0, 0x0)
+    BaseModel: (String, 0x0, 0x0, 0x0)
+    QualitySetting: (Link, 0x0, 0x0, QualitySetting)
+    VersionThreshold: (U32, 0x0, 0x0, 0x0)
     pass
 
 class UiElementEffect(UiElementAsset):
@@ -26056,7 +26056,7 @@ class GameMutatorExpansions():
     mMutators: (List2, 0x0, String, 0x0)
     pass
 
-class 0xf5b736ff(ViewController):
+class ObjectiveVotePanelViewController(ViewController):
     Scene: (Hash, 0x0, 0x0, 0x0)
     CollapseButton: (Hash, 0x0, 0x0, 0x0)
     ForButton: (Hash, 0x0, 0x0, 0x0)
@@ -26064,15 +26064,15 @@ class 0xf5b736ff(ViewController):
     ObjectivePortrait: (Hash, 0x0, 0x0, 0x0)
     ObjectiveText: (Hash, 0x0, 0x0, 0x0)
     RejectButton: (Hash, 0x0, 0x0, 0x0)
-    0x77835d07: (Hash, 0x0, 0x0, 0x0)
+    SpawningText: (Hash, 0x0, 0x0, 0x0)
     VoteResultTemplate: (Embed, 0x0, 0x0, ObjectiveVoteResultData)
     VoteAutoCloseDelay: (F32, 0x0, 0x0, 0x0)
     AutoActivateTimeBeforeSpawn: (F32, 0x0, 0x0, 0x0)
-    0xaa34e2a4: (Hash, 0x0, 0x0, 0x0)
+    PortraitLayout: (Hash, 0x0, 0x0, 0x0)
     VotesLayout: (Hash, 0x0, 0x0, 0x0)
     NumVoters: (U32, 0x0, 0x0, 0x0)
-    ObjectiveCampInfo: (List, 0x0, Embed, 0xc9619884)
-    0xe73fbbbb: (Embed, 0x0, 0x0, 0xef77ac04)
+    ObjectiveCampInfo: (List, 0x0, Embed, ObjectiveVoteCampDefinition)
+    VoteTemplate: (Embed, 0x0, 0x0, ObjectiveVoteData)
     pass
 
 class HudStatStoneMilestoneData():
@@ -26087,7 +26087,7 @@ class HudStatStoneMilestoneData():
     MilestoneOtherIntroTime: (F32, 0x0, 0x0, 0x0)
     0x86f904d1: (F32, 0x0, 0x0, 0x0)
     0x8ca5c29b: (F32, 0x0, 0x0, 0x0)
-    0x9bdfc2c9: (Map, U32, Link, VfxSystemDefinitionData)
+    MasteryToBackgroundLookup: (Map, U32, Link, VfxSystemDefinitionData)
     0xa6d1b459: (Embed, 0x0, 0x0, HudMenuTransitionData)
     UiSound: (String, 0x0, 0x0, 0x0)
     MilestoneTransitionIn: (Embed, 0x0, 0x0, HudMenuTransitionData)
@@ -26102,11 +26102,11 @@ class HudLoadingScreenWidgetTutorial(IHudLoadingScreenWidget):
     pass
 
 class TftTrovesBannerData():
-    0x13eec9f: (U32, 0x0, 0x0, 0x0)
+    PullCost: (U32, 0x0, 0x0, 0x0)
     BannerTexturePath: (String, 0x0, 0x0, 0x0)
     PityThreshold: (U32, 0x0, 0x0, 0x0)
-    0x22b6ef5b: (U32, 0x0, 0x0, 0x0)
-    0x2a454a76: (String, 0x0, 0x0, 0x0)
+    MaxTotalRolls: (U32, 0x0, 0x0, 0x0)
+    PlatformTexturePath: (String, 0x0, 0x0, 0x0)
     Id: (String, 0x0, 0x0, 0x0)
     ChaseTable: (Link, 0x0, 0x0, TftTrovesBannerTable)
     ActivationDateTime: (String, 0x0, 0x0, 0x0)
@@ -26114,9 +26114,9 @@ class TftTrovesBannerData():
     BannerCurrencyId: (String, 0x0, 0x0, 0x0)
     ThumbnailTexturePath: (String, 0x0, 0x0, 0x0)
     NameTraKey: (String, 0x0, 0x0, 0x0)
-    0x6ff16584: (Link, 0x0, 0x0, 0x28b2b2ea)
-    0x80964614: (String, 0x0, 0x0, 0x0)
-    0x87696dab: (String, 0x0, 0x0, 0x0)
+    BannerCurrency: (Link, 0x0, 0x0, TftCurrency)
+    TotalRollsCounterId: (String, 0x0, 0x0, 0x0)
+    BackgroundTexturePath: (String, 0x0, 0x0, 0x0)
     CelebrationTheme: (Link, 0x0, 0x0, TftTrovesCelebrationThemeData)
     PityCounterId: (String, 0x0, 0x0, 0x0)
     RootTable: (Link, 0x0, 0x0, TftTrovesBannerTable)
@@ -26149,7 +26149,7 @@ class AnimationGraphData():
     mTransitionClipDataList: (List, 0x0, Embed, TransitionClipData)
     mUseCascadeBlend: (Bool, 0x0, 0x0, 0x0)
     mSyncGroupDataList: (List, 0x0, Embed, SyncGroupData)
-    0xd31ccb9f: (Hash, 0x0, 0x0, 0x0)
+    AnimStateGraphEntryClip: (Hash, 0x0, 0x0, 0x0)
     mMaskDataMap: (Map, Hash, Embed, MaskData)
     pass
 
@@ -26182,10 +26182,10 @@ class VfxAssetRemap():
     NewAsset: (String, 0x0, 0x0, 0x0)
     pass
 
-class 0xf63704f():
+class BezierSegment():
     ControlPoint1: (Vec3, 0x0, 0x0, 0x0)
     ControlPoint2: (Vec3, 0x0, 0x0, 0x0)
-    0xd8b7f07c: (Vec3, 0x0, 0x0, 0x0)
+    Endpoint: (Vec3, 0x0, 0x0, 0x0)
     pass
 
 class TftStageRoundDataTemplate():
@@ -26300,9 +26300,9 @@ class LoadScreenTipSet():
 
 class UiElementEffectFillPercentageData(UiElementEffectData):
     mPerPixelUvsX: (Bool, 0x0, 0x0, 0x0)
-    TextureData: (Pointer, 0x0, 0x0, 0x840074ef)
+    TextureData: (Pointer, 0x0, 0x0, IUiEffectTextureDataProvider)
     mAtlas: (Pointer, 0x0, 0x0, AtlasData)
-    mAtlas: (Pointer, 0x0, 0x0, 0x840074ef)
+    mAtlas: (Pointer, 0x0, 0x0, IUiEffectTextureDataProvider)
     mFlipY: (Bool, 0x0, 0x0, 0x0)
     mFlipX: (Bool, 0x0, 0x0, 0x0)
     pass
@@ -26338,10 +26338,10 @@ class HudChatData():
     HideAfterSeconds: (F32, 0x0, 0x0, 0x0)
     pass
 
-class 0xf77590db(0x121b48aa):
+class LogicDriverVisibilityController(IMapVisibilityController):
     0x35b17559: (Pointer, 0x0, 0x0, ILogicBoolDriver)
-    0x97abeaff: (Pointer, 0x0, 0x0, ILogicBoolDriver)
-    0xbe02c271: (Pointer, 0x0, 0x0, ILogicFloatDriver)
+    VisibilityDriver: (Pointer, 0x0, 0x0, ILogicBoolDriver)
+    TransitionTimeDriver: (Pointer, 0x0, 0x0, ILogicFloatDriver)
     pass
 
 class TftCutsceneAction(TftCutsceneEntry):
@@ -26424,7 +26424,7 @@ class 0xf8739c73():
     OtherPlayer: (Embed, 0x0, 0x0, 0xf02f881)
     pass
 
-class 0xf892933d(0xa4290ed0):
+class DisabledRegionData(RegionDataBase):
     pass
 
 class CastOnDistanceFromCaster(MissileBehaviorSpec):
@@ -26435,8 +26435,8 @@ class 0xf8c18a6e():
     NameTraKey: (String, 0x0, 0x0, 0x0)
     pass
 
-class 0xf8ec595b():
-    0xaf8cfbf: (Map, U8, Embed, 0x6de4753e)
+class TftBotSkillData():
+    SkillAxes: (Map, U8, Embed, 0x6de4753e)
     pass
 
 class FxActionVfx(IFxAction):
@@ -26474,7 +26474,7 @@ class TeamScoreMeterUiTunables():
     mAllowDynamicVisibility: (Bool, 0x0, 0x0, 0x0)
     pass
 
-class 0xf956a163(TftCutsceneClip):
+class TftCutsceneObjSfxClip(TftCutsceneClip):
     0x3cff8270: (Bool, 0x0, 0x0, 0x0)
     StopAudioEvent: (String, 0x0, 0x0, 0x0)
     0x78afa616: (String, 0x0, 0x0, 0x0)
@@ -26524,7 +26524,7 @@ class SocialPanelViewController(ViewController):
 class IsAttackingBoolDriver(ILogicBoolDriver):
     pass
 
-class 0xf9ded696(IScriptBlock, IBehaviorScriptBlock):
+class SelectSpellBlock(IScriptBlock, IBehaviorScriptBlock):
     pass
 
 class 0xf9e5b8b9(ILogicFloatDriver):
@@ -26534,7 +26534,7 @@ class 0xf9e5b8b9(ILogicFloatDriver):
 class 0xfa040e57(0xbc280d0a):
     Source: (Link, 0x0, 0x0, SequenceObjectSelector)
     DefaultValue: (String, 0x0, 0x0, 0x0)
-    0xc2e77088: (String, 0x0, 0x0, 0x0)
+    DebugOverride: (String, 0x0, 0x0, 0x0)
     pass
 
 class SelectorMovement(MissileMovementSpec):
@@ -26561,7 +26561,7 @@ class WardSkinDisabler():
 class UiElementGroupFramed(UiElementGroup):
     pass
 
-class 0xfa3c7ffa():
+class NeutralTimerState():
     0x56841fae: (List2, 0x0, Hash, 0x0)
     0xbe0caaff: (List2, 0x0, Hash, 0x0)
     pass
@@ -26585,9 +26585,9 @@ class PersistentVfxData():
     OrientTowardsTarget: (Bool, 0x0, 0x0, 0x0)
     pass
 
-class 0xfa49cfed(IScriptBlock):
+class ClearBit(IScriptBlock):
     BitIndex: (Pointer, 0x0, 0x0, IIntGet)
-    0xa5d2169c: (Embed, 0x0, 0x0, IntTableSet)
+    BitField: (Embed, 0x0, 0x0, IntTableSet)
     pass
 
 class IsDeadDynamicMaterialBoolDriver(ILogicBoolDriver, IDynamicMaterialBoolDriver):
@@ -26602,8 +26602,8 @@ class HudLoadingScreenData():
     pass
 
 class 0xfacd8b68():
-    0x5c5d98c2: (List2, 0x0, String, 0x0)
-    0x75fbcb48: (Embed, 0x0, 0x0, 0x40a87ffc)
+    ChampionNames: (List2, 0x0, String, 0x0)
+    BoardPosition: (Embed, 0x0, 0x0, TftBoardPosition)
     pass
 
 class 0xface6a25(BuffEffect):
@@ -26628,18 +26628,18 @@ class DestroyOnMovementComplete(MissileBehaviorSpec):
     pass
 
 class 0xfb16e4be(0xfd51006c):
-    0xf2be52f4: (List2, 0x0, U8, 0x0)
+    OrderTypes: (List2, 0x0, U8, 0x0)
     pass
 
 class 0xfb1989a3():
-    0x2c4a7c82: (Link, 0x0, 0x0, VfxSystemDefinitionData)
+    PickedVfxSystem: (Link, 0x0, 0x0, VfxSystemDefinitionData)
     0x34296273: (Link, 0x0, 0x0, VfxSystemDefinitionData)
-    0x5f2af0b8: (Link, 0x0, 0x0, VfxSystemDefinitionData)
-    0x72f38b69: (Link, 0x0, 0x0, VfxSystemDefinitionData)
-    0x8231d843: (Link, 0x0, 0x0, VfxSystemDefinitionData)
-    0x886b33d1: (Link, 0x0, 0x0, VfxSystemDefinitionData)
-    0xb55d10c3: (String, 0x0, 0x0, 0x0)
-    0xdbc03b26: (Link, 0x0, 0x0, VfxSystemDefinitionData)
+    IdleVfxSystem: (Link, 0x0, 0x0, VfxSystemDefinitionData)
+    RefreshVfxSystem: (Link, 0x0, 0x0, VfxSystemDefinitionData)
+    NotPickedVfxSystem: (Link, 0x0, 0x0, VfxSystemDefinitionData)
+    RefreshOverlayVfxSystem: (Link, 0x0, 0x0, VfxSystemDefinitionData)
+    IconBackgroundPath: (String, 0x0, 0x0, 0x0)
+    HoverVfxSystem: (Link, 0x0, 0x0, VfxSystemDefinitionData)
     pass
 
 class Turret(AnimatedBuilding):
@@ -26650,12 +26650,12 @@ class TooltipInstanceList():
     LevelCount: (U32, 0x0, 0x0, 0x0)
     pass
 
-class 0xfb3de76b(ILogicDriver):
-    0x6129b949: (Vec4, 0x0, 0x0, 0x0)
-    0x7332c626: (Vec4, 0x0, 0x0, 0x0)
-    0xae9faafb: (Vec4, 0x0, 0x0, 0x0)
+class RemapVec4MaterialDriver(ILogicDriver):
+    OutputMinValue: (Vec4, 0x0, 0x0, 0x0)
+    MaxValue: (Vec4, 0x0, 0x0, 0x0)
+    OutputMaxValue: (Vec4, 0x0, 0x0, 0x0)
     Driver: (Pointer, 0x0, 0x0, ILogicDriver)
-    0xf1a5a54c: (Vec4, 0x0, 0x0, 0x0)
+    MinValue: (Vec4, 0x0, 0x0, 0x0)
     pass
 
 class ReplayControlsViewController(ViewController):
@@ -26698,26 +26698,26 @@ class CherryRoundsViewController(0x856ba9bc, ViewController):
     TimerText: (Hash, 0x0, 0x0, 0x0)
     Scene: (Hash, 0x0, 0x0, 0x0)
     TimerFillTexture: (Hash, 0x0, 0x0, 0x0)
-    0x2cc9ea0f: (List, 0x3, Embed, 0x9784901f)
-    0x2cc9ea0f: (List, 0x3, Hash, 0x0)
-    0x352a241c: (String, 0x0, 0x0, 0x0)
+    LeftPhaseIcons: (List, 0x3, Embed, 0x9784901f)
+    LeftPhaseIcons: (List, 0x3, Hash, 0x0)
+    RoundLabelTra: (String, 0x0, 0x0, 0x0)
     0x3aa6852c: (Hash, 0x0, 0x0, 0x0)
     BaseLoadable: (Link, 0x0, 0x0, UiPropertyLoadable)
-    0x4555fbb0: (Embed, 0x0, 0x0, 0x5b5e6994)
-    0x47dc6b2c: (Embed, 0x0, 0x0, 0x9784901f)
-    0x47dc6b2c: (Hash, 0x0, 0x0, 0x0)
-    0x4b7703b3: (Hash, 0x0, 0x0, 0x0)
+    TimerLeftBar: (Embed, 0x0, 0x0, 0x5b5e6994)
+    CurrentPhaseIcon: (Embed, 0x0, 0x0, 0x9784901f)
+    CurrentPhaseIcon: (Hash, 0x0, 0x0, 0x0)
+    RoundLabel: (Hash, 0x0, 0x0, 0x0)
     0x580dfb9d: (F32, 0x0, 0x0, 0x0)
     Timer: (Hash, 0x0, 0x0, 0x0)
     PhaseLabel: (Hash, 0x0, 0x0, 0x0)
-    0x8d7fe1ae: (List, 0x3, Embed, 0x9784901f)
-    0x8d7fe1ae: (List, 0x3, Hash, 0x0)
-    0x9507344d: (Color, 0x0, 0x0, 0x0)
+    RightPhaseIcons: (List, 0x3, Embed, 0x9784901f)
+    RightPhaseIcons: (List, 0x3, Hash, 0x0)
+    TimerTextDefaultColor: (Color, 0x0, 0x0, 0x0)
     StageNumber: (Hash, 0x0, 0x0, 0x0)
     0xa2e2709c: (String, 0x0, 0x0, 0x0)
     0xb03d7e4b: (Color, 0x0, 0x0, 0x0)
     0xb1f34e3f: (Embed, 0x0, 0x0, 0xf2dd2d14)
-    0xb2d6cb55: (Embed, 0x0, 0x0, 0x5b5e6994)
+    TimerRightBar: (Embed, 0x0, 0x0, 0x5b5e6994)
     TimerFillLeftTexture: (Hash, 0x0, 0x0, 0x0)
     0xcf3fe190: (Hash, 0x0, 0x0, 0x0)
     0xd24a0877: (Map, U8, String, 0x0)
@@ -26750,7 +26750,7 @@ class RenderStyleData():
     mUnitStyleUseInking: (Bool, 0x0, 0x0, 0x0)
     pass
 
-class 0xfc205680(0x5d765a43):
+class MutatorEnabler(IEnabler):
     Mutator: (String, 0x0, 0x0, 0x0)
     pass
 
@@ -26772,8 +26772,8 @@ class UiElementGroupButtonSoundEvents():
     pass
 
 class 0xfc331f53():
-    0x73f6b70e: (Hash, 0x0, 0x0, 0x0)
-    AugmentSlotData: (Embed, 0x0, 0x0, 0x6f1e4224)
+    AugmentLayout: (Hash, 0x0, 0x0, 0x0)
+    AugmentSlotData: (Embed, 0x0, 0x0, AugmentSlot)
     pass
 
 class EsportsBannerMaterialController(SkinnedMeshDataMaterialController):
@@ -26784,13 +26784,13 @@ class LolModesTeamDisplayData():
     0x1cb3b8e6: (String, 0x0, 0x0, 0x0)
     0x1ef5b158: (String, 0x0, 0x0, 0x0)
     0x20e0b520: (String, 0x0, 0x0, 0x0)
-    0x2446eaea: (String, 0x0, 0x0, 0x0)
+    TeamMatchupIconPath: (String, 0x0, 0x0, 0x0)
     0x33f929a8: (String, 0x0, 0x0, 0x0)
-    0x40aaa283: (Pointer, 0x0, 0x0, 0x79ca73e7)
+    LoadingScreenData: (Pointer, 0x0, 0x0, 0x79ca73e7)
     TeamIconPath: (String, 0x0, 0x0, 0x0)
     0x581ad352: (String, 0x0, 0x0, 0x0)
     0x59fbc855: (String, 0x0, 0x0, 0x0)
-    0x7cf17f6: (String, 0x0, 0x0, 0x0)
+    TeamEliminatedIconPath: (String, 0x0, 0x0, 0x0)
     0x7dbd6ef1: (String, 0x0, 0x0, 0x0)
     0x9290be1: (String, 0x0, 0x0, 0x0)
     0x95fd5384: (String, 0x0, 0x0, 0x0)
@@ -26824,19 +26824,19 @@ class RoleOpponentEquivalentChallengeConstraintInfo(ListenerConstraintInfo):
     pass
 
 class 0xfc6af367():
-    0x2c4a7c82: (Link, 0x0, 0x0, VfxSystemDefinitionData)
+    PickedVfxSystem: (Link, 0x0, 0x0, VfxSystemDefinitionData)
     0x34296273: (Link, 0x0, 0x0, VfxSystemDefinitionData)
     0x3c66a261: (String, 0x0, 0x0, 0x0)
     0x56fabff4: (String, 0x0, 0x0, 0x0)
-    0x5f2af0b8: (Link, 0x0, 0x0, VfxSystemDefinitionData)
-    0x72f38b69: (Link, 0x0, 0x0, VfxSystemDefinitionData)
-    0x8231d843: (Link, 0x0, 0x0, VfxSystemDefinitionData)
+    IdleVfxSystem: (Link, 0x0, 0x0, VfxSystemDefinitionData)
+    RefreshVfxSystem: (Link, 0x0, 0x0, VfxSystemDefinitionData)
+    NotPickedVfxSystem: (Link, 0x0, 0x0, VfxSystemDefinitionData)
     0x8371223f: (String, 0x0, 0x0, 0x0)
-    0x886b33d1: (Link, 0x0, 0x0, VfxSystemDefinitionData)
+    RefreshOverlayVfxSystem: (Link, 0x0, 0x0, VfxSystemDefinitionData)
     0x941f723a: (String, 0x0, 0x0, 0x0)
     0xb95f539d: (String, 0x0, 0x0, 0x0)
     0xd908f898: (String, 0x0, 0x0, 0x0)
-    0xdbc03b26: (Link, 0x0, 0x0, VfxSystemDefinitionData)
+    HoverVfxSystem: (Link, 0x0, 0x0, VfxSystemDefinitionData)
     pass
 
 class WardData(BaseLoadoutData):
@@ -26859,7 +26859,7 @@ class SequencePhase():
     pass
 
 class DamageSkinLoadoutGridButtonData(LoadoutGridButtonData):
-    0x74381508: (Hash, 0x0, 0x0, 0x0)
+    FavoriteIcon: (Hash, 0x0, 0x0, 0x0)
     RarityIcon: (List, 0x0, Hash, 0x0)
     pass
 
@@ -26873,7 +26873,7 @@ class HudHealthBarBurstHealData():
     pass
 
 class 0xfd51006c(ILogicBoolDriver):
-    0xab767e50: (Bool, 0x0, 0x0, 0x0)
+    DelayOrder: (Bool, 0x0, 0x0, 0x0)
     pass
 
 class PfxAnimatedVector3fVariableData():
@@ -26907,13 +26907,13 @@ class PingRadialBaseViewController(RadialMenuViewController):
     0xf2df8264: (Map, U8, String, 0x0)
     pass
 
-class 0xfd95da2c(IFloatParametricUpdater):
+class TftArenaOwnerStreakParametricUpdater(IFloatParametricUpdater):
     pass
 
 class IFxActionInstance():
     pass
 
-class 0xfda22aa1():
+class HudCenterFrameGlowData():
     0xcdeba821: (F32, 0x0, 0x0, 0x0)
     EaseType: (U8, 0x0, 0x0, 0x0)
     Icon: (Hash, 0x0, 0x0, 0x0)
@@ -26951,10 +26951,10 @@ class LuaPropertyDataInteger(LuaPropertyData):
     Value: (I32, 0x0, 0x0, 0x0)
     pass
 
-class 0xfdd6dfa2(VfxPrimitiveBase):
+class VfxPrimitiveCameraUnitQuad(VfxPrimitiveBase):
     pass
 
-class 0xfdde9956(ViewController):
+class StrawberryAugmentSelectionViewController(ViewController):
     0x23de7775: (String, 0x0, 0x0, 0x0)
     BaseLoadable: (Link, 0x0, 0x0, UiPropertyLoadable)
     MainScene: (Hash, 0x0, 0x0, 0x0)
@@ -26970,7 +26970,7 @@ class 0xfdde9956(ViewController):
     0xce64b8ab: (Embed, 0x0, 0x0, 0xfc6af367)
     0xd93a5b65: (Embed, 0x0, 0x0, 0xfc6af367)
     0xdcf99336: (String, 0x0, 0x0, 0x0)
-    AugmentSlotData: (Embed, 0x0, 0x0, 0x60a46c3)
+    AugmentSlotData: (Embed, 0x0, 0x0, StrawberryAugmentSlotData)
     0xf8d5ccda: (Embed, 0x0, 0x0, 0xfc6af367)
     pass
 
@@ -26982,12 +26982,12 @@ class ContextualConditionNumberOfCharactersNearTargetPos(IContextualCondition, I
     pass
 
 class 0xfde8af7f(IFxAction):
-    Object: (Embed, 0x0, 0x0, 0x5c086dbd)
+    Object: (Embed, 0x0, 0x0, FxObjectSelector)
     AttachToLocation: (Pointer, 0x0, 0x0, IFxLocation)
     AttachOrientation: (Bool, 0x0, 0x0, 0x0)
     pass
 
-class VfxAnimatedFloatVariableData(0x5c4922b6):
+class VfxAnimatedFloatVariableData(VfxFloatBase):
     Values: (List, 0x0, F32, 0x0)
     Times: (List, 0x0, F32, 0x0)
     ProbabilityTables: (List, 0x1, Pointer, VfxProbabilityTableData)
@@ -27006,7 +27006,7 @@ class RelicLoadoutData(BaseLoadoutData):
 
 class 0xfe31ac4d(0xc06f5f6a):
     Source: (Link, 0x0, 0x0, SequenceObjectSelector)
-    0xc2e77088: (Hash, 0x0, 0x0, 0x0)
+    DebugOverride: (Hash, 0x0, 0x0, 0x0)
     pass
 
 class ContextualConditionNearbyChampionCount(IContextualCondition):
@@ -27029,7 +27029,7 @@ class ItemRecommendationContext():
     mCompletedItemMatrix: (Embed, 0x0, 0x0, ItemRecommendationMatrix)
     mIsDefaultPosition: (Bool, 0x0, 0x0, 0x0)
     mStartingItemBundles: (List, 0x0, Embed, ItemRecommendationItemList)
-    0xe1100a05: (Map, U32, Embed, ItemRecommendationItemList)
+    UpgradeChoices: (Map, U32, Embed, ItemRecommendationItemList)
     mItemMatrix: (Embed, 0x0, 0x0, ItemRecommendationMatrix)
     pass
 
@@ -27038,10 +27038,10 @@ class NeutralMinionCamp(NeutralMinionCampCommon):
 
 class 0xfe897399():
     Name: (String, 0x0, 0x0, 0x0)
-    0xd278219f: (Bool, 0x0, 0x0, 0x0)
+    RunOnce: (Bool, 0x0, 0x0, 0x0)
     pass
 
-class 0xfea4e3fe(MapAction):
+class MapActionTftCameraShake(MapAction):
     Duration: (F32, 0x0, 0x0, 0x0)
     Magnitude: (F32, 0x0, 0x0, 0x0)
     0x728fa513: (Bool, 0x0, 0x0, 0x0)
@@ -27051,27 +27051,27 @@ class 0xfea4e3fe(MapAction):
     pass
 
 class 0xfeacedf2(0x30aa7360):
-    0x2d6f5674: (Pointer, 0x0, 0x0, ILogicFloatDriver)
+    ValueDriver: (Pointer, 0x0, 0x0, ILogicFloatDriver)
     0x7a721423: (List2, 0x0, Pointer, 0x9a573886)
     0x94eea539: (List2, 0x0, Pointer, 0xbc413e21)
     pass
 
 class TftCharacterRoleCardViewController(ViewController):
     Scene: (Hash, 0x0, 0x0, 0x0)
-    0x244c26e6: (Embed, 0x0, 0x0, 0x2efdcf99)
+    ItemData: (Embed, 0x0, 0x0, TftCharacterRoleCardItem)
     BaseLoadable: (Link, 0x0, 0x0, UiPropertyLoadable)
     MobileOverrideLoadable: (Link, 0x0, 0x0, UiPropertyOverrideLoadable)
-    HeaderData: (Embed, 0x0, 0x0, 0x8d22df1b)
+    HeaderData: (Embed, 0x0, 0x0, TftCharacterRoleCardHeader)
     HeaderData: (Embed, 0x0, 0x0, TftCharacterRoleCardHeaderData)
     ItemRows: (List, 0x0, Embed, TftCharacterRoleCardItemRowData)
     Grid: (Hash, 0x0, 0x0, 0x0)
     Layout: (Hash, 0x0, 0x0, 0x0)
     pass
 
-class 0xff23de67(FxActionSfxBase):
-    0x13b9efeb: (Embed, 0x0, 0x0, 0x232464eb)
+class FxActionSfxBeam(FxActionSfxBase):
+    MidpointEvent: (Embed, 0x0, 0x0, FxSfxBeamEvent)
     Target: (Pointer, 0x0, 0x0, IFxLocation)
-    0x8f0b8bb4: (Embed, 0x0, 0x0, 0x232464eb)
+    EndpointEvent: (Embed, 0x0, 0x0, FxSfxBeamEvent)
     Location: (Pointer, 0x0, 0x0, IFxLocation)
     pass
 
@@ -27081,7 +27081,7 @@ class TriggerFromScript(MissileTriggerSpec):
     mTriggerName: (String, 0x0, 0x0, 0x0)
     pass
 
-class 0xff410d3f(0x4c895a1d):
+class ItemScriptEvent(IScriptEvent):
     pass
 
 class FloatTextDisplayOverrides():
@@ -27166,14 +27166,14 @@ class CustomChampionKillStatStoneData(StatStoneData):
     mKillEvent: (Hash, 0x0, 0x0, 0x0)
     pass
 
-class BarracksLevelController(ILevelController, 0xf486858e):
+class BarracksLevelController(ILevelController, BaseLevelController):
     TriggerEventsOnInitialSpawn: (List2, 0x0, U32, 0x0)
     BarracksConfig: (Embed, 0x0, 0x0, BarracksConfig)
     LinkedBarracks: (List2, 0x0, Embed, BarracksLink)
     pass
 
 class 0xffcac16f():
-    0x44c48f24: (Map, String, Embed, 0x709bc2e4)
+    BehaviorsData: (Map, String, Embed, 0x709bc2e4)
     pass
 
 class HudAbilityPromptData():
